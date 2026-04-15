@@ -87,36 +87,7 @@
 
 ## Meeting-Notizen
 
-### Kickoff Janine Steidelmüller — [Datum eintragen]
-
-**Vorbereitung — Fragen fürs erste Gespräch:**
-
-*Orientierung & Rolle*
-- Wie sieht mein erster Arbeitstag / die erste Woche aus — gibt es ein strukturiertes Onboarding?
-- In welchen Meetings werde ich von Anfang an dabei sein?
-- Wer sind die wichtigsten Personen, die ich in den ersten Tagen kennenlernen sollte?
-
-*Zusammenarbeit*
-- Wie läuft unsere Zusammenarbeit am liebsten ab — eher asynchron oder lieber kurze regelmäßige Syncs?
-- Wie erreichbar bist du generell, und wen kann ich bei dringenden Fragen ansprechen, wenn du nicht da bist?
-- Wie offen soll ich proaktiv Fragen stellen, oder lieber erst selbst recherchieren?
-
-*Erwartungen*
-- Was wäre für dich ein richtig guter Start meiner Praxisphase?
-- Gibt es etwas, das du dir von mir in den ersten Wochen besonders wünscht?
-
-**Notizen:**
-*Hier Notizen eintragen*
-
----
-
-### Sync Janine — [Datum eintragen]
-*Hier Notizen eintragen*
-
----
-
-### Sync Hochschule — [Datum eintragen]
-*Hier Notizen eintragen*
+→ Siehe [MEETINGS.md](MEETINGS.md)
 
 ---
 
