@@ -37,6 +37,25 @@
 
 ---
 
+## Check-in KPI Dashboard Requirements — Janine Steidelmüller & Oliver Timm | 22. April 2026
+
+**Kontext:**
+Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses Meeting dient dazu, diese Requirements mit mir zu teilen — erster inhaltlicher Input für Kapitel 5 (Anforderungsanalyse).
+
+**Vorbereitung — Fragen:**
+- [ ] Welche Requirements hat Oliver gesammelt — nach welchem Schema / Format?
+- [ ] Welche Stakeholder wurden dabei bereits berücksichtigt?
+- [ ] Gibt es Requirements, die schon priorisiert wurden?
+- [ ] Welche Quellsysteme tauchen in den Requirements auf?
+- [ ] Was ist noch offen / nicht abgedeckt?
+
+**Notizen:**
+
+**Ergebnisse / Action Items:**
+- [ ] 
+
+---
+
 ## Sync Janine — [Datum eintragen]
 
 **Stand seit letztem Sync:**
