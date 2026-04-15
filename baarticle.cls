@@ -355,8 +355,10 @@
     \define@boolkey[BA]{simple}{blocknotice}[true]{}
     % optional end date for the blocking period (e.g. "10. Juli 2029")
     \define@key[BA]{simple}{blockuntil}[]{\def\@basimpleblockuntil{#1}}
+    % optional signed AI approval document (must be a pdf file)
+    \define@key[BA]{simple}{kidoc}[]{\def\@basimplekidoc{#1}}
 
-    \presetkeys[BA]{simple}{type=undefined,blocknotice=true,blockuntil={}}{}
+    \presetkeys[BA]{simple}{type=undefined,blocknotice=true,blockuntil={},kidoc={}}{}
     
     % adjust glossary styling
     \renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]}
@@ -389,6 +391,9 @@
                 until=\@basimpleblockuntil
             }
         \fi
+        \ifdefempty{\@basimplekidoc}{}{
+            \includepdf[pages={1}]{\@basimplekidoc}
+        }
         \ifdefvoid{\basimpleabstract}{}{
             \section*{Abstract}
             \basimpleabstract
