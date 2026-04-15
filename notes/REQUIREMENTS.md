@@ -11,13 +11,13 @@
 
 ---
 
-## SAP (Praxispartner)
+## SAP / Praxispartner (Janine Steidelmüller)
 
 *(noch nicht dokumentiert)*
 
 ---
 
-## DHSN-Betreuer (Janine Steidelmüller)
+## DHSN-Betreuer (Dr.-Ing. Jürgen Sachse)
 
 *(noch nicht dokumentiert)*
 
