@@ -1,0 +1,35 @@
+# LaTeX build artifacts
+simple.aux
+simple.bbl
+simple.bcf
+simple.fdb_latexmk
+simple.fls
+simple.loa
+simple.lof
+simple.log
+simple.lot
+simple.out
+simple.pdf
+simple.run.xml
+simple.synctex.gz
+simple.toc
+simple.blg
+
+# Chapter build artifacts
+chapter/*.aux
+
+# General LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.loa
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
