@@ -27,18 +27,17 @@
 
 ### Inhalt
 
-- Problemstellung definieren + Herleitung: Warum ist das ein Problem?
-  - Defizite bestehender Ansätze fundiert herausarbeiten → Literatur (keine Dokumentation, internen Dokumente, Blogbeiträge)
-  - Einordnung in die Wirtschaftsinformatik
-  - Lösungsrelevanz: Diskrepanz aktuell ↔ gewünscht, Hindernisse, negative Konsequenzen, aktueller Handlungsbedarf
-- Nachweisführung zur Problemstellung
-- Literaturrecherche: kein Lehrbuch schreiben, Rechercheprozess dokumentieren, ca. 45 Quellen, Aktualität beachten
-- Eigener Forschungsansatz / Methode (Referenz: Heinzl + Riedl)
-  - Methodik begründen + Ergebniserwartung aufstellen
-  - Durchführung und Untersuchung der Ergebnisse
-- Fazit und Ausblick mit Bezug zur Problemstellung + Zielgruppe
-- Alle Aussagen belegen (auch allgemein Bekanntes)
-- Verzeichnisse
+| Anforderung | Kapitel | Datei |
+|---|---|---|
+| Problemstellung + Herleitung; Lösungsrelevanz (Diskrepanz, Hindernisse, Handlungsbedarf) | 1 Einleitung | `chapter/01einleitung.tex` |
+| Defizite bestehender Ansätze fundiert herausarbeiten (Literatur, keine internen Docs/Blogs) | 2 Grundlagen & Stand der Forschung | `chapter/02Grundlagen_und_Stand_der_Forschung.tex` |
+| Einordnung in die Wirtschaftsinformatik | 1 Einleitung | `chapter/01einleitung.tex` |
+| Nachweisführung zur Problemstellung (Ausgangssituation, Systemlandschaft) | 4 Ausgangssituation | `chapter/04Ausgangssituation_und_Systemlandschaft.tex` |
+| Eigener Forschungsansatz / Methode (Heinzl + Riedl); Methodik begründen; Ergebniserwartung aufstellen; Literaturrecherche dokumentieren | 3 Methodik | `chapter/03Methodik.tex` |
+| Durchführung der Untersuchung | 8 MVP | `chapter/08MVP:Design-Umsetzung_Validierung.tex` |
+| Untersuchung der Ergebnisse | 9 Ergebnisse, Diskussion | `chapter/09Ergebnisse_Diskussion.tex` |
+| Fazit & Ausblick mit Bezug zur Problemstellung + Zielgruppe | 10 Fazit | `chapter/10Fazit_Ausblick.tex` |
+| Alle Aussagen belegen (auch allgemein Bekanntes); ~45 Quellen, Aktualität | durchgängig | alle Kapitel |
 
 ### KI-Nutzung
 

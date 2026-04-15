@@ -206,10 +206,10 @@
 \newcommand{\mktitle}[1]{
     \setkeys[BA]{title}{#1}
     \begin{titlepage}
-        \begin{wrapfigure}[3]{r}{0.5\textwidth}
+        \begin{wrapfigure}[3]{r}{0.25\textwidth}
             \begin{center}
                 \vspace{-18pt}
-                \includegraphics[width=0.5\textwidth]{\@batitleimg}
+                \includegraphics[width=0.25\textwidth]{\@batitleimg}
             \end{center}
         \end{wrapfigure}
         \noindent
@@ -248,6 +248,9 @@
 \define@key[BA]{block}{date}{\def\@bablockdate{#1}}
 % where the company is located at
 \define@key[BA]{block}{location}{\def\@bablocklocation{#1}}
+% optional end date of the blocking period (e.g. "10. Juli 2029")
+\define@key[BA]{block}{until}[]{\def\@bablockuntil{#1}}
+\presetkeys[BA]{block}{until={}}{}
 
 % Blocking notice
 \newcommand{\mkblocknotice}[1]{
@@ -259,6 +262,9 @@
     Auf Wunsch des Unternehmens \@baclscompany{} ist die vorliegende Arbeit für die öffentliche Nutzung zu sperren.
     Veröffentlichung, Vervielfältigung und Einsichtnahme sind ohne ausdrückliche Genehmigung des Unternehmens \@baclscompany{}, in \@bablocklocation{} und des Verfassers \@baclsfirst{} \@baclslast{} nicht gestattet.
     Die Arbeit ist nur den Gutachtern und den Mitgliedern des Prüfungsausschusses zugänglich zu machen.
+    \ifdefempty{\@bablockuntil}{}{%
+        \space Dieser Sperrvermerk gilt bis zum \@bablockuntil{}.%
+    }
     \bigskip\par
     \begin{wrapfigure}[1]{r}{0.3\textwidth}
         \begin{center}
@@ -347,8 +353,10 @@
     \define@key[BA]{simple}{assignment}{\def\@basimpleassignment{#1}}
     % whether to include the blocknotice or not
     \define@boolkey[BA]{simple}{blocknotice}[true]{}
-    
-    \presetkeys[BA]{simple}{type=undefined,blocknotice=true}{}
+    % optional end date for the blocking period (e.g. "10. Juli 2029")
+    \define@key[BA]{simple}{blockuntil}[]{\def\@basimpleblockuntil{#1}}
+
+    \presetkeys[BA]{simple}{type=undefined,blocknotice=true,blockuntil={}}{}
     
     % adjust glossary styling
     \renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]}
@@ -377,7 +385,8 @@
             \mkblocknotice{
                 signature=\@basimplesignature,
                 date=\@basimplereturndate,
-                location=\@basimplelocation
+                location=\@basimplelocation,
+                until=\@basimpleblockuntil
             }
         \fi
         \ifdefvoid{\basimpleabstract}{}{
