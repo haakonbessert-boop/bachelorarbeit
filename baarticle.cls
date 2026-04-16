@@ -401,8 +401,8 @@
         }
         \mkfrontmatter{
             \singlespacing
-            \section*{Abkürzungsverzeichnis}
-            \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+            \section*{Abkürzungs- und Begriffsverzeichnis}
+            \addcontentsline{toc}{section}{Abkürzungs- und Begriffsverzeichnis}
             \vspace{-1cm}
             \printnoidxglossaries
             \onehalfspacing
