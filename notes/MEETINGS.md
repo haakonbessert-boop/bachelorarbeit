@@ -8,7 +8,7 @@
 
 | Meeting | Rhythmus | Dauer | Teilnehmer |
 |---------|----------|-------|------------|
-| Weekly Sync | wöchentlich | 30 min | Janine Steidelmüller (SAP) |
+| Weekly Sync | wöchentlich, freitags | 30 min | Janine Steidelmüller (SAP) |
 
 ---
 
@@ -37,18 +37,6 @@
 
 ---
 
-### Weekly Sync — Janine Steidelmüller | [Datum eintragen]
-
-**Stand seit letztem Sync:**
-
-**Geplant bis nächstem Sync:**
-
-**Blockiert / brauche Input:**
-
-**Notizen:**
-
----
-
 ### Check-in KPI Dashboard Requirements — Janine Steidelmüller & Oliver Timm | 22. April 2026
 
 **Kontext:**
@@ -65,6 +53,138 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 
 **Ergebnisse / Action Items:**
 - [ ]
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 24. April 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 1. Mai 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 8. Mai 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 15. Mai 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 22. Mai 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 29. Mai 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 5. Juni 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 12. Juni 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 19. Juni 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 26. Juni 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
+
+---
+
+### Weekly Sync — Janine Steidelmüller | 3. Juli 2026
+
+**Stand seit letztem Sync:**
+
+**Geplant bis nächstem Sync:**
+
+**Blockiert / brauche Input:**
+
+**Notizen:**
 
 ---
 
@@ -113,25 +233,6 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 *Praktisches (SAP-seitig, mit Janine)*
 - [ ] Zugang zu Quellsystemen klären (JIRA, ServiceNow, SAP Analytics Cloud)
 - [ ] Welche KI-Tools sind SAP-intern für die Praxisphase freigegeben?
-
-**Notizen:**
-
-**Ergebnisse / Action Items:**
-- [ ]
-
----
-
-### Check-in KPI Dashboard Requirements — Janine Steidelmüller & Oliver Timm | 22. April 2026
-
-**Kontext:**
-Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses Meeting dient dazu, diese Requirements mit mir zu teilen — erster inhaltlicher Input für Kapitel 5 (Anforderungsanalyse).
-
-**Vorbereitung — Fragen:**
-- [ ] Welche Requirements hat Oliver gesammelt — nach welchem Schema / Format?
-- [ ] Welche Stakeholder wurden dabei bereits berücksichtigt?
-- [ ] Gibt es Requirements, die schon priorisiert wurden?
-- [ ] Welche Quellsysteme tauchen in den Requirements auf?
-- [ ] Was ist noch offen / nicht abgedeckt?
 
 **Notizen:**
 
