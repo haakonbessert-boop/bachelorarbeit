@@ -404,6 +404,7 @@
             \section*{Abkürzungs- und Begriffsverzeichnis}
             \addcontentsline{toc}{section}{Abkürzungs- und Begriffsverzeichnis}
             \vspace{-1cm}
+            \glsaddall
             \printnoidxglossaries
             \onehalfspacing
         }
