@@ -18,7 +18,42 @@
 
 ---
 
-## Kickoff — Janine Steidelmüller | 20. April 2026
+## Erstgespräch Gutachter — Janine Steidelmüller & Dr.-Ing. Jürgen Sachse | [Datum eintragen]
+
+### To-dos vor dem Meeting
+
+- [ ] Mail an Dr. Sachse schicken (Termin anfragen, gemeinsam mit Janine)
+- [ ] Terminslot zwischen Janine und Sachse abstimmen
+- [ ] `ki-genehmigung.pdf` ausdrucken und zum Meeting mitbringen (zum Unterschreiben)
+- [ ] Agenda vorab an beide schicken
+
+### Agenda
+
+**Formales**
+- [ ] KI-Genehmigungsdokument unterschreiben (Claude Code + Claude.ai — welche weiteren Tools ggf. ergänzen?)
+- [ ] Sperrvermerk: Befristung gewünscht, und wenn ja bis wann?
+- [ ] Abgabeformat klären — Druck + was als elektronische Beigabe (CD / USB / GitHub)?
+
+**Erwartungen & Scope**
+- [ ] Erwartungen beider Gutachter an Inhalt und Tiefe der Arbeit
+- [ ] Themenabgrenzung bestätigen — ist der aktuelle Scope (Scoring-Modell + MVP) für beide in Ordnung?
+- [ ] Methodenwahl (Design Science Research) kurz vorstellen und absegnen lassen
+
+**Zusammenarbeit & Feedback**
+- [ ] Feedback-Rhythmus mit Dr. Sachse — wie oft, in welchem Format?
+- [ ] Wann und in welcher Form sollen Zwischenstände gezeigt werden?
+- [ ] Bevorzugter Kommunikationskanal Dr. Sachse (Mail, OPAL, Persönlich)?
+
+**Praktisches (SAP-seitig, mit Janine)**
+- [ ] Zugang zu Quellsystemen klären (JIRA, ServiceNow, SAP Analytics Cloud)
+- [ ] Welche KI-Tools sind SAP-intern für die Praxisphase freigegeben?
+
+### Notizen
+
+### Ergebnisse / Action Items
+- [ ]
+
+---
 
 **Vorbereitung — Fragen:**
 
