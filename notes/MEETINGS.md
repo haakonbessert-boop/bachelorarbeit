@@ -205,7 +205,7 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 
 ---
 
-### Erstgespräch Gutachter — Janine Steidelmüller & Dr.-Ing. Jürgen Sachse | [Datum eintragen]
+### Erstgespräch Gutachter — Janine Steidelmüller & Prof. Dr.-Ing. Jürgen Sachse | 21. April 2026, 13:30 Uhr
 
 **To-dos vor dem Meeting**
 - [ ] Mail an Dr. Sachse schicken (Termin anfragen, gemeinsam mit Janine)
@@ -241,7 +241,7 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 
 ---
 
-### Hochschul-Sync — Dr.-Ing. Jürgen Sachse | [Datum eintragen]
+### Hochschul-Sync — Prof. Dr.-Ing. Jürgen Sachse | [Datum eintragen]
 
 **Aktueller Stand Bachelorarbeit:**
 
