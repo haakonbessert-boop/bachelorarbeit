@@ -9,13 +9,6 @@
 | Meeting | Rhythmus | Dauer | Teilnehmer |
 |---------|----------|-------|------------|
 | Weekly Sync | wöchentlich | 30 min | Janine Steidelmüller (SAP) |
-| Meilenstein-Sync | nach Abschluss einer Projektphase | 60 min | Janine Steidelmüller (SAP) |
-
-**Meilensteine für Meilenstein-Syncs mit Janine:**
-- [ ] Ende Orientierungsphase (ca. 7. Mai) — Systemlandschaft & Stakeholder verstanden
-- [ ] Ende Anforderungsphase (ca. 24. Mai) — Requirements erhoben und priorisiert
-- [ ] Ende Analyse & Modell (ca. 14. Juni) — Entscheidungsmodell fertig, Lösungsansatz gewählt
-- [ ] MVP fertig (ca. 30. Juni) — Validierung abgeschlossen, Bachelorarbeit ready to submit
 
 ---
 
@@ -81,7 +74,14 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 
 | Meeting | Rhythmus | Dauer | Teilnehmer |
 |---------|----------|-------|------------|
+| Meilenstein-Sync | nach Abschluss einer Projektphase | 60 min | Janine Steidelmüller (SAP) |
 | Hochschul-Sync | alle 2 Wochen | 30 min | Dr.-Ing. Jürgen Sachse (DHSN) |
+
+**Meilensteine für Meilenstein-Syncs mit Janine:**
+- [ ] Ende Orientierungsphase (ca. 7. Mai) — Systemlandschaft & Stakeholder verstanden
+- [ ] Ende Anforderungsphase (ca. 24. Mai) — Requirements erhoben und priorisiert
+- [ ] Ende Analyse & Modell (ca. 14. Juni) — Entscheidungsmodell fertig, Lösungsansatz gewählt
+- [ ] MVP fertig (ca. 30. Juni) — Validierung abgeschlossen, Bachelorarbeit ready to submit
 
 ---
 
