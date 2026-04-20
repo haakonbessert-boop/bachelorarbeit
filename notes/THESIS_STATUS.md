@@ -74,34 +74,24 @@
 
 ## Nächste Schritte (zentrales To-Do-Board)
 
-> Wird nach jedem Meeting / Arbeitsschritt aktualisiert. Meetingspezifische Notizen bleiben in MEETINGS.md, aber alle offenen Aktionspunkte laufen hier zusammen.
+> Wird nach jedem Meeting / Arbeitsschritt aktualisiert. Fokus auf die aktuelle Phase — nicht zu weit vorausplanen.
+> Aktuelle Phase: **Orientierung** (20. Apr – 7. Mai)
 
 ### Formales
 
-- [ ] KI-Genehmigungsdokument bei Janine + Prof. Dr.-Ing. Sachse unterschreiben lassen → als `ki-genehmigung.pdf` ins Repo, dann `kidoc=` in `simple.tex` einkommentieren
-- [ ] Befristungsdatum Sperrvermerk festlegen → `blockuntil=` in `simple.tex` einkommentieren
+- [ ] KI-Genehmigungsdokument bei Janine + Prof. Dr.-Ing. Sachse unterschreiben lassen (Erstgespräch 21. Apr)
+- [ ] Befristungsdatum Sperrvermerk klären (Erstgespräch 21. Apr)
 
-### Bachelorarbeit — Schreiben
+### Meetings diese Woche
+
+- [ ] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April 13:30
+- [ ] Check-in Oliver Timm — 22. April
+- [ ] Kennenlernen Nina Vayssiere — 27. April
+
+### Schreiben (parallel starten)
 
 - [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007)
-- [ ] Kapitel 3 Methodik beginnen (DSR steht fest, kein neues Wissen nötig)
-- [ ] Kapitel 1 Einleitung beginnen (nach Kickoff-Woche, wenn SAP-Kontext klar)
-
-### Systemlandschaft & Zugang
-
-- [ ] Zugang zu Quellsystemen klären: JIRA, ServiceNow, SAP Analytics Cloud
-- [ ] Welche SAP-internen Tools sind für MVP-Entwicklung freigegeben?
-- [ ] BDC (Business Data Cloud) recherchieren — Rolle im SAP-Kontext, Relevanz für Kap. 4 + 6
-
-### Stakeholder & Interviews
-
-- [ ] Erstgespräch Gutachter (Janine + Prof. Dr.-Ing. Sachse) — 21. April 13:30
-- [ ] Check-in Oliver Timm — 22. April (Requirements-Dokument bereits eingearbeitet, offene Fragen vorbereitet)
-- [ ] Kennenlernen Nina Vayssiere — 27. April
-- [ ] Christopher Pfeiler erneut einladen für konkrete Requirements (ab Anforderungsphase 8. Mai)
-- [ ] Landscape Analysis Draft von Oliver/Janine anfordern
-- [ ] Stakeholder identifizieren, die monatliche Review-Reports erstellen (laut Oliver Next Steps)
-- [ ] Kapitel 1 (Einleitung) beginnen
+- [ ] Kapitel 3 Methodik beginnen
 
 ---
 
