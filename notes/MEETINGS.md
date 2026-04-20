@@ -79,16 +79,15 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 
 ---
 
-### Kennenlernen — Christopher Pfeiler | [Datum eintragen]
+### Kennenlernen — Christopher Pfeiler | 20. April 2026
 
 **Kontext:**
-Christopher Pfeiler ist verantwortlich für Financial & Budget / Operations. Relevanter Stakeholder für die Anforderungsanalyse (Kap. 5) — insbesondere finanzielle KPIs und Budgetmetriken.
+Kurzes Kennenlernen (15 min). Christopher Pfeiler ist verantwortlich für Financial & Budget / Operations.
 
 **Vorbereitung — Fragen:**
-- [ ] Welche KPIs / Metriken sind für dich täglich relevant?
-- [ ] Welche Tools nutzt du aktuell zur Datenauswertung?
-- [ ] Was fehlt dir an der aktuellen Datenlage / den bestehenden Dashboards?
-- [ ] Welche Anforderungen hast du an Zugriffsrechte und Datenschutz?
+- [ ] Was ist dein Bereich / deine Rolle genau?
+- [ ] Welche KPIs oder Metriken sind für dich im Alltag am wichtigsten?
+- [ ] Darf ich mich später nochmal mit konkreteren Fragen melden, wenn meine Anforderungsanalyse startet?
 
 **Notizen:**
 
