@@ -12,7 +12,7 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ## Wirtschaftsinformatik Grundlagen
 
-### Heinzl (2024) — Wirtschaftsinformatik: Einführung und Grundlegung
+### Heinzl & Riedl (2024) — Wirtschaftsinformatik: Einführung und Grundlegung
 - **BibTeX-Key:** `heinzl2024`
 - **Quelle:** TODO — Verlag, Auflage, ISBN bitte ergänzen
 - **Relevanz:** Hoch
