@@ -52,7 +52,7 @@
 
 **Ergebnisse / Action Items:**
 - [x] Meeting-Struktur mit Janine abgestimmt (GitHub-Ansatz bestätigt)
-- [ ] Onboarding-Material von Janine abholen (Requirements-Dokument + Tool-Liste)
+- [x] Onboarding-Material von Janine abholen (Requirements-Dokument + Tool-Liste)
 - [ ] Oliver Timm, Christopher Pfeiler, Nina Vayssiere kennenlernen
 - [ ] Material von Oliver vor Mittwoch ansehen
 
