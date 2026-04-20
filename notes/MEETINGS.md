@@ -98,12 +98,15 @@ Kurzes Kennenlernen (15 min). Christopher Pfeiler ist verantwortlich für Financ
 
 **Notizen:**
 
+- **Rolle:** Business Operations — verantwortlich für das monatliche KPI-Reporting (→ das sind die "colleagues who create the monthly review reports" aus Olivers Next Steps)
+- **Wichtigste KPIs:** Alles rund ums Budget, Portfolio Management
+- Konkrete Anforderungen folgen in der formalen Anforderungsanalyse-Phase
+- **Neues System:** BDC (Business Data Cloud) — laut Christopher als nächster Schritt relevant; näher untersuchen
+
 **Ergebnisse / Action Items:**
-- [ ]
-
----
-
-### Kennenlernen — Nina Vayssiere | [Datum eintragen]
+- [x] Christopher Pfeiler kennengelernt
+- [ ] BDC (Business Data Cloud) recherchieren — was ist das, welche Rolle spielt es im SAP-Kontext?
+- [ ] Christopher in der Anforderungsanalyse-Phase (ab 8. Mai) erneut einladen für konkrete Requirements | [Datum eintragen]
 
 **Kontext:**
 Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für die Anforderungsanalyse (Kap. 5) — insbesondere produktseitige und engineering-seitige KPIs.

@@ -74,6 +74,9 @@ Plattform für die Entwicklung und Integration von SAP-Anwendungen. Potenziell r
 **Gainsight**
 Customer-Success-Plattform (GtM-seitig). Quelle für Customer-Success-KPIs wie Retention, Adoption, Nutzungsmetriken.
 
+**BDC (Business Data Cloud)**
+SAP-Produkt zur Vereinheitlichung und Bereitstellung von Unternehmensdaten über verschiedene SAP-Systeme hinweg. Von Christopher Pfeiler (Business Operations) als relevanter nächster Schritt im KPI-Hub-Kontext genannt. Mögliche Relevanz für Kap. 4 (Systemlandschaft) und Kap. 6 (Lösungsraum) — noch zu untersuchen.
+
 **PPR (Product Performance Review)**
 Internes SAP-Reporting-Format. Wird als zu statisch, slide-basiert und nicht engineering-spezifisch bewertet. Kein direkter Link zu engineering-seitigen KPIs.
 
