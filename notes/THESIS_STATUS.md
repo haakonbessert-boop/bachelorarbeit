@@ -40,15 +40,24 @@
 
 ## Grober Zeitplan
 
-| Phase | Zeitraum | Schwerpunkt |
-|-------|----------|-------------|
-| **Orientierung** | 20. Apr – 7. Mai (2,5 Wo.) | Onboarding, Systemlandschaft verstehen, Stakeholder kennenlernen |
-| **Anforderungen** | 8. Mai – 24. Mai (2,5 Wo.) | Interviews führen, Anforderungen erheben und priorisieren |
-| **Analyse & Modell** | 25. Mai – 14. Jun (3 Wo.) | Lösungsraum analysieren, Scoring-Modell bauen + anwenden |
-| **MVP + Schreiben** | 15. Jun – 30. Jun (2,5 Wo.) | MVP umsetzen & validieren, Arbeit fertigstellen |
-| **Puffer** | 1. Jul – 9. Jul (10 Tage) | Korrekturen, Feinschliff, unvorhergesehenes |
-| **Abgabe** | **10. Jul** | Bachelorarbeit einreichen |
-| **Nach Abgabe** | 11. Jul – 30. Sep | Weiterarbeit bei SAP — MVP skalieren, weitere Quellsysteme |
+> **Wichtig:** Schreiben läuft **parallel zu jeder Phase** — nicht erst am Ende. Die "MVP + Schreiben"-Phase hat nur 2,5 Wochen, das reicht nicht für 60 Seiten. Jede Phase hat ein Schreibziel.
+
+| Phase | Zeitraum | Inhaltlicher Schwerpunkt | Parallel schreiben |
+|-------|----------|--------------------------|--------------------|
+| **Orientierung** | 20. Apr – 7. Mai | Onboarding, Systemlandschaft, Stakeholder kennenlernen | Kap. 3 Methodik (DSR steht fest) + Kap. 1 Einleitung (Problemstellung) + **Literaturrecherche starten** |
+| **Anforderungen** | 8. Mai – 24. Mai | Interviews führen, Requirements erheben und priorisieren | Kap. 2 Grundlagen & Stand der Forschung + Kap. 4 Ausgangssituation |
+| **Analyse & Modell** | 25. Mai – 14. Jun | Lösungsraum analysieren, Scoring-Modell bauen + anwenden | Kap. 5 Anforderungsanalyse + Kap. 6 Lösungsraum + Kap. 7 Entscheidungsmodell |
+| **MVP** | 15. Jun – 30. Jun | MVP umsetzen & validieren | Kap. 8 MVP + Kap. 9 Ergebnisse + Kap. 10 Fazit |
+| **Puffer** | 1. Jul – 9. Jul | — | Korrekturen, Feinschliff, Roter-Faden-Check |
+| **Abgabe** | **10. Jul** | — | — |
+| **Nach Abgabe** | 11. Jul – 30. Sep | Weiterarbeit bei SAP — MVP skalieren, weitere Quellsysteme | — |
+
+### Literaturrecherche
+
+- **Jetzt sofort beginnen** — parallel zum Onboarding
+- Pflicht-Einstieg: Hevner et al. (2004) — Design Science Research in Information Systems
+- Weitere Kernthemen: Enterprise BI-Integration, KPI-Dashboards, RBAC in Enterprise-Systemen, Föderations-Architektur
+- Rechercheprozess dokumentieren (Hänel-Anforderung: Suchstrategie, Datenbanken, Ein-/Ausschlusskriterien) → fließt in Kap. 3
 
 > **Hinweis:** Kapitel 1–3 (Einleitung, Grundlagen, Methodik) sollten parallel zu den frühen Phasen geschrieben werden, nicht erst am Ende.
 
