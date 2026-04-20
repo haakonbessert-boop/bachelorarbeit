@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (15. April 2026)
+## Aktueller Stand (20. April 2026)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -68,7 +68,7 @@
 
 - [ ] KI-Genehmigungsdokument bei Janine Steidelmüller + Dr.-Ing. Jürgen Sachse unterschreiben lassen → als `images/ki-genehmigung.pdf` ins Repo
 - [ ] Befristungsdatum Sperrvermerk festlegen → `blockuntil=` in `simple.tex` einkommentieren
-- [ ] Meeting mit Janine Steidelmüller (Kickoff 20. April)
+- [x] Meeting mit Janine Steidelmüller (Kickoff 20. April)
 - [ ] Klärung: Zugang zu Quellsystemen (JIRA, ServiceNow, SAP Analytics Cloud)
 - [ ] Klärung: Welche Tools sind SAP-intern zur Nutzung freigegeben?
 - [ ] Klärung: Format und Umfang der Stakeholder-Interviews
