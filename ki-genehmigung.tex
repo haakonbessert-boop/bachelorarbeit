@@ -6,52 +6,89 @@
 \usepackage{setspace}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{graphicx}
 \usepackage{parskip}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titlespacing{\section}{0pt}{1.5em}{0.5em}
 
 \begin{document}
 \thispagestyle{empty}
 \onehalfspacing
 
-\subsubsection*{Genehmigung zur Nutzung von KI-Werkzeugen}
+{\LARGE\bfseries Antrag auf Genehmigung der Nutzung von KI-Werkzeugen im Rahmen der Bachelorarbeit}
 
-\textbf{Bachelorarbeit:} Ein Mehrkriterien-Entscheidungsmodell zur Auswahl eines KPI-Hub-Inte"-gra"-tions"-an"-satzes in einer fragmentierten Enterprise-Systemlandschaft
+\vspace{0.4em}
+\hrule
+\vspace{1.5em}
 
-\textbf{Verfasser:} Haakon Bessert (Matrikelnummer: 3005149)
+\section*{1\quad Antrag}
 
-\textbf{Studiengang:} Wirtschaftsinformatik, Duale Hochschule Sachsen Dresden
+Hiermit beantrage ich, Haakon Bessert (Matrikelnummer: 3005149), die Genehmigung zur Nutzung der nachfolgend aufgeführten KI-gestützten Werkzeuge im Rahmen der Erstellung meiner Bachelorarbeit.
 
-\bigskip
+\medskip
+\textbf{Titel:} Ein Mehrkriterien-Entscheidungsmodell zur Auswahl eines KPI-Hub-Inte"-gra"-tions"-an"-satzes in einer fragmentierten Enterprise-Systemlandschaft
 
-Die unterzeichnenden Gutachter genehmigen die Nutzung der nachfolgend aufgeführten KI-Werkzeuge im Rahmen der oben genannten Bachelorarbeit. Die Nutzung erfolgt ausschließlich unterstützend. Alle KI-generierten Textstellen werden gemäß den Hinweisen zur Bachelorarbeit als solche gekennzeichnet. Eine Dokumentation der verwendeten Prompts und Ergebnisse wird der Arbeit beigefügt.
+\textbf{Studiengang:} Wirtschaftsinformatik, Duale Hochschule Sachsen Dresden (3WI23)
 
-\bigskip
+Die Nutzung erfolgt ausschließlich zu den angegebenen Zwecken und unter Einhaltung der in Abschnitt 4 beschriebenen Verpflichtungen.
 
-\begin{tabular}{p{4.5cm} p{4cm} p{6cm}}
+\section*{2\quad Verwendete KI-Werkzeuge}
+
+\begin{tabular}{p{3.5cm} p{3cm} p{7cm}}
 \toprule
-\textbf{Werkzeug} & \textbf{Anbieter} & \textbf{Verwendungszweck} \\
+\textbf{Werkzeug} & \textbf{Anbieter} & \textbf{Beschreibung} \\
 \midrule
-Claude Code & Anthropic & Unterstützung bei der Softwareentwicklung (MVP-Implementierung) \\[0.5em]
-Claude (claude.ai) & Anthropic & Unterstützende Textformulierung und inhaltliche Überarbeitung \\
+Claude Code & Anthropic & KI-gestützte Entwicklungsumgebung (CLI) \\[0.4em]
+Claude (claude.ai) & Anthropic & Konversationsbasiertes Sprachmodell \\
 \bottomrule
 \end{tabular}
 
-\bigskip\bigskip
+\section*{3\quad Verwendungszwecke}
 
-Es wird bestätigt, dass keine vertraulichen unternehmensinternen oder hochschulinternen Daten in die genannten KI-Werkzeuge eingegeben werden.
+\begin{itemize}
+  \item \textbf{Softwareentwicklung:} Unterstützung bei der Implementierung des MVP (Prototyp des Entscheidungsmodells) mittels Claude Code
+  \item \textbf{Textformulierung:} Unterstützende Formulierung und inhaltliche Überarbeitung von Textpassagen der Bachelorarbeit mittels Claude (claude.ai)
+  \item \textbf{Literatur- und Rechercheunterstützung:} Strukturierung und Einordnung von Fachliteratur mittels Claude (claude.ai)
+\end{itemize}
 
-\vspace{2cm}
+\section*{4\quad Verpflichtungserklärung des Verfassers}
 
-\noindent
-Dresden, \underline{\hspace{4cm}}
+\textbf{Kennzeichnung:} Alle KI-generierten Textstellen, sowohl direkte Übernahmen als auch redigierte Passagen, werden in der Bachelorarbeit als solche kenntlich gemacht.
+
+\textbf{Dokumentation:} Alle verwendeten Prompts sowie die dazugehörigen KI-Ausgaben, die als Grundlage für gekennzeichnete Textbausteine dienen, werden dokumentiert und der Arbeit beigefügt.
+
+\textbf{Datenschutz:} Es werden keine firmeninternen Daten, Zugangsdaten, IP-Adressen, personenbezogenen Daten oder hochschulinternen vertraulichen Informationen in externe KI-Systeme eingegeben.
+
+\section*{5\quad Genehmigung}
+
+Mit ihrer Unterschrift erteilen die Gutachter die Genehmigung zur Nutzung der in Abschnitt 2 aufgeführten KI-Werkzeuge für die in Abschnitt 3 genannten Zwecke.
 
 \vspace{1.5cm}
 
 \noindent
 \begin{tabular}{p{7cm} p{7cm}}
-\underline{\hspace{6cm}} & \underline{\hspace{6cm}} \\[0.3em]
-Janine Steidelmüller & Dr.-Ing. Jürgen Sachse \\
-Gutachterin (SAP SE) & Gutachter (DHSN Dresden) \\
+\underline{\hspace{6cm}} & \\[0.3em]
+Haakon Bessert & Ort, Datum: \underline{\hspace{3.5cm}} \\
+Studierender & \\
+\end{tabular}
+
+\vspace{1.5cm}
+
+\noindent
+\begin{tabular}{p{7cm} p{7cm}}
+\underline{\hspace{6cm}} & \\[0.3em]
+Janine Steidelmüller & Ort, Datum: \underline{\hspace{3.5cm}} \\
+Erstgutachterin (SAP SE) & \\
+\end{tabular}
+
+\vspace{1.5cm}
+
+\noindent
+\begin{tabular}{p{7cm} p{7cm}}
+\underline{\hspace{6cm}} & \\[0.3em]
+Dr.-Ing. Jürgen Sachse & Ort, Datum: \underline{\hspace{3.5cm}} \\
+Zweitgutachter (DHSN Dresden) & \\
 \end{tabular}
 
 \end{document}
