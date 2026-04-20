@@ -18,7 +18,7 @@
 - Hänel-Anforderungen vollständig in Kapitel-Mapping überführt (siehe [REQUIREMENTS.md](REQUIREMENTS.md))
 - **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter, bachlorarbeit-gerechte Tiefe)
   - DSR-Definition, IS Research Framework (Relevance/Rigor Cycle), Artefakt-Klassifikation nach March & Smith, Abgrenzung zu empirischen Methoden, Quellenrollen
-  - Abbildung IS Research Framework eingebunden (`images/IS_Research.png`)
+  - **Status: Erster Entwurf** — inhaltlich vollständig, Seitenzahlen (XX) noch offen, kein Gegenlesen
   - Labels für 3.2 (`\label{sec:literaturrecherche}`) und 3.4 (`\label{sec:vorgehen}`) gesetzt
 
 ### Formales
@@ -33,7 +33,7 @@
 |---|---------|-----------------|--------|
 | 1 | Einleitung | 4 | Subsections angelegt |
 | 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt |
-| 3 | Methodik | 6 | **3.1 fertig** — 3.2–3.4 offen |
+| 3 | Methodik | 6 | **3.1 Erster Entwurf** — 3.2–3.4 offen |
 | 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt |
 | 5 | Anforderungsanalyse | 7 | Subsections angelegt |
 | 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt |
@@ -97,7 +97,7 @@
 ### Schreiben (parallel starten)
 
 - [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007) — Seitenzahlen für XX-Platzhalter in Kap. 3.1 nachtragen
-- [x] Kapitel 3.1 Forschungsansatz geschrieben
+- [x] Kapitel 3.1 Forschungsansatz — Erster Entwurf
 - [ ] Kapitel 3.4 Vorgehen im Überblick (nächster Schritt — eng verzahnt mit DSRM-Phasen nach Peffers)
 - [ ] Kapitel 3.3 Ergebniserwartung (wenn Kap. 7 klarer ist)
 - [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
