@@ -40,3 +40,31 @@ Dieses Dokument hält alle Anforderungen und Arbeitsweisen fest, die im Verlauf 
 
 - Änderungen an `notes/THESIS_STATUS.md` und `notes/MEETINGS.md` immer mit konkreten Inhalten befüllen, nicht nur Platzhalter lassen
 - Meeting-Notizen in `notes/MEETINGS.md`, nicht in `notes/THESIS_STATUS.md`
+
+---
+
+## LaTeX-Schreibkonventionen
+
+### Zitieren
+
+- **Zitierstil:** `\vglcite[Seitenzahl]{key}` — einziger Zitierstil im Fließtext (erzeugt Fußnote mit „vgl.")
+- **Position:** Zitat immer **hinter** den Satzpunkt: `Text.\vglcite[XX]{key}` — nie davor
+- **Keine Autoren im Fließtext:** Weder `\textcite{}` noch ausgeschriebene Autorennamen. Zitate sind immer anonym als Fußnote
+- **Platzhalter:** Unbekannte Seitenzahlen mit `XX` markieren und später nachtragen
+- **Nicht verwenden:** `\citet{}`, `\citep{}`, `\autocite{}` — nicht kompatibel mit diesem Template
+
+### Abkürzungen & Glossar
+
+- Alle definierten Einträge aus `acronyms.tex` und `glossary.tex` **immer** mit `\gls{key}` einbinden
+- Nie manuell als `\textit{Begriff (ABK)}` ausschreiben — das umgeht das Abkürzungsverzeichnis
+- `\textit{}` nur für Fachbegriff-Hervorhebungen **ohne** Glossareintrag (z.B. Taxonomiebegriffe wie *Modell*, *Instanz*)
+
+### Sprache & Stil
+
+- **Selbstreferenz vermeiden:** Nicht wiederholt „diese Arbeit", „die vorliegende Arbeit", „der Autor" schreiben — stattdessen variieren: „diese Untersuchung", „zu diesem Zweck", Passivkonstruktionen etc.
+
+### Abbildungen
+
+- Abbildungen nur einbinden, wenn sie sich **zwingend** anbieten oder den Text erst verständlich machen
+- Einbindung als `bafigure`-Umgebung mit `source=` und `label=`
+- Direkte Übernahme aus Fachzeitschriften vermeiden (Urheberrecht) — stattdessen nachzeichnen und mit „in Anlehnung an \cite{key}" kennzeichnen
