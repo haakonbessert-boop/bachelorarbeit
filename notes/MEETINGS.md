@@ -56,21 +56,28 @@
 - [x] Oliver Timm kennenlernen (via Check-in 22. April)
 - [ ] Christopher Pfeiler kennenlernen (Termin ausstehend)
 - [ ] Nina Vayssiere kennenlernen (Termin ausstehend)
-- [ ] Material von Oliver vor Mittwoch ansehen
+- [x] Material von Oliver vor Mittwoch ansehen (→ „KPI Dashboard Interview Summary" erhalten)
 
 ---
 
 ### Check-in KPI Dashboard Requirements — Janine Steidelmüller & Oliver Timm | 22. April 2026
 
 **Kontext:**
-Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses Meeting dient dazu, diese Requirements mit mir zu teilen — erster inhaltlicher Input für Kapitel 5 (Anforderungsanalyse).
+Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als „KPI Dashboard Interview Summary" dokumentiert — Cluster-basierte Synthese aus Stakeholder-Interviews. Dokument bereits vorab erhalten und eingearbeitet (→ REQUIREMENTS.md SAP-Sektion). Meeting dient zur Vertiefung und Klärung offener Punkte.
 
-**Vorbereitung — Fragen:**
-- [ ] Welche Requirements hat Oliver gesammelt — nach welchem Schema / Format?
-- [ ] Welche Stakeholder wurden dabei bereits berücksichtigt?
-- [ ] Gibt es Requirements, die schon priorisiert wurden?
-- [ ] Welche Quellsysteme tauchen in den Requirements auf?
-- [ ] Was ist noch offen / nicht abgedeckt?
+**Vorab bekannt (aus Olivers Dokument):**
+- Systemlandschaft: SAC, ServiceNow, Jira/PI, Gainsight, PPR, Product 360, DORA, FLOW
+- 6 Cluster: Usage, Current Challenges, Requirements, Internal Offers, Missing KPIs, Important KPIs
+- Funktionale & nicht-funktionale Anforderungen bereits dokumentiert
+- Empfohlener MVP-Scope liegt vor
+
+**Offene Fragen fürs Meeting:**
+- [ ] Wie wurden die Stakeholder ausgewählt — wer fehlt noch?
+- [ ] Was bedeutet genau PSAT im SAP-Signavio-Kontext?
+- [ ] Was sind EPT und PLT genau?
+- [ ] Wie weit ist die Landscape Analysis (laut Next Steps: Draft ready)?
+- [ ] Wer sind die Stakeholder, die monatliche Review-Reports erstellen — sollen die auch interviewt werden?
+- [ ] Welche SAP-internen Tools sind für den MVP-Bau freigegeben?
 
 **Notizen:**
 

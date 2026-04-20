@@ -71,6 +71,51 @@ IT-Service-Management-Plattform. Im Kontext: Quelle für operative Kennzahlen (z
 **SAP BTP (Business Technology Platform)**
 Plattform für die Entwicklung und Integration von SAP-Anwendungen. Potenziell relevant als technische Basis für den KPI-Hub.
 
+**Gainsight**
+Customer-Success-Plattform (GtM-seitig). Quelle für Customer-Success-KPIs wie Retention, Adoption, Nutzungsmetriken.
+
+**PPR (Product Performance Review)**
+Internes SAP-Reporting-Format. Wird als zu statisch, slide-basiert und nicht engineering-spezifisch bewertet. Kein direkter Link zu engineering-seitigen KPIs.
+
+**PI (Program Increment / PI Planning Tool)**
+Im SAP-Signavio-Kontext: Tool für Flow Metrics auf Basis von JIRA-Daten. Datenqualität wird von Stakeholdern als unzuverlässig eingestuft.
+
+**Product 360**
+Internes SAP-Produkt-Übersichts-Dashboard.
+
+**P&E Fundamentals Dashboard**
+Internes Engineering-Dashboard für grundlegende P&E-Metriken.
+
+**Micro Deliveries**
+Internes Tracking-System für Delivery-Metriken auf Teamebene.
+
+**DORA-Metriken (DevOps Research and Assessment)**
+Vier Leitmetriken für Software-Delivery-Performance: Deployment Frequency, Lead Time for Changes, Change Failure Rate, Time to Restore Service. Im SAP-Signavio-Kontext kaum noch aktiv genutzt.
+
+**FLOW-Metriken**
+Kennzahlen zur Messung des Wertflusses durch Engineering-Prozesse (Flow Velocity, Flow Efficiency, Flow Load, Flow Time, Flow Distribution). Ergänzt DORA um einen businessseitigen Blick.
+
+**HEART-Framework**
+Google-UX-Messmethode: Happiness, Engagement, Adoption, Retention, Task Success. Im Kontext für Produkt-Adoption-KPIs relevant.
+
+**MAU / DAU (Monthly/Daily Active Users)**
+Nutzungsmetriken zur Messung von Produktaktivität. MAU = Monatlich aktive Nutzer, DAU = Täglich aktive Nutzer.
+
+**ACV (Annual Contract Value)**
+Jährlicher Vertragswert eines Kunden. Wichtige Business-KPI im SAP-Signavio-Kontext.
+
+**PSAT (Predictive/Partner Satisfaction Score)**
+Zufriedenheitskennzahl. Genaue Definition im SAP-Signavio-Kontext zu klären.
+
+**EMT (Engineering Management Team)**
+Leitungsgremium im Engineering-Bereich. Relevante Zielgruppe für Leadership-KPIs.
+
+**EPT / PLT**
+Engineering-interne Teambezeichnungen (Engineering Productivity Team / Product Leadership Team). Genaue Definition zu verifizieren.
+
+**VT-STAR**
+SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit einem VT-STAR-Studenten umgesetzt werden.
+
 ---
 
 ## Abkürzungen

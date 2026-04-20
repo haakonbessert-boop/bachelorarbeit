@@ -13,7 +13,161 @@
 
 ## SAP / Praxispartner (Janine Steidelmüller)
 
-*(noch nicht dokumentiert)*
+> Quelle: „KPI Dashboard Interview Summary" — Oliver Timm (22. April 2026)
+
+### Kontext & Problemstellung
+
+SAP Signavio Engineering operiert mit einer fragmentierten Landschaft aus Metriken, Dashboards und Reporting-Tools, die unabhängig voneinander über Teams und Funktionsbereiche entstanden sind. Stakeholder beschreiben täglich Situationen, in denen Daten schwer auffindbar, unvollständig, inkonsistent definiert oder systemübergreifend dupliziert vorliegen. Dominante Themen: **Fragmentierung, fehlende Sichtbarkeit, inkonsistente Datenqualität, Vergleichbarkeit**.
+
+**Ziele des KPI Dashboard Hub (aus Janines Goals):**
+- Zentraler Einstiegspunkt für engineering-relevante KPIs
+- Echtzeit- oder Near-Realtime-Sichtbarkeit auf Fortschritt, Risiken, operative Signale
+- Konsistente KPI-Definitionen und Datenstrukturen
+- Reduktion manueller Reporting-Aufwände und Slide-Decks
+- Unterstützung von Leadership-Entscheidungen, Priorisierung, Risikoidentifikation
+- Förderung von KPI-Literacy quer durch Teams
+
+---
+
+### Bestehende Systemlandschaft (Ist-Zustand)
+
+Aktuell genutzte Systeme (Basis für Kap. 4):
+
+| System | Nutzung | Einschränkungen |
+|--------|---------|-----------------|
+| SAP Analytics Cloud (SAC) | Zentrale Dashboards | Viele fehlen, veraltet oder langsam; häufige Änderungen |
+| ServiceNow | Cloud Health & Reliability, Incident-Metriken | Globale Daten ohne DE |
+| Jira (PI) | Flow Metrics, Sprint-Daten, JIRA-Daten | Datenqualität in PI nicht vertrauenswürdig |
+| Gainsight | Customer Success (GtM) | — |
+| PPR | Unternehmensübergreifendes Reporting | Nur Slides, zu statisch, nicht engineering-spezifisch, groß/wenig hilfreich |
+| Product 360 | Produktübersicht | — |
+| P&E Fundamentals Dashboard | Engineering-Metriken | — |
+| Micro Deliveries | Delivery-Metriken | — |
+| DORA | DevOps-Metriken | Kaum noch genutzt |
+| Security Dashboards | Sicherheitsmetriken | — |
+| Circle CI → Hyperspace Dashboard | CI/CD-Metriken | — |
+
+---
+
+### Herausforderungen (aus Stakeholder-Interviews)
+
+**Datenqualität:**
+- „I don't trust the data quality in PI"
+- „We are missing about 25% of the data"
+- „Poor performance"
+- „Some not visible to me"
+
+**Konsistenz & Vergleichbarkeit:**
+- Keine Vergleichbarkeit über Epics, Stories, Features hinweg
+- Viele verschiedene Produkte, kein Link zum PPR
+
+**Strukturelle Probleme:**
+- Häufige Änderungen an CS-Dashboards in SAC
+- Fehlende Zuordnung zwischen Systemen
+- Fragmentierung → Suchaufwand: „Where do I find what?"
+
+**Transparenz & Kapazität:**
+- Fehlende Sichtbarkeit auf Kapazität und Release-Blocker
+
+---
+
+### Funktionale Anforderungen
+
+| # | Anforderung | Priorität |
+|---|-------------|-----------|
+| F01 | Ein konsolidiertes Dashboard (Single Entry Point) | Hoch |
+| F02 | Echtzeit- oder Near-Realtime-Daten | Hoch |
+| F03 | Konsistente Datenqualität | Hoch |
+| F04 | KPI-Definitionen & Erklärungspanels | Hoch |
+| F05 | Filterbarkeit nach Zeiträumen | Mittel |
+| F06 | Einfach erweiterbar (neue KPIs, neue Quellsysteme) | Mittel |
+| F07 | Cross-Initiative-Sichtbarkeit | Mittel |
+| F08 | Einbindung eigener Produktdaten | Mittel |
+| F09 | Auffindbarkeit & einfache Navigation | Hoch |
+| F10 | Reports mit minimalem Aufwand erstellen | Mittel |
+| F11 | State-of-the-art UI | Mittel |
+
+### Nicht-funktionale Anforderungen
+
+| # | Anforderung |
+|---|-------------|
+| NF01 | Datenintegrität |
+| NF02 | Datenkonsistenz |
+| NF03 | Zuverlässige Performance |
+| NF04 | Usability (selbsterklärend, explorierbar) |
+| NF05 | Messbarkeit der Dashboard-Nutzung |
+| NF06 | Systemkonsolidierung (nicht weitere Fragmentierung) |
+
+---
+
+### User Stories
+
+**Leadership:**
+- Als Leader möchte ich konsistente und vertrauenswürdige Datenqualität, damit ich strategische Entscheidungen auf einer verlässlichen Basis treffe.
+- Als EMT-Mitglied möchte ich ein einziges Dashboard statt vieler fragmentierter Systeme, um ohne Suche einen einheitlichen Überblick zu erhalten.
+- Als Entscheider möchte ich klare direktionale Orientierung, um Initiativen effektiv steuern zu können.
+
+**Manager:**
+- Als Team-Manager möchte ich Unterstützung für Entscheidungen und Priorisierung, um mein Team und Deliverables effektiver zu managen.
+- Als Manager möchte ich Echtzeit-Daten, um operative Probleme zeitnah zu erkennen und zu handeln.
+
+**Operative Rollen:**
+- Als Contributor möchte ich KPIs leicht auffindbar haben, ohne durch mehrere Dashboards suchen zu müssen.
+- Als Nutzer möchte ich klare Erklärungen für Metriken (z.B. Durchschnitt, Median), um Daten korrekt interpretieren zu können.
+
+**Cross-funktionale Teams:**
+- Als PM/UX/Ops-Stakeholder möchte ich Sichtbarkeit über Initiativen hinweg, um Abhängigkeiten zu verstehen.
+
+---
+
+### Fehlende KPIs (Stakeholder-Lücken)
+
+**Organisatorisch / Finanziell:**
+- Kosten im Vergleich zum eigenen Budget
+- Budget-Überblick
+- Reisekosten
+- Monatlicher Delivery-Output & Trends (kein Überblick über Menge und Art der Items)
+
+**Delivery / Flow / Performance:**
+- Velocity / Throughput
+- Organisationsweite Performance
+- Test Coverage (heute nur Product-Area-weit)
+
+**Innovation & Technologie:**
+- Progress with AI
+
+---
+
+### Wichtige KPIs (hoher Stakeholder-Wert heute)
+
+**Customer & Business Value:**
+- Retention, Consumed ACV, MAU/DAU/PSAT, Product Usage, Adoption/HEART, Gainsight (Customer Success), Anzahl Customer Reports je Produkt
+
+**Operational Health:**
+- Incidents, Ticket Lifetime, Availability, Outages, SLA, Security Findings, Cloud Costs
+
+**Team & Delivery Health:**
+- Team Health, Cloud Maturity, DORA/FLOW, AI Advancements, Operational Metrics, Release-relevante Signale
+
+---
+
+### Empfohlener MVP-Scope (aus Olivers Dokument)
+
+**Im MVP enthalten:**
+- Eine konsolidierte Landing Page
+- Echtzeit-/Near-Realtime-operative Metriken
+- Konsistente KPI-Definitionen
+- Basis Customer/Business-KPIs (z.B. Usage, Adoption)
+- Cloud-Cost-Sichtbarkeit
+- Availability/Outage-Metriken
+- Einfache, navigierbare UI
+- Klare Dokumentation der Metriken
+
+**Explizit außerhalb MVP (spätere Iteration):**
+- Automatisierung Business Operations KPI-View (aktuell monatliches PDF)
+- Automatisierung Product-Area-spezifischer Monatsberichte
+- KI-basierte Learnings
+- Umfangreiche Trend-Bibliotheken
 
 ---
 
