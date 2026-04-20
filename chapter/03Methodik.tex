@@ -2,10 +2,33 @@
 
 \subsection{Forschungsansatz}
 % Hänel: Welcher Forschungsansatz wird warum gewählt?
-% Design Science Research nach Heinzl + Riedl (Referenz einfügen)
-% Begründung warum DSR für diese Arbeit geeignet ist
+
+Diese Untersuchung folgt dem Paradigma des \gls{dsr}, das in der Wirtschaftsinformatik als eigenständige Forschungsform etabliert ist.\vglcite[XX]{heinzl2024}\vglcite[XX]{hevner2004}
+\gls{dsr} erzeugt wissenschaftliches Wissen nicht durch Beobachtung und Erklärung bestehender Phänomene, sondern durch die zielgerichtete Konstruktion und Evaluation von \gls{it}-Artefakten.\vglcite[XX]{hevner2004}
+Wissen entsteht im Gestaltungsakt selbst -- durch den iterativen Prozess des Entwerfens, Bauens und Bewertens einer Lösung für ein konkretes, praxisrelevantes Problem.
+
+Den konzeptionellen Rahmen bildet das \gls{is} Research Framework, das drei Sphären unterscheidet: die \textit{Umgebung} (Personen, Organisationen, Technologien, in der ein Problem verortet ist), die \textit{Wissensbasis} (bestehende Theorien, Methoden und Artefakte der \gls{is}-Forschung) sowie den \textit{\gls{is}-Forschungsprozess} selbst.\vglcite[XX]{hevner2004}
+
+\begin{bafigure}[source={in Anlehnung an \cite{hevner2004}},label=fig:isresearchframework]{IS Research Framework}
+    \includegraphics[width=0.85\textwidth]{images/IS_Research.png}
+\end{bafigure}
+
+Zwischen diesen Sphären wirken zwei Zyklen: der \textit{Relevance Cycle} verankert die Forschung in einem realen Problemkontext und stellt sicher, dass das konstruierte Artefakt einen praktischen Beitrag leistet; der \textit{Rigor Cycle} gewährleistet die wissenschaftliche Fundierung durch Rückgriff auf etablierte Theorien und Methoden.\vglcite[XX]{hevner2004}
+Für die vorliegende Untersuchung erfüllt die fragmentierte \gls{kpi}-Integrationslandschaft bei SAP SE die Anforderung des Relevance Cycle: ein dokumentiertes, organisational bedeutsames Problem ohne etablierte Lösung.
+Der Rigor Cycle wird durch die systematische Literaturrecherche sowie die Anlehnung an anerkannte Bewertungsframeworks aus der \gls{is}-Forschung bedient (vgl.\ Abschnitt~\ref{sec:literaturrecherche}).
+
+Zu diesem Zweck werden zwei Artefakte konstruiert: ein Mehrkriterien-Bewertungsmodell zur systematischen Auswahl eines \gls{kpihub}-Integrationsansatzes sowie ein \gls{mvp}, der den ausgewählten Ansatz exemplarisch validiert.
+Beide lassen sich als \textit{Modell} bzw.\ \textit{Instanz} innerhalb gestaltungsorientierter \gls{is}-Forschung klassifizieren.\vglcite[XX]{march1995}
+Diese Artefakttypologie verdeutlicht den Erkenntnischarakter der Untersuchung: Das Bewertungsmodell abstrahiert und strukturiert den Entscheidungsraum, während der \gls{mvp} als konkrete Instanz die Realisierbarkeit und den Nutzen des gewählten Ansatzes unter Realbedingungen demonstriert.
+
+Rein empirische Ansätze -- etwa ausschließlich leitfadengestützte Interviews oder Fallstudien -- wären für dieses Forschungsziel ungeeignet.
+Sie liefern Beschreibungen und Erklärungen bestehender Zustände, nicht jedoch das gestaltete Artefakt selbst.
+Da der Fokus auf der \textit{Konstruktion} eines anwendbaren Entscheidungsmodells liegt und nicht auf der deskriptiven Erfassung vorhandener Praktiken, ist \gls{dsr} der methodisch adäquate Rahmen.
+Empirische Erhebungen -- insbesondere strukturierte Interviews zur Anforderungsermittlung -- fließen dennoch als Datengrundlage in den \gls{dsr}-Prozess ein und sind dort methodisch verankert (vgl.\ Abschnitt~\ref{sec:vorgehen}).
+Die Rollenverteilung der herangezogenen Quellen spiegelt diese Struktur wider: Die wirtschaftsinformatische Grundlegung des \gls{dsr}-Paradigmas wird durch die einschlägige Fachliteratur geliefert,\vglcite[XX]{heinzl2024} das normative Framework mit Rigor- und Relevance-Kriterien bildet den evaluativen Maßstab\vglcite[XX]{hevner2004} und das operative Prozessmodell strukturiert die Phasenabfolge dieser Untersuchung unmittelbar.\vglcite[XX]{peffers2007}
 
 \subsection{Literaturrecherche}
+\label{sec:literaturrecherche}
 % Hänel: Rechercheprozess dokumentieren (Suche, Auswertung, Analyse, Interpretation)
 % Verwendete Datenbanken, Suchbegriffe, Ein-/Ausschlusskriterien
 % Anzahl gefundener / verwendeter Quellen
@@ -16,5 +39,6 @@
 % Wie wird Zielerreichung gemessen?
 
 \subsection{Vorgehen im Überblick}
+\label{sec:vorgehen}
 % Hänel: Wie erfolgt die Untersuchung?
 % Überblick über die einzelnen Phasen (Anforderungsanalyse → Lösungsraum → Bewertungsmodell → MVP)
