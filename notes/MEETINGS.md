@@ -32,8 +32,29 @@
 
 **Notizen:**
 
+*Wichtige Personen (erste Tage kennenlernen):*
+- **Oliver Timm** — Engineering
+- **Christopher Pfeiler** — Financial & Budget / Operations
+- **Nina Vayssiere** — P&E (Product & Engineering)
+
+*Onboarding-Material von Janine:*
+- Requirements-Dokument (vorhanden)
+- Liste SAP-zugelassener Tools für KPI-Dashboard
+
+*Meeting-Struktur:*
+- Janine ist einverstanden mit dem GitHub-Ansatz (Weekly Sync-Templates bereits angelegt)
+
+*Morgen (21. April, Erstgespräch mit Sachse & Janine):*
+- Erwartungen DHSN und SAP vereinbaren und für BA-Planung festhalten
+
+*Mittwoch (22. April, Check-in mit Oliver Timm):*
+- Material von Oliver vorab ansehen (Requirements-Dokument)
+
 **Ergebnisse / Action Items:**
-- [ ]
+- [x] Meeting-Struktur mit Janine abgestimmt (GitHub-Ansatz bestätigt)
+- [ ] Onboarding-Material von Janine abholen (Requirements-Dokument + Tool-Liste)
+- [ ] Oliver Timm, Christopher Pfeiler, Nina Vayssiere kennenlernen
+- [ ] Material von Oliver vor Mittwoch ansehen
 
 ---
 
