@@ -10,6 +10,7 @@ Dieses Dokument hält alle Anforderungen und Arbeitsweisen fest, die im Verlauf 
 - **Nach jeder Änderung an `notes/MEETINGS.md`** → sofort committen und pushen
 - **Nach jeder Änderung an `notes/REQUIREMENTS.md`** → sofort committen und pushen
 - **Nach jeder Änderung an `notes/LITERATURE.md`** → sofort committen und pushen
+- **To-Dos zentral pflegen:** Alle offenen Aktionspunkte laufen in `notes/THESIS_STATUS.md` unter „Nächste Schritte" zusammen — nach jedem Meeting / Arbeitsschritt prüfen und aktualisieren. Meeting-spezifische Notizen bleiben in `notes/MEETINGS.md`.
 - LaTeX-Build-Artefakte (`.aux`, `.log`, `.pdf`, `.synctex.gz` etc.) gehören **nicht** ins Repo
 
 ## Ordnerstruktur

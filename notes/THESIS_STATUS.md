@@ -65,7 +65,6 @@
 
 ## Offene Fragen (intern)
 
-- [ ] Welche Stakeholder werden konkret für die Anforderungsanalyse interviewt?
 - [ ] Wie tief wird die Sensitivitätsanalyse (Kapitel 7 oder 9)?
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
 - [ ] Befristungsdatum Sperrvermerk festlegen (Empfehlung: 10. Juli 2029)
@@ -73,14 +72,35 @@
 
 ---
 
-## Nächste Schritte
+## Nächste Schritte (zentrales To-Do-Board)
 
-- [ ] KI-Genehmigungsdokument bei Janine Steidelmüller + Dr.-Ing. Jürgen Sachse unterschreiben lassen → als `images/ki-genehmigung.pdf` ins Repo
+> Wird nach jedem Meeting / Arbeitsschritt aktualisiert. Meetingspezifische Notizen bleiben in MEETINGS.md, aber alle offenen Aktionspunkte laufen hier zusammen.
+
+### Formales
+
+- [ ] KI-Genehmigungsdokument bei Janine + Prof. Dr.-Ing. Sachse unterschreiben lassen → als `ki-genehmigung.pdf` ins Repo, dann `kidoc=` in `simple.tex` einkommentieren
 - [ ] Befristungsdatum Sperrvermerk festlegen → `blockuntil=` in `simple.tex` einkommentieren
-- [x] Meeting mit Janine Steidelmüller (Kickoff 20. April)
-- [ ] Klärung: Zugang zu Quellsystemen (JIRA, ServiceNow, SAP Analytics Cloud)
-- [ ] Klärung: Welche Tools sind SAP-intern zur Nutzung freigegeben?
-- [ ] Klärung: Format und Umfang der Stakeholder-Interviews
+
+### Bachelorarbeit — Schreiben
+
+- [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007)
+- [ ] Kapitel 3 Methodik beginnen (DSR steht fest, kein neues Wissen nötig)
+- [ ] Kapitel 1 Einleitung beginnen (nach Kickoff-Woche, wenn SAP-Kontext klar)
+
+### Systemlandschaft & Zugang
+
+- [ ] Zugang zu Quellsystemen klären: JIRA, ServiceNow, SAP Analytics Cloud
+- [ ] Welche SAP-internen Tools sind für MVP-Entwicklung freigegeben?
+- [ ] BDC (Business Data Cloud) recherchieren — Rolle im SAP-Kontext, Relevanz für Kap. 4 + 6
+
+### Stakeholder & Interviews
+
+- [ ] Erstgespräch Gutachter (Janine + Prof. Dr.-Ing. Sachse) — 21. April 13:30
+- [ ] Check-in Oliver Timm — 22. April (Requirements-Dokument bereits eingearbeitet, offene Fragen vorbereitet)
+- [ ] Kennenlernen Nina Vayssiere — Termin ausstehend
+- [ ] Christopher Pfeiler erneut einladen für konkrete Requirements (ab Anforderungsphase 8. Mai)
+- [ ] Landscape Analysis Draft von Oliver/Janine anfordern
+- [ ] Stakeholder identifizieren, die monatliche Review-Reports erstellen (laut Oliver Next Steps)
 - [ ] Kapitel 1 (Einleitung) beginnen
 
 ---
