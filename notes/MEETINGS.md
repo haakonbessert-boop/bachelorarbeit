@@ -38,7 +38,7 @@
 - **Nina Vayssiere** — P&E (Product & Engineering)
 
 *Onboarding-Material von Janine:*
-- Requirements-Dokument (vorhanden)
+- Requirements-Dokument (vorhanden) ✓ erhalten
 - Liste SAP-zugelassener Tools für KPI-Dashboard
 
 *Meeting-Struktur:*
@@ -48,15 +48,7 @@
 - Erwartungen DHSN und SAP vereinbaren und für BA-Planung festhalten
 
 *Mittwoch (22. April, Check-in mit Oliver Timm):*
-- Material von Oliver vorab ansehen (Requirements-Dokument)
-
-**Ergebnisse / Action Items:**
-- [x] Meeting-Struktur mit Janine abgestimmt (GitHub-Ansatz bestätigt)
-- [x] Onboarding-Material von Janine abholen (Requirements-Dokument + Tool-Liste)
-- [x] Oliver Timm kennenlernen (via Check-in 22. April)
-- [ ] Christopher Pfeiler kennenlernen (Termin ausstehend)
-- [ ] Nina Vayssiere kennenlernen (Termin ausstehend)
-- [x] Material von Oliver vor Mittwoch ansehen (→ „KPI Dashboard Interview Summary" erhalten)
+- Material von Oliver vorab ansehen → „KPI Dashboard Interview Summary" erhalten und eingearbeitet
 
 ---
 
@@ -74,15 +66,11 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als �
 **Offene Fragen fürs Meeting:**
 - [ ] Wie wurden die Stakeholder ausgewählt — wer fehlt noch?
 - [ ] Was bedeutet genau PSAT im SAP-Signavio-Kontext?
-- [ ] Was sind EPT und PLT genau?
 - [ ] Wie weit ist die Landscape Analysis (laut Next Steps: Draft ready)?
 - [ ] Wer sind die Stakeholder, die monatliche Review-Reports erstellen — sollen die auch interviewt werden?
 - [ ] Welche SAP-internen Tools sind für den MVP-Bau freigegeben?
 
 **Notizen:**
-
-**Ergebnisse / Action Items:**
-- [ ]
 
 ---
 
@@ -98,15 +86,10 @@ Kurzes Kennenlernen (15 min). Christopher Pfeiler ist verantwortlich für Financ
 
 **Notizen:**
 
-- **Rolle:** Business Operations — verantwortlich für das monatliche KPI-Reporting (→ das sind die "colleagues who create the monthly review reports" aus Olivers Next Steps)
+- **Rolle:** Business Operations — verantwortlich für das monatliche KPI-Reporting (→ die "colleagues who create the monthly review reports" aus Olivers Next Steps)
 - **Wichtigste KPIs:** Alles rund ums Budget, Portfolio Management
 - Konkrete Anforderungen folgen in der formalen Anforderungsanalyse-Phase
 - **Neues System:** BDC (Business Data Cloud) — laut Christopher als nächster Schritt relevant; näher untersuchen
-
-**Ergebnisse / Action Items:**
-- [x] Christopher Pfeiler kennengelernt
-- [ ] BDC (Business Data Cloud) recherchieren — was ist das, welche Rolle spielt es im SAP-Kontext?
-- [ ] Christopher in der Anforderungsanalyse-Phase (ab 8. Mai) erneut einladen für konkrete Requirements
 
 ---
 
@@ -122,9 +105,6 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 - [ ] Welche Anforderungen hast du an Zugriffsrechte und Datenschutz?
 
 **Notizen:**
-
-**Ergebnisse / Action Items:**
-- [ ]
 
 ---
 
@@ -267,9 +247,9 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 | Meeting | Rhythmus | Dauer | Teilnehmer |
 |---------|----------|-------|------------|
 | Meilenstein-Sync | nach Abschluss einer Projektphase | 60 min | Janine Steidelmüller (SAP) |
-| Hochschul-Sync | alle 2 Wochen | 30 min | Dr.-Ing. Jürgen Sachse (DHSN) |
+| Hochschul-Sync | alle 2 Wochen | 30 min | Prof. Dr.-Ing. Jürgen Sachse (DHSN) |
 
-**Meilensteine für Meilenstein-Syncs mit Janine:**
+**Meilensteine:**
 - [ ] Ende Orientierungsphase (ca. 7. Mai) — Systemlandschaft & Stakeholder verstanden
 - [ ] Ende Anforderungsphase (ca. 24. Mai) — Requirements erhoben und priorisiert
 - [ ] Ende Analyse & Modell (ca. 14. Juni) — Entscheidungsmodell fertig, Lösungsansatz gewählt
@@ -278,12 +258,6 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 ---
 
 ### Erstgespräch Gutachter — Janine Steidelmüller & Prof. Dr.-Ing. Jürgen Sachse | 21. April 2026, 13:30 Uhr
-
-**To-dos vor dem Meeting**
-- [ ] Mail an Dr. Sachse schicken (Termin anfragen, gemeinsam mit Janine)
-- [ ] Terminslot zwischen Janine und Sachse abstimmen
-- [ ] `ki-genehmigung.pdf` ausdrucken und zum Meeting mitbringen (zum Unterschreiben)
-- [ ] Agenda vorab an beide schicken
 
 **Agenda**
 
@@ -307,9 +281,6 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 - [ ] Welche KI-Tools sind SAP-intern für die Praxisphase freigegeben?
 
 **Notizen:**
-
-**Ergebnisse / Action Items:**
-- [ ]
 
 ---
 
