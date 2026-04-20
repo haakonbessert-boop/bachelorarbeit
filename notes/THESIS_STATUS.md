@@ -97,7 +97,7 @@
 
 - [ ] Erstgespräch Gutachter (Janine + Prof. Dr.-Ing. Sachse) — 21. April 13:30
 - [ ] Check-in Oliver Timm — 22. April (Requirements-Dokument bereits eingearbeitet, offene Fragen vorbereitet)
-- [ ] Kennenlernen Nina Vayssiere — Termin ausstehend
+- [ ] Kennenlernen Nina Vayssiere — 27. April
 - [ ] Christopher Pfeiler erneut einladen für konkrete Requirements (ab Anforderungsphase 8. Mai)
 - [ ] Landscape Analysis Draft von Oliver/Janine anfordern
 - [ ] Stakeholder identifizieren, die monatliche Review-Reports erstellen (laut Oliver Next Steps)
