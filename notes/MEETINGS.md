@@ -53,7 +53,9 @@
 **Ergebnisse / Action Items:**
 - [x] Meeting-Struktur mit Janine abgestimmt (GitHub-Ansatz bestätigt)
 - [x] Onboarding-Material von Janine abholen (Requirements-Dokument + Tool-Liste)
-- [ ] Oliver Timm, Christopher Pfeiler, Nina Vayssiere kennenlernen
+- [x] Oliver Timm kennenlernen (via Check-in 22. April)
+- [ ] Christopher Pfeiler kennenlernen (Termin ausstehend)
+- [ ] Nina Vayssiere kennenlernen (Termin ausstehend)
 - [ ] Material von Oliver vor Mittwoch ansehen
 
 ---
@@ -69,6 +71,42 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt. Dieses M
 - [ ] Gibt es Requirements, die schon priorisiert wurden?
 - [ ] Welche Quellsysteme tauchen in den Requirements auf?
 - [ ] Was ist noch offen / nicht abgedeckt?
+
+**Notizen:**
+
+**Ergebnisse / Action Items:**
+- [ ]
+
+---
+
+### Kennenlernen — Christopher Pfeiler | [Datum eintragen]
+
+**Kontext:**
+Christopher Pfeiler ist verantwortlich für Financial & Budget / Operations. Relevanter Stakeholder für die Anforderungsanalyse (Kap. 5) — insbesondere finanzielle KPIs und Budgetmetriken.
+
+**Vorbereitung — Fragen:**
+- [ ] Welche KPIs / Metriken sind für dich täglich relevant?
+- [ ] Welche Tools nutzt du aktuell zur Datenauswertung?
+- [ ] Was fehlt dir an der aktuellen Datenlage / den bestehenden Dashboards?
+- [ ] Welche Anforderungen hast du an Zugriffsrechte und Datenschutz?
+
+**Notizen:**
+
+**Ergebnisse / Action Items:**
+- [ ]
+
+---
+
+### Kennenlernen — Nina Vayssiere | [Datum eintragen]
+
+**Kontext:**
+Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für die Anforderungsanalyse (Kap. 5) — insbesondere produktseitige und engineering-seitige KPIs.
+
+**Vorbereitung — Fragen:**
+- [ ] Welche KPIs / Metriken sind für dich täglich relevant?
+- [ ] Welche Tools nutzt du aktuell zur Datenauswertung?
+- [ ] Was fehlt dir an der aktuellen Datenlage / den bestehenden Dashboards?
+- [ ] Welche Anforderungen hast du an Zugriffsrechte und Datenschutz?
 
 **Notizen:**
 
