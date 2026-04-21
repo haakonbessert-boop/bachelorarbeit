@@ -77,9 +77,9 @@
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
 - [ ] Befristungsdatum Sperrvermerk festlegen — Entscheidung vertagt (Erstgespräch 21.04.)
 - [x] KI-Genehmigungsdokument: Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
-- [ ] Referenzprojekte aus anderen SAP-Bereichen anfragen (Janine/Oliver)
+- [ ] Referenzprojekte aus anderen SAP-Bereichen anfragen (morgen bei Oliver Timm klären)
 - [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
-- [ ] Datenbereitstellung als explizites Thema einplanen (Kap. 4 oder 6)
+- [x] Datenbereitstellung als explizites Thema einplanen → Kap. 4.4 angelegt
 - [ ] Gliederung für nächstes Meeting (28. April) vorbereiten und Sachse vorlegen
 
 ---
@@ -93,6 +93,7 @@
 
 - [x] KI-Genehmigungsdokument: Protokollierung akzeptiert — Dokument wird von Sachse weitergeleitet
 - [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
+- [ ] Svitlana Vlasova anschreiben (Mail formuliert) — BDC/SAC Tool-Überblick
 
 ### Meetings diese Woche
 
