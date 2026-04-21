@@ -68,7 +68,7 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als �
 - [ ] Was bedeutet genau PSAT im SAP-Signavio-Kontext?
 - [ ] Wie weit ist die Landscape Analysis (laut Next Steps: Draft ready)?
 - [ ] Wer sind die Stakeholder, die monatliche Review-Reports erstellen — sollen die auch interviewt werden?
-- [ ] Welche SAP-internen Tools sind für den MVP-Bau freigegeben?
+- [ ] Welche SAP-internen Tools sind für den MVP-Bau freigegeben? (BDC-Stack bekannt: Datasphere, SAC, Signavio Process Insights, Integration Suite — ist das der richtige Pfad für Signavio Engineering?)
 
 **Notizen:**
 
