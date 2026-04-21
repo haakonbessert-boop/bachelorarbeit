@@ -77,4 +77,47 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 - Zu klären: Kann EKX live auf KPI-Datenquellen zugreifen, oder nur auf statische SAP-Inhalte?
 - → Bewertung in Kap. 6 (Lösungsraum) als eigenständiger Kandidat oder Ergänzung zum BDC-Stack
 
+---
+
+## Weitere Tool-Kandidaten (EKG-Recherche, 21.04.2026)
+
+### Integration & Datenzufuhr
+
+- **SAP Integration Suite (Open Connectors / Cloud Integration):** Standardisierte Adapter für Non-SAP-Quellen (Jira, ServiceNow, Gainsight, CircleCI) via REST, Webhooks, Files. Im EKG Signavio-Bezug belegt. → Primärer Ingestion-Pfad für Non-SAP-Quellen.
+- **SAP Business Accelerator Hub:** API-/Integrationsartefakte und Referenzbeispiele für schnelleren Aufbau von Ingestion-Flows.
+
+### Experience-/Portal-Layer
+
+- **SAP Build Work Zone:** Zentrales Portal ("Single Pane of Glass") zur Einbettung von SAC-Stories, Signavio-Kacheln, Dokumentation. Technisch naheliegend, kein expliziter Signavio-Engineering-KPI-Hub-Beleg im EKG.
+- **SAP Mobile Start:** Mobile Exponierung von SAC-KPI-Kacheln (relevant falls Mobile-First für Leadership).
+
+### IT-Ops / Projekt-KPIs
+
+- **SAP Cloud ALM:** Betriebs- und Projekt-/Test-KPIs (Incidents, Deployments, Test Coverage). Im EKG explizit mit Signavio integriert belegt. → Als Datenquelle für Operations-KPIs einsetzbar.
+- **SAP Solution Manager — Focused Insights:** Vorkonfigurierte IT-Betriebs-Dashboards (nur relevant falls SolMan noch aktiv).
+- **LeanIX:** IT-Portfolio-/Architektur-KPIs; Einbettung in SAC/Work Zone als Kontextebene (Ownership, Lifecycle).
+
+### Ergänzende Datenschicht
+
+- **SAP HANA Cloud:** Für hochfrequente oder komplexe Berechnungen jenseits Datasphere-Standard; Near-Real-Time-Szenarien.
+
+---
+
+## Empfohlene Zielarchitektur (aus EKG-Recherche abgeleitet)
+
+| Schicht | Tool(s) |
+|---------|---------|
+| Ingestion Non-SAP | Integration Suite (Open Connectors) + Signavio-Adapter (Jira/ServiceNow) |
+| Persistenz/Semantik | SAP Datasphere |
+| Prozess-/Service-KPIs | SAP Signavio Process Insights |
+| Ops-/Projekt-KPIs | SAP Cloud ALM → Datasphere |
+| Visualisierung/Monitoring | SAP Analytics Cloud (Stories, My Metrics, Alerts) |
+| Portal/Experience | SAP Build Work Zone |
+| Creation/Deliverables | EKX |
+| Mobile | SAP Mobile Start (optional) |
+
+---
+
+## Kritischer Fit-Check für Signavio Engineering
+
 BDC ist primär für ERP/S/4HANA konzipiert; Signavio-Engineering-Quellsysteme sind dominant Non-SAP. Kein "Plug-and-play" — Integrationsaufwand für REST-API-Ingestion ist real. Dies ist ein zentrales **Machbarkeitskriterium** für das Scoring-Modell (Kap. 7) und ein "erschwerender Faktor im konkreten Einsatzfall" i.S. Sachses Erwartungen.
