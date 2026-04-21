@@ -282,9 +282,35 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 **Notizen:**
 
+*Formales:*
+- **KI-Genehmigung:** Kein T1-Log nötig — Protokollierung wie geplant (KI_PROTOKOLL.md) ist ausreichend. Dokument wird von Sachse weitergeleitet.
+- **Sperrvermerk-Befristung:** Entscheidung vertagt — wird zu einem späteren Zeitpunkt geklärt.
+
+*Erwartungen SAP (Janine):*
+- **Machbarkeitsanalyse ist Kernpriorität** — Umsetzbarkeit/Komplexität der Lösungsansätze ist das wichtigste Kriterium
+- Nur SAP-approved Tools verwenden
+- Wissenschaftlicher Ansatz soll **Blind Spots aufdecken** — Aspekte, an die man bei SAP noch nicht gedacht hat
+- Thema **Datenbereitstellung** muss explizit abgedeckt werden
+- Verwendete Tools müssen realistisch umsetzbar sein
+- Es gibt bereits **Referenzprojekte aus anderen SAP-Bereichen** → anfragen
+
+*Erwartungen DHSN (Sachse):*
+- MVP für KPI-Hub aufbauen
+- Kernaufgabe: **Entscheidungsmodell** — welche Methoden gibt es, um Entscheidungen zu finden? → **Software Requirement Engineering** als Methodenfeld
+- Einordnung: Wo ist die Aufgabe angelegt? Welche erschwerenden Faktoren gibt es im konkreten Einsatzfall?
+- Eventuelle Forschungsfrage: Wie wurden ähnliche Probleme in **anderen Bereichen/Domänen** überwunden?
+- Verwertbarkeit der Arbeit liegt beim Unternehmen
+- Forschungsfragen können nach Fortschritt angepasst werden
+
+*Feedback-Rhythmus:*
+- Nach jedem Meilenstein (nicht häufiger)
+
+*Nächstes Meeting:*
+- **Nächste Woche** — Thema: **Gliederung und Gedanken dazu** vorstellen
+
 ---
 
-### Hochschul-Sync — Prof. Dr.-Ing. Jürgen Sachse | [Datum eintragen]
+### Hochschul-Sync — Prof. Dr.-Ing. Jürgen Sachse | 28. April 2026
 
 **Aktueller Stand Bachelorarbeit:**
 

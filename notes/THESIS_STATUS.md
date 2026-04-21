@@ -74,8 +74,12 @@
 
 - [ ] Wie tief wird die Sensitivitätsanalyse (Kapitel 7 oder 9)?
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
-- [ ] Befristungsdatum Sperrvermerk festlegen (Empfehlung: 10. Juli 2029)
-- [ ] KI-Genehmigungsdokument: welche Modelle / Tools werden genutzt?
+- [ ] Befristungsdatum Sperrvermerk festlegen — Entscheidung vertagt (Erstgespräch 21.04.)
+- [x] KI-Genehmigungsdokument: Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
+- [ ] Referenzprojekte aus anderen SAP-Bereichen anfragen (Janine/Oliver)
+- [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
+- [ ] Datenbereitstellung als explizites Thema einplanen (Kap. 4 oder 6)
+- [ ] Gliederung für nächstes Meeting (28. April) vorbereiten und Sachse vorlegen
 
 ---
 
@@ -86,14 +90,21 @@
 
 ### Formales
 
-- [ ] KI-Genehmigungsdokument bei Janine + Prof. Dr.-Ing. Sachse unterschreiben lassen (Erstgespräch 21. Apr)
-- [ ] Befristungsdatum Sperrvermerk klären (Erstgespräch 21. Apr)
+- [x] KI-Genehmigungsdokument: Protokollierung akzeptiert — Dokument wird von Sachse weitergeleitet
+- [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
 
 ### Meetings diese Woche
 
-- [ ] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April 13:30
+- [x] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April 13:30
 - [ ] Check-in Oliver Timm — 22. April
 - [ ] Kennenlernen Nina Vayssiere — 27. April
+
+### Vorbereitung nächstes Meeting (28. April — Sachse)
+
+- [ ] Gliederung überarbeiten und Gedanken dazu formulieren
+- [ ] Methoden der Entscheidungsfindung recherchieren (Software Requirement Engineering, AHP, Nutzwertanalyse)
+- [ ] Referenzprojekte bei Janine/Oliver anfragen
+- [ ] Datenbereitstellung als Thema in Gliederung verorten
 
 ### Schreiben (parallel starten)
 
@@ -136,3 +147,7 @@
 | Apr 2026 | Design Science Research als Methodik | Artefakt (Scoring-Modell + MVP) steht im Mittelpunkt, keine reine Beschreibung |
 | Apr 2026 | Einschränkung auf SAP-intern freigegebene Tools | Praxisbezug und beherrschbarer Scope |
 | Apr 2026 | Kapitel-Struktur nach Hänel-Anforderungen ausgerichtet | Anforderungen direkt als Kommentare in Subsections verankert |
+| 21.04.2026 | KI-Protokollierung wie geplant akzeptiert | Sachse akzeptiert KI_PROTOKOLL.md — kein T1-Log nötig |
+| 21.04.2026 | Machbarkeit als zentrales SAP-Kriterium | Janine: Umsetzbarkeit ist der SAP am allerwichtigsten |
+| 21.04.2026 | Entscheidungsmethodik aus Software Req. Engineering | Sachse: Methoden wie AHP, Nutzwertanalyse für Kap. 7 heranziehen |
+| 21.04.2026 | Forschungsfragen dürfen angepasst werden | Sachse: Anpassung nach Fortschritt erlaubt |

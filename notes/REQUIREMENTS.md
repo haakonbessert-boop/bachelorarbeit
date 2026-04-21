@@ -171,9 +171,27 @@ Aktuell genutzte Systeme (Basis für Kap. 4):
 
 ---
 
-## DHSN-Betreuer (Dr.-Ing. Jürgen Sachse)
+## DHSN-Betreuer (Prof. Dr.-Ing. Jürgen Sachse)
 
-*(noch nicht dokumentiert)*
+> Quelle: Erstgespräch Gutachter — 21. April 2026
+
+### Inhaltliche Erwartungen
+
+- **Entscheidungsmodell ist die zentrale Aufgabe** — nicht nur ein Scoring, sondern methodisch fundierte Entscheidungsfindung
+- Methoden aus dem **Software Requirement Engineering** heranziehen (z.B. AHP, gewichtete Bewertungsverfahren, Nutzwertanalyse)
+- **Einordnung der Aufgabe:** Wo ist das Problem angelegt? Was macht den konkreten Einsatzfall besonders schwierig?
+- Erschwerende Faktoren des Einsatzfalls herausarbeiten (Fragmentierung, RBAC, heterogene Systeme)
+- Eventuell eigene Forschungsfrage: Wie wurden **vergleichbare Probleme in anderen Bereichen/Domänen** gelöst?
+- **MVP** als artefaktbasierte Evaluation aufbauen
+- Verwertbarkeit der Arbeit liegt beim Unternehmen — Praxisnutzen ist zentral
+- Forschungsfragen dürfen im Verlauf angepasst werden
+
+### Formales
+
+- KI-Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
+- Sperrvermerk-Befristung: Entscheidung vertagt
+- Feedback-Rhythmus: nach jedem Meilenstein
+- **Nächstes Meeting (28. April 2026):** Gliederung und Gedanken dazu vorstellen
 
 ---
 
