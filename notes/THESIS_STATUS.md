@@ -24,6 +24,7 @@
 ### Formales
 - [x] Sperrvermerk: `blockuntil=`-Key in `baarticle.cls` implementiert — Befristungsdatum noch festzulegen
 - [ ] KI-Genehmigungsdokument: Platzhalter in `simple.tex` vorbereitet — PDF noch ausstehend (Unterschriften Janine + Jürgen Sachse)
+- [x] KI-Nutzungsprotokoll: `notes/KI_PROTOKOLL.md` angelegt — wird laufend gepflegt
 - [x] Typo API-Akronym korrigiert (Applocation → Application)
 - [x] IT und IS in `acronyms.tex` ergänzt
 - [x] LaTeX-Schreibkonventionen in `notes/CONVENTIONS.md` dokumentiert

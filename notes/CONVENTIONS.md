@@ -36,6 +36,13 @@ Dieses Dokument hält alle Anforderungen und Arbeitsweisen fest, die im Verlauf 
   1. `references.bib` — BibTeX-Eintrag anlegen
   2. `notes/LITERATURE.md` — Analyse-Eintrag mit Relevanz, Kapitel, Key Findings ergänzen
 
+## KI-Nutzung
+
+- Bei jeder KI-gestützten Arbeit an der Bachelorarbeit (Text, Diagramme, Code, Recherche) **immer** einen Eintrag in `notes/KI_PROTOKOLL.md` anlegen:
+  1. Laufende ID vergeben (KI-001, KI-002, ...)
+  2. Alle Felder ausfüllen (Datum, Werkzeug, Nutzungsart, Kapitel, Prompt, Ergebnis, Verwendungsklasse)
+  3. Verwendungsklasse ehrlich einordnen: **Direkt** / **Redigiert** / **Inspiration**
+
 ## Inhaltliche Anforderungen
 
 - Änderungen an `notes/THESIS_STATUS.md` und `notes/MEETINGS.md` immer mit konkreten Inhalten befüllen, nicht nur Platzhalter lassen
