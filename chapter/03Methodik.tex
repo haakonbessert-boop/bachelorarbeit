@@ -100,34 +100,34 @@ Abbildung~\ref{fig:dsrm} zeigt die Phasenabfolge und ihre Entsprechung in dieser
     box/.style={
         rectangle, rounded corners=4pt,
         draw=black!60, fill=gray!8,
-        text width=3.7cm, minimum height=1.8cm,
+        text width=3.7cm, minimum height=2.2cm,
         align=center, font=\small
     },
     arr/.style={-{Stealth[length=3.5pt,width=5pt]}, thick, black!60}
 ]
 
 \node[box] (p1) at (0,0) {
-    \textbf{Problemidentifikation}\\[3pt]
+    \textbf{1 — Problem-\\identifikation}\\[3pt]
     {\footnotesize Ist-Analyse,\\Stakeholder-Interviews}
 };
 \node[box] (p2) at (4.3,0) {
-    \textbf{Zieldefinition}\\[3pt]
+    \textbf{2 — Zieldefinition}\\[3pt]
     {\footnotesize Priorisierter\\Anforderungskatalog}
 };
 \node[box] (p3) at (8.6,0) {
-    \textbf{Design \&\\Entwicklung}\\[3pt]
+    \textbf{3 — Design \&\\Entwicklung}\\[3pt]
     {\footnotesize Scoring-Modell,\\MVP-Konzept}
 };
-\node[box] (p4) at (8.6,-3.0) {
-    \textbf{Demonstration}\\[3pt]
+\node[box] (p4) at (8.6,-3.4) {
+    \textbf{4 — Demonstration}\\[3pt]
     {\footnotesize MVP-Umsetzung\\und Erprobung}
 };
-\node[box] (p5) at (4.3,-3.0) {
-    \textbf{Evaluation}\\[3pt]
+\node[box] (p5) at (4.3,-3.4) {
+    \textbf{5 — Evaluation}\\[3pt]
     {\footnotesize Bewertung gegen\\Anforderungen}
 };
-\node[box] (p6) at (0,-3.0) {
-    \textbf{Kommunikation}\\[3pt]
+\node[box] (p6) at (0,-3.4) {
+    \textbf{6 — Kommunikation}\\[3pt]
     {\footnotesize Ergebnisse,\\Diskussion, Ausblick}
 };
 
@@ -147,9 +147,12 @@ Die Phasenabfolge eignet sich für den vorliegenden Untersuchungsgegenstand aus 
 Zweitens ermöglicht die explizite Trennung von Anforderungserhebung (Zieldefinition) und Lösungsbewertung (Design) eine nachvollziehbare Entscheidungsfindung, bei der die Kriterien unabhängig von den bewerteten Alternativen entwickelt werden.
 
 Methodisch kommen in den einzelnen Phasen unterschiedliche Erhebungs- und Analysemethoden zum Einsatz:
-In der \textit{Problemidentifikation} werden eine Dokumentenanalyse bestehender Systeme und Dashboards sowie strukturierte Stakeholder-Interviews durchgeführt, um den Ist-Zustand und die wahrgenommenen Defizite zu erfassen (Kapitel~4 und~5).
-Die \textit{Zieldefinition} überführt diese Erhebungsergebnisse in einen priorisierten Anforderungskatalog mit funktionalen und nicht-funktionalen Kriterien, der als Bewertungsmaßstab für alle nachfolgenden Phasen dient (Kapitel~5).
-In der Phase \textit{Design und Entwicklung} werden zunächst mögliche Integrationsansätze systematisch identifiziert und anhand einer Literatur- und Technologieanalyse charakterisiert; darauf aufbauend wird ein Mehrkriterien-Scoring-Modell konstruiert, das die Alternativen anhand der erhobenen Anforderungen vergleichbar macht (Kapitel~6 und~7).
-Die \textit{Demonstration} setzt den durch das Scoring-Modell empfohlenen Ansatz in einem funktionsfähigen \gls{mvp} um und erprobt ihn anhand ausgewählter Quellsysteme und Kernmetriken unter Realbedingungen (Kapitel~8).
-In der \textit{Evaluation} wird der \gls{mvp} systematisch gegen den Anforderungskatalog bewertet; ergänzend prüft eine Sensitivitätsanalyse der Kriteriengewichtung die Robustheit der getroffenen Empfehlung (Kapitel~9).
-Die abschließende \textit{Kommunikation} fasst die Ergebnisse zusammen, diskutiert Limitationen und formuliert einen Ausblick auf weiterführende Schritte (Kapitel~9 und~10).
+
+\begin{enumerate}
+    \item \textit{Problemidentifikation:} Dokumentenanalyse bestehender Systeme und Dashboards sowie strukturierte Stakeholder-Interviews, um den Ist-Zustand und die wahrgenommenen Defizite zu erfassen (Kapitel~4 und~5).
+    \item \textit{Zieldefinition:} Überführung der Erhebungsergebnisse in einen priorisierten Anforderungskatalog mit funktionalen und nicht-funktionalen Kriterien, der als Bewertungsmaßstab für alle nachfolgenden Phasen dient (Kapitel~5).
+    \item \textit{Design und Entwicklung:} Systematische Identifikation möglicher Integrationsansätze anhand einer Literatur- und Technologieanalyse; darauf aufbauend Konstruktion eines Mehrkriterien-Scoring-Modells, das die Alternativen anhand der erhobenen Anforderungen vergleichbar macht (Kapitel~6 und~7).
+    \item \textit{Demonstration:} Umsetzung des durch das Scoring-Modell empfohlenen Ansatzes in einem funktionsfähigen \gls{mvp}; Erprobung anhand ausgewählter Quellsysteme und Kernmetriken unter Realbedingungen (Kapitel~8).
+    \item \textit{Evaluation:} Systematische Bewertung des \gls{mvp} gegen den Anforderungskatalog; ergänzend Sensitivitätsanalyse der Kriteriengewichtung zur Prüfung der Robustheit der Empfehlung (Kapitel~9).
+    \item \textit{Kommunikation:} Zusammenfassung der Ergebnisse, Diskussion von Limitationen und Formulierung eines Ausblicks auf weiterführende Schritte (Kapitel~9 und~10).
+\end{enumerate}
