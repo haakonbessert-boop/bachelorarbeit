@@ -9,25 +9,26 @@
 
 ---
 
-## Aktueller Stand (20. April 2026)
+## Aktueller Stand (21. April 2026)
 
 ### Struktur
 - Exposé: fertig und abgegeben
-- Alle 10 Kapitel angelegt mit Subsection-Struktur und Hänel-Anforderungen als Kommentare
+- Alle 10 Kapitel angelegt mit Subsection-Struktur und Hänel-Anforderungen als Kommentaren
 - LaTeX-Template kompiliert fehlerfrei
 - Hänel-Anforderungen vollständig in Kapitel-Mapping überführt (siehe [REQUIREMENTS.md](REQUIREMENTS.md))
-- **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter, bachlorarbeit-gerechte Tiefe)
-  - DSR-Definition, IS Research Framework (Relevance/Rigor Cycle), Artefakt-Klassifikation nach March & Smith, Abgrenzung zu empirischen Methoden, Quellenrollen
-  - **Status: Erster Entwurf** — inhaltlich vollständig, Seitenzahlen (XX) noch offen, kein Gegenlesen
-  - Labels für 3.2 (`\label{sec:literaturrecherche}`) und 3.4 (`\label{sec:vorgehen}`) gesetzt
+- **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter)
+  - Status: Erster Entwurf — inhaltlich vollständig, Seitenzahlen (XX) noch offen
+
+### Praxisphase (gestartet 20. April)
+- Erstgespräch Gutachter (Janine + Sachse, 21.04.) ✓
+- Kennenlernen Christopher Pfeiler ✓ → BDC als relevanter nächster Schritt identifiziert
+- Tool-Landschaft BDC/SAP recherchiert → [notes/praxis/TOOLS.md](praxis/TOOLS.md)
+- EKX als expliziter Tool-Kandidat von Janine erhalten und dokumentiert
 
 ### Formales
-- [x] Sperrvermerk: `blockuntil=`-Key in `baarticle.cls` implementiert — Befristungsdatum noch festzulegen
-- [ ] KI-Genehmigungsdokument: Platzhalter in `simple.tex` vorbereitet — PDF noch ausstehend (Unterschriften Janine + Jürgen Sachse)
-- [x] KI-Nutzungsprotokoll: `notes/KI_PROTOKOLL.md` angelegt — wird laufend gepflegt
-- [x] Typo API-Akronym korrigiert (Applocation → Application)
-- [x] IT und IS in `acronyms.tex` ergänzt
-- [x] LaTeX-Schreibkonventionen in `notes/CONVENTIONS.md` dokumentiert
+- [x] Sperrvermerk: implementiert — Befristungsdatum noch offen
+- [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse leitet weiter)
+- [x] KI-Nutzungsprotokoll: läuft
 
 ### Kapitelplanung (aus Exposé + Erstgespräch 21.04.)
 | # | Kapitel | Geplante Seiten | Status |
@@ -95,7 +96,8 @@
 
 ### Meetings diese Woche
 
-- [x] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April 13:30
+- [x] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April
+- [x] Kennenlernen Christopher Pfeiler | 20. April
 - [ ] Check-in Oliver Timm — 22. April
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 
