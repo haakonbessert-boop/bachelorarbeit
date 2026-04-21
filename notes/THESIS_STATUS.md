@@ -91,7 +91,7 @@
 
 ### Formales
 
-- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten (21.04.) — weiterleiten an Janine Steidelmüller zur Gegenzeichnung
+- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten + an Janine weitergeleitet — Janines Gegenzeichnung ausstehend
 - [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
 - [x] Svitlana Vlasova anschreiben — Mail gesendet, warte auf Antwort
 

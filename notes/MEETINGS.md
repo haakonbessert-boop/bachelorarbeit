@@ -312,10 +312,26 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 ### Hochschul-Sync — Prof. Dr.-Ing. Jürgen Sachse | 28. April 2026
 
-**Aktueller Stand Bachelorarbeit:**
+**Format:** Mail (kein Meeting) — Sachse: "Senden Sie mir die gewünschte Gliederung und den Zeitplan als PDF per E-Mail."
 
-**Methodische / inhaltliche Fragen:**
+**Zu senden:** Gliederung + Zeitplan als PDF
 
-**Feedback zu Zwischenständen:**
+**Roter Faden der Gliederung:**
+Problem verstehen (Kap. 1–4) → Anforderungen erheben (Kap. 5) → Optionen identifizieren & bewerten (Kap. 6–7) → Lösung umsetzen & validieren (Kap. 8–9) → Fazit (Kap. 10). Kap. 1–4 = Relevance Cycle, Kap. 5–7 = Rigor Cycle, Kap. 8–9 = Artefakt-Evaluation.
+
+**Strukturelle Entscheidungen (Begründung für Sachse):**
+
+| Entscheidung | Begründung |
+|---|---|
+| DSR als Methodik | Zwei Artefakte im Zentrum: Scoring-Modell + MVP |
+| Kap. 2.5 Entscheidungsmethoden | Sachse-Feedback (21.04.): theoretische Basis für Kap. 7 |
+| Kap. 4.4 Datenbereitstellung | Janine-Anforderung: explizit abzudecken |
+| Kap. 6.6/6.7 Referenzprojekte + Machbarkeit | Janines Kernkriterium: Umsetzbarkeit als Vorfilter |
+| Kap. 7.1 Methodenwahl explizit | Sachse: Warum dieses Bewertungsverfahren? |
+
+**Offene Fragen an Sachse:**
+- Wie tief soll die Sensitivitätsanalyse (Kap. 7.5) gehen?
+- MVP: konkretes Tool (z.B. SAC-Dashboard) oder Architektur-PoC?
+- Forschungsfrage: Formulierung aus Exposé noch passend?
 
 **Notizen:**
