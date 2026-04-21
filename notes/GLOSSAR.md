@@ -75,7 +75,13 @@ Plattform für die Entwicklung und Integration von SAP-Anwendungen. Potenziell r
 Customer-Success-Plattform (GtM-seitig). Quelle für Customer-Success-KPIs wie Retention, Adoption, Nutzungsmetriken.
 
 **BDC (Business Data Cloud)**
-SAP-Produkt zur Vereinheitlichung und Bereitstellung von Unternehmensdaten über verschiedene SAP-Systeme hinweg. Von Christopher Pfeiler (Business Operations) als relevanter nächster Schritt im KPI-Hub-Kontext genannt. Mögliche Relevanz für Kap. 4 (Systemlandschaft) und Kap. 6 (Lösungsraum) — noch zu untersuchen.
+SAP-Produkt zur Vereinheitlichung und Bereitstellung von Unternehmensdaten. Referenzarchitektur für KPI-Management: Datenbasis (SAP Datasphere), Visualisierung/Monitoring (SAP Analytics Cloud), Prozess-KPIs (SAP Signavio Process Insights). Primär für ERP/S/4HANA konzipiert; Non-SAP-Quellen (Jira, ServiceNow etc.) per Konnektoren/REST-API einbindbar. Relevant für Kap. 4 (Systemlandschaft) und Kap. 6 (Lösungsraum).
+
+**SAP Datasphere**
+Zentrale semantische Datenschicht innerhalb der BDC. Persistiert KPI-Fakten, Dimensionen und Datenprodukte; harmonisiert SAP- und Non-SAP-Quellen über Konnektoren und Replication Flows. Keine dedizierten Out-of-the-box-Konnektoren für Jira/ServiceNow/CircleCI — Integration via REST API oder File-Staging.
+
+**EKX (Enterprise Knowledge Exploration)**
+SAP-internes Tool auf Basis des Enterprise Knowledge Graph (EKG). Spring Release 2026: Evolution zur "Creation Engine" — generiert Dashboards, Diagramme, PowerPoints, Code aus SAP-Inhalten. Von Janine als Tool-Kandidat für KPI Hub vorgeschlagen (21.04.2026). Zu klären: Konnektivität zu operativen Datenquellen.
 
 **PPR (Product Performance Review)**
 Internes SAP-Reporting-Format. Wird als zu statisch, slide-basiert und nicht engineering-spezifisch bewertet. Kein direkter Link zu engineering-seitigen KPIs.
