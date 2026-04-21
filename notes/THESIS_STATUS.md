@@ -29,16 +29,16 @@
 - [x] IT und IS in `acronyms.tex` ergänzt
 - [x] LaTeX-Schreibkonventionen in `notes/CONVENTIONS.md` dokumentiert
 
-### Kapitelplanung (aus Exposé)
+### Kapitelplanung (aus Exposé + Erstgespräch 21.04.)
 | # | Kapitel | Geplante Seiten | Status |
 |---|---------|-----------------|--------|
 | 1 | Einleitung | 4 | Subsections angelegt |
-| 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt |
+| 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt — **NEU: 2.5 Entscheidungsmethoden** |
 | 3 | Methodik | 6 | **3.1 Erster Entwurf** — 3.2–3.4 offen |
-| 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt |
+| 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt — **NEU: 4.4 Datenbereitstellung** |
 | 5 | Anforderungsanalyse | 7 | Subsections angelegt |
-| 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt |
-| 7 | Entscheidungs- und Bewertungsmodell | 8 | Subsections angelegt |
+| 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt — **NEU: 6.6 Referenzprojekte, 6.7 Machbarkeit** |
+| 7 | Entscheidungs- und Bewertungsmodell | 8 | Subsections angelegt — **NEU: 7.1 Wahl der Bewertungsmethodik** |
 | 8 | MVP: Design, Umsetzung und Validierung | 8 | Subsections angelegt |
 | 9 | Ergebnisse, Diskussion | 5 | Subsections angelegt |
 | 10 | Fazit und Ausblick | 2 | Subsections angelegt |
@@ -151,3 +151,4 @@
 | 21.04.2026 | Machbarkeit als zentrales SAP-Kriterium | Janine: Umsetzbarkeit ist der SAP am allerwichtigsten |
 | 21.04.2026 | Entscheidungsmethodik aus Software Req. Engineering | Sachse: Methoden wie AHP, Nutzwertanalyse für Kap. 7 heranziehen |
 | 21.04.2026 | Forschungsfragen dürfen angepasst werden | Sachse: Anpassung nach Fortschritt erlaubt |
+| 21.04.2026 | Gliederung erweitert: 2.5, 4.4, 6.6/6.7, 7.1 neu | Umsetzung Erstgespräch-Feedback (Entscheidungsmethoden, Datenbereitstellung, Machbarkeit, Methodenwahl) |
