@@ -93,7 +93,7 @@
 
 - [x] KI-Genehmigungsdokument: Protokollierung akzeptiert — Dokument wird von Sachse weitergeleitet
 - [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
-- [ ] Svitlana Vlasova anschreiben (Mail formuliert) — BDC/SAC Tool-Überblick
+- [x] Svitlana Vlasova anschreiben — Meeting 22. April vorbereitet → [MEETING_SVITLANA_20260422.md](praxis/MEETING_SVITLANA_20260422.md)
 
 ### Meetings diese Woche
 
