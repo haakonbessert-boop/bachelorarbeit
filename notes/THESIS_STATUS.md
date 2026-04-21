@@ -101,10 +101,10 @@
 
 ### Vorbereitung nächstes Meeting (28. April — Sachse)
 
-- [x] Gliederung überarbeiten und Gedanken dazu formulieren
-- [x] Methoden der Entscheidungsfindung recherchieren (Software Requirement Engineering, AHP, Nutzwertanalyse)
-- [x] Referenzprojekte bei Janine/Oliver anfragen
-- [x] Datenbereitstellung als Thema in Gliederung verorten
+- [ ] Gliederung überarbeiten und Gedanken dazu formulieren
+- [ ] Methoden der Entscheidungsfindung recherchieren (Software Requirement Engineering, AHP, Nutzwertanalyse)
+- [ ] Referenzprojekte bei Janine/Oliver anfragen
+- [ ] Datenbereitstellung als Thema in Gliederung verorten
 
 ### Schreiben (parallel starten)
 
