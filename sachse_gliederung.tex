@@ -3,6 +3,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{booktabs}
@@ -39,7 +41,9 @@
 % ── Kapitelübersicht ─────────────────────────────────────────────────────────
 {\large\bfseries Gliederung}\vspace{0.4em}
 
-\begin{tabular}{@{}r p{12.5cm} r@{}}
+\noindent Die Arbeit umfasst 10 Kapitel auf 62 Seiten. Der detaillierte Aufbau ist nachfolgend dargestellt.
+
+\vspace{0.3em}\begin{tabular}{@{}r p{12.5cm} r@{}}
 \toprule
 \textbf{Nr.} & \textbf{Kapitel} & \textbf{S.} \\
 \midrule
@@ -59,7 +63,8 @@
 \end{tabular}
 
 % ── Detaillierte Gliederung ───────────────────────────────────────────────────
-\vspace{0.6em}
+\vspace{0.4em}
+{\normalsize\bfseries Detaillierte Untergliederung}\vspace{0.3em}
 
 \renewcommand{\arraystretch}{1.15}
 \begin{tabular}{@{}L{7.5cm} L{8cm}@{}}
@@ -104,15 +109,43 @@
 % ── Roter Faden ───────────────────────────────────────────────────────────────
 {\large\bfseries Roter Faden}\vspace{0.4em}
 
-\noindent Die Kapitel folgen dem DSR-Zyklus nach Peffers et al.:
+\noindent Die Kapitelstruktur folgt dem DSR-Prozessmodell nach Peffers et al.\ (2007) --- von der Problemdefinition über die Artefaktkonstruktion bis zur Evaluation:
 
-\vspace{0.3em}
-\begin{tabular}{@{}L{2cm} L{3.5cm} L{9cm}@{}}
-  \textbf{Kap.\ 1--4} & Relevance Cycle      & Problem verstehen, Systemlandschaft erfassen \\
-  \textbf{Kap.\ 5--7} & Rigor Cycle          & Anforderungen erheben, Lösungsoptionen identifizieren \& bewerten \\
-  \textbf{Kap.\ 8--9} & Artefakt-Evaluation  & MVP umsetzen \& validieren \\
-  \textbf{Kap.\ 10}   & ---                  & Fazit und Ausblick \\
-\end{tabular}
+\vspace{0.6em}
+\begin{tikzpicture}[
+  box/.style={
+    rectangle, draw, rounded corners=3pt,
+    minimum height=1.6cm, minimum width=2.7cm, text width=2.5cm,
+    align=center, font=\small
+  },
+  arr/.style={-{Stealth[scale=1.1]}, thick},
+  phase/.style={font=\scriptsize\itshape, align=center}
+]
+  \node[box] (n1) {\textbf{Kap.~1--4}\\[5pt]Problem \&\\System\-landschaft};
+  \node[box, right=0.5cm of n1] (n2) {\textbf{Kap.~5}\\[5pt]Anforde-\\rungsanalyse};
+  \node[box, right=0.5cm of n2] (n3) {\textbf{Kap.~6--7}\\[5pt]Lösungsraum \&\\Bewertung};
+  \node[box, right=0.5cm of n3] (n4) {\textbf{Kap.~8--9}\\[5pt]MVP \&\\Validierung};
+  \node[box, right=0.5cm of n4] (n5) {\textbf{Kap.~10}\\[5pt]Fazit \&\\Ausblick};
+
+  \draw[arr] (n1) -- (n2);
+  \draw[arr] (n2) -- (n3);
+  \draw[arr] (n3) -- (n4);
+  \draw[arr] (n4) -- (n5);
+
+  % DSR-Phasenbeschriftungen mit Klammerlinie
+  % Relevance Cycle — Kap. 1–4
+  \draw ([yshift=-6pt]n1.south west) -- ([yshift=-6pt]n1.south east);
+  \node[phase] at ([yshift=-18pt]n1.south) {Relevance Cycle};
+
+  % Rigor Cycle — Kap. 5–7 (überspannt n2 und n3)
+  \draw ([yshift=-6pt]n2.south west) -- ([yshift=-6pt]n3.south east);
+  \node[phase] at ($(n2.south)!0.5!(n3.south) + (0,-18pt)$) {Rigor Cycle};
+
+  % Artefakt-Evaluation — Kap. 8–9
+  \draw ([yshift=-6pt]n4.south west) -- ([yshift=-6pt]n4.south east);
+  \node[phase] at ([yshift=-18pt]n4.south) {Artefakt-\\Evaluation};
+\end{tikzpicture}
+\vspace{0.2em}
 
 \vspace{0.5em}\noindent\rule{\linewidth}{0.4pt}
 
