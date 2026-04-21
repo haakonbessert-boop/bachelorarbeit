@@ -100,42 +100,36 @@ Abbildung~\ref{fig:dsrm} zeigt die Phasenabfolge und ihre Entsprechung in dieser
     box/.style={
         rectangle, rounded corners=4pt,
         draw=black!60, fill=gray!8,
-        text width=3.7cm, minimum height=2.5cm,
-        align=center, font=\small
+        inner sep=5pt,
+        font=\small
     },
     arr/.style={-{Stealth[length=3.5pt,width=5pt]}, thick, black!60}
 ]
 
-\node[box] (p1) at (0,0) {
-    {\scriptsize Phase 1}\\
+\node[box] (p1) at (0,0) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Problemidentifikation}\\[3pt]
     {\footnotesize Ist-Analyse,\\Stakeholder-Interviews}
-};
-\node[box] (p2) at (4.3,0) {
-    {\scriptsize Phase 2}\\
+}};
+\node[box] (p2) at (4.6,0) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Zieldefinition}\\[3pt]
     {\footnotesize Priorisierter\\Anforderungskatalog}
-};
-\node[box] (p3) at (8.6,0) {
-    {\scriptsize Phase 3}\\
+}};
+\node[box] (p3) at (9.2,0) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Design \& Entwicklung}\\[3pt]
     {\footnotesize Scoring-Modell,\\MVP-Konzept}
-};
-\node[box] (p4) at (8.6,-3.7) {
-    {\scriptsize Phase 4}\\
+}};
+\node[box] (p4) at (9.2,-3.5) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Demonstration}\\[3pt]
     {\footnotesize MVP-Umsetzung\\und Erprobung}
-};
-\node[box] (p5) at (4.3,-3.7) {
-    {\scriptsize Phase 5}\\
+}};
+\node[box] (p5) at (4.6,-3.5) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Evaluation}\\[3pt]
     {\footnotesize Bewertung gegen\\Anforderungen}
-};
-\node[box] (p6) at (0,-3.7) {
-    {\scriptsize Phase 6}\\
+}};
+\node[box] (p6) at (0,-3.5) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Kommunikation}\\[3pt]
     {\footnotesize Ergebnisse,\\Diskussion, Ausblick}
-};
+}};
 
 \draw[arr] (p1) -- (p2);
 \draw[arr] (p2) -- (p3);

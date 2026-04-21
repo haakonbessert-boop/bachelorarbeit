@@ -142,4 +142,22 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 
 ## Kapitelübergreifend
 
-*(noch keine Einträge)*
+### KI-006 | 21. Apr 2026 | REC | BDC/SAP Tool-Landscape-Recherche
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Kap. 4 Systemlandschaft + Kap. 6 Lösungsraum (Vorarbeit) |
+| **Prompt (Zusammenfassung)** | Iterative Recherche (3 Runden) zu konkreten SAP-Tools für KPI-Hub: BDC-Stack (Datasphere, SAC, Signavio Process Insights, Integration Suite), EKX Spring Release 2026, Build Work Zone, Cloud ALM. Externe SAP-Quellen abgefragt. Ergänzung durch intern erhaltene BDC-Architekturdetails von Janine. |
+| **Ergebnis (Zusammenfassung)** | Dokumentiert in `notes/praxis/TOOLS.md`: BDC-Referenzarchitektur (3-Schichten), EKX als Creation Engine, vollständige Tool-Landscape-Tabelle, Zielarchitektur Signavio Engineering, Critical-Fit-Check. |
+| **Verwendung** | **Redigiert** — Recherche-Rohdaten aus KI-Chatbot, Struktur und Bewertung eigenständig; intern ergänzt durch Janines BDC-Hinweise und EKX-Mail |
+
+### KI-007 | 21. Apr 2026 | DEV + VIS | sachse_gliederung.tex (PDF + DOCX für Sachse)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Projektmanagement — Kommunikation Hochschulbetreuer |
+| **Prompt (Zusammenfassung)** | Erstelle ein eigenständiges LaTeX-Dokument (Standalone, kein Thesis-Template) mit Gliederungsübersicht, detaillierter Untergliederung, Rotem Faden (TikZ-Diagramm mit DSR-Phasenzuordnung), Strukturellen Entscheidungen und Zeitplan. Iterative Verbesserungen: gleich große TikZ-Boxen, überspannende DSR-Phasenbeschriftungen, ragged2e für Umbrüche, pandoc-Konvertierung zu DOCX. |
+| **Ergebnis (Zusammenfassung)** | `sachse_gliederung.tex` + `sachse_gliederung.pdf` + `sachse_gliederung.docx` — versandfertig für Sachse (nach finaler DOCX-Prüfung morgen). |
+| **Verwendung** | **Redigiert** — Layout-Grundstruktur und TikZ aus KI, Inhalte (Kapitelstruktur, Begründungen) eigenständig; mehrere Iterationen zur Qualitätssicherung |

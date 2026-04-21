@@ -8,11 +8,13 @@
 \usepackage{array}
 \usepackage{parskip}
 \usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}
 \titlespacing{\section}{0pt}{1.5em}{0.5em}
 
 \begin{document}
+\begin{Form}
 \thispagestyle{empty}
 \onehalfspacing
 
@@ -68,8 +70,8 @@ Mit ihrer Unterschrift erteilen die Gutachter die Genehmigung zur Nutzung der in
 
 \noindent
 \begin{tabular}{p{7cm} p{7cm}}
-\underline{\hspace{6cm}} & \\[0.3em]
-Haakon Bessert & Ort, Datum: \underline{\hspace{3.5cm}} \\
+\TextField[name=sig-bessert, width=6cm, height=0.65cm, bordercolor={0 0 0}]{} & \\[0.3em]
+Haakon Bessert & Ort, Datum:\enspace\TextField[name=dat-bessert, width=3.4cm, height=0.5cm, bordercolor={0 0 0}]{} \\
 Studierender & \\
 \end{tabular}
 
@@ -77,8 +79,8 @@ Studierender & \\
 
 \noindent
 \begin{tabular}{p{7cm} p{7cm}}
-\underline{\hspace{6cm}} & \\[0.3em]
-Janine Steidelmüller & Ort, Datum: \underline{\hspace{3.5cm}} \\
+\TextField[name=sig-steidenmueller, width=6cm, height=0.65cm, bordercolor={0 0 0}]{} & \\[0.3em]
+Janine Steidelmüller & Ort, Datum:\enspace\TextField[name=dat-steidenmueller, width=3.4cm, height=0.5cm, bordercolor={0 0 0}]{} \\
 Erstgutachterin (SAP SE) & \\
 \end{tabular}
 
@@ -86,9 +88,10 @@ Erstgutachterin (SAP SE) & \\
 
 \noindent
 \begin{tabular}{p{7cm} p{7cm}}
-\underline{\hspace{6cm}} & \\[0.3em]
-Dr.-Ing. Jürgen Sachse & Ort, Datum: \underline{\hspace{3.5cm}} \\
+\TextField[name=sig-sachse, width=6cm, height=0.65cm, bordercolor={0 0 0}]{} & \\[0.3em]
+Dr.-Ing. Jürgen Sachse & Ort, Datum:\enspace\TextField[name=dat-sachse, width=3.4cm, height=0.5cm, bordercolor={0 0 0}]{} \\
 Zweitgutachter (DHSN Dresden) & \\
 \end{tabular}
 
+\end{Form}
 \end{document}

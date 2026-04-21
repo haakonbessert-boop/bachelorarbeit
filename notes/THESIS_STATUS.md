@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (21. April 2026)
+## Aktueller Stand (21. April 2026 — Feierabend)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -17,29 +17,31 @@
 - LaTeX-Template kompiliert fehlerfrei
 - Hänel-Anforderungen vollständig in Kapitel-Mapping überführt (siehe [REQUIREMENTS.md](REQUIREMENTS.md))
 - **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter)
-  - Status: Erster Entwurf — inhaltlich vollständig, Seitenzahlen (XX) noch offen
+- **Kapitel 3.4 Vorgehen im Überblick: vollständig geschrieben** — DSRM-Phasen auf Kapitel gemappt
+- **Gliederung + Zeitplan für Sachse:** sachse_gliederung.pdf + sachse_gliederung.docx fertig und gepusht
 
 ### Praxisphase (gestartet 20. April)
 - Erstgespräch Gutachter (Janine + Sachse, 21.04.) ✓
 - Kennenlernen Christopher Pfeiler ✓ → BDC als relevanter nächster Schritt identifiziert
 - Tool-Landschaft BDC/SAP recherchiert → [notes/praxis/TOOLS.md](praxis/TOOLS.md)
 - EKX als expliziter Tool-Kandidat von Janine erhalten und dokumentiert
+- Literatur-PDFs für Kap. 2 + 3 im Repo abgelegt (Literatur/)
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum noch offen
 - [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
 - [x] KI-Nutzungsprotokoll: läuft
 
-### Kapitelplanung (aus Exposé + Erstgespräch 21.04.)
+### Kapitelplanung
 | # | Kapitel | Geplante Seiten | Status |
 |---|---------|-----------------|--------|
 | 1 | Einleitung | 4 | Subsections angelegt |
-| 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt — **NEU: 2.5 Entscheidungsmethoden** |
-| 3 | Methodik | 6 | **3.1 Erster Entwurf** — 3.2–3.4 offen |
-| 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt — **NEU: 4.4 Datenbereitstellung** |
+| 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt — NEU: 2.5 Entscheidungsmethoden |
+| 3 | Methodik | 6 | **3.1 + 3.4 Erster Entwurf** — 3.2–3.3 offen |
+| 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt — NEU: 4.4 Datenbereitstellung |
 | 5 | Anforderungsanalyse | 7 | Subsections angelegt |
-| 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt — **NEU: 6.6 Referenzprojekte, 6.7 Machbarkeit** |
-| 7 | Entscheidungs- und Bewertungsmodell | 8 | Subsections angelegt — **NEU: 7.1 Wahl der Bewertungsmethodik** |
+| 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt — NEU: 6.6 Referenzprojekte, 6.7 Machbarkeit |
+| 7 | Entscheidungs- und Bewertungsmodell | 8 | Subsections angelegt — NEU: 7.1 Wahl der Bewertungsmethodik |
 | 8 | MVP: Design, Umsetzung und Validierung | 8 | Subsections angelegt |
 | 9 | Ergebnisse, Diskussion | 5 | Subsections angelegt |
 | 10 | Fazit und Ausblick | 2 | Subsections angelegt |
@@ -104,14 +106,15 @@
 
 ### Vorbereitung Sachse (28. April — Mail statt Meeting)
 
-- [ ] Gliederung + Zeitplan als PDF per Mail an Sachse senden (Grundlage: SACHSE_PREP_28APR.md + Zeitplan aus dieser Datei)
-- [ ] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleiten
+- [ ] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen (morgen, 22.04.)
+- [ ] Mail an Sachse schreiben + PDF + DOCX anhängen (morgen, 22.04.)
+- [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleitet
 
 ### Schreiben (parallel starten)
 
-- [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007) — Seitenzahlen für XX-Platzhalter in Kap. 3.1 nachtragen
+- [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007) — Seitenzahlen für XX-Platzhalter in Kap. 3.1 + 3.4 nachtragen
 - [x] Kapitel 3.1 Forschungsansatz — Erster Entwurf
-- [ ] Kapitel 3.4 Vorgehen im Überblick (nächster Schritt — eng verzahnt mit DSRM-Phasen nach Peffers)
+- [x] Kapitel 3.4 Vorgehen im Überblick — Erster Entwurf
 - [ ] Kapitel 3.3 Ergebniserwartung (wenn Kap. 7 klarer ist)
 - [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
 
