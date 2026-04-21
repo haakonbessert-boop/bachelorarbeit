@@ -57,6 +57,8 @@
 \RequirePackage[all]{nowidow} % to eliminate widows and orphans
 \RequirePackage{titlesec} % to reduce section spacing
 \RequirePackage{lipsum}% just to generate text for the example
+\RequirePackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds}
 
 % Load additional packages if in simple mode
 \iftoggle{baclssimple}{
