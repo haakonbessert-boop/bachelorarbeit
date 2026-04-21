@@ -27,7 +27,7 @@
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum noch offen
-- [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse leitet weiter)
+- [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
 - [x] KI-Nutzungsprotokoll: läuft
 
 ### Kapitelplanung (aus Exposé + Erstgespräch 21.04.)
@@ -91,9 +91,9 @@
 
 ### Formales
 
-- [x] KI-Genehmigungsdokument: Protokollierung akzeptiert — Dokument wird von Sachse weitergeleitet
+- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten (21.04.) — weiterleiten an Janine Steidelmüller zur Gegenzeichnung
 - [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
-- [x] Svitlana Vlasova anschreiben — Meeting 22. April vorbereitet → [MEETING_SVITLANA_20260422.md](praxis/MEETING_SVITLANA_20260422.md)
+- [x] Svitlana Vlasova anschreiben — Mail gesendet, warte auf Antwort
 
 ### Meetings diese Woche
 
@@ -102,12 +102,10 @@
 - [ ] Check-in Oliver Timm — 22. April
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 
-### Vorbereitung nächstes Meeting (28. April — Sachse)
+### Vorbereitung Sachse (28. April — Mail statt Meeting)
 
-- [ ] Gliederung überarbeiten und Gedanken dazu formulieren
-- [ ] Methoden der Entscheidungsfindung recherchieren (Software Requirement Engineering, AHP, Nutzwertanalyse)
-- [ ] Referenzprojekte bei Janine/Oliver anfragen
-- [ ] Datenbereitstellung als Thema in Gliederung verorten
+- [ ] Gliederung + Zeitplan als PDF per Mail an Sachse senden (Grundlage: SACHSE_PREP_28APR.md + Zeitplan aus dieser Datei)
+- [ ] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleiten
 
 ### Schreiben (parallel starten)
 
