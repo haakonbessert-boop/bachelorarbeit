@@ -10,7 +10,56 @@ Wissen entsteht im Gestaltungsakt selbst -- durch den iterativen Prozess des Ent
 Den konzeptionellen Rahmen bildet das \gls{is} Research Framework, das drei Sphären unterscheidet: die \textit{Umgebung} (Personen, Organisationen, Technologien, in der ein Problem verortet ist), die \textit{Wissensbasis} (bestehende Theorien, Methoden und Artefakte der \gls{is}-Forschung) sowie den \textit{\gls{is}-Forschungsprozess} selbst.\vglcite[XX]{hevner2004}
 
 \begin{bafigure}[source={in Anlehnung an \cite{hevner2004}},label=fig:isresearchframework]{IS Research Framework}
-    \includegraphics[width=0.85\textwidth]{images/IS_Research.png}
+\begin{tikzpicture}
+
+% Outer boxes (Seitensäulen je 3.3cm, symmetrische Lücken 1.4cm)
+\draw[rounded corners=8pt, thick] (0,-2.7) rectangle (3.3,2.7);
+\node[font=\small\bfseries] at (1.65, 2.3) {Environment};
+
+\draw[rounded corners=8pt, thick] (4.7,-2.7) rectangle (8.9,2.7);
+\node[font=\small\bfseries] at (6.8, 2.3) {IS Research};
+
+\draw[rounded corners=8pt, thick] (10.3,-2.7) rectangle (13.6,2.7);
+\node[font=\small\bfseries] at (11.95, 2.3) {Knowledge Base};
+
+% Inner boxes in IS Research
+\node[draw, thick, text width=3.3cm, minimum height=1.4cm, align=center, font=\small]
+    (build) at (6.8, 1.2) {\textbf{Development / Build}};
+\node[draw, thick, text width=3.3cm, minimum height=1.4cm, align=center, font=\small]
+    (eval)  at (6.8,-1.2) {\textbf{Justify / Evaluate}};
+
+% Assess / Refine arrows
+\draw[-{Stealth[length=3pt,width=4pt]}, thick]
+    ([xshift=-18pt]build.south) -- node[left, font=\scriptsize]{Assess}
+    ([xshift=-18pt]eval.north);
+\draw[-{Stealth[length=3pt,width=4pt]}, thick]
+    ([xshift=18pt]eval.north)   -- node[right, font=\scriptsize]{Refine}
+    ([xshift=18pt]build.south);
+
+% Fat arrow: Relevanz (right-pointing, gap 3.3–4.7)
+\fill[gray!15, draw=black!60, thick]
+    (3.35,-0.32) -- (4.05,-0.32) -- (4.05,-0.58) --
+    (4.65, 0)    -- (4.05, 0.58) -- (4.05, 0.32) -- (3.35, 0.32) -- cycle;
+\node[font=\scriptsize] at (4.0, 0.9) {Relevanz};
+
+% Fat arrow: Rigor (left-pointing, gap 8.9–10.3)
+\fill[gray!15, draw=black!60, thick]
+    (10.25,-0.32) -- (9.55,-0.32) -- (9.55,-0.58) --
+    (8.95, 0)     -- (9.55, 0.58) -- (9.55, 0.32) -- (10.25, 0.32) -- cycle;
+\node[font=\scriptsize] at (9.6, 0.9) {Rigor};
+
+% Bottom feedback arrows
+\draw[-{Stealth[length=3pt,width=4pt]}, thick]
+    (6.3,-2.7) -- (6.3,-3.4) -- (1.65,-3.4) -- (1.65,-2.7);
+\node[font=\scriptsize, align=center, text width=3.5cm, anchor=north] at (4.0,-3.5)
+    {Application in the Appropriate Environment};
+
+\draw[-{Stealth[length=3pt,width=4pt]}, thick]
+    (7.3,-2.7) -- (7.3,-3.4) -- (11.95,-3.4) -- (11.95,-2.7);
+\node[font=\scriptsize, align=center, text width=2.8cm, anchor=north] at (9.6,-3.5)
+    {Addition to the Knowledge Base};
+
+\end{tikzpicture}
 \end{bafigure}
 
 Zwischen diesen Sphären wirken zwei Zyklen: der \textit{Relevance Cycle} verankert die Forschung in einem realen Problemkontext und stellt sicher, dass das konstruierte Artefakt einen praktischen Beitrag leistet; der \textit{Rigor Cycle} gewährleistet die wissenschaftliche Fundierung durch Rückgriff auf etablierte Theorien und Methoden.\vglcite[XX]{hevner2004}
@@ -48,39 +97,38 @@ Abbildung~\ref{fig:dsrm} zeigt die Phasenabfolge und ihre Entsprechung in dieser
 
 \begin{bafigure}[source={in Anlehnung an \cite{peffers2007}},label=fig:dsrm]{DSRM-Phasenmodell und Kapitelzuordnung}
 \begin{tikzpicture}[
-    node distance=0.45cm and 0.5cm,
     box/.style={
         rectangle, rounded corners=4pt,
         draw=black!60, fill=gray!8,
-        text width=3.05cm, minimum height=1.6cm,
+        text width=3.7cm, minimum height=2.2cm,
         align=center, font=\small
     },
-    arr/.style={-{Stealth[length=3pt,width=4pt]}, thick, black!60}
+    arr/.style={-{Stealth[length=3.5pt,width=5pt]}, thick, black!60}
 ]
 
-\node[box] (p1) {
-    \textbf{Problemidentifikation}\\[2pt]
-    {\footnotesize Ist-Analyse,\\Stakeholder-Interviews\\Kap.~4 + 5}
+\node[box] (p1) at (0,0) {
+    \textbf{Problemidentifikation}\\[3pt]
+    {\footnotesize Ist-Analyse,\\Stakeholder-Interviews\\[2pt]Kap.~4 + 5}
 };
-\node[box, right=of p1] (p2) {
-    \textbf{Zieldefinition}\\[2pt]
-    {\footnotesize Anforderungskatalog\\(F01--F11,\\NF01--NF06)\\Kap.~5}
+\node[box] (p2) at (4.3,0) {
+    \textbf{Zieldefinition}\\[3pt]
+    {\footnotesize Anforderungskatalog\\(F01--F11, NF01--NF06)\\[2pt]Kap.~5}
 };
-\node[box, right=of p2] (p3) {
-    \textbf{Design \& Entwicklung}\\[2pt]
-    {\footnotesize Scoring-Modell\\+ MVP-Konzept\\Kap.~6 + 7 + 8}
+\node[box] (p3) at (8.6,0) {
+    \textbf{Design \&\\Entwicklung}\\[3pt]
+    {\footnotesize Scoring-Modell\\+ MVP-Konzept\\[2pt]Kap.~6 + 7 + 8}
 };
-\node[box, below=of p3] (p4) {
-    \textbf{Demonstration}\\[2pt]
-    {\footnotesize MVP-Umsetzung\\\& Validierung\\Kap.~8}
+\node[box] (p4) at (8.6,-3.3) {
+    \textbf{Demonstration}\\[3pt]
+    {\footnotesize MVP-Umsetzung\\\& Validierung\\[2pt]Kap.~8}
 };
-\node[box, left=of p4] (p5) {
-    \textbf{Evaluation}\\[2pt]
-    {\footnotesize Bewertung gegen\\Anforderungen\\Kap.~9}
+\node[box] (p5) at (4.3,-3.3) {
+    \textbf{Evaluation}\\[3pt]
+    {\footnotesize Bewertung gegen\\Anforderungen\\[2pt]Kap.~9}
 };
-\node[box, left=of p5] (p6) {
-    \textbf{Kommunikation}\\[2pt]
-    {\footnotesize Ergebnisse,\\Diskussion,\\Ausblick\\Kap.~9 + 10}
+\node[box] (p6) at (0,-3.3) {
+    \textbf{Kommunikation}\\[3pt]
+    {\footnotesize Ergebnisse,\\Diskussion, Ausblick\\[2pt]Kap.~9 + 10}
 };
 
 \draw[arr] (p1) -- (p2);
