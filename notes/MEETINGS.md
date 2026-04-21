@@ -126,7 +126,32 @@ Kurzes Kennenlernen (15 min). Christopher Pfeiler ist verantwortlich für Financ
 
 ## 22. April 2026 — Svitlana Vlasova (BDC/SAC Tool-Überblick)
 
-Vorbereitung: [notes/praxis/MEETING_SVITLANA_20260422.md](praxis/MEETING_SVITLANA_20260422.md) | [GitHub Issue #1](https://github.com/haakonbessert-boop/bachelorarbeit/issues/1)
+**Kontext:**
+Svitlana Vlasova (s.vlasova@sap.com) — SAP-intern, BDC/SAC-Expertin. Tipp von Janine (21.04.). Ziel: Tool-Überblick für Kap. 6 Lösungsraum + Kap. 7 Scoring-Modell. [GitHub Issue #1](https://github.com/haakonbessert-boop/bachelorarbeit/issues/1)
+
+**Vorab bekannt (nicht nochmal fragen):**
+- SAP Datasphere = zentrale semantische Schicht, Persistenz, Datenprodukte
+- SAP Analytics Cloud (SAC) = KPI-Modellierung, Stories, "My Metrics"/Watchlist, Alerts
+- SAP Signavio Process Insights = prozessnahe KPIs; Jira + ServiceNow als Quellsysteme bereits vorhanden
+- SAP Integration Suite = Non-SAP-Ingestion (Open Connectors, REST-Adapter)
+- Non-SAP-Konnektoren (Jira, ServiceNow, CircleCI, Gainsight): kein out-of-the-box confirmed → Reifegrad unklar
+- EKX: Relevanz unklar (Creation Engine vs. KPI-Persistenz-Tool)
+
+**Fragen — Priorität 1 (Kern für Thesis):**
+- [ ] Gibt es produktive Konnektoren/Patterns für Jira, ServiceNow, CircleCI, Gainsight in Datasphere — oder ist REST via Replication Flows noch Roadmap?
+- [ ] Reifegrad REST-basierte Replication Flows (April 2026): Einschränkungen bei Rate Limits, Paginierung, Delta, Retry?
+- [ ] SAC "My Metrics" / KPI-Watchlist: Auch praktisch nutzbar für Non-ERP/Non-SAP-Quellen?
+- [ ] Security/Compliance-Freigabe für Non-SAP-Quellen aus Datasphere: Wo anfragen?
+
+**Fragen — Priorität 2 (Architektur):**
+- [ ] Direktpfad Signavio Process Insights → SAC ohne eigene Datasphere-Schicht: empfehlenswert oder Anti-Pattern?
+- [ ] Datasphere vs. SAC als SSOT: Wann lebt KPI-Logik direkt in SAC?
+- [ ] BW Bridge: Für reinen Engineering-/Non-SAP-Use-Case relevant oder ignorierbar?
+
+**Fragen — Priorität 3 (Kontext):**
+- [ ] SAP-interne Referenzprojekte: BDC + Engineering-/DevOps-KPIs (DORA, Ticket, Build)?
+- [ ] EKX: Komplementär zum BDC-Stack oder eigener Ansatz? Kann EKX live auf KPI-Daten zugreifen?
+- [ ] Onboarding/Sandbox: Trial-Tenant oder SAP-interner Sandbox für Datasphere/SAC?
 
 **Notizen:**
 
