@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+\pagestyle{empty}
+
+% Prevent hyphenation in table cells
+\newcolumntype{L}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
+\begin{document}
+
+% ── Titelblock ───────────────────────────────────────────────────────────────
+\begin{center}
+  {\Large\bfseries Gliederung und Zeitplan}\\[0.2em]
+  {\small Stand: 22. April 2026}
+\end{center}
+
+\noindent\rule{\linewidth}{0.4pt}\vspace{0.3em}
+
+\noindent\begin{tabular}{@{}p{3.5cm} p{12cm}@{}}
+\textbf{Titel}         & Ein Mehrkriterien-Entscheidungsmodell zur Auswahl eines KPI-Hub-Integrationsansatzes in einer fragmentierten Enterprise-Systemlandschaft \\[0.3em]
+\textbf{Verfasser}     & Haakon Bessert (Matrikelnr. 3005149) \\
+\textbf{Praxispartner} & SAP SE --- Janine Steidelmüller \\
+\textbf{Betreuer DHSN} & Prof.\ Dr.-Ing.\ Jürgen Sachse \\
+\textbf{Abgabe}        & 10. Juli 2026 \\
+\end{tabular}
+
+\vspace{0.3em}\noindent\rule{\linewidth}{0.4pt}
+
+% ── Kapitelübersicht ─────────────────────────────────────────────────────────
+{\large\bfseries Gliederung}\vspace{0.4em}
+
+\begin{tabular}{@{}r p{12.5cm} r@{}}
+\toprule
+\textbf{Nr.} & \textbf{Kapitel} & \textbf{S.} \\
+\midrule
+1  & Einleitung & 4 \\
+2  & Grundlagen und Stand der Forschung & 9 \\
+3  & Methodik & 6 \\
+4  & Ausgangssituation und Systemlandschaft & 7 \\
+5  & Anforderungsanalyse & 7 \\
+6  & Lösungsraum und Architektur-/Tooloptionen & 6 \\
+7  & Entscheidungs- und Bewertungsmodell & 8 \\
+8  & MVP: Design, Umsetzung und Validierung & 8 \\
+9  & Ergebnisse und Diskussion & 5 \\
+10 & Fazit und Ausblick & 2 \\
+\midrule
+   & \textbf{Gesamt} & \textbf{62} \\
+\bottomrule
+\end{tabular}
+
+% ── Detaillierte Gliederung ───────────────────────────────────────────────────
+\vspace{0.6em}
+
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}L{7.5cm} L{8cm}@{}}
+  % Kap 1
+  \textbf{1\enspace Einleitung}                          & \textbf{6\enspace Lösungsraum und Architektur-/Tooloptionen} \\
+  {\small 1.1\enspace Ausgangssituation und Problemstellung} & {\small 6.1\enspace Identifikation relevanter Lösungsansätze} \\
+  {\small 1.2\enspace Lösungsrelevanz und Motivation}       & {\small 6.2\enspace Portal-/Dashboard-Föderation (Embedding)} \\
+  {\small 1.3\enspace Einordnung in die Wirtschaftsinformatik} & {\small 6.3\enspace Zentrale BI-Aggregation} \\
+  {\small 1.4\enspace Zielsetzung und Forschungsfrage}       & {\small 6.4\enspace Low-Code / No-Code Plattformen} \\
+  {\small 1.5\enspace Aufbau der Arbeit}                     & {\small 6.5\enspace Kundenspezifische Webanwendung} \\
+  & {\small 6.6\enspace Referenzprojekte bei SAP} \\
+  \textbf{2\enspace Grundlagen und Stand der Forschung}    & {\small 6.7\enspace Vergleichende Übersicht und Machbarkeitseinschätzung} \\
+  {\small 2.1\enspace KPI-Management und Business Intelligence} & \\
+  {\small 2.2\enspace Enterprise-Systemintegration}          & \textbf{7\enspace Entscheidungs- und Bewertungsmodell} \\
+  {\small 2.3\enspace Data Governance und Zugriffskontrolle} & {\small 7.1\enspace Wahl der Bewertungsmethodik} \\
+  {\small 2.4\enspace Entscheidungsmethoden im Software Engineering} & {\small 7.2\enspace Aufbau des Scoring-Modells} \\
+  {\small 2.5\enspace Defizite bestehender Ansätze}          & {\small 7.3\enspace Bewertung der Lösungsoptionen} \\
+                                                             & {\small 7.4\enspace Ergebnis und Empfehlung} \\
+  \textbf{3\enspace Methodik}                              & {\small 7.5\enspace Sensitivitätsanalyse} \\
+  {\small 3.1\enspace Forschungsansatz (Design Science Research)} & \\
+  {\small 3.2\enspace Literaturrecherche}                    & \textbf{8\enspace MVP: Design, Umsetzung und Validierung} \\
+  {\small 3.3\enspace Ergebniserwartung}                     & {\small 8.1\enspace MVP-Zielsetzung und Scope} \\
+  {\small 3.4\enspace Vorgehen im Überblick}                 & {\small 8.2\enspace Architektur und Design} \\
+                                                             & {\small 8.3\enspace Umsetzung} \\
+  \textbf{4\enspace Ausgangssituation und Systemlandschaft} & {\small 8.4\enspace Validierung} \\
+  {\small 4.1\enspace Organisatorischer Kontext}             & \\
+  {\small 4.2\enspace Bestehende Systemlandschaft}           & \textbf{9\enspace Ergebnisse und Diskussion} \\
+  {\small 4.3\enspace Ist-Zustand der KPI-Versorgung}        & {\small 9.1\enspace Ergebnisse der Bewertung} \\
+  {\small 4.4\enspace Datenbereitstellung und Schnittstellenlandschaft} & {\small 9.2\enspace Beantwortung der Forschungsfrage} \\
+  {\small 4.5\enspace Identifizierte Problemfelder}          & {\small 9.3\enspace Kritische Diskussion} \\
+                                                             & {\small 9.4\enspace Vergleich mit Ergebniserwartung} \\
+  \textbf{5\enspace Anforderungsanalyse}                   & \\
+  {\small 5.1\enspace Vorgehen bei der Anforderungserhebung} & \textbf{10\enspace Fazit und Ausblick} \\
+  {\small 5.2\enspace Stakeholder und Use Cases}             & {\small 10.1\enspace Fazit} \\
+  {\small 5.3\enspace Funktionale Anforderungen}             & {\small 10.2\enspace Beitrag der Arbeit} \\
+  {\small 5.4\enspace Nicht-funktionale Anforderungen}       & {\small 10.3\enspace Ausblick} \\
+  {\small 5.5\enspace Priorisierung der Anforderungen}       & \\
+\end{tabular}
+
+\vspace{0.5em}\noindent\rule{\linewidth}{0.4pt}
+
+% ── Zeitplan ─────────────────────────────────────────────────────────────────
+{\large\bfseries Zeitplan}\vspace{0.4em}
+
+\noindent Das Schreiben der Kapitel läuft \textbf{parallel zu jeder Phase} --- nicht erst am Ende.
+
+\vspace{0.4em}
+\begin{tabular}{@{}p{2.5cm} p{2.8cm} p{5.0cm} p{4.2cm}@{}}
+\toprule
+\textbf{Phase} & \textbf{Zeitraum} & \textbf{Schwerpunkt} & \textbf{Parallel schreiben} \\
+\midrule
+Orientierung      & 20. Apr -- 7. Mai  & Onboarding, Systemlandschaft, Stakeholder & Kap. 1, 3 + Literatur \\
+Anforderungen     & 8. Mai -- 24. Mai  & Interviews, Requirements erheben          & Kap. 2, 4 \\
+Analyse \& Modell & 25. Mai -- 14. Jun & Lösungsraum, Scoring-Modell               & Kap. 5, 6, 7 \\
+MVP               & 15. Jun -- 30. Jun & MVP umsetzen und validieren               & Kap. 8, 9, 10 \\
+Puffer            & 1. Jul -- 9. Jul   & Korrekturen, Feinschliff                  & --- \\
+\midrule
+\textbf{Abgabe}   & \textbf{10. Juli 2026} & & \\
+\bottomrule
+\end{tabular}
+
+\end{document}
