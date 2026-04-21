@@ -151,31 +151,6 @@ Aktuell genutzte Systeme (Basis für Kap. 4):
 
 ---
 
-### BDC Toolstack — SAP-Referenzarchitektur für KPI-Management (Recherche 21.04.2026)
-
-> Quelle: SAP-interne Recherche (21.04.2026). Relevant für Kap. 6 (Lösungsraum) und Kap. 7 (Scoring-Modell).
-
-**Schicht 1 — Datenbasis & Persistenz**
-- **SAP Datasphere:** Zentrale semantische Schicht; KPI-Fakten, Dimensionen, Harmonisierung, Datenprodukte. Primäre persistente Schicht in der BDC. Konnektoren zu SAP- und Non-SAP-Quellen (S/4HANA, HANA Cloud, BW Bridge, BigQuery, Snowflake, Azure SQL, SharePoint u.a.)
-- **SAP BW Bridge:** Weiterverwendung bestehender BW-Objekte und -Extraktoren in der Cloud-Architektur
-
-**Schicht 2 — Modellierung, Visualisierung & Monitoring**
-- **SAP Analytics Cloud (SAC):** KPI-Modellierung auf Datasphere-Modellen, Stories, "My Metrics"/KPI Monitoring inkl. Alarme, Self-Service-Analyse, Planung
-
-**Schicht 3 — Prozess-KPIs**
-- **SAP Signavio Process Insights:** Vordefinierte prozessnahe KPIs und Benchmarks aus operativen Systemen (z.B. S/4HANA); ergänzt klassischen KPI-Stack um Prozesssicht und Actionable Insights
-
-**Ergänzend (ERP-nah)**
-- **KPI Workspace (Fiori, App F0818):** Definition und Nutzung von KPI/Evaluationen in S/4HANA-Kontexten
-
-**Rolle von Jira im BDC-Kontext**
-Jira ist kein BDC-Tool für KPI-Speicherung/-Berechnung. Es fungiert als externe Quelle für Prozess-/Service-Metriken (z.B. Average Resolution Time, SLA Breach Ratio) — einbindbar über Signavio Process Intelligence/Insights oder Datasphere-Konnektoren.
-
-**Kritischer Fit-Check für Signavio Engineering (eigene Einschätzung)**
-Die BDC-Referenzarchitektur ist primär für ERP/S/4HANA-Szenarien konzipiert. Die Signavio-Engineering-Quellsysteme sind jedoch dominant Non-SAP (Jira, ServiceNow, CircleCI, Gainsight). Datasphere kann diese per Konnektoren einbinden, aber Aufwand und Komplexität dieser Integration sind ein zentrales Machbarkeitskriterium für das Scoring-Modell (Kap. 7). → Dieser Reibungspunkt ist ein "erschwerender Faktor im konkreten Einsatzfall" i.S. Sachses Erwartungen.
-
----
-
 ### Empfohlener MVP-Scope (aus Olivers Dokument)
 
 **Im MVP enthalten:**
