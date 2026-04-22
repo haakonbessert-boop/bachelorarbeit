@@ -173,6 +173,29 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 - Security Validations
 - Rolling Calendar View cross initiatives
 
+### Bereich: Security (aus Anastasia Zinkina Mails, März 2026)
+
+> Quelle: E-Mail-Thread Anastasia Zinkina → Oliver Timm (04.–09.03.2026). Ansprechpartner Security-Dashboards: Anastasia Zinkina, Prashant Manerikar, Apoorva Veluvali. Zugang teils eingeschränkt (CAM-Profil, Sirius-Programm, Slack #data-insights-team).
+
+**Security-Dashboard (Haupt-Dashboard):**
+- Zugang über CAM-Profil beantragen
+- Dokumentation vorhanden
+
+**Incidents / Operational Status Dashboard:**
+- Dokumentation: SAP Wiki (Signavio Data Insights)
+- Dashboard in SAC
+- Zugang via Slack #data-insights-team oder datainsights.signavio@groups.sap.com
+
+**Hacker Simulation Findings:**
+- Eingeschränkter Zugang (nur bei Findings im eigenen Team)
+- Dashboard + Dokumentation im SAP Wiki (SIGSEC)
+
+**Security Validation Findings:**
+- Zugang nur für Sirius-Programm-Mitglieder
+- Dashboard + Dokumentation im SAP Wiki (SIGSEC / SecVal)
+
+---
+
 ### Bereich: Portfolio
 
 **SAC-Dashboards:**
