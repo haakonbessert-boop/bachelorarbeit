@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (21. April 2026 — Feierabend)
+## Aktueller Stand (22. April 2026 — Feierabend)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -18,17 +18,21 @@
 - Hänel-Anforderungen vollständig in Kapitel-Mapping überführt (siehe [REQUIREMENTS.md](REQUIREMENTS.md))
 - **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter)
 - **Kapitel 3.4 Vorgehen im Überblick: vollständig geschrieben** — DSRM-Phasen auf Kapitel gemappt
-- **Gliederung + Zeitplan für Sachse:** sachse_gliederung.pdf + sachse_gliederung.docx fertig und gepusht
+- **sachse_gliederung.docx** neu generiert (python-docx), an Janine geschickt → wartet auf Feedback
+- **Sachse-Mail** geschrieben, wartet auf Janines OK zum .docx bevor Versand
 
-### Praxisphase (gestartet 20. April)
+### Praxisphase (Tag 3)
 - Erstgespräch Gutachter (Janine + Sachse, 21.04.) ✓
 - Kennenlernen Christopher Pfeiler ✓ → BDC als relevanter nächster Schritt identifiziert
-- Tool-Landschaft BDC/SAP recherchiert → [notes/praxis/TOOLS.md](praxis/TOOLS.md)
-- EKX als expliziter Tool-Kandidat von Janine erhalten und dokumentiert
-- Literatur-PDFs für Kap. 2 + 3 im Repo abgelegt (Literatur/)
+- **Svitlana Vlasova Meeting (22.04.) ✓** → SAC Data Steer, Collibra als fester BDC-Bestandteil, BDC Adoption Program (SharePoint). EKX ihr unbekannt, keine Referenzprojekte. Präsentation ausgewertet.
+- **Oliver Timm Check-in (22.04.) ✓** → Mural mit ~25 Dashboard-Links, bis Freitag durcharbeiten. Tool-Übersicht bis 15. Mai. Ich bin das Lead. Persona = Senior Management.
+- **#OneDashboard-Dokument** von Oliver ausgewertet → 7 KPI-Kategorien, 5+ parallele Initiativen (teils on hold), Hindernisse dokumentiert
+- **SAC-Zugang** erhalten (Data Insights Team) → Signavio Dashboards + Datasphere View-Zugang
+- **Mural-Bereiche erfasst:** Product, Security, Portfolio, HR (leer), VoC
+- Tool-Landschaft BDC/SAP umfassend dokumentiert → [notes/praxis/TOOLS.md](praxis/TOOLS.md)
 
 ### Formales
-- [x] Sperrvermerk: implementiert — Befristungsdatum noch offen
+- [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
 - [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
 - [x] KI-Nutzungsprotokoll: läuft
 
@@ -79,10 +83,10 @@
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
 - [ ] Befristungsdatum Sperrvermerk festlegen — wird erst am Ende der Arbeit geklärt
 - [x] KI-Genehmigungsdokument: Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
-- [ ] Referenzprojekte aus anderen SAP-Bereichen anfragen (morgen bei Oliver Timm klären)
+- [x] Referenzprojekte aus anderen SAP-Bereichen anfragen → Svitlana kennt keine; Goals Tracking (Svitlana) als einziges Referenzprojekt identifiziert
 - [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
 - [x] Datenbereitstellung als explizites Thema einplanen → Kap. 4.4 angelegt
-- [ ] Gliederung für nächstes Meeting (28. April) vorbereiten und Sachse vorlegen
+- [x] Gliederung für nächstes Meeting (28. April) vorbereiten und Sachse vorlegen → .docx an Janine, Mail an Sachse geschrieben
 
 ---
 
@@ -165,3 +169,6 @@
 | 21.04.2026 | Entscheidungsmethodik aus Software Req. Engineering | Sachse: Methoden wie AHP, Nutzwertanalyse für Kap. 7 heranziehen |
 | 21.04.2026 | Forschungsfragen dürfen angepasst werden | Sachse: Anpassung nach Fortschritt erlaubt |
 | 21.04.2026 | Gliederung erweitert: 2.5, 4.4, 6.6/6.7, 7.1 neu | Umsetzung Erstgespräch-Feedback (Entscheidungsmethoden, Datenbereitstellung, Machbarkeit, Methodenwahl) |
+| 22.04.2026 | Sperrvermerk-Befristung wird erst am Ende der Arbeit geklärt | Keine Dringlichkeit, Entscheidung hat keine Auswirkung auf Schreibprozess |
+| 22.04.2026 | Collibra ist fester Bestandteil des BDC-Stacks (nicht externer Kandidat) | Svitlana-Präsentation: Collibra = offizielle Governance-Plattform im BDC |
+| 22.04.2026 | Goals Tracking als Referenzprojekt | Einziges identifiziertes BDC-Projekt mit Engineering-Bezug (Svitlana, Data Products in Collibra → DSP → SAC) |

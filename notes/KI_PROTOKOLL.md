@@ -161,3 +161,23 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Prompt (Zusammenfassung)** | Erstelle ein eigenständiges LaTeX-Dokument (Standalone, kein Thesis-Template) mit Gliederungsübersicht, detaillierter Untergliederung, Rotem Faden (TikZ-Diagramm mit DSR-Phasenzuordnung), Strukturellen Entscheidungen und Zeitplan. Iterative Verbesserungen: gleich große TikZ-Boxen, überspannende DSR-Phasenbeschriftungen, ragged2e für Umbrüche, pandoc-Konvertierung zu DOCX. |
 | **Ergebnis (Zusammenfassung)** | `sachse_gliederung.tex` + `sachse_gliederung.pdf` + `sachse_gliederung.docx` — versandfertig für Sachse (nach finaler DOCX-Prüfung morgen). |
 | **Verwendung** | **Redigiert** — Layout-Grundstruktur und TikZ aus KI, Inhalte (Kapitelstruktur, Begründungen) eigenständig; mehrere Iterationen zur Qualitätssicherung |
+
+### KI-008 | 22. Apr 2026 | DEV | sachse_gliederung.docx neu generiert (python-docx)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Projektmanagement — Kommunikation Hochschulbetreuer |
+| **Prompt (Zusammenfassung)** | Die pandoc-Konvertierung von LaTeX zu Word zerstört TikZ-Diagramme und komplexe Tabellen. Erstelle ein Python-Script (python-docx) das die sachse_gliederung.docx direkt Word-nativ generiert mit sauberen Tabellen, Textflow-Rotem-Faden und korrekter Formatierung. |
+| **Ergebnis (Zusammenfassung)** | `generate_sachse_docx.py` erstellt, generiert `sachse_gliederung.docx` mit Titelblock, Kapitelübersicht, zweispaltiger Detailgliederung, Rotem Faden (Textflow mit Pfeilen + DSR-Phasen), Strukturellen Entscheidungen, Zeitplan. Alles Word-nativ formatiert. |
+| **Verwendung** | **Direkt** — Script-Code aus KI, Inhalte identisch zum bestehenden .tex |
+
+### KI-009 | 22. Apr 2026 | STR | Meeting-Vorbereitung und Dokumentation (Svitlana, Oliver)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Kap. 4 + 6 (Vorarbeit) — Orientierungsphase |
+| **Prompt (Zusammenfassung)** | Iterative Unterstützung bei: (1) Umformulierung Svitlana-Meeting-Fragen (von technisch auf Tool-Überblick-Niveau), (2) Auswertung Svitlana-Präsentation "Introducing BDC" (BDC-Architektur, Data Products, Collibra-Rolle), (3) Erfassung Mural-Dashboard-Links, (4) Auswertung #OneDashboard-Dokument (KPI-Kategorien, Initiativen, Hindernisse), (5) Dokumentation aller Meeting-Ergebnisse. |
+| **Ergebnis (Zusammenfassung)** | Aktualisierte MEETINGS.md, TOOLS.md (Mural-Overview, Svitlana-Auswertung, #OneDashboard-Analyse, Security-Dashboards, VoC-Bereich), THESIS_STATUS.md. |
+| **Verwendung** | **Redigiert** — Strukturierung und Dokumentation durch KI, inhaltliche Inputs und Bewertungen eigenständig |
