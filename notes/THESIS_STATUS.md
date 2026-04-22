@@ -77,7 +77,7 @@
 
 - [ ] Wie tief wird die Sensitivitätsanalyse (Kapitel 7 oder 9)?
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
-- [ ] Befristungsdatum Sperrvermerk festlegen — Entscheidung vertagt (Erstgespräch 21.04.)
+- [ ] Befristungsdatum Sperrvermerk festlegen — wird erst am Ende der Arbeit geklärt
 - [x] KI-Genehmigungsdokument: Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
 - [ ] Referenzprojekte aus anderen SAP-Bereichen anfragen (morgen bei Oliver Timm klären)
 - [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
@@ -94,7 +94,7 @@
 ### Formales
 
 - [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten + an Janine weitergeleitet — Janines Gegenzeichnung ausstehend
-- [ ] Befristungsdatum Sperrvermerk — vertagt, später klären
+- [ ] Befristungsdatum Sperrvermerk — wird erst am Ende der Arbeit geklärt
 - [x] Svitlana Vlasova anschreiben — Mail gesendet, warte auf Antwort
 
 ### Meetings diese Woche
