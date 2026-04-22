@@ -129,6 +129,58 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 
 ---
 
+## Mural-Overview: Bestehende Dashboards & Links (22.04.2026, Oliver Timm)
+
+> Quelle: Mural-Board, gemeinsam mit Oliver bis Freitag (24.04.) durcharbeiten. **Oberste Priorität.**
+
+### Bereich: Operations
+
+**SharePoints:**
+- Signavio PPR
+- Signavio Product Excellence Dashboard
+- Business Data Cloud
+
+**SAC-Dashboards:**
+- Signavio Product Excellence Dashboard
+- Signavio Customer Reported Incidents & Bugs
+- Adoption Monitor 2.0
+- SAP Usage Analyser
+- Consumed Annual Contract Value (CACV) Dashboard
+- CACV Single Customer Analysis
+- Product 360
+- Operational Status Dashboard
+- Signavio Dashboards
+- Product Standard Requirements P&E
+- Product Standard Compliance Dashboard
+- Corporate Requirements Dashboard
+- EVM - Infrastructure Vulnerabilities
+- Cloud Health & Reliability Dashboard
+
+**Collibra:**
+- Product Experience Analytics Foundation
+
+**Gainsight:**
+- Signavio Dashboards
+
+**Grafana:**
+- SAP Signavio Release Management Security
+
+**SAP Jira:**
+- Jira Tools (Link)
+- CPA Planning & Adoption Insights
+
+**SAP Wiki:**
+- Security Validations
+- Rolling Calendar View cross initiatives
+
+### Bereich: Portfolio
+
+**SAC-Dashboards:**
+- E2E Portfolio Planning Dashboard
+- E2E Portfolio QBR Dashboard
+
+---
+
 ## Kritischer Fit-Check für Signavio Engineering
 
 BDC ist primär für ERP/S/4HANA konzipiert; Signavio-Engineering-Quellsysteme sind dominant Non-SAP. Kein "Plug-and-play" — Integrationsaufwand für REST-API-Ingestion ist real. Dies ist ein zentrales **Machbarkeitskriterium** für das Scoring-Modell (Kap. 7) und ein "erschwerender Faktor im konkreten Einsatzfall" i.S. Sachses Erwartungen.
