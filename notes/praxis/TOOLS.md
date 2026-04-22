@@ -265,6 +265,10 @@ Auch möglich: Excel-Upload via CSV in Datasphere (für KPIs die noch nicht syst
 - E2E Portfolio Planning Dashboard
 - E2E Portfolio QBR Dashboard
 
+### Bereich: HR
+
+*(noch keine Inhalte im Mural)*
+
 ---
 
 ## Kritischer Fit-Check für Signavio Engineering
