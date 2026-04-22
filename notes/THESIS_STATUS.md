@@ -106,6 +106,12 @@
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 - [ ] Bei Oliver melden (Anfang nächste Woche, ~27./28.04.): Brauchen wir vor Mai nochmal ein Meeting?
 
+### Mural / Dashboard-Analyse (Priorität bis Freitag 24.04.)
+
+- [ ] Alle zugänglichen Dashboards durchgehen: Screenshots + kurze Beschreibung pro Dashboard
+- [ ] Gemeinsam auswerten: relevante KPIs für KPI-Hub identifizieren, Lücken und Überlappungen erkennen, offene Fragen für Oliver formulieren
+- [ ] Tool-Liste für Janine-Sync (Freitag) zusammenstellen
+
 ### Vorbereitung Sachse (28. April — Mail statt Meeting)
 
 - [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
