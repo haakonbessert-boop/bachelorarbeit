@@ -269,6 +269,74 @@ Auch möglich: Excel-Upload via CSV in Datasphere (für KPIs die noch nicht syst
 
 *(noch keine Inhalte im Mural)*
 
+### Bereich: VoC (Voice of Customer)
+
+- Voice of Customer Mural (Mural)
+- Voice of Customer Pitch (SharePoint/PowerPoint)
+- Voice of Customer Alignment Sheet (SharePoint/Word)
+- KPI Session with Signavio LT — 21. November 2025 (SharePoint/PowerPoint)
+
+---
+
+## #OneDashboard Vision-Dokument (Oliver Timm)
+
+> Quelle: "one-signavio-metrics-dashboard.pdf" — Oliver Timm. Beschreibt die übergreifende #OneDashboard-Initiative mit KPI-Kategorien, bestehenden Initiativen, Hindernissen und Next Steps.
+
+### Vision
+
+"We have #OneDashboard with all relevant KPIs visualized in various categories that everyone can consider while deciding."
+
+Aktuell: monatlicher KPI-Report als PDF (Fokus: Headcount, Financials, Release Management). Mehrere parallele Initiativen, keine Harmonisierung.
+
+### KPI-Kategorien (vollständig)
+
+**GTM KPIs:**
+- Renewal Rate FC/ACT, Net Retention Rate, Licensed Customers, Health Score (CSP Managed)
+
+**Service KPIs:**
+- Value of Services Sold (Volume, Net Value, Backlog), Avg. PD/Service, Win Rate, Customer Satisfaction Score, Utilization (Billable/Chargeable/Investment), Services Bookings Value (Pipeline), Service to License Attach Rate, Churn/Renewal Rate (Service Attached), Profitability of Services
+
+**People KPIs:**
+- P Actuals (FTE/Heads), HC/NHC/Maternity, Terminations, Starters, Diversity (Gender, Early Talent, Females in Management), Career Level (T-Level), Job Function/Group/Title, Org Unit/Cost Center, Location Strategy (Low/Mid/High Cost), Attrition Rate
+
+**Usage:**
+- Software- und Feature-Nutzung (nicht weiter spezifiziert)
+
+**Delivery (DORA + Jira):**
+- Deployment Frequency, Lead Time for Changes, Change Failure Rate, Time to Restore Service, Throughput, Cycle Time, (Velocity)
+
+**Release Management:**
+- Total Non-assessed Vulnerabilities, Product Standards Compliance (Corporate, Top-X, Accessibility, Integration), Key Customer Issues / Operational Events / Outages
+
+**Financials:**
+- P&L Statement, Actuals, Budget, Forecast
+
+### Bestehende Initiativen (Stand des Dokuments)
+
+| Initiative | Owner | Status | Beschreibung |
+|---|---|---|---|
+| **COO Cross Team** | Jens Hildenbrand | **On Hold** (wegen Re-Org) | SAP Signavio Dashboard / Digital Boardroom für Rouven, Gero und LT. Standard-KPIs via ID&A + Signavio-spezifische KPIs. Alle Units hatten Unit-spezifische KPIs beigesteuert |
+| **GTM** | Julius Meinl | Laufend | E2E Steering Model für G2M. High-level Health Overview für Senior Management |
+| **Process Intelligence** | Björn Wagner, Rohini Geetha Soman Nair | Laufend | JIRA-Daten (Release Prediction), Usage Data mit Event Logs |
+| **DORA & QA Metrics** | Stefan Popescu et al. | OKR, nicht voll besetzt | DORA & QA Metrics Dashboard |
+| **Process Insights** | — | Produktiv | 3 Cloud Reporting Dashboards: SAP Signavio Ops, SAP Process Insights, Solution Area – SAP Signavio |
+| **PM&Strategy** | — | Migration geplant | "Data-Driven Product Management Initiative", aktuell on-prem Tableau, Migration zu SAC geplant |
+
+### Hindernisse (aus Dokument)
+
+1. **Verschiedene Datenquellen** → Integration komplex
+2. **Zu viel manueller Aufwand** → Aggregation und Visualisierung händisch
+3. **Access Rights** → Units haben unterschiedliche Zugriffsrechte → Policy/Procedures nötig
+4. **Nicht genug Kapazität** → COO-Office hat nicht genug Ressourcen
+5. **Kein klares Ownership** → Keine dedizierte Verantwortung, andere SAP-Units allokieren mehrere FTEs
+
+### Next Steps (aus Dokument)
+
+1. LT-Mandat einholen für zentrale Initiative
+2. Plan erstellen: wie soll Dashboard aussehen, Alignment mit allen Initiative-Owners
+3. Plan dem Management präsentieren, Kapazitäten klären
+4. Mit Julius (GTM) auf Product-KPIs aus CS alignen
+
 ---
 
 ## Kritischer Fit-Check für Signavio Engineering
