@@ -137,21 +137,21 @@ Svitlana Vlasova (s.vlasova@sap.com) — SAP-intern, BDC/SAC-Expertin. Tipp von 
 - Non-SAP-Konnektoren (Jira, ServiceNow, CircleCI, Gainsight): kein out-of-the-box confirmed → Reifegrad unklar
 - EKX: Relevanz unklar (Creation Engine vs. KPI-Persistenz-Tool)
 
-**Fragen — Priorität 1 (Kern für Thesis):**
-- [ ] Gibt es produktive Konnektoren/Patterns für Jira, ServiceNow, CircleCI, Gainsight in Datasphere — oder ist REST via Replication Flows noch Roadmap?
-- [ ] Reifegrad REST-basierte Replication Flows (April 2026): Einschränkungen bei Rate Limits, Paginierung, Delta, Retry?
-- [ ] SAC "My Metrics" / KPI-Watchlist: Auch praktisch nutzbar für Non-ERP/Non-SAP-Quellen?
-- [ ] Security/Compliance-Freigabe für Non-SAP-Quellen aus Datasphere: Wo anfragen?
+**Fragen — Priorität 1: Was geht technisch wirklich?**
+- [ ] Wir wollen Daten aus Jira, ServiceNow, CircleCI und Gainsight in einem zentralen Dashboard zusammenbringen. Kann Datasphere diese Systeme heute schon anbinden — oder muss man da noch viel selbst bauen?
+- [ ] Wenn man Daten per REST-Schnittstelle reinholt: Funktioniert das stabil im Alltag, oder gibt es da noch Kinderkrankheiten?
+- [ ] In SAC gibt es „My Metrics" und KPI-Watchlists — funktioniert das auch gut mit Daten, die nicht aus SAP-Systemen kommen?
+- [ ] Wer bei SAP entscheidet, ob wir Non-SAP-Datenquellen anbinden dürfen (Security/Compliance)? An wen müssen wir uns wenden?
 
-**Fragen — Priorität 2 (Architektur):**
-- [ ] Direktpfad Signavio Process Insights → SAC ohne eigene Datasphere-Schicht: empfehlenswert oder Anti-Pattern?
-- [ ] Datasphere vs. SAC als SSOT: Wann lebt KPI-Logik direkt in SAC?
-- [ ] BW Bridge: Für reinen Engineering-/Non-SAP-Use-Case relevant oder ignorierbar?
+**Fragen — Priorität 2: Welcher Weg ist der richtige?**
+- [ ] Kann man Daten direkt von Signavio Process Insights nach SAC schicken, ohne Datasphere dazwischen — oder ist das eine schlechte Idee?
+- [ ] Wo sollten die KPI-Berechnungen leben — in Datasphere oder direkt in SAC? Was empfiehlst du?
+- [ ] BW Bridge — brauchen wir das für unseren Fall (Engineering-KPIs, kein klassisches ERP), oder können wir das ignorieren?
 
-**Fragen — Priorität 3 (Kontext):**
-- [ ] SAP-interne Referenzprojekte: BDC + Engineering-/DevOps-KPIs (DORA, Ticket, Build)?
-- [ ] EKX: Komplementär zum BDC-Stack oder eigener Ansatz? Kann EKX live auf KPI-Daten zugreifen?
-- [ ] Onboarding/Sandbox: Trial-Tenant oder SAP-interner Sandbox für Datasphere/SAC?
+**Fragen — Priorität 3: Kontext & Einstieg**
+- [ ] Gibt es bei SAP schon Teams, die etwas Ähnliches gemacht haben — also Engineering- oder DevOps-KPIs über BDC/SAC zusammengebracht? Referenzprojekte, an denen wir uns orientieren können?
+- [ ] EKX: Ist das ein eigener Ansatz oder eine Ergänzung zum BDC-Stack? Kann EKX live auf KPI-Daten zugreifen?
+- [ ] Gibt es einen Sandbox-Zugang zu Datasphere/SAC, wo wir einfach mal ausprobieren können?
 
 **Notizen:**
 
@@ -186,6 +186,9 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als �
 **Geplant bis nächstem Sync:**
 
 **Blockiert / brauche Input:**
+
+**Vorbereitung / To-Dos:**
+- [ ] Tool-Liste mitbringen: Alle bisher identifizierten Tools und Plattformen (BDC-Stack, EKX, etc.) — Janine will das sehen
 
 **Notizen:**
 
