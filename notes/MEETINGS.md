@@ -127,31 +127,22 @@ Kurzes Kennenlernen (15 min). Christopher Pfeiler ist verantwortlich für Financ
 ## 22. April 2026 — Svitlana Vlasova (BDC/SAC Tool-Überblick)
 
 **Kontext:**
-Svitlana Vlasova (s.vlasova@sap.com) — SAP-intern, BDC/SAC-Expertin. Tipp von Janine (21.04.). Ziel: Tool-Überblick für Kap. 6 Lösungsraum + Kap. 7 Scoring-Modell. [GitHub Issue #1](https://github.com/haakonbessert-boop/bachelorarbeit/issues/1)
+Svitlana Vlasova (s.vlasova@sap.com) — SAP-intern, BDC/SAC-Expertin. Tipp von Janine (21.04.). Ziel: **Überblick über verfügbare Tools und Plattformen** für die Tool-Liste (Freitag Janine-Sync) und Kap. 6 Lösungsraum. Technische Tiefe (Konnektoren, REST, Architektur) kommt später.
 
-**Vorab bekannt (nicht nochmal fragen):**
-- SAP Datasphere = zentrale semantische Schicht, Persistenz, Datenprodukte
-- SAP Analytics Cloud (SAC) = KPI-Modellierung, Stories, "My Metrics"/Watchlist, Alerts
-- SAP Signavio Process Insights = prozessnahe KPIs; Jira + ServiceNow als Quellsysteme bereits vorhanden
-- SAP Integration Suite = Non-SAP-Ingestion (Open Connectors, REST-Adapter)
-- Non-SAP-Konnektoren (Jira, ServiceNow, CircleCI, Gainsight): kein out-of-the-box confirmed → Reifegrad unklar
-- EKX: Relevanz unklar (Creation Engine vs. KPI-Persistenz-Tool)
+**Vorab bekannt:**
+- SAP Datasphere, SAP Analytics Cloud (SAC), Signavio Process Insights, Integration Suite — Namen bekannt, aber Einordnung noch unklar
+- EKX: von Janine als Kandidat genannt, Rolle unklar
 
-**Fragen — Priorität 1: Was geht technisch wirklich?**
-- [ ] Wir wollen Daten aus Jira, ServiceNow, CircleCI und Gainsight in einem zentralen Dashboard zusammenbringen. Kann Datasphere diese Systeme heute schon anbinden — oder muss man da noch viel selbst bauen?
-- [ ] Wenn man Daten per REST-Schnittstelle reinholt: Funktioniert das stabil im Alltag, oder gibt es da noch Kinderkrankheiten?
-- [ ] In SAC gibt es „My Metrics" und KPI-Watchlists — funktioniert das auch gut mit Daten, die nicht aus SAP-Systemen kommen?
-- [ ] Wer bei SAP entscheidet, ob wir Non-SAP-Datenquellen anbinden dürfen (Security/Compliance)? An wen müssen wir uns wenden?
+**Fragen — Welche Tools gibt es und was können sie?**
+- [ ] Wir sammeln gerade alle SAP-internen Tools, die für ein zentrales KPI-Dashboard in Frage kommen. Welche kennst du — und wofür ist welches Tool gedacht?
+- [ ] EKX wurde uns empfohlen: Was genau ist das, und passt das für KPI-Dashboards?
+- [ ] Gibt es noch weitere Tools oder Plattformen bei SAP, die wir auf dem Schirm haben sollten — vielleicht etwas, das nicht so bekannt ist?
+- [ ] Welche dieser Tools werden bei SAP intern tatsächlich schon produktiv für Dashboards oder KPI-Reporting eingesetzt?
 
-**Fragen — Priorität 2: Welcher Weg ist der richtige?**
-- [ ] Kann man Daten direkt von Signavio Process Insights nach SAC schicken, ohne Datasphere dazwischen — oder ist das eine schlechte Idee?
-- [ ] Wo sollten die KPI-Berechnungen leben — in Datasphere oder direkt in SAC? Was empfiehlst du?
-- [ ] BW Bridge — brauchen wir das für unseren Fall (Engineering-KPIs, kein klassisches ERP), oder können wir das ignorieren?
-
-**Fragen — Priorität 3: Kontext & Einstieg**
-- [ ] Gibt es bei SAP schon Teams, die etwas Ähnliches gemacht haben — also Engineering- oder DevOps-KPIs über BDC/SAC zusammengebracht? Referenzprojekte, an denen wir uns orientieren können?
-- [ ] EKX: Ist das ein eigener Ansatz oder eine Ergänzung zum BDC-Stack? Kann EKX live auf KPI-Daten zugreifen?
-- [ ] Gibt es einen Sandbox-Zugang zu Datasphere/SAC, wo wir einfach mal ausprobieren können?
+**Fragen — Einordnung und Erfahrung**
+- [ ] Gibt es Teams bei SAP, die schon etwas Ähnliches gebaut haben — also Engineering- oder Operations-KPIs zentral zusammengebracht? An wen könnten wir uns wenden?
+- [ ] Wenn du aus Erfahrung einen Tipp geben müsstest, wo man anfangen sollte: Welches Tool würdest du als erstes anschauen?
+- [ ] Gibt es einen Sandbox-Zugang, wo wir die Tools einfach mal ausprobieren können?
 
 **Notizen:**
 
