@@ -109,7 +109,7 @@
 
 - [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
 - [x] sachse_gliederung.docx an Janine geschickt (22.04.) — wartet auf Feedback
-- [ ] Nach Janines Feedback: Mail an Sachse schreiben + PDF + DOCX anhängen
+- [x] Mail an Sachse geschrieben (22.04.) — wartet auf Janines Feedback zum .docx bevor Versand
 - [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleitet
 
 ### Schreiben (parallel starten)
