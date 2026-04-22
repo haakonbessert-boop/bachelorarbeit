@@ -125,7 +125,70 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 - **BDC Adoption Program (SharePoint):** "your golden ticket" laut Svitlana — unbedingt durcharbeiten
 - **EKX:** Svitlana kennt es nicht, keine BDC-Projekte damit bekannt
 - **Referenzprojekte:** Svitlana kennt keine für Engineering-KPIs
-- **Präsentation:** Svitlana schickt noch nach → auswerten
+- **Präsentation:** Svitlana schickt noch nach → ✅ erhalten und ausgewertet (siehe unten)
+
+---
+
+## Svitlana-Präsentation: "Introducing BDC" (05.02.2026) — Auswertung
+
+> Quelle: Svitlana Vlasova, "Introducing BDC: From Shopping in Collibra to Modelling in SAP DSP and Analytics in SAC", 05.02.2026. INTERNAL — SAP Only.
+
+### BDC-Architektur (offiziell)
+
+Der BDC-Stack besteht aus drei Kernkomponenten + Collibra als Governance-Layer:
+
+| Komponente | Rolle |
+|---|---|
+| **SAP Analytics Cloud (SAC)** | Dashboards, Reporting, Planung — Consumption Layer |
+| **SAP Datasphere (DSP)** | Datenintegration, Modellierung, Semantik — zentrale Datenschicht |
+| **SAP Databricks** | AI/ML, Advanced Data Engineering (optional) |
+| **Collibra** | Data Governance, Data Catalog, Lineage, Qualität, Privacy — **kein SAP-Produkt, aber fester Bestandteil des BDC-Stacks** |
+
+**Wichtig:** Collibra ist nicht nur ein externer Kandidat — es ist die offizielle Governance-Plattform im BDC-Stack. Data Products werden über Collibra entdeckt, beantragt und governed.
+
+### Data Products — Konzept
+
+- Standardisierte, wiederverwendbare "business-ready" Datenassets
+- Werden in Collibra katalogisiert (Suche, Metadata, Lineage, Ownership, SLAs)
+- Lifecycle: Ideate → Initiate → Build & Govern → Publish → Consume → Maintain → Retire
+- Beispiel-Use-Case: "BDC Operations Insights — Goals Tracking" (Product Satisfaction, Active Users, Cloud Availability, etc.)
+
+### Datasphere 3-Schichten-Architektur
+
+| Schicht | Zweck |
+|---|---|
+| **1 — Input Layer** | Rohdaten 1:1 aus Quellsystem, persistiert |
+| **2 — Transformation Layer** | Business Logic: Joins, Unions, Aggregation, Harmonisierung → FACT Views |
+| **3 — Output Layer** | Business-ready: Measures, Keys, Hierarchien, Analytic Models → SAC-Consumption |
+
+### Datenfluss (End-to-End)
+
+Quellsystem → Datasphere (Input → Transformation → Output) → Analytic Model → SAC (Live Connection → Story)
+
+Auch möglich: Excel-Upload via CSV in Datasphere (für KPIs die noch nicht systemintegriert sind).
+
+### BDC Adoption Program
+
+- SAP nutzt BDC intern als "Customer Zero" — interne Strategie trifft externes Produkt
+- **BDC Adoption Program:** Mentoring-Programm für Citizen User Adoption
+- Svitlanas Use Case: "BDC&I Goals Tracking" — sie hat Platform Mentors (Gregory, Claudia)
+- Spaces in Datasphere: "Goals Tracking", "BDD Goals Tracking Foundation", "General Manager 360"
+
+### Relevante Personen (aus Präsentation)
+
+- **Gregory Rohloff** — Data Product Owner (Goals Tracking)
+- **Natasa Nakic** — Data Product Owner
+- **Svitlana Vlasova** — Data Product Owner
+- **Vikrant Shinde** — Data Product Owner
+
+### Wichtige Links (aus Folie 8)
+
+- BDC Adoption Program (SharePoint)
+- Collibra Landing Page
+- Initiate Data Product (Collibra)
+- Request SAP Datasphere Space in Data for All Hub
+- Mandatory Concepts (DSP-Modellierung)
+- Use Case "Goals Tracking": Data Product + Foundation in Collibra
 
 ---
 
