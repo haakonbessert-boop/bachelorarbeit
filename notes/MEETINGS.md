@@ -177,6 +177,16 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als �
 
 **Notizen:**
 
+- Kurzes gegenseitiges Vorstellen
+- **Landscape-Analyse:** Status erfragt (offen geblieben)
+- **Monatliche Reports:** Stakeholder-Frage gestellt (offen geblieben)
+- **Wichtig — Arbeitsweise:**
+  - Ich muss immer proaktiv auf Oliver (und alle anderen) zukommen — ich bin das Lead
+  - Ziel kann auch sein, die reine Auswahl an Tools zu verringern / zu bündeln
+  - Stakeholder nicht aus den Augen verlieren → **Persona = Senior Management**
+- **Meilenstein 15. Mai:** Tool-Übersicht fertig + Tools verstanden
+- **Mural mit Links:** Gemeinsam mit Oliver bis Freitag (24.04.) durcharbeiten — **oberste Priorität**
+
 ---
 
 ## 24. April 2026 — Weekly Sync Janine Steidelmüller
