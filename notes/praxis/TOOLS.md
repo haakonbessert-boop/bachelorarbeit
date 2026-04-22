@@ -118,6 +118,17 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 
 ---
 
+## Svitlana-Meeting (22.04.2026) — Neue Erkenntnisse
+
+- **SAC Data Steer** (via BDC → SAC): neuer Tool-Kandidat, näher ansehen
+- **Collibra Data Intelligence Platform:** Landing Page ansehen — externer Kandidat
+- **BDC Adoption Program (SharePoint):** "your golden ticket" laut Svitlana — unbedingt durcharbeiten
+- **EKX:** Svitlana kennt es nicht, keine BDC-Projekte damit bekannt
+- **Referenzprojekte:** Svitlana kennt keine für Engineering-KPIs
+- **Präsentation:** Svitlana schickt noch nach → auswerten
+
+---
+
 ## Kritischer Fit-Check für Signavio Engineering
 
 BDC ist primär für ERP/S/4HANA konzipiert; Signavio-Engineering-Quellsysteme sind dominant Non-SAP. Kein "Plug-and-play" — Integrationsaufwand für REST-API-Ingestion ist real. Dies ist ein zentrales **Machbarkeitskriterium** für das Scoring-Modell (Kap. 7) und ein "erschwerender Faktor im konkreten Einsatzfall" i.S. Sachses Erwartungen.

@@ -146,6 +146,15 @@ Svitlana Vlasova (s.vlasova@sap.com) — SAP-intern, BDC/SAC-Expertin. Tipp von 
 
 **Notizen:**
 
+- Svitlana kurz den aktuellen Stand / eigenes Verständnis beschrieben
+- **Neue Tools:** SAC Dashboards, BDC → SAC Data Steer
+- **EKX:** Svitlana kennt EKX nicht, auch keine vergleichbaren Projekte aus dem BDC-Umfeld
+- **Produktiv genutzt:** Nichts Neues über das hinaus, was bereits bekannt war
+- **Referenzprojekte:** Keine bekannt
+- **Wichtiger Hinweis:** SharePoint "BDC Adoption Program" angucken → "your golden ticket"
+- **Neues Tool:** Collibra Data Intelligence Platform — Landing Page ansehen
+- **Präsentation:** Svitlana schickt noch eine Präsentation nach → TODO: an Claude weitergeben
+
 ---
 
 ## 22. April 2026 — Check-in KPI Dashboard Requirements (Janine Steidelmüller & Oliver Timm)

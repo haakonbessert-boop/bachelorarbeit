@@ -102,7 +102,7 @@
 - [x] Erstgespräch Gutachter — Janine + Prof. Dr.-Ing. Sachse | 21. April
 - [x] Kennenlernen Christopher Pfeiler | 20. April
 - [ ] Check-in Oliver Timm — 22. April
-- [ ] Svitlana Vlasova — BDC/SAC Tool-Überblick | 22. April
+- [x] Svitlana Vlasova — BDC/SAC Tool-Überblick | 22. April ✓ → SAC Data Steer, Collibra, BDC Adoption Program (SharePoint) als neue Leads
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 
 ### Vorbereitung Sachse (28. April — Mail statt Meeting)
