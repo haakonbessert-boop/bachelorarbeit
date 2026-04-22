@@ -133,7 +133,7 @@ EKX ist SAP-intern und basiert auf dem **Enterprise Knowledge Graph (EKG)**. Spr
 
 > Quelle: Mural-Board, gemeinsam mit Oliver bis Freitag (24.04.) durcharbeiten. **Oberste Priorität.**
 
-### Bereich: Operations
+### Bereich: Product
 
 **SharePoints:**
 - Signavio PPR
