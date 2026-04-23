@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (23. April 2026 — Feierabend, 2. Session)
+## Aktueller Stand (23. April 2026 — Feierabend, 3. Session)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -62,6 +62,15 @@
   - Key Findings für heinzl2024 in LITERATURE.md nachgetragen
 - **Methodik-Literatur-Analyse:** 8/10 Bewertung, Quellenauswahl überdurchschnittlich für BA
 
+### 3. Session (Abend)
+- **CLAUDE.md:** Agent-System-Sektion ergänzt (Dispatcher-Regeln, Agent-Übersicht)
+- **`outline/03-methodik.md`:** Abschnitt 3.3 zu reifer Outline ausgebaut — Artefakt-Typisierung, FEDS-Framework, Evaluationslogik, Rollenverteilung der Quellen, offene Entscheidungspunkte
+- **`chapter/03Methodik.tex`:** Kap. 3.3 Ergebniserwartung geschrieben (~320 Wörter) — beide Artefakte typisiert nach March & Smith, FEDS-Evaluationsstrategie, Anforderungsabdeckung als Erfolgskriterium
+- **`acronyms.tex` + `notes/GLOSSAR.md`:** 2 neue Einträge (FEDS, AHP)
+- **`outline/06-loesungsraum.md`:** Stub mit Subsection-Struktur und offenem Entscheidungspunkt [KAP6-E1] (Gewichtungsmethodik) angelegt
+- **`outline/07-bewertungsmodell.md`:** Stub mit Subsection-Struktur und offenen Entscheidungspunkten [KAP7-E1] (MVP-Zielsystem) + [KAP7-E2] (Gewichtungsmethodik) angelegt
+- **Seitenzahl cleven2009:** S. 5 nachgetragen — kein XX-Platzhalter mehr in 3.3
+
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
 - [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
@@ -72,7 +81,7 @@
 |---|---------|-----------------|--------|
 | 1 | Einleitung | 4 | Subsections angelegt |
 | 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt — NEU: 2.5 Entscheidungsmethoden |
-| 3 | Methodik | 6 | **3.1 + 3.4 Erster Entwurf** — 3.2–3.3 offen |
+| 3 | Methodik | 6 | **3.1 + 3.3 + 3.4 Erster Entwurf** — 3.2 offen (nach Literaturrecherche) |
 | 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt — NEU: 4.4 Datenbereitstellung |
 | 5 | Anforderungsanalyse | 7 | Subsections angelegt |
 | 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt — NEU: 6.6 Referenzprojekte, 6.7 Machbarkeit |
@@ -163,7 +172,7 @@
 - [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007) — Seitenzahlen für XX-Platzhalter in Kap. 3.1 + 3.4 nachtragen
 - [x] Kapitel 3.1 Forschungsansatz — Erster Entwurf
 - [x] Kapitel 3.4 Vorgehen im Überblick — Erster Entwurf
-- [ ] Kapitel 3.3 Ergebniserwartung (wenn Kap. 7 klarer ist)
+- [x] Kapitel 3.3 Ergebniserwartung — Erster Entwurf (~320 Wörter, 23.04.)
 - [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
 
 ---

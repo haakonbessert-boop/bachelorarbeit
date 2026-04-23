@@ -96,6 +96,16 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit 6 Boxen im Snake-Layout, Pfeilen, Kapitelverweisen. Absolute Koordinaten, text width 3.7 cm. |
 | **Verwendung** | **Redigiert** — Layout-Grundstruktur aus KI, Boxgrößen und Abstände manuell angepasst |
 
+### KI-012 | 23. Apr 2026 | TXT | Fließtext 3.3 Ergebniserwartung
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 3.3 Ergebniserwartung |
+| **Prompt (Zusammenfassung)** | Schreibe Kapitel 3.3 der Bachelorarbeit: Ergebniserwartung. Typisiere beide Artefakte nach March & Smith (1995) — Bewertungsmodell als Typ Modell, MVP als Typ Instanz. Erkläre die FEDS-Evaluationsstrategie (Venable et al. 2016) für beide Artefakte. Benenne Anforderungsabdeckung nach Cleven et al. (2009) als zentrales Evaluationskriterium. Offene Entscheidungspunkte (Gewichtungsmethodik, Zielsystem MVP) als Vorbehalte formulieren. ~320 Wörter, \vglcite-Zitierstil, \gls{feds} und \gls{ahp} verwenden. |
+| **Ergebnis (Zusammenfassung)** | Fließtext ~320 Wörter mit Artefakt-Typisierung, FEDS-Evaluationslogik (formativ/summativ × artifizell/naturalistisch), Anforderungsabdeckung als Hauptkriterium, Vorbehalte zu offenen Entscheidungen. Keine XX-Platzhalter. |
+| **Verwendung** | **Redigiert** — Struktur und Argumentationsführung aus KI, inhaltliche Substanz (Artefakttypen, FEDS-Zuordnung, Kriterienkatalog) eigenständig vorgegeben |
+
 ---
 
 ## Kapitel 4 — Ausgangssituation und Systemlandschaft
@@ -151,6 +161,16 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Prompt (Zusammenfassung)** | Agent-System mit 9 spezialisierten Rollen erstellt (Projektmanager, Planer, Autor, Rechercheur, Qualitätsprüfer, Compliance, SAP-Praxis, Redakteur, Lektor). Gesamtcheck durchgeführt (Qualität, Compliance, Redaktion parallel). 7 LaTeX-Fixes (Tippfehler, Zitierkonventionen, \gls{}-Korrekturen, Satzumstrukturierung). GLOSSAR.md um 7 fehlende Abkürzungen ergänzt. Repo-Verdichtung (~128 Zeilen in 4 Notes-Dateien eingespart). Interview-Methodik-Quelle beschafft (Myers & Newman 2007 in references.bib + LITERATURE.md). BibTeX vervollständigt (vombrocke2009, cleven2009). Key Findings heinzl2024 nachgetragen. Methodik-Literatur-Analyse (Bewertung 8/10). |
 | **Ergebnis (Zusammenfassung)** | 9 Agent-Rollen als Markdown-Dateien, 7 LaTeX-Korrekturen in Kap. 3, 3 Literatur-Tasks abgeschlossen (Myers/Newman, vomBrocke, Cleven), 7 Glossar-Einträge ergänzt, Repo um ~128 Zeilen verdichtet. |
 | **Verwendung** | **Redigiert** — Agent-Outputs wurden geprüft und vom User freigegeben |
+
+### KI-012 | 23. Apr 2026 | TXT + STR | Kap. 3.3 Ergebniserwartung + Outline-Ausbau + Stubs Kap. 6/7
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Kapitel 3 (3.3), outline/03-methodik.md, outline/06-loesungsraum.md, outline/07-bewertungsmodell.md, acronyms.tex, GLOSSAR.md, CLAUDE.md |
+| **Prompt (Zusammenfassung)** | (1) Abschnitt 3.3 in outline/03-methodik.md zu reifer Outline ausbauen — Artefakt-Typisierung nach March & Smith, FEDS-Evaluationsframework (Venable 2016), Anforderungsabdeckung als Hauptkriterium, offene Entscheidungspunkte. (2) chapter/03Methodik.tex: Kap. 3.3 Fließtext schreiben (~320 Wörter). (3) Neue Glossar-Einträge FEDS und AHP in acronyms.tex + GLOSSAR.md. (4) Stubs für outline/06-loesungsraum.md und outline/07-bewertungsmodell.md mit offenen Entscheidungspunkten anlegen. (5) CLAUDE.md: Agent-System-Sektion ergänzen. (6) Feierabend-Routine (THESIS_STATUS + KI_PROTOKOLL). |
+| **Ergebnis (Zusammenfassung)** | Fließtext 3.3 (~320 Wörter) in chapter/03Methodik.tex; outline/03-methodik.md Abschnitt 3.3 vollständig ausgebaut; outline/06-loesungsraum.md + outline/07-bewertungsmodell.md als Stubs angelegt; FEDS + AHP in acronyms.tex + GLOSSAR.md; cleven2009 Seitenzahl S. 5 eingetragen; CLAUDE.md Agent-Sektion ergänzt. |
+| **Verwendung** | **Redigiert** — Fließtext und Outline-Inhalte aus KI, inhaltliche Substanz (Artefakt-Entscheidungen, Evaluationsstrategie) eigenständig vorgegeben |
 
 ### KI-010 | 23. Apr 2026 | STR | Glossar-Ergänzung: DAU/MAU + PES
 
