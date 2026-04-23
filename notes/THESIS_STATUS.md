@@ -29,21 +29,24 @@
 - **#OneDashboard-Dokument** von Oliver ausgewertet → 7 KPI-Kategorien, 5+ parallele Initiativen (teils on hold), Hindernisse dokumentiert
 - **SAC-Zugang** erhalten (Data Insights Team) → Signavio Dashboards + Datasphere View-Zugang
 - **Mural Dashboard-Analyse (23.04.) ✓** — alle ~25 Links systematisch durchgearbeitet, Befunde in [notes/praxis/TOOLS.md](praxis/TOOLS.md) dokumentiert
+- **TOOLS.md vollständig überarbeitet (23.04.)** — thematische Struktur A–H, bereinigt von thesis-opinionierter Sprache
+- **KPI_HUB_KONZEPT.md angelegt (23.04.)** — 4-Schichten-Architektur (Datasphere → SAC → Build Work Zone → EKX), Phasenplan, offene Architekturentscheidungen
+- **Janine-Sync 24.04. vorbereitet** — Agenda mit Lösungsoptionen, 10 Blockiert-Fragen
 
 ### Kernergebnisse Mural-Analyse
 - **Fragmentierung bestätigt:** 7 Systeme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint), kein einheitlicher Einstieg
 - **RBAC-Problem real:** ~⅓ der Dashboards nicht zugänglich (CAM, EA Store, Sirius-Mitgliedschaft)
-- **DORA-Metriken fehlen komplett** — größte KPI-Lücke im Ist-Zustand
 - **Stärkste Quellen:** Operational Status Dashboard (ServiceNow), Jira Micro Deliveries
 - **Präzedenzfall:** SAP Signavio Product Excellence Portal — existierender Portal-Ansatz, aber nur Product-KPIs, deprecated Komponenten, veraltete Daten
 
 ### Neue Erkenntnisse (23.04.)
-- **Pendo Analytics Playbook** (Oliver, 23.04.) → Pendo ist bestätigtes Quellsystem für Usage/HEART-KPIs (DAU/MAU, Feature Adoption, Retention). Dokumentiert in TOOLS.md.
+- **Pendo Analytics Playbook** (Oliver, 23.04.) → Pendo ist bestätigtes Quellsystem für Usage/HEART-KPIs (DAU/MAU, Feature Adoption, Retention, PES). Dokumentiert in TOOLS.md.
 - **VoC „One Voice" Alignment Sheet** (Oliver/Janine/Lea Reib, 05.11.2025) → Parallele Initiative mit identischem Problemraum. Kritische Befunde:
-  - PPR = aktueller Status quo: 150 Folien (Q2), 5–10 Tage Aufwand — **quantifizierter Schmerzpunkt für Kap. 4**
+  - PPR = aktueller Status quo: 150 Folien (Q2), 5–10 Tage Aufwand — quantifizierter Schmerzpunkt
   - Qualtrics als PSAT-Quelle bestätigt
-  - Metabase als neues Tool (Demo-Dashboard „ONE VOICE") — zu bewerten für Kap. 6
-  - Lea Reib: neue potenzielle Interviewpartnerin (Kap. 5)
+  - Metabase als neues Tool (Demo-Dashboard „ONE VOICE") — SAP-Freigabe unklar
+  - Lea Reib: neue potenzielle Interviewpartnerin
+- **Zielarchitektur konkretisiert:** BDC-Stack (Datasphere + SAC) + Build Work Zone (Portal) + EKX (Deliverables optional). Jira + ServiceNow bereits produktiv eingebunden → MVP-Basis ohne neue Integrationen möglich.
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -127,29 +130,23 @@
 ### Mural / Dashboard-Analyse (✓ Abgeschlossen 23.04.)
 
 - [x] Alle zugänglichen Dashboards durchgegangen: Befunde dokumentiert in [notes/praxis/TOOLS.md](praxis/TOOLS.md)
-- [x] Relevante KPIs für KPI-Hub identifiziert, Lücken und Überlappungen erkannt
-- [x] Offene Fragen für Oliver + Janine formuliert (Zugänge, defekte Links, DORA-Lücke)
-- [ ] Tool-Liste für Janine-Sync (Freitag) fertigstellen — Basis liegt vor
+- [x] Relevante KPIs für KPI-Hub identifiziert, Überlappungen erkannt
+- [x] Offene Fragen für Oliver + Janine formuliert (Zugänge, defekte Links)
+- [x] Tool-Liste für Janine-Sync fertiggestellt → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md) + MEETINGS.md 24.04.
 
-### Zugänge beantragen (heute noch)
+### Zugänge / Formales
 
-- [ ] EA Store: **Product 360 Access** beantragen (48h Wartezeit)
-- [ ] EA Store: **EVM neue Rolle** beantragen (48h Wartezeit)
+- [ ] EA Store: **Product 360 Access** + **EVM neue Rolle** → Janine fragen (24.04.)
+- [ ] Befristungsdatum Sperrvermerk — wird erst am Ende der Arbeit geklärt
+- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten + an Janine weitergeleitet
 
-### Vorbereitung Janine-Sync (Freitag 24.04.)
+### Vorbereitung Janine-Sync (✓ Abgeschlossen 23.04.)
 
-- [ ] **Pendo Analytics Playbook** von Oliver erhalten (23.04.) → Pendo ist aktives Quellsystem für Adoption/HEART-Metriken; Admin-Zugang + Adoption Monitor 2.0-Verbindung klären
-- [ ] **Metabase (One Voice Demo-Dashboard)** — Tool-Kandidat prüfen: SAP-genehmigt? Wer hat Zugang?
-- [ ] **Qualtrics** als PSAT-Quelle bestätigt — API-Integration für Near-Realtime möglich?
-- [ ] **Lea Reib** (One Voice Co-Autorin) — als Interview-Kandidatin für Kap. 5 vormerken; Janine fragen ob Kontakt sinnvoll
-- [ ] **Gainsight** Zugangsdaten erfragen
-- [ ] **Grafana** Zugangsdaten erfragen
-- [ ] **Adoption Monitor 2.0** Zugang klären — wahrscheinlich Pendo-basiert
-- [ ] **Operations-Links** (E2E Portfolio Planning + QBR): Owner + Status erfragen
-- [ ] **Mural aktualisieren:** Usage Analyzer Link → Detailed Product Analysis ersetzen (mit Oliver)
-- [ ] Klären: SAP Usage Analyzer + CHR Dashboard — gibt es Signavio-Filter?
-- [ ] **#14 Product Standard Compliance Dashboard** nochmal öffnen (hatte nicht geladen)
-- [ ] Tool-Liste für Janine final zusammenstellen
+- [x] Pendo Analytics Playbook ausgewertet → in TOOLS.md dokumentiert
+- [x] One Voice Alignment Sheet ausgewertet → PPR-Schmerzpunkt, Metabase, Lea Reib dokumentiert
+- [x] Zielarchitektur konkretisiert → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md)
+- [x] Sync-Agenda fertig → MEETINGS.md 24.04. (Stand, Lösungsoptionen, 10 Blockiert-Fragen)
+- [ ] Offene Fragen → werden morgen im Sync geklärt (Pendo-Owner, Metabase-Freigabe, Gainsight/Grafana, Qualtrics-API, EA Store, Lea Reib, sachse_gliederung.docx-Freigabe)
 
 ### Vorbereitung Sachse (28. April — Mail)
 

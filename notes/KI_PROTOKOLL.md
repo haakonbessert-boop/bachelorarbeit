@@ -142,6 +142,16 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 
 ## Kapitelübergreifend
 
+### KI-010 | 23. Apr 2026 | STR | Glossar-Ergänzung: DAU/MAU + PES
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | `acronyms.tex` + `notes/GLOSSAR.md` |
+| **Prompt (Zusammenfassung)** | Erkläre DAU/MAU und PES im Signavio-Kontext; übernehme Definitionen in Glossar und Acronyms. |
+| **Ergebnis (Zusammenfassung)** | DAU/MAU-Eintrag in GLOSSAR.md erweitert (Stickiness-Erklärung, DAU/MAU-Ratio); PES-Eintrag neu angelegt; `\newacronym{pes}` in `acronyms.tex` ergänzt. |
+| **Verwendung** | **Redigiert** — Definitionen aus KI-Erklärung übernommen und in Glossar-Stil gebracht |
+
 ### KI-006 | 21. Apr 2026 | REC | BDC/SAP Tool-Landscape-Recherche
 
 | Feld | Inhalt |
