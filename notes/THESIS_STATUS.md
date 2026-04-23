@@ -37,6 +37,14 @@
 - **Stärkste Quellen:** Operational Status Dashboard (ServiceNow), Jira Micro Deliveries
 - **Präzedenzfall:** SAP Signavio Product Excellence Portal — existierender Portal-Ansatz, aber nur Product-KPIs, deprecated Komponenten, veraltete Daten
 
+### Neue Erkenntnisse (23.04.)
+- **Pendo Analytics Playbook** (Oliver, 23.04.) → Pendo ist bestätigtes Quellsystem für Usage/HEART-KPIs (DAU/MAU, Feature Adoption, Retention). Dokumentiert in TOOLS.md.
+- **VoC „One Voice" Alignment Sheet** (Oliver/Janine/Lea Reib, 05.11.2025) → Parallele Initiative mit identischem Problemraum. Kritische Befunde:
+  - PPR = aktueller Status quo: 150 Folien (Q2), 5–10 Tage Aufwand — **quantifizierter Schmerzpunkt für Kap. 4**
+  - Qualtrics als PSAT-Quelle bestätigt
+  - Metabase als neues Tool (Demo-Dashboard „ONE VOICE") — zu bewerten für Kap. 6
+  - Lea Reib: neue potenzielle Interviewpartnerin (Kap. 5)
+
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
 - [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
@@ -131,6 +139,9 @@
 ### Vorbereitung Janine-Sync (Freitag 25.04.)
 
 - [ ] **Pendo Analytics Playbook** von Oliver erhalten (23.04.) → Pendo ist aktives Quellsystem für Adoption/HEART-Metriken; Admin-Zugang + Adoption Monitor 2.0-Verbindung klären
+- [ ] **Metabase (One Voice Demo-Dashboard)** — Tool-Kandidat prüfen: SAP-genehmigt? Wer hat Zugang?
+- [ ] **Qualtrics** als PSAT-Quelle bestätigt — API-Integration für Near-Realtime möglich?
+- [ ] **Lea Reib** (One Voice Co-Autorin) — als Interview-Kandidatin für Kap. 5 vormerken; Janine fragen ob Kontakt sinnvoll
 - [ ] **Gainsight** Zugangsdaten erfragen
 - [ ] **Grafana** Zugangsdaten erfragen
 - [ ] **Adoption Monitor 2.0** Zugang klären — wahrscheinlich Pendo-basiert

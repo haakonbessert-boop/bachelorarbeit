@@ -477,6 +477,109 @@ Von ~25 Links: **~8 vollständig zugänglich mit Daten**, ~8 kein Zugang, ~3 dep
 
 ---
 
+## VoC „One Voice" Program — Alignment Sheet (Oliver Timm / Lea Reib / Janine, 05.11.2025)
+
+> Quelle: "SAP Signavio Voice of the Customer Program 'One Voice' – Alignment Sheet", 05.11.2025. Autoren: Lea Reib, Oliver Timm, Janine Steidelmüller. INTERNAL — SAP Only.
+> Thesis-Relevanz: Kap. 1 (Problemstellung), Kap. 4 (Ist-Zustand / PPR als Messlatte), Kap. 5 (Anforderungen), Kap. 6 (Metabase als Tool-Kandidat)
+
+### Problem Statement (direkt aus dem Dokument — für Kap. 1 + 4 nutzbar)
+
+> "Signavio's Product & Engineering Department operates without unified, actionable visibility into customer satisfaction and experience. Customer insights are immature within development and engineering workflows."
+
+Konkrete Symptome laut Dokument:
+- Kundenzufriedenheitsdaten (CSAT, Feature Adoption, Support Sentiment) in **Silos und Ad-hoc-Reports mit inkonsistenten Definitionen**
+- Kein Standard-Department-Überblick nach Product Area, Segment oder Release
+- Backlog-Priorisierung ohne robuste Customer-Impact-Signale
+- Engineers und PMs verlassen sich auf Anekdoten und Eskalationen statt messbarer Evidenz
+- P&E, Design, Support, Sales, CS operieren **ohne gemeinsames CX-Ziel-Set und Metriken**
+
+### Ist-Zustand: PPR (Product Performance Review)
+
+Das PPR ist das aktuelle "One-Stop"-Dokument — ein **quartalsweiser PowerPoint-Report** des Product Excellence Teams.
+
+| Kennzahl | Q2 2025 | Q3 2025 |
+|---|---|---|
+| **Slides gesamt** | 150 | 85 |
+| davon Financials | ~50% | — |
+| davon Pendo (Product Usage) | 6 | — |
+| davon HEART | 5 | — |
+| davon Quality (Customer Support) | 4 | — |
+| **Aufwand Erstellung** | **5–10 Tage** (Janine-Schätzung; Lea: „1–2 Wochen inkl. Datenabfragen") | — |
+
+**Kritische PPR-Probleme (aus dem Dokument explizit):**
+- Keine Echtzeit-Daten — Daten 1+ Monat nach Quartalsende noch nicht vollständig
+- Kein Kundenfilter / keine Customisierung möglich
+- Resolution Time: basiert auf Created vs. Resolved (ignoriert kundenseitige Haltezeiten)
+- Keine Differenzierung Bug / Incident / 1st-2nd-3rd-Level-Ticket
+- Keine korrelierten Analysen (z.B. Bug-to-Incident-Ratio)
+- Definitionen unterscheiden sich von internen Support-Ansichten
+
+→ **Thesis-Goldmine für Kap. 4:** Quantifizierter Schmerzpunkt — 5–10 Tage manuelle Arbeit für eine 150-Folien-Quartalsübersicht ist exakt das Problem, das der KPI-Hub lösen soll.
+
+### Datenquellen hinter PPR / HEART (aus Q3-Datenverfügbarkeitstabelle)
+
+| KPI | HEART-Kategorie | Quelle |
+|---|---|---|
+| DAU & MAU | Happiness / Adoption | **Data Insights database** |
+| Activated Unique Users | Adoption | **Data Insights database** |
+| Product Content Data | Task success | **Data Insights database** |
+| Customer License data | — | Cloud Reporting |
+| Survey data (PX / PSAT) | Happiness | **Qualtrics Export** |
+| Customer reported bugs | Quality | **ServiceNow** |
+| Contract Terminations / Win-Loss / ACV | — | **SAC Analytics Store** |
+
+> **Wichtig:** "Data Insights database" ist der interne Name für das aggregierte Pendo-Daten-Repository (DAU/MAU → Pendo → Data Insights DB → SAC). Qualtrics ist die Quelle für PSAT-Daten.
+
+### „One Voice" vs. PPR — Die 4 Differenziatoren
+
+Das Dokument vergleicht den PPR-Status quo mit der One-Voice-Zielvision:
+
+1. **Dashboards mit Live-Daten** (statt Quartalsschnappschuss)
+2. **Real-time Updates durch Datenintegrationen** (statt manuellem Export)
+3. **Korrelierte Daten aus mehreren Quellen** (statt Silos)
+4. **Weniger manueller Aufwand → schnellere Insights**
+
+→ Exakt die Anforderungen aus Oliver Timms #OneDashboard-Dokument — konsistentes Bild.
+
+### Demo Dashboard: Metabase (neues Tool!)
+
+Das Dokument verweist auf ein **Demo Dashboard "ONE VOICE @SAP SIGNAVIO" in Metabase**.
+
+| Aspekt | Bewertung |
+|---|---|
+| **Was ist Metabase?** | Open-Source BI / Self-Service Analytics Tool (SQL-basiert) |
+| **Rolle hier** | Demo/Prototyp-Dashboard für One Voice — kein produktiver BDC-Stack |
+| **Relevanz für Kap. 6** | Neuer Tool-Kandidat: leichtgewichtig, kein SAP-Stack, schnelle Iteration |
+| **Risiko** | Nicht im SAP-genehmigten Tool-Stack — SAP-Freigabe zu prüfen |
+| **Einordnung** | Konkurrent zu SAC/BDC-Stack: einfacher aufzubauen, aber Integration fraglich |
+
+### Qualtrics (neues Quellsystem!)
+
+Quelle für PX/PSAT-Survey-Daten. Bisher als "Qualtrics" in HEART-KPIs bekannt, Quellrolle jetzt bestätigt.
+
+| Aspekt | Details |
+|---|---|
+| **KPIs** | PSAT, PX Survey-Ergebnisse, Customer Satisfaction |
+| **Integration** | Derzeit manueller **Export** (laut PPR-Tabelle) — kein Live-Feed |
+| **Potenzial** | API-Integration möglich für Near-Realtime PSAT im KPI-Hub |
+
+### Neue Personen
+
+- **Lea Reib** — Co-Autorin, Product Excellence / VoC-Initiative. Potenzielle Interviewpartnerin für Kap. 5 Anforderungsanalyse.
+
+### Verhältnis KPI-Hub ↔ One Voice
+
+| Dimension | One Voice | KPI-Hub (diese Arbeit) |
+|---|---|---|
+| **Scope** | CX/VoC: Customer Satisfaction, Feature Adoption, PSAT | Engineering + Ops + DORA + Compliance + Usage |
+| **Zielgruppe** | PLT, EPTs (Product + Engineering Leadership) | Senior Management (Oliver) |
+| **Status** | Initiative, Nov 2025 — Demo in Metabase | Bachelorarbeit + MVP |
+| **Overlap** | HEART-Metriken, Customer Bugs/Incidents, Feature Adoption | ← gleiche KPI-Kategorien |
+
+→ **Fazit:** One Voice und KPI-Hub sind **komplementär, nicht konkurrierend** — One Voice = CX/VoC-Schicht, KPI-Hub = Engineering + Ops-Schicht. Beide wollen dasselbe Problem lösen (Fragmentierung, manuelle PPR), aber aus verschiedenen Blickwinkeln. Für Kap. 4 und 6 ist die Existenz von One Voice ein weiterer Beleg für den Handlungsbedarf.
+
+---
+
 ## #OneDashboard Vision-Dokument (Oliver Timm)
 
 > Quelle: "one-signavio-metrics-dashboard.pdf" — Oliver Timm. Beschreibt die übergreifende #OneDashboard-Initiative mit KPI-Kategorien, bestehenden Initiativen, Hindernissen und Next Steps.
