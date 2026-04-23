@@ -1,7 +1,6 @@
 # Tools & Systemlandschaft — Praxisphase SAP Signavio
 
 Forschungskontext: KPI-Hub für SAP Signavio Engineering — Mehrkriterien-Entscheidungsmodell.
-Kapitelzuordnung: **A–C → Kap. 4 (Ist-Zustand)** | **D–E → Kap. 6 (Lösungsraum)** | **F → Kap. 7 (Scoring/Fit-Check)**
 
 Quellsysteme (Anforderungsseite) → ergänzend [REQUIREMENTS.md](../REQUIREMENTS.md).
 
@@ -19,14 +18,13 @@ Quellsysteme (Anforderungsseite) → ergänzend [REQUIREMENTS.md](../REQUIREMENT
 | **Qualtrics** | PSAT, PX Survey | ❌ kein Direktzugang | Manueller Export | REST API möglich |
 | **Gainsight** | Customer Health Score, CS-KPIs, Churn | ❌ kein Zugang | Unklar | REST API |
 | **Grafana** | Release Mgmt Security | ❌ kein Zugang | Realtime | REST API / Export |
-| **CircleCI** | Build/Deploy-KPIs (DORA-Quellen) | ❌ nicht im Mural | Realtime | REST API |
+| **CircleCI** | Build/Deploy-KPIs | ❌ nicht im Mural | Realtime | REST API |
 | **SAC Analytics Store** | Financials, ACV, Bookings, Revenue | ⚠️ nur Corporate-Filter | Aktuell | SAC nativ |
 | **Sirius / HyCoM** | PSR Compliance-Status | ⚠️ via SAC-Dashboard | Apr 2026 | SAC nativ |
 | **Cloud Reporting** | Customer License data | ⚠️ Corporate-Filter | Unklar | SAC nativ |
 | **SAP Cloud ALM** | IT-Ops: Incidents, Deployments, Test Coverage | ⚠️ EKG-Beleg vorhanden | Unklar | Datasphere → SAC |
 | **Collibra (PX Foundation)** | Qualtrics-Survey-Daten, LPR-Mapping | ✅ als Data Product | Gold-Qualität | Datasphere Ready |
 
-> **DORA-Lücke:** Kein einziges Quellsystem liefert aktuell vollständige DORA-Metriken. Deployment Frequency, Lead Time, CFR, MTTR (als DORA) wären primär in CircleCI — Zugang ungeklärt. DORA-Initiative bei Stefan Popescu existiert als OKR, ist aber nicht voll besetzt.
 
 ### A.2 Quellsystem-Details
 
@@ -60,7 +58,7 @@ Primäre Quelle für Incident-KPIs. Jira/ServiceNow sind als Quellsysteme in Sig
 
 #### Jira (SAP Jira)
 
-Primäre Quelle für Delivery- und Release-KPIs. Signavio-Adapter produktiv. Performance-Probleme bekannt (Performance Notice aktiv im Micro Deliveries Dashboard — direkter Beleg für Requirements-Complaint).
+Primäre Quelle für Delivery- und Release-KPIs. Signavio-Adapter produktiv. Performance-Probleme bekannt (Performance Notice aktiv im Micro Deliveries Dashboard).
 
 ---
 
@@ -98,18 +96,17 @@ Primäre Quelle für Delivery- und Release-KPIs. Signavio-Adapter produktiv. Per
 
 ### B.2 KPI-Abdeckungsmatrix (Ist-Zustand)
 
-| KPI-Kategorie | Abdeckung | Bestes verfügbares Dashboard | Lücke / Problem |
-|---|---|---|---|
-| Operational Health (Incidents, SLA, MTTR) | ✅ Gut | Operational Status Dashboard | — |
-| Delivery / Jira-KPIs | ✅ Gut | Micro Deliveries | Kein vollständiges DORA |
-| **DORA-Metriken** (Deploy Freq., Lead Time, CFR) | **❌ Fehlt komplett** | — | Größte Lücke; CircleCI-Zugang ungeklärt |
-| Compliance / PSR | ✅ Vorhanden | PSR, Corporate Requirements | EVM-Zugang ausstehend |
-| Security / Vulnerabilities | ⚠️ Partiell | EVM (ausstehend), Grafana (kein Zugang) | Zugänge fehlen |
-| Usage / Adoption (DAU/MAU) | ⚠️ Lücke | Usage Analyzer (kein Signavio-Filter) | Pendo-Direktzugang fehlt |
-| HEART / PX / PSAT | ⚠️ Veraltet | Product Excellence Portal | 8 Monate alt, deprecated |
-| Customer Health / Gainsight | ❌ Kein Zugang | Gainsight | Zugangsdaten fehlen |
-| Financials / GTM | ❌ Kein Datensatz | CACV, Product 360 | CACV kein Signavio-Filter; Product 360 gesperrt |
-| People / HR | ❌ Leer | — | Kein Mural-Inhalt |
+| KPI-Kategorie | Abdeckung | Bestes verfügbares Dashboard |
+|---|---|---|
+| Operational Health (Incidents, SLA, MTTR) | ✅ Gut | Operational Status Dashboard |
+| Delivery / Jira-KPIs | ✅ Gut | Micro Deliveries |
+| Compliance / PSR | ✅ Vorhanden | PSR, Corporate Requirements |
+| Security / Vulnerabilities | ⚠️ Partiell | EVM (EA Store ausstehend), Grafana (kein Zugang) |
+| Usage / Adoption (DAU/MAU) | ⚠️ Lücke | Usage Analyzer (kein Signavio-Filter), Pendo (kein Zugang) |
+| HEART / PX / PSAT | ⚠️ Veraltet | Product Excellence Portal (8 Monate alt, deprecated) |
+| Customer Health / Gainsight | ❌ Kein Zugang | Gainsight |
+| Financials / GTM | ❌ Kein Datensatz / kein Zugang | CACV (kein Signavio-Filter), Product 360 (gesperrt) |
+| People / HR | ❌ Leer | Kein Mural-Inhalt |
 
 ### B.3 PPR — Aktueller Status quo (Ist-Zustand Reporting)
 
@@ -136,8 +133,6 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - Keine korrelierten Analysen (z.B. Bug-to-Incident-Ratio)
 - Definitionen unterscheiden sich von internen Support-Ansichten
 
-> **Thesis-Relevanz (Kap. 4):** Der PPR ist der quantifizierte Schmerzpunkt — 5–10 Tage manueller Aufwand für eine 150-Folien-Quartalsübersicht ist exakt das Problem, das der KPI-Hub lösen soll.
-
 **Datenquellen hinter PPR / HEART (aus Q3 Datenverfügbarkeitstabelle):**
 
 | KPI | HEART-Kategorie | Quelle |
@@ -159,7 +154,6 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - **Seite 2:** Drilldown-Tabelle aller High/Medium-Tickets mit individuellem TTR
 - Filter: Incident Key, Region, Risk Impact Class, Product Area, Classification
 - Daten aktuell (bis Apr 2026). Auffällig: SIGINCIDENT-1175 mit 84h 50m TTR (MxG); PAM dominiert Incident-Volumen
-- **Thesis-Relevanz:** Hoch — stärkste verfügbare Quelle für Operational Health KPIs; MVP-Kandidat
 
 #### Customer Reported Incidents & Bugs — Quarterly View ⚠️
 
@@ -168,7 +162,6 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - **Problem:** Updated Aug 22, 2025 — Daten 8 Monate alt, nur bis Q2 2025
 - Auffällig: 40 Bugs >4 Wochen offen; Access Management SAP Signavio häufigste Komponente (185); 142 Bugs = identische Zahl wie im HEART Quarterly (gleiche Datenquelle)
 - PPR-Kommentar (One Voice Dokument): selbe Datenbasis, selbe Definitions-Probleme wie im PPR
-- **Thesis-Relevanz:** Hoch für Support/Quality KPIs — aber Freshness-Problem belegt Anforderung F02 (Near-Realtime)
 
 #### Cloud Health & Reliability (CHR 2.0) ✅
 
@@ -176,19 +169,19 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - **KPIs:** Cloud Operations: Avg Tenant Outage Min, Initial Customer Communication in 15min, SLA Violation %, % RCA Completion in 10 Days; Infrastructure: MTTR Infra, Avg Infra. Availability, Service Disruptions Count, % RCA Completion in 8 Days; YTD Facts: SWAT Count, Total Downtime Min
 - Sichtbare Werte: SLA Violation **1,17%** (Ziel 0,5% — verfehlt), RCA Completion **87%** (Ziel 80% ✅), SWAT Count YTD: **10**, Infra. Availability Ziel: **99,90%**
 - Filter: Solution Area, Dev Org (aktuell PE Ariba/Business — Signavio-Filter nicht bestätigt)
-- **Thesis-Relevanz:** Hoch als Corporate-Layer; Relation zum Operational Status Dashboard: CHR = übergeordneter Cloud-Reliability-Layer, Operational Status = Signavio-spezifische Incident-Ebene
+- Verhältnis zum Operational Status Dashboard: CHR = übergeordneter Corporate Cloud-Reliability-Layer, Operational Status = Signavio-spezifische Incident-Ebene
 
 #### Product Standard Requirements P&E ✅
 
 - Corporate — 9 Seiten; Quellsysteme: Sirius + HyCoM; Cut-off Apr 2026 (6-Monats-Fenster)
 - **KPIs:** PSR Compliance-Status (Fulfilled vs. non-compliant) nach 4 PSR-Typen: Corporate, Mandatory, Integration, UX Consistency
-- **Thesis-Relevanz:** Mittel — Compliance-Cluster (zusammen mit Corporate Requirements und EVM)
+- Bildet zusammen mit Corporate Requirements und EVM einen Compliance-Cluster
 
 #### Corporate Requirements Dashboard ✅
 
 - Corporate — 9 Seiten
 - **KPIs:** CR Violations (Non-Security + Security), Current Status, LoB Overview, Time Trend, Violation Early Warning, BuLi Tabelle
-- **Thesis-Relevanz:** Mittel — PSR + Corporate Requirements + EVM als ein Compliance-Integrations-Cluster
+- Bildet zusammen mit PSR und EVM einen Compliance-Cluster
 
 #### Product Standard Compliance Dashboard ⚠️
 
@@ -198,8 +191,7 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 
 - SGSC Dashboard (EVM LOB Report), 2 Seiten (EVM Drill Down + EVM Trends)
 - **KPIs:** L1 Goal Compliance (90d): Vulnerability-SLA nach Severity (Emergency/Critical/High/Medium/Low), Open vs. Fixed, Open vs. Risk Accepted, SLA Compliance per L3/L4 Unit, Avg. Vulnerability Age
-- Partieller Zugang — neue EVM-Rolle nötig (EA Store)
-- **Thesis-Relevanz:** Hoch — KPI-Kategorie Security/Vulnerabilities; Aktion: EA Store-Rolle beantragen
+- Partieller Zugang — neue EVM-Rolle nötig (EA Store beantragen)
 
 #### SAP Usage Analyzer | Product Analysis (Detailed) ✅
 
@@ -214,8 +206,7 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - **KPIs:** Management Status RAG (361 GREEN, 0 RED/YELLOW), Progress of MD (55% Done, 695 Issues), Documentation Status (74% Done), X-Ray Status per Sub-Group, In Pre-Release Delivery Group Split, Product Board Info per Group (FIT/MXG/PA&M/NEXT)
 - Sub-Groups: Platform Services, Process.AI, Transformation Enablement, SPG, M&C, Connectivity, Suite Essentials
 - Filter: Current MD, Version/Delivery, Status, Assignee, Team, Labels, Sub-Groups, JQL
-- ⚠️ Performance Notice aktiv ("bulk operations may be slow") — direkter Beleg für Stakeholder-Complaint aus REQUIREMENTS.md
-- **Thesis-Relevanz:** Hoch — RAG-Status exakt das Signal, das der KPI-Hub surfacen soll; zweite Hauptquelle neben Operational Status; MVP-Kandidat
+- ⚠️ Performance Notice aktiv ("bulk operations may be slow")
 
 #### Product Excellence Portal (SAP Signavio) ✅ ⚠️
 
@@ -225,7 +216,7 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - ⚠️ HEART-Dashboard deprecated: *"Due to deprecating classic SAC Stories this Dashboard is no longer supported."*
 - ⚠️ Daten veraltet: Updated Apr 25, 2025 — 8 Monate alt
 - Navigation: 3-Ebenen-Struktur (Portal → Kategorie → Kadenz → Dashboard) — widerspricht "Where do I find what?"-Anforderung
-- **Thesis-Relevanz:** Sehr hoch — **einziger existierender Signavio Portal-Ansatz**. Deckt nur Product-KPIs ab (HEART, Revenue, Customer) — Engineering-KPIs (DORA, Delivery, Ops) fehlen komplett. Architekturelle Kernfrage für Kap. 6: Erweiterung dieses Portals oder eigenständige Lösung?
+- Einziger existierender Signavio Portal-Ansatz für KPI-Übersichten; deckt Product-KPIs ab (HEART, Revenue, Customer)
 
 #### Product Experience Analytics Foundation (Collibra) ✅
 
@@ -233,7 +224,7 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - **Typ:** Data Product (Derived, Gold-Qualität) — Datenbasis, kein Dashboard
 - **Inhalt:** Qualtrics PX Survey-Daten + Mapping zu LPR, Solution Areas, Tenants, Customers
 - SAP Datasphere Ready ✅, SAP Analytics Cloud Ready ✅, Architecture Execution CoE approved ✅
-- **Thesis-Relevanz:** Mittel — zeigt BDC-Stack-Funktionsweise in der Praxis (Qualtrics → Collibra → Datasphere → SAC)
+- Zeigt BDC-Stack-Datenfluss in der Praxis: Qualtrics → Collibra → Datasphere → SAC
 
 #### Signavio Dashboards (Gainsight) ❌
 
@@ -248,7 +239,7 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 - Global Adoption & Experience CoE (2 Seiten)
 - **KPIs (aus Fehlermeldung/Übersicht):** Customers, Usage (MAU, Active Scope), AI Usage (Base/Premium AI Features), PX (PSAT, Usefulness, Ease of Use), Commercials (Cloud Revenue, Backlog, Bookings, Pipeline), Support (Call Rate, Avg Days to Solve, Customer Effort Score)
 - Fehler: "Not authorized to the data. Please request authorization in EA Store. Up to 48h propagation."
-- **Thesis-Relevanz:** Hoch als Referenz — konzeptionell der vollständigste KPI-Hub für Product-KPIs; fehlt: Engineering/DORA
+- Konzeptionell der vollständigste bestehende KPI-Hub für Product-KPIs; EA Store-Zugang ausstehend
 
 #### Adoption Monitor 2.0 ❌
 
@@ -259,8 +250,8 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 
 - Wiki@SAP — Anna Maria Muhs, zuletzt Apr 08, 2026; Migration zu ProductBoard geplant
 - **Typ:** Statische Transparenzschicht — kein Dashboard, keine KPI-Daten
-- Thesis-relevante Initiativen: Unified Metering (non-billable usage), Hyperspace/CircleCI Migration (Beppler Christopher), HAIM (Auth/RBAC), Data & Analytics Initiative (Barbara Schories)
-- FAQ-Zitat für Kap. 4: *"If BDC integration is prioritized... PA&M and MxG would add the relevant data-product deliveries in NEXT"*
+- Laufende Initiativen: Unified Metering (non-billable usage), Hyperspace/CircleCI Migration (Beppler Christopher), HAIM (Auth/RBAC), Data & Analytics Initiative (Barbara Schories)
+- Hinweis im Dokument: *"If BDC integration is prioritized... PA&M and MxG would add the relevant data-product deliveries in NEXT"*
 
 #### E2E Portfolio Planning Dashboard / E2E Portfolio QBR Dashboard ❌
 
@@ -278,14 +269,13 @@ Erstellungsaufwand-Schätzung: Janine: 5–10 Tage; Lea Reib: „1–2 Wochen in
 
 **Zahlen:** Von ~25 Links: ~8 vollständig zugänglich, ~8 kein Zugang, ~3 deprecated/veraltet, ~2 defekte Links.
 
-| # | Kernbefund | Thesis-Kapitel |
-|---|---|---|
-| 1 | **Fragmentierung messbar:** 7 Systeme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint), kein einheitlicher Einstieg | Kap. 1 + 4 |
-| 2 | **RBAC-Problem real:** Fast jedes 3. Dashboard nicht zugänglich (CAM, EA Store, Sirius-Mitgliedschaft) | Kap. 4 + 5 |
-| 3 | **DORA-Metriken fehlen komplett** — kein einziges Dashboard für Deployment Frequency, Lead Time, CFR, MTTR als DORA | Kap. 4 + 5 (Lücke) |
-| 4 | **Freshness-Problem:** HEART veraltet (8 Monate), Bugs-Dashboard (8 Monate), deprecated Komponenten | Kap. 4 |
-| 5 | **Stärkste Quellen:** Operational Status Dashboard (ServiceNow) + Jira Micro Deliveries | Kap. 4 + 8 (MVP-Quellen) |
-| 6 | **Product Excellence Portal = Präzedenzfall:** Portallösung existiert für Product-KPIs — Engineering fehlt komplett | Kap. 6 |
+| # | Kernbefund |
+|---|---|
+| 1 | **Fragmentierung messbar:** 7 Systeme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint), kein einheitlicher Einstieg |
+| 2 | **RBAC-Problem real:** Fast jedes 3. Dashboard nicht zugänglich (CAM, EA Store, Sirius-Mitgliedschaft) |
+| 3 | **Freshness-Problem:** HEART veraltet (8 Monate), Bugs-Dashboard (8 Monate), deprecated Komponenten |
+| 4 | **Stärkste Quellen:** Operational Status Dashboard (ServiceNow) + Jira Micro Deliveries |
+| 5 | **Product Excellence Portal = Präzedenzfall:** Portallösung existiert für Product-KPIs |
 
 ---
 
@@ -329,8 +319,6 @@ Aktuell: monatlicher KPI-Report als PDF (Headcount, Financials, Release Manageme
 4. Nicht genug Kapazität → COO-Office unterbesetzt
 5. Kein klares Ownership → keine dedizierte Verantwortung
 
-> **Thesis-Relevanz:** Die 5 Hindernisse sind die direkte empirische Basis für Kap. 4 (Problemfelder) und Kap. 5 (Anforderungen). Insbesondere Hindernis 3 (Access Rights) bestätigt RBAC als Kernforderung.
-
 ### C.2 VoC „One Voice" (Lea Reib / Oliver Timm / Janine Steidelmüller)
 
 > Quelle: "SAP Signavio Voice of the Customer Program 'One Voice' – Alignment Sheet", 05.11.2025.
@@ -343,14 +331,14 @@ Aktuell: monatlicher KPI-Report als PDF (Headcount, Financials, Release Manageme
 
 | Dimension | One Voice | KPI-Hub (diese Arbeit) |
 |---|---|---|
-| Scope | CX/VoC: Customer Satisfaction, Feature Adoption, PSAT | Engineering + Ops + DORA + Compliance + Usage |
+| Scope | CX/VoC: Customer Satisfaction, Feature Adoption, PSAT | Engineering + Ops + Compliance + Usage |
 | Zielgruppe | PLT, EPTs | Senior Management (Oliver) |
 | Status (Nov 2025) | Demo-Dashboard in Metabase | Bachelorarbeit + MVP |
 | Overlap | HEART-Metriken, Customer Bugs, Feature Adoption | ← identische KPI-Kategorien |
 
-**Fazit:** One Voice und KPI-Hub sind **komplementär** — One Voice = CX/VoC-Schicht, KPI-Hub = Engineering + Ops-Schicht. Beide kämpfen gegen dasselbe Problem (PPR-Fragmentierung). Für Kap. 4 und 6 ist die Existenz von One Voice ein weiterer Beleg für den Handlungsbedarf.
+**Fazit:** One Voice und KPI-Hub sind **komplementär** — One Voice = CX/VoC-Schicht, KPI-Hub = Engineering + Ops-Schicht. Beide kämpfen gegen dasselbe Problem (PPR-Fragmentierung).
 
-**Neue Person:** Lea Reib — Co-Autorin, Product Excellence / VoC-Initiative. Potenzielle Interviewpartnerin für Kap. 5.
+**Neue Person:** Lea Reib — Co-Autorin, Product Excellence / VoC-Initiative. Potenzielle Interviewpartnerin.
 
 **One Voice vs. PPR — Die 4 Differenziatoren (aus Dokument):**
 1. Dashboards mit Live-Daten (statt Quartalsschnappschuss)
@@ -360,7 +348,7 @@ Aktuell: monatlicher KPI-Report als PDF (Headcount, Financials, Release Manageme
 
 ---
 
-## D — Lösungskandidaten (→ Kap. 6)
+## D — Lösungskandidaten
 
 ### D.1 SAP BDC-Stack — Offizieller SAP-Pfad
 
@@ -432,7 +420,7 @@ Standardisierte Adapter (Open Connectors / Cloud Integration) für Non-SAP-Quell
 
 ### D.5 Pendo Analytics (als eigenständiger Tool-Kandidat)
 
-Pendo als **Standalone-Dashboard-Tool** (nicht nur als Datenquelle). Eigene Dashboard-Typen: Feature Adoption, Application Overview, Executive Readout, Roadmap Evidence. Vorteil: stärkste native Quelle für Product Usage KPIs. Nachteil: kein integrierter Portal-Layer, kein Engineering/DORA-Coverage, Standalone-UX begrenzt.
+Pendo als **Standalone-Dashboard-Tool** (nicht nur als Datenquelle). Eigene Dashboard-Typen: Feature Adoption, Application Overview, Executive Readout, Roadmap Evidence. Vorteil: stärkste native Quelle für Product Usage KPIs. Nachteil: kein integrierter Portal-Layer, kein Engineering-Coverage als Standalone.
 
 Für KPI-Hub-Überlegungen: Pendo als **Quellsystem** (Data Out → Datasphere → SAC) ist wahrscheinlicher als Pendo als Zieldashboard.
 
@@ -440,7 +428,7 @@ Für KPI-Hub-Überlegungen: Pendo als **Quellsystem** (Data Out → Datasphere �
 
 > Quelle: One Voice Alignment Sheet (05.11.2025) — Demo Dashboard „ONE VOICE @SAP SIGNAVIO" in Metabase.
 
-Open-Source BI / Self-Service Analytics Tool (SQL-basiert). Oliver und Janine nutzen Metabase für das One Voice Demo-Dashboard — impliziter Hinweis, dass BDC-Stack für VoC-Use-Case als zu schwer empfunden wird. **SAP-Freigabe unklar** — nicht im offiziellen BDC-Stack. Interessante Spannung für Kap. 6: BDC (offiziell, komplex) vs. Metabase (leichtgewichtig, schnell, aber Compliance fraglich).
+Open-Source BI / Self-Service Analytics Tool (SQL-basiert). Oliver und Janine nutzen Metabase für das One Voice Demo-Dashboard — impliziter Hinweis, dass BDC-Stack für VoC-Use-Case als zu schwer empfunden wird. **SAP-Freigabe unklar** — nicht im offiziellen BDC-Stack. Spannung: BDC (offiziell, komplex) vs. Metabase (leichtgewichtig, schnell, aber Compliance fraglich).
 
 ### D.7 Weitere SAP-Tool-Kandidaten
 
@@ -452,7 +440,7 @@ Open-Source BI / Self-Service Analytics Tool (SQL-basiert). Oliver und Janine nu
 
 ---
 
-## E — Integrationsarchitektur (→ Kap. 6)
+## E — Integrationsarchitektur
 
 ### E.1 Empfohlene Zielarchitektur (vorläufig, aus EKG-Recherche abgeleitet)
 
@@ -467,15 +455,13 @@ Open-Source BI / Self-Service Analytics Tool (SQL-basiert). Oliver und Janine nu
 | Creation/Deliverables | EKX | Spring Release 2026 |
 | Mobile | SAP Mobile Start (optional) | Produktiv |
 
-> Diese Architektur ist eine Hypothese auf Basis der EKG-Recherche (21.04.) — noch nicht durch Praxis-Validierung bestätigt. Wird in Kap. 6 + 7 evaluiert.
+> Diese Architektur ist eine Hypothese auf Basis der EKG-Recherche (21.04.) — noch nicht durch Praxis-Validierung bestätigt.
 
 ---
 
-## F — Kritischer Fit-Check (→ Kap. 7)
+## F — Kritischer Fit-Check
 
 BDC ist primär für ERP/S/4HANA konzipiert; Signavio-Engineering-Quellsysteme sind dominant **Non-SAP** (Jira, ServiceNow, Gainsight, CircleCI, Pendo/Qualtrics). Es gibt keinen „Plug-and-play"-Pfad — Integrationsaufwand für REST-API-Ingestion ist real.
-
-Dies ist ein zentrales **Machbarkeitskriterium** für das Scoring-Modell (Kap. 7) und ein „erschwerender Faktor im konkreten Einsatzfall" i.S. Sachses Erwartungen.
 
 Gleichzeitig: Jira und ServiceNow sind bereits produktiv als Signavio-Adapter in Signavio Process Insights eingebunden — das ist der schnellste BDC-native Integrationspfad für die zwei stärksten KPI-Quellen.
 
@@ -492,7 +478,7 @@ Gleichzeitig: Jira und ServiceNow sind bereits produktiv als Signavio-Adapter in
 | **Morgen (24.04.)** | E2E Portfolio Links (Owner + Status) | Janine/Oliver | Offen |
 | **Morgen (24.04.)** | SAP Usage Analyzer + CHR: Signavio-Filter vorhanden? | Janine | Offen |
 | **Morgen (24.04.)** | Mural-Link Usage Analyzer aktualisieren (Factsheet → Detailed) | Oliver | Offen |
-| **Morgen (24.04.)** | Lea Reib — Kontakt für Kap. 5 Interview sinnvoll? | Janine | Offen |
+| **Morgen (24.04.)** | Lea Reib — Kontakt für Interview sinnvoll? | Janine | Offen |
 | **Nächste Woche** | DORA-Metriken: Gibt es ein Dashboard? (Stefan Popescu Initiative) | Oliver | Offen |
 | **Nächste Woche** | SAP_Signavio_Dashboards Unterordner (Jira, Product Usage) durchgehen | Oliver | Offen |
 | **Nächste Woche** | Qualtrics API-Zugang — Near-Realtime PSAT möglich? | Janine | Offen |
