@@ -9,67 +9,9 @@
 
 ---
 
-## Aktueller Stand (23. April 2026 — Feierabend, 3. Session)
+## Aktueller Stand (23. April 2026)
 
-### Struktur
-- Exposé: fertig und abgegeben
-- Alle 10 Kapitel angelegt mit Subsection-Struktur und Hänel-Anforderungen als Kommentaren
-- LaTeX-Template kompiliert fehlerfrei
-- Hänel-Anforderungen vollständig in Kapitel-Mapping überführt (siehe [REQUIREMENTS.md](REQUIREMENTS.md))
-- **Kapitel 3.1 Forschungsansatz: vollständig geschrieben** (~350 Wörter)
-- **Kapitel 3.4 Vorgehen im Überblick: vollständig geschrieben** — DSRM-Phasen auf Kapitel gemappt
-- **sachse_gliederung.docx** neu generiert (python-docx), an Janine geschickt → wartet auf Feedback
-- **Sachse-Mail** geschrieben, wartet auf Janines OK zum .docx bevor Versand
-
-### Praxisphase (Tag 4)
-- Erstgespräch Gutachter (Janine + Sachse, 21.04.) ✓
-- Kennenlernen Christopher Pfeiler ✓ → BDC als relevanter nächster Schritt identifiziert
-- **Svitlana Vlasova Meeting (22.04.) ✓** → SAC Data Steer, Collibra als fester BDC-Bestandteil, BDC Adoption Program (SharePoint). EKX ihr unbekannt, keine Referenzprojekte. Präsentation ausgewertet.
-- **Oliver Timm Check-in (22.04.) ✓** → Mural mit ~25 Dashboard-Links, bis Freitag durcharbeiten. Tool-Übersicht bis 15. Mai. Ich bin das Lead. Persona = Senior Management.
-- **#OneDashboard-Dokument** von Oliver ausgewertet → 7 KPI-Kategorien, 5+ parallele Initiativen (teils on hold), Hindernisse dokumentiert
-- **SAC-Zugang** erhalten (Data Insights Team) → Signavio Dashboards + Datasphere View-Zugang
-- **Mural Dashboard-Analyse (23.04.) ✓** — alle ~25 Links systematisch durchgearbeitet, Befunde in [notes/praxis/TOOLS.md](praxis/TOOLS.md) dokumentiert
-- **TOOLS.md vollständig überarbeitet (23.04.)** — thematische Struktur A–H, bereinigt von thesis-opinionierter Sprache
-- **KPI_HUB_KONZEPT.md angelegt (23.04.)** — 4-Schichten-Architektur (Datasphere → SAC → Build Work Zone → EKX), Phasenplan, offene Architekturentscheidungen
-- **Janine-Sync 24.04. vorbereitet** — Agenda mit Lösungsoptionen, 10 Blockiert-Fragen
-
-### Kernergebnisse Mural-Analyse
-- **Fragmentierung bestätigt:** 7 Systeme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint), kein einheitlicher Einstieg
-- **RBAC-Problem real:** ~⅓ der Dashboards nicht zugänglich (CAM, EA Store, Sirius-Mitgliedschaft)
-- **Stärkste Quellen:** Operational Status Dashboard (ServiceNow), Jira Micro Deliveries
-- **Präzedenzfall:** SAP Signavio Product Excellence Portal — existierender Portal-Ansatz, aber nur Product-KPIs, deprecated Komponenten, veraltete Daten
-
-### Neue Erkenntnisse (23.04.)
-- **Pendo Analytics Playbook** (Oliver, 23.04.) → Pendo ist bestätigtes Quellsystem für Usage/HEART-KPIs (DAU/MAU, Feature Adoption, Retention, PES). Dokumentiert in TOOLS.md.
-- **VoC „One Voice" Alignment Sheet** (Oliver/Janine/Lea Reib, 05.11.2025) → Parallele Initiative mit identischem Problemraum. Kritische Befunde:
-  - PPR = aktueller Status quo: 150 Folien (Q2), 5–10 Tage Aufwand — quantifizierter Schmerzpunkt
-  - Qualtrics als PSAT-Quelle bestätigt
-  - Metabase als neues Tool (Demo-Dashboard „ONE VOICE") — SAP-Freigabe unklar
-  - Lea Reib: neue potenzielle Interviewpartnerin
-- **Zielarchitektur konkretisiert:** BDC-Stack (Datasphere + SAC) + Build Work Zone (Portal) + EKX (Deliverables optional). Jira + ServiceNow bereits produktiv eingebunden → MVP-Basis ohne neue Integrationen möglich.
-
-### 2. Session (Nachmittag)
-- **Agent-System aufgesetzt:** 9 spezialisierte Agents in `agents/` angelegt (Projektmanager, Planer, Autor, Rechercheur, Qualitätsprüfer, Compliance, SAP-Praxis, Redakteur, Lektor)
-- **Gesamtcheck (Qualität + Compliance + Redakteur parallel):**
-  - 7 LaTeX-Fixes in simple.tex + Kap. 3 (Tippfehler, Zitierkonventionen, `\gls`-Korrekturen, Bandwurmsatz aufgeteilt)
-  - GLOSSAR.md: 7 fehlende Abkürzungen ergänzt (DSRM, IS, IT, ACV, DORA, BDC, EKX)
-  - .gitignore: .DS_Store ergänzt
-  - baarticle.cls: headheight auf 14.5pt (fancyhdr-Warnungen behoben)
-- **Repo-Verdichtung:** ~128 Zeilen eingespart (MEETINGS.md leere Templates entfernt, THESIS_STATUS erledigte Blöcke archiviert, KPI_HUB_KONZEPT Redundanzen entfernt, TOOLS.md Aktionspunkte konsolidiert)
-- **Methodik-Literatur vervollständigt:**
-  - Interview-Methodik-Quelle beschafft: Myers & Newman (2007)
-  - BibTeX-Einträge vervollständigt: vombrocke2009 (pages, publisher), cleven2009 (DOI, pages)
-  - Key Findings für heinzl2024 in LITERATURE.md nachgetragen
-- **Methodik-Literatur-Analyse:** 8/10 Bewertung, Quellenauswahl überdurchschnittlich für BA
-
-### 3. Session (Abend)
-- **CLAUDE.md:** Agent-System-Sektion ergänzt (Dispatcher-Regeln, Agent-Übersicht)
-- **`outline/03-methodik.md`:** Abschnitt 3.3 zu reifer Outline ausgebaut — Artefakt-Typisierung, FEDS-Framework, Evaluationslogik, Rollenverteilung der Quellen, offene Entscheidungspunkte
-- **`chapter/03Methodik.tex`:** Kap. 3.3 Ergebniserwartung geschrieben (~320 Wörter) — beide Artefakte typisiert nach March & Smith, FEDS-Evaluationsstrategie, Anforderungsabdeckung als Erfolgskriterium
-- **`acronyms.tex` + `notes/GLOSSAR.md`:** 2 neue Einträge (FEDS, AHP)
-- **`outline/06-loesungsraum.md`:** Stub mit Subsection-Struktur und offenem Entscheidungspunkt [KAP6-E1] (Gewichtungsmethodik) angelegt
-- **`outline/07-bewertungsmodell.md`:** Stub mit Subsection-Struktur und offenen Entscheidungspunkten [KAP7-E1] (MVP-Zielsystem) + [KAP7-E2] (Gewichtungsmethodik) angelegt
-- **Seitenzahl cleven2009:** S. 5 nachgetragen — kein XX-Platzhalter mehr in 3.3
+Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 liegen als erste Entwürfe vor. Mural-Analyse abgeschlossen, Systemlandschaft in TOOLS.md und KPI_HUB_KONZEPT.md dokumentiert. Janine-Sync für 24.04. vorbereitet. Sachse-Gliederung an Janine weitergeleitet (wartet auf Freigabe).
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
