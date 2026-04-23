@@ -107,8 +107,11 @@ Kennzahlen zur Messung des Wertflusses durch Engineering-Prozesse (Flow Velocity
 **HEART-Framework**
 Google-UX-Messmethode: Happiness, Engagement, Adoption, Retention, Task Success. Im Kontext für Produkt-Adoption-KPIs relevant.
 
-**MAU / DAU (Monthly/Daily Active Users)**
-Nutzungsmetriken zur Messung von Produktaktivität. MAU = Monatlich aktive Nutzer, DAU = Täglich aktive Nutzer.
+**DAU / MAU (Daily / Monthly Active Users)**
+Nutzungsmetriken zur Messung von Produktaktivität: DAU = Anzahl eindeutiger Nutzer an einem Tag, MAU = Anzahl eindeutiger Nutzer in einem Monat. Das Verhältnis DAU/MAU (auch: Stickiness) gibt an, wie regelmäßig Nutzer zurückkehren — 10 % bedeutet, ein Nutzer ist im Schnitt an ~3 von 30 Tagen aktiv. Quelle: Pendo (via „Data Insights Database" → SAC).
+
+**PES (Product Engagement Score)**
+Pendo-eigener zusammengesetzter Score zur Bewertung des Gesamtengagements eines Produkts. Kombiniert drei Dimensionen: Adoption (Breite der Featurenutzung), Stickiness (DAU/MAU-Verhältnis) und Growth (Nutzerentwicklung über Zeit). Dient als Executive-Kurzindikator für „Wie engagiert sind unsere Nutzer insgesamt?"
 
 **ACV (Annual Contract Value)**
 Jährlicher Vertragswert eines Kunden. Wichtige Business-KPI im SAP-Signavio-Kontext.
@@ -141,3 +144,6 @@ SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit e
 | SAC | SAP Analytics Cloud |
 | BTP | SAP Business Technology Platform |
 | PoC | Proof of Concept |
+| MAU | Monthly Active Users |
+| DAU | Daily Active Users |
+| PES | Product Engagement Score |
