@@ -130,9 +130,10 @@
 
 ### Vorbereitung Janine-Sync (Freitag 25.04.)
 
+- [ ] **Pendo Analytics Playbook** von Oliver erhalten (23.04.) → Pendo ist aktives Quellsystem für Adoption/HEART-Metriken; Admin-Zugang + Adoption Monitor 2.0-Verbindung klären
 - [ ] **Gainsight** Zugangsdaten erfragen
 - [ ] **Grafana** Zugangsdaten erfragen
-- [ ] **Adoption Monitor 2.0** Zugang klären
+- [ ] **Adoption Monitor 2.0** Zugang klären — wahrscheinlich Pendo-basiert
 - [ ] **Operations-Links** (E2E Portfolio Planning + QBR): Owner + Status erfragen
 - [ ] **Mural aktualisieren:** Usage Analyzer Link → Detailed Product Analysis ersetzen (mit Oliver)
 - [ ] Klären: SAP Usage Analyzer + CHR Dashboard — gibt es Signavio-Filter?

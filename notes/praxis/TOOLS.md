@@ -192,6 +192,53 @@ Auch möglich: Excel-Upload via CSV in Datasphere (für KPIs die noch nicht syst
 
 ---
 
+## Pendo Analytics (Oliver Timm, 23.04.2026)
+
+> Quelle: "Pendo Analytics Playbook" — von Oliver Timm erhalten, 23.04.2026. SAP-internes Dokument.
+> Relevant für Kap. 4 (Quellsystem Usage/Adoption), Kap. 6 (Tool-Kandidat), Kap. 7 (Scoring)
+
+### Einordnung
+
+Pendo ist ein **Product Analytics Tool**, das Nutzerverhalten in der Anwendung trackt (Feature-Clicks, Page Views, Sitzungsdauer). SAP nutzt Pendo intern — die Formulierung "SAP teams can utilise" und der direkte Playbook-Versand durch Oliver bestätigen eine aktive SAP-Lizenz.
+
+**Wahrscheinliche Verbindung:** Die HEART-Metriken im Product Excellence Portal (DAU/MAU, Activated Users, Feature Adoption) und der "Adoption Monitor 2.0" sind mit hoher Wahrscheinlichkeit Pendo-Daten, die via SAC visualisiert werden.
+
+### KPI-Abdeckung (Pendo nativ)
+
+| Kategorie | KPIs |
+|---|---|
+| **Nutzungsintensität** | DAU, WAU, MAU, Visitor Count, Session Count |
+| **Feature-Adoption** | Adoption Rate (% Nutzer die Feature nutzen), Top 5% Features by Clicks |
+| **Retention / Stickiness** | Cohort Retention over Time, Feature-Stickiness |
+| **Engagement-Score** | PES (Product Engagement Score) = Adoption + Stickiness + Growth |
+| **Funnels** | Step-by-Step Konversionsraten in Key Flows |
+| **Paths** | Navigationssequenzen vor/nach einer Aktion |
+| **Segmentierung** | Nach Rolle, Plan, Region, Modul, Lifecycle Stage |
+
+### Kernfunktionen (für KPI-Hub relevant)
+
+- **Data Explorer:** Flexible Reports mit Filtern nach Segment, Feature, Zeitraum — inkl. Berechnungen (Sum, Ratio, Relative %)
+- **Dashboards:** Role-specific Dashboards (Executive Readout, Feature Release Performance, Product Usage Overview, Roadmap Evidence)
+- **Data Out:** Webhooks, REST API, Data Sync → direkte Integration in BI-Tools / CRM / Automation
+- **Account Reports:** Aggregation auf Kundenkonto-Ebene (wichtig: zeigt Nutzung pro Account)
+
+### Relevanz für KPI-Hub
+
+| Aspekt | Bewertung |
+|---|---|
+| **Als Quellsystem** | Hoch — einzige belastbare Quelle für Feature-Adoption und DAU/WAU/MAU bei Signavio |
+| **Als Tool-Kandidat (Kap. 6)** | Mittel — Pendo hat eigene Dashboards, aber kein Portal-Layer; Datenbasis stark, UX-Standalone begrenzt |
+| **RBAC** | Pendo-Segmentierung erlaubt rollenbasierte Ansichten; Zugang noch zu klären |
+| **Integration in BDC** | Über "Data Out" (API/Webhooks) → Datasphere → SAC theoretisch möglich |
+
+### Offene Fragen
+
+- Wer hat Pendo-Admin-Zugang? (Janine/Oliver fragen)
+- Ist der Adoption Monitor 2.0 ein Pendo-Dashboard in SAC oder natives Pendo?
+- Kann Pendo-Daten direkt in Datasphere repliziert werden (via Data Sync)?
+
+---
+
 ## Mural-Dashboard-Analyse (23.04.2026)
 
 > Quelle: Mural-Board Oliver Timm — systematische Durchsicht aller ~25 Links am 23.04.2026.
