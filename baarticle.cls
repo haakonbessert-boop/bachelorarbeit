@@ -45,6 +45,7 @@
 }{
     \RequirePackage[a4paper,left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry} % for paper size and page spacing
 }
+\setlength{\headheight}{14.5pt} % fix fancyhdr warning (default 12pt too small)
 \RequirePackage{setspace} % for line spacing
 \RequirePackage{float} % for H placement directive in \begin{figure}
 \RequirePackage{tocloft} % to adjust the ToC, LoF and LoT

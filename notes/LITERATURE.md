@@ -17,7 +17,7 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Quelle:** TODO — Verlag, Auflage, ISBN bitte ergänzen
 - **Relevanz:** Hoch
 - **Kapitel:** 2 Grundlagen / 3 Methodik
-- **Key Findings:** TODO — nach Lektüre ergänzen
+- **Key Findings:** Deutschsprachiges Lehrbuch, das die Wirtschaftsinformatik als gleichzeitig empirische Wissenschaft und Ingenieurwissenschaft einordnet und daraus eine charakteristische "Doppelgesichtigkeit" ableitet: verhaltensorientierte Forschung (Erkenntnisgewinnung, deskriptives Omega-Wissen) und gestaltungsorientierte Forschung (Erkenntnisverwertung, praskriptives Lambda-Wissen) stehen komplementar nebeneinander (Kap. 2 + 5). Kapitel 5 behandelt DSR im deutschsprachigen WI-Kontext als Problem-/Losungsparadigma, klassifiziert Artefakte in Konstrukte, Modelle, Methoden und Software-Instanziierungen (nach Hevner et al. 2004) und stellt den DSRM-Prozess (Peffers et al. 2007) als Referenzprozessmodell vor. Gegenuber den englischsprachigen Originalquellen liegt der Mehrwert in der didaktischen Integration von DSR in den Gesamtrahmen der WI-Wissenschaftstheorie (Seins- vs. Sollens-Wissenschaft, Kap. 2.6) sowie in der systematischen Darstellung empirischer und gestaltungsorientierter Methoden in einem gemeinsamen Methodenkanon (Kap. 4 + 5).
 - **Notizen:** Von Hänel explizit als Pflichtlektüre genannt. BibTeX-Eintrag unvollständig — Verlagsdetails nachtragen.
 
 ---
@@ -87,6 +87,14 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Kapitel:** 3 Methodik (3.1 Forschungsansatz)
 - **Key Findings:** Führt das DSR Knowledge Contribution Framework ein: klassifiziert Forschungsbeiträge nach Abstraktionsgrad (Level 1 = spezifische Instanz, Level 2 = nascent design theory, Level 3 = well-developed design theory). Ordnet DSR-Artefakte in eine 2×2-Matrix ein (Maturity of Problem × Maturity of Solution), daraus ergeben sich drei Beitragstypen: Invention, Improvement, Exaptation (+ Routine Design als Nicht-Beitrag).
 - **Notizen:** Direkt anwendbar auf die Einordnung der eigenen Artefakte: Das Bewertungsmodell ist ein Improvement (bekanntes Problem, neue Lösung), der MVP eine Instanz auf Level 1. Stärkt die Argumentation in 3.1 für den wissenschaftlichen Beitrag der Arbeit.
+
+### Myers & Newman (2007) — The Qualitative Interview in IS Research: Examining the Craft
+- **BibTeX-Key:** `myers2007`
+- **Quelle:** Information and Organization, Vol. 17, No. 1, S. 2–26
+- **Relevanz:** Hoch
+- **Kapitel:** 3 Methodik (3.4 Vorgehen), 5 Anforderungsanalyse
+- **Key Findings:** Entwickelt ein dramaturgisches Modell für qualitative Interviews in der IS-Forschung. Identifiziert sieben zentrale Problemfelder bei Forschungsinterviews (u. a. fehlende Vertrauensbasis, Elite-Bias, Hawthorne-Effekt, Konstruktion von Wissen durch die Interviewsituation selbst) und leitet daraus konkrete Gestaltungsrichtlinien ab: Situierung des Forschers als Akteur, Minimierung sozialer Distanz, Flexibilität des Leitfadens, Berücksichtigung der Interviewdynamik. Die über 4.400 Zitationen machen den Beitrag zum meistzitierten Methodenpapier für qualitative Interviews im IS-Kontext.
+- **Notizen:** Methodische Grundlage für die leitfadengestützten Stakeholder-Interviews in Kap. 5. Legitimiert den Einsatz qualitativer Interviews als Datenerhebungsmethode innerhalb des DSR-Prozesses (Phase 1: Problemidentifikation). Besonders relevant: die Empfehlung, den Leitfaden flexibel zu handhaben und die soziale Dynamik zwischen Interviewer und Experte bewusst zu reflektieren.
 
 ---
 

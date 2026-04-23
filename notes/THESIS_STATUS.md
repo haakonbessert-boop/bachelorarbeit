@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (23. April 2026 — Feierabend)
+## Aktueller Stand (23. April 2026 — Feierabend, 2. Session)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -47,6 +47,20 @@
   - Metabase als neues Tool (Demo-Dashboard „ONE VOICE") — SAP-Freigabe unklar
   - Lea Reib: neue potenzielle Interviewpartnerin
 - **Zielarchitektur konkretisiert:** BDC-Stack (Datasphere + SAC) + Build Work Zone (Portal) + EKX (Deliverables optional). Jira + ServiceNow bereits produktiv eingebunden → MVP-Basis ohne neue Integrationen möglich.
+
+### 2. Session (Nachmittag)
+- **Agent-System aufgesetzt:** 9 spezialisierte Agents in `agents/` angelegt (Projektmanager, Planer, Autor, Rechercheur, Qualitätsprüfer, Compliance, SAP-Praxis, Redakteur, Lektor)
+- **Gesamtcheck (Qualität + Compliance + Redakteur parallel):**
+  - 7 LaTeX-Fixes in simple.tex + Kap. 3 (Tippfehler, Zitierkonventionen, `\gls`-Korrekturen, Bandwurmsatz aufgeteilt)
+  - GLOSSAR.md: 7 fehlende Abkürzungen ergänzt (DSRM, IS, IT, ACV, DORA, BDC, EKX)
+  - .gitignore: .DS_Store ergänzt
+  - baarticle.cls: headheight auf 14.5pt (fancyhdr-Warnungen behoben)
+- **Repo-Verdichtung:** ~128 Zeilen eingespart (MEETINGS.md leere Templates entfernt, THESIS_STATUS erledigte Blöcke archiviert, KPI_HUB_KONZEPT Redundanzen entfernt, TOOLS.md Aktionspunkte konsolidiert)
+- **Methodik-Literatur vervollständigt:**
+  - Interview-Methodik-Quelle beschafft: Myers & Newman (2007)
+  - BibTeX-Einträge vervollständigt: vombrocke2009 (pages, publisher), cleven2009 (DOI, pages)
+  - Key Findings für heinzl2024 in LITERATURE.md nachgetragen
+- **Methodik-Literatur-Analyse:** 8/10 Bewertung, Quellenauswahl überdurchschnittlich für BA
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -99,7 +113,6 @@
 - [ ] Wie tief wird die Sensitivitätsanalyse (Kapitel 7 oder 9)?
 - [ ] Ist der MVP ein konkretes Tool oder ein Architektur-PoC?
 - [ ] Befristungsdatum Sperrvermerk festlegen — wird erst am Ende der Arbeit geklärt
-- [x] KI-Genehmigungsdokument: Protokollierung wie geplant (KI_PROTOKOLL.md) akzeptiert — kein T1-Log nötig
 - [x] Referenzprojekte aus anderen SAP-Bereichen anfragen → Svitlana kennt keine; Goals Tracking (Svitlana) als einziges Referenzprojekt identifiziert
 - [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
 - [x] Datenbereitstellung als explizites Thema einplanen → Kap. 4.4 angelegt
@@ -114,8 +127,7 @@
 
 ### Formales
 
-- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten + an Janine weitergeleitet — Janines Gegenzeichnung ausstehend
-- [ ] Befristungsdatum Sperrvermerk — wird erst am Ende der Arbeit geklärt
+- [ ] KI-Genehmigungsdokument: Janines Gegenzeichnung ausstehend (siehe Formales oben)
 - [x] Svitlana Vlasova anschreiben — Mail gesendet, warte auf Antwort
 
 ### Meetings diese Woche
@@ -127,18 +139,9 @@
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 - [ ] Bei Oliver melden (Anfang nächste Woche, ~27./28.04.): Brauchen wir vor Mai nochmal ein Meeting?
 
-### Mural / Dashboard-Analyse (✓ Abgeschlossen 23.04.)
-
-- [x] Alle zugänglichen Dashboards durchgegangen: Befunde dokumentiert in [notes/praxis/TOOLS.md](praxis/TOOLS.md)
-- [x] Relevante KPIs für KPI-Hub identifiziert, Überlappungen erkannt
-- [x] Offene Fragen für Oliver + Janine formuliert (Zugänge, defekte Links)
-- [x] Tool-Liste für Janine-Sync fertiggestellt → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md) + MEETINGS.md 24.04.
-
-### Zugänge / Formales
+### Zugänge
 
 - [ ] EA Store: **Product 360 Access** + **EVM neue Rolle** → Janine fragen (24.04.)
-- [ ] Befristungsdatum Sperrvermerk — wird erst am Ende der Arbeit geklärt
-- [x] KI-Genehmigungsdokument: Sachse-Unterschrift erhalten + an Janine weitergeleitet
 
 ### Vorbereitung Janine-Sync (✓ Abgeschlossen 23.04.)
 
@@ -147,13 +150,6 @@
 - [x] Zielarchitektur konkretisiert → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md)
 - [x] Sync-Agenda fertig → MEETINGS.md 24.04. (Stand, Lösungsoptionen, 10 Blockiert-Fragen)
 - [ ] Offene Fragen → werden morgen im Sync geklärt (Pendo-Owner, Metabase-Freigabe, Gainsight/Grafana, Qualtrics-API, EA Store, Lea Reib, sachse_gliederung.docx-Freigabe)
-
-### Vorbereitung Sachse (28. April — Mail)
-
-- [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
-- [x] sachse_gliederung.docx an Janine geschickt (22.04.) — wartet auf Feedback
-- [x] Mail an Sachse geschrieben (22.04.) — wartet auf Janines Feedback zum .docx bevor Versand
-- [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleitet
 
 ### Nächste Woche — Oliver
 
@@ -211,3 +207,21 @@
 | 22.04.2026 | Sperrvermerk-Befristung wird erst am Ende der Arbeit geklärt | Keine Dringlichkeit, Entscheidung hat keine Auswirkung auf Schreibprozess |
 | 22.04.2026 | Collibra ist fester Bestandteil des BDC-Stacks (nicht externer Kandidat) | Svitlana-Präsentation: Collibra = offizielle Governance-Plattform im BDC |
 | 22.04.2026 | Goals Tracking als Referenzprojekt | Einziges identifiziertes BDC-Projekt mit Engineering-Bezug (Svitlana, Data Products in Collibra → DSP → SAC) |
+
+---
+
+## Archiv erledigter Schritte
+
+### Mural / Dashboard-Analyse (abgeschlossen 23.04.)
+
+- [x] Alle zugänglichen Dashboards durchgegangen: Befunde dokumentiert in [notes/praxis/TOOLS.md](praxis/TOOLS.md)
+- [x] Relevante KPIs für KPI-Hub identifiziert, Überlappungen erkannt
+- [x] Offene Fragen für Oliver + Janine formuliert (Zugänge, defekte Links)
+- [x] Tool-Liste für Janine-Sync fertiggestellt → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md) + MEETINGS.md 24.04.
+
+### Vorbereitung Sachse (abgeschlossen 23.04.)
+
+- [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
+- [x] sachse_gliederung.docx an Janine geschickt (22.04.) — wartet auf Feedback
+- [x] Mail an Sachse geschrieben (22.04.) — wartet auf Janines Feedback zum .docx bevor Versand
+- [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weitergeleitet

@@ -7,7 +7,10 @@ Diese Untersuchung folgt dem Paradigma des \gls{dsr}, das in der Wirtschaftsinfo
 \gls{dsr} erzeugt wissenschaftliches Wissen nicht durch Beobachtung und Erklärung bestehender Phänomene, sondern durch die zielgerichtete Konstruktion und Evaluation von \gls{it}-Artefakten.\vglcite[76]{hevner2004}
 Wissen entsteht im Gestaltungsakt selbst -- durch den iterativen Prozess des Entwerfens, Bauens und Bewertens einer Lösung für ein konkretes, praxisrelevantes Problem.
 
-Den konzeptionellen Rahmen bildet das \gls{is} Research Framework, das drei Sphären unterscheidet: die \textit{Umgebung} (Personen, Organisationen, Technologien, in der ein Problem verortet ist), die \textit{Wissensbasis} (bestehende Theorien, Methoden und Artefakte der \gls{is}-Forschung) sowie den \textit{\gls{is}-Forschungsprozess} selbst.\vglcite[80]{hevner2004}
+Den konzeptionellen Rahmen bildet das \gls{is} Research Framework, das drei Sphären unterscheidet.\vglcite[80]{hevner2004}
+Die erste Sphäre umfasst die \textit{Umgebung} -- Personen, Organisationen und Technologien, in der ein Problem verortet ist.
+Die zweite Sphäre bildet die \textit{Wissensbasis}, bestehend aus Theorien, Methoden und Artefakten der \gls{is}-Forschung.
+Zwischen beiden vermittelt der \textit{\gls{is}-Forschungsprozess} selbst als dritte Sphäre.
 
 \begin{bafigure}[source={in Anlehnung an \cite{hevner2004}},label=fig:isresearchframework]{IS Research Framework}
 \begin{tikzpicture}
@@ -69,14 +72,16 @@ Der Rigor Cycle wird durch die systematische Literaturrecherche sowie die Anlehn
 Zu diesem Zweck werden zwei Artefakte konstruiert: ein Mehrkriterien-Bewertungsmodell zur systematischen Auswahl eines \gls{kpihub}-Integrationsansatzes sowie ein \gls{mvp}, der den ausgewählten Ansatz exemplarisch validiert.
 Beide lassen sich als \textit{Modell} bzw.\ \textit{Instanz} innerhalb gestaltungsorientierter \gls{is}-Forschung klassifizieren.\vglcite[256, 258]{march1995}
 Diese Artefakttypologie verdeutlicht den Erkenntnischarakter der Untersuchung: Das Bewertungsmodell abstrahiert und strukturiert den Entscheidungsraum, während der \gls{mvp} als konkrete Instanz die Realisierbarkeit und den Nutzen des gewählten Ansatzes unter Realbedingungen demonstriert.
-Im \textit{DSR Knowledge Contribution Framework} entspricht dieser Beitrag dem Typ \textit{Improvement} -- einer neuen Lösung für ein bekanntes, aber unzureichend adressiertes Problem.\vglcite[345]{gregor2013}
+Im \textit{\gls{dsr} Knowledge Contribution Framework} entspricht dieser Beitrag dem Typ \textit{Improvement} -- einer neuen Lösung für ein bekanntes, aber unzureichend adressiertes Problem.\vglcite[345]{gregor2013}
 Das Bewertungsmodell liefert dabei präskriptives Wissen auf Ebene~2 (nascent design theory), der \gls{mvp} als situierte Instanz einen Beitrag auf Ebene~1.\vglcite[342]{gregor2013}
 
 Rein empirische Ansätze -- etwa ausschließlich leitfadengestützte Interviews oder Fallstudien -- wären für dieses Forschungsziel ungeeignet.
 Sie liefern Beschreibungen und Erklärungen bestehender Zustände, nicht jedoch das gestaltete Artefakt selbst.
 Da der Fokus auf der \textit{Konstruktion} eines anwendbaren Entscheidungsmodells liegt und nicht auf der deskriptiven Erfassung vorhandener Praktiken, ist \gls{dsr} der methodisch adäquate Rahmen.
 Empirische Erhebungen -- insbesondere strukturierte Interviews zur Anforderungsermittlung -- fließen dennoch als Datengrundlage in den \gls{dsr}-Prozess ein und sind dort methodisch verankert (vgl.\ Abschnitt~\ref{sec:vorgehen}).
-Die Rollenverteilung der herangezogenen Quellen spiegelt diese Struktur wider: Die wirtschaftsinformatische Grundlegung des \gls{dsr}-Paradigmas wird durch die einschlägige Fachliteratur geliefert,\vglcite[79\,ff.]{heinzl2024} das normative Framework mit Rigor- und Relevance-Kriterien bildet den evaluativen Maßstab\vglcite[79\,f.]{hevner2004} und das operative Prozessmodell strukturiert die Phasenabfolge dieser Untersuchung unmittelbar.\vglcite[52\,ff.]{peffers2007}
+Die Rollenverteilung der herangezogenen Quellen spiegelt diese Struktur wider: Die wirtschaftsinformatische Grundlegung des \gls{dsr}-Paradigmas wird durch die einschlägige Fachliteratur geliefert.\vglcite[79\,ff.]{heinzl2024}
+Das normative Framework mit Rigor- und Relevance-Kriterien bildet den evaluativen Maßstab.\vglcite[79\,f.]{hevner2004}
+Das operative Prozessmodell strukturiert die Phasenabfolge dieser Untersuchung unmittelbar.\vglcite[52\,ff.]{peffers2007}
 
 \subsection{Literaturrecherche}
 \label{sec:literaturrecherche}
@@ -118,11 +123,11 @@ Abbildung~\ref{fig:dsrm} zeigt die Phasenabfolge und ihre Entsprechung in dieser
 }};
 \node[box] (p3) at (9.2,0) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Design \& Entwicklung}\\[3pt]
-    {\footnotesize Scoring-Modell,\\MVP-Konzept}
+    {\footnotesize Scoring-Modell,\\\gls{mvp}-Konzept}
 }};
 \node[box] (p4) at (9.2,-3.5) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Demonstration}\\[3pt]
-    {\footnotesize MVP-Umsetzung\\und Erprobung}
+    {\footnotesize \gls{mvp}-Umsetzung\\und Erprobung}
 }};
 \node[box] (p5) at (4.6,-3.5) {\parbox[c][2.5cm][c]{3.6cm}{\centering
     \textbf{Evaluation}\\[3pt]

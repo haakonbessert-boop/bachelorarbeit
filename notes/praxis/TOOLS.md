@@ -467,24 +467,14 @@ Gleichzeitig: Jira und ServiceNow sind bereits produktiv als Signavio-Adapter in
 
 ---
 
-## G — Offene Fragen & Aktionen
+## G — Offene technische Fragen
 
-| Priorität | Aktion | An wen | Status |
-|---|---|---|---|
-| **Morgen (24.04.)** | Pendo-Zugang / Adoption Monitor 2.0 — Wer ist Owner? | Janine | Offen |
-| **Morgen (24.04.)** | Metabase One Voice Demo-Dashboard — SAP-freigegeben? Zugang? | Janine | Offen |
-| **Morgen (24.04.)** | Gainsight Zugangsdaten | Janine | Offen |
-| **Morgen (24.04.)** | Grafana Zugangsdaten | Janine | Offen |
-| **Morgen (24.04.)** | E2E Portfolio Links (Owner + Status) | Janine/Oliver | Offen |
-| **Morgen (24.04.)** | SAP Usage Analyzer + CHR: Signavio-Filter vorhanden? | Janine | Offen |
-| **Morgen (24.04.)** | Mural-Link Usage Analyzer aktualisieren (Factsheet → Detailed) | Oliver | Offen |
-| **Morgen (24.04.)** | Lea Reib — Kontakt für Interview sinnvoll? | Janine | Offen |
-| **Nächste Woche** | DORA-Metriken: Gibt es ein Dashboard? (Stefan Popescu Initiative) | Oliver | Offen |
-| **Nächste Woche** | SAP_Signavio_Dashboards Unterordner (Jira, Product Usage) durchgehen | Oliver | Offen |
-| **Nächste Woche** | Qualtrics API-Zugang — Near-Realtime PSAT möglich? | Janine | Offen |
-| **Nächste Woche** | Pendo Data Sync → Datasphere: möglich? | Janine/Oliver | Offen |
-| **EA Store (48h)** | Product 360 Access beantragen | Selbst | Beantragt? |
-| **EA Store (48h)** | EVM neue Rolle beantragen | Selbst | Beantragt? |
+> Meeting-bezogene Aktionspunkte und Zugangsfragen werden zentral in [THESIS_STATUS.md](../THESIS_STATUS.md) unter "Nächste Schritte" gepflegt.
+
+| Frage | Kontext | Status |
+|---|---|---|
+| Qualtrics API-Zugang — Near-Realtime PSAT möglich? | Aktuell nur manueller Export im PPR-Prozess | Offen |
+| Pendo Data Sync → Datasphere: technisch möglich? | Data Sync vs. REST API für Pendo-Integration | Offen |
 
 ---
 

@@ -37,16 +37,7 @@ Stand: 23. April 2026 — vorläufig, noch nicht durch Praxis-Validierung bestä
 
 ## 2 — Quellsystem-Mapping
 
-| Quellsystem | KPI-Kategorie | Integrationspfad | Reifegrad |
-|---|---|---|---|
-| Jira (SAP Jira) | Delivery, RAG, Bugs | Signavio-Adapter → Signavio Process Insights → SAC | ✅ Produktiv |
-| ServiceNow | Incidents, MTTR, SLA | Signavio-Adapter → Signavio Process Insights → SAC | ✅ Produktiv |
-| Pendo / Data Insights DB | DAU/MAU, Feature Adoption, PES | REST API / Data Sync → Datasphere → SAC | ⚠️ Zu klären |
-| Qualtrics | PSAT, PX Survey | REST API → Datasphere → SAC (aktuell: manueller Export) | ⚠️ Zu klären |
-| Gainsight | Customer Health, Churn | REST API → Datasphere → SAC | ❌ Kein Zugang |
-| Grafana | Security / Release Mgmt | REST API / Export → Datasphere → SAC | ❌ Kein Zugang |
-| SAC Analytics Store | Financials, ACV | SAC nativ (Corporate-Filter) | ⚠️ Filter-Problem |
-| Collibra (PX Foundation) | Qualtrics-Datenbasis | Datasphere Ready ✅ — Data Product vorhanden | ✅ Vorhanden |
+Detailliertes Quellsystem-Mapping siehe [TOOLS.md, Sektion A](TOOLS.md#a--quellsysteme-ist-zustand).
 
 ---
 

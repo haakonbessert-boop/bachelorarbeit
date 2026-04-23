@@ -134,16 +134,23 @@ SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit e
 
 | Kürzel | Ausgeschrieben |
 |--------|----------------|
-| KPI | Key Performance Indicator |
+| ACV | Annual Contract Value |
 | API | Application Programming Interface |
-| ETL | Extract, Transform, Load |
+| BDC | Business Data Cloud |
 | BI | Business Intelligence |
-| MVP | Minimum Viable Product |
-| RBAC | Role-Based Access Control |
-| DSR | Design Science Research |
-| SAC | SAP Analytics Cloud |
 | BTP | SAP Business Technology Platform |
-| PoC | Proof of Concept |
-| MAU | Monthly Active Users |
 | DAU | Daily Active Users |
+| DORA | DevOps Research and Assessment |
+| DSR | Design Science Research |
+| DSRM | Design Science Research Methodology |
+| EKX | Enterprise Knowledge Exploration |
+| ETL | Extract, Transform, Load |
+| IS | Informationssystem |
+| IT | Informationstechnologie |
+| KPI | Key Performance Indicator |
+| MAU | Monthly Active Users |
+| MVP | Minimum Viable Product |
 | PES | Product Engagement Score |
+| PoC | Proof of Concept |
+| RBAC | Role-Based Access Control |
+| SAC | SAP Analytics Cloud |
