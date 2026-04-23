@@ -56,6 +56,38 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Key Findings:** Systematisiert Evaluationsdesigns für DSR-Artefakte anhand eines morphologischen Feldes (6 Dimensionen: Evaluationszeitpunkt, -subjekt, -methode, -granularität, -rolle, -kriterien). Unterscheidet naturalistic vs. artificial evaluation. Gibt konkrete Entscheidungshilfe für die Wahl der Evaluationsmethode im MVP-Kapitel.
 - **Notizen:** Sekundär — erst relevant wenn Evaluationsmethode für Kap. 8 festgelegt wird. Nicht Pflicht wie Hevner/Peffers, aber nützlich für methodische Begründung der Validierungsstrategie.
 
+### vom Brocke et al. (2009) — Reconstructing the Giant: On the Importance of Rigour in Documenting the Literature Search Process
+- **BibTeX-Key:** `vombrocke2009`
+- **Quelle:** Proceedings of the 17th European Conference on Information Systems (ECIS), Verona, Italy
+- **Relevanz:** Hoch
+- **Kapitel:** 3 Methodik (3.2 Literaturrecherche)
+- **Key Findings:** Fordert rigorose Dokumentation des Literaturrechercheprozesses in der IS-Forschung. Stellt einen 5-Phasen-Rahmen auf: (1) Definition des Suchbereichs, (2) Konzeptualisierung des Themas, (3) Literatursuche, (4) Analyse und Synthese, (5) Forschungsagenda. Betont die Reproduzierbarkeit als Qualitätskriterium — Datenbanken, Suchstrings, Ein-/Ausschlusskriterien müssen explizit dokumentiert werden.
+- **Notizen:** Zentrale Referenz für Kap. 3.2 — strukturiert die Darstellung der eigenen Literaturrecherche. Komplementär zu Webster & Watson (2002) als europäische IS-Perspektive.
+
+### Webster & Watson (2002) — Analyzing the Past to Prepare for the Future: Writing a Literature Review
+- **BibTeX-Key:** `webster2002`
+- **Quelle:** MIS Quarterly, Vol. 26, No. 2, S. xiii–xxiii
+- **Relevanz:** Hoch
+- **Kapitel:** 3 Methodik (3.2 Literaturrecherche)
+- **Key Findings:** Kanonisches MIS-Quarterly-Editorial zur Methodik von Literaturreviews in IS. Empfiehlt concept-centric statt author-centric Strukturierung. Fordert systematische Suche über führende Journals hinaus (Vorwärts-/Rückwärtssuche). Unterscheidet zwischen reiner Aufzählung und echter Synthese — letztere erfordert Konzeptmatrix und Identifikation von Forschungslücken.
+- **Notizen:** Zusammen mit vom Brocke (2009) die methodische Grundlage für Kap. 3.2. Webster/Watson liefert die Strukturierungslogik (Konzeptmatrix), vom Brocke den Dokumentationsrahmen.
+
+### Venable et al. (2016) — FEDS: A Framework for Evaluation in Design Science Research
+- **BibTeX-Key:** `venable2016`
+- **Quelle:** European Journal of Information Systems, Vol. 25, No. 1, S. 77–89
+- **Relevanz:** Hoch
+- **Kapitel:** 3 Methodik (3.3 Ergebniserwartung), 9 Ergebnisse/Diskussion
+- **Key Findings:** Stellt das FEDS-Framework vor (Framework for Evaluation in Design Science Research). Klassifiziert Evaluationsstrategien entlang zweier Achsen: (1) artificial vs. naturalistic und (2) formative vs. summative. Definiert vier Evaluationsstrategien: Quick & Simple, Human Risk & Effectiveness, Technical Risk & Efficacy, Purely Technical. Gibt praxisnahe Entscheidungshilfe, welche Evaluationsmethode wann angemessen ist.
+- **Notizen:** Deutlich konkreter als Cleven (2009). Für die vorliegende Arbeit relevant: Der MVP wird naturalistic-summativ evaluiert (Erprobung unter Realbedingungen), das Bewertungsmodell eher artificial-formativ. FEDS liefert die Begründung für diese Doppelstrategie.
+
+### Gregor & Hevner (2013) — Positioning and Presenting Design Science Research for Maximum Impact
+- **BibTeX-Key:** `gregor2013`
+- **Quelle:** MIS Quarterly, Vol. 37, No. 2, S. 337–355
+- **Relevanz:** Hoch
+- **Kapitel:** 3 Methodik (3.1 Forschungsansatz)
+- **Key Findings:** Führt das DSR Knowledge Contribution Framework ein: klassifiziert Forschungsbeiträge nach Abstraktionsgrad (Level 1 = spezifische Instanz, Level 2 = nascent design theory, Level 3 = well-developed design theory). Ordnet DSR-Artefakte in eine 2×2-Matrix ein (Maturity of Problem × Maturity of Solution), daraus ergeben sich drei Beitragstypen: Invention, Improvement, Exaptation (+ Routine Design als Nicht-Beitrag).
+- **Notizen:** Direkt anwendbar auf die Einordnung der eigenen Artefakte: Das Bewertungsmodell ist ein Improvement (bekanntes Problem, neue Lösung), der MVP eine Instanz auf Level 1. Stärkt die Argumentation in 3.1 für den wissenschaftlichen Beitrag der Arbeit.
+
 ---
 
 ## KPI / Enterprise BI
