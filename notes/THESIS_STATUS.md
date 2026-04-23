@@ -136,7 +136,7 @@
 - [ ] EA Store: **Product 360 Access** beantragen (48h Wartezeit)
 - [ ] EA Store: **EVM neue Rolle** beantragen (48h Wartezeit)
 
-### Vorbereitung Janine-Sync (Freitag 25.04.)
+### Vorbereitung Janine-Sync (Freitag 24.04.)
 
 - [ ] **Pendo Analytics Playbook** von Oliver erhalten (23.04.) → Pendo ist aktives Quellsystem für Adoption/HEART-Metriken; Admin-Zugang + Adoption Monitor 2.0-Verbindung klären
 - [ ] **Metabase (One Voice Demo-Dashboard)** — Tool-Kandidat prüfen: SAP-genehmigt? Wer hat Zugang?
