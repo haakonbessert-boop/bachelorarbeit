@@ -135,6 +135,7 @@ SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit e
 | Kürzel | Ausgeschrieben |
 |--------|----------------|
 | ACV | Annual Contract Value |
+| AHP | Analytic Hierarchy Process |
 | API | Application Programming Interface |
 | BDC | Business Data Cloud |
 | BI | Business Intelligence |
@@ -145,6 +146,7 @@ SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit e
 | DSRM | Design Science Research Methodology |
 | EKX | Enterprise Knowledge Exploration |
 | ETL | Extract, Transform, Load |
+| FEDS | Framework for Evaluation in Design Science Research |
 | IS | Informationssystem |
 | IT | Informationstechnologie |
 | KPI | Key Performance Indicator |

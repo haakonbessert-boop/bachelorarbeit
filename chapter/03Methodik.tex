@@ -94,6 +94,28 @@ Das operative Prozessmodell strukturiert die Phasenabfolge dieser Untersuchung u
 % Was soll aus der Methodik herauskommen?
 % Wie wird Zielerreichung gemessen?
 
+Der \gls{dsr}-Prozess dieser Untersuchung soll zwei komplementäre \gls{artefakt}e erzeugen, die einander methodisch ergänzen und gemeinsam den Forschungsbeitrag konstituieren.
+Die Typisierung folgt der Klassifikation nach March und Smith, die vier \gls{artefakt}-Typen in der gestaltungsorientierten Informationssystemforschung unterscheiden.\vglcite[256]{march1995}
+
+Das erste \gls{artefakt} ist ein Mehrkriterien-Bewertungsmodell zur systematischen Auswahl eines \gls{kpihub}-Integrationsansatzes.
+Es entspricht dem Typ \textit{Modell} -- einer abstrahierten Repräsentation des Lösungsraums, die Alternativen anhand eines strukturierten Kriterienkatalogs vergleichbar macht, ohne selbst eine konkrete Implementierung zu sein.\vglcite[256]{march1995}
+Zu erwarten ist ein priorisierter Vergleich von fünf bis sieben Kandidaten -- darunter \gls{sac}, \gls{bdc}-basierte Ansätze sowie Drittanbieter -- anhand von Kriterien wie technischer Machbarkeit im SAP-Ökosystem, \gls{rbac}-Unterstützung, Integrationsaufwand und lizenzrechtlichen Rahmenbedingungen.
+Die Gewichtungsmethodik -- Nutzwertanalyse, \gls{ahp} oder ähnliche Verfahren -- wird auf Grundlage des in Kapitel~5 erhobenen Anforderungskatalogs in Kapitel~6 festgelegt.
+Das Ergebnis soll eine nachvollziehbare, kriterienbasierte Entscheidungsvorlage sein, die dem Praxisunternehmen als Grundlage für eine fundierte Integrationsentscheidung dient.
+
+Das zweite \gls{artefakt} ist ein \gls{mvp}, der den durch das Bewertungsmodell empfohlenen Integrationsansatz operativ validiert.
+Es entspricht dem Typ \textit{Instanz} -- einer konkreten, lauffähigen Realisierung eines Ansatzes in der Zielumgebung.\vglcite[258]{march1995}
+Geplant ist ein funktionsfähiger Prototyp, der mindestens einen durchgehenden Datenpfad von einem Quellsystem -- voraussichtlich Jira oder ServiceNow -- über eine Integrationsschicht bis zur Darstellung im \gls{kpihub} demonstriert.
+Die genaue Zielsystemwahl wird in Kapitel~7 auf Basis des Bewertungsmodells getroffen.
+Durch diese Zweiteilung leistet die Untersuchung sowohl einen Beitrag auf der Ebene präskriptiven Modellwissens als auch einen situierten Machbarkeitsnachweis unter Realbedingungen.\vglcite[342\,f.]{gregor2013}
+
+Die Erfolgsmessung beider \gls{artefakt}e orientiert sich an unterschiedlichen, artefakttypgerechten Evaluationsformen.
+Als übergreifendes Rahmenwerk dient das \gls{feds}, das Evaluationsstrategien für \gls{dsr}-\gls{artefakt}e entlang zweier Dimensionen strukturiert: formativ versus summativ sowie artifizell versus naturalistisch.\vglcite[79]{venable2016}
+Das Bewertungsmodell wird \textit{formativ} evaluiert -- begleitend zum Designprozess etwa durch einen Expertenabgleich des Kriterienkatalogs mit dem Anforderungskatalog aus Kapitel~5.
+Der \gls{mvp} hingegen wird \textit{naturalistisch-summativ} bewertet: abschließend und im realen Nutzungskontext der SAP-Praxisumgebung.\vglcite[80\,f.]{venable2016}
+Als zentrales Erfolgskriterium für beide \gls{artefakt}e gilt die Abdeckung der in Kapitel~5 erhobenen funktionalen und nicht-funktionalen Anforderungen.\vglcite[XX]{cleven2009}
+Ergänzend fließen die Nachvollziehbarkeit der Modellentscheidungen sowie die technische Integrierbarkeit im SAP-Umfeld als Sekundärkriterien in die Evaluation ein.
+
 \subsection{Vorgehen im Überblick}
 \label{sec:vorgehen}
 % Hänel: Wie erfolgt die Untersuchung?
