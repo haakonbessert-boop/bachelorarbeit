@@ -9,7 +9,7 @@
 
 ---
 
-## Aktueller Stand (22. April 2026 — Feierabend)
+## Aktueller Stand (23. April 2026 — Feierabend)
 
 ### Struktur
 - Exposé: fertig und abgegeben
@@ -21,15 +21,21 @@
 - **sachse_gliederung.docx** neu generiert (python-docx), an Janine geschickt → wartet auf Feedback
 - **Sachse-Mail** geschrieben, wartet auf Janines OK zum .docx bevor Versand
 
-### Praxisphase (Tag 3)
+### Praxisphase (Tag 4)
 - Erstgespräch Gutachter (Janine + Sachse, 21.04.) ✓
 - Kennenlernen Christopher Pfeiler ✓ → BDC als relevanter nächster Schritt identifiziert
 - **Svitlana Vlasova Meeting (22.04.) ✓** → SAC Data Steer, Collibra als fester BDC-Bestandteil, BDC Adoption Program (SharePoint). EKX ihr unbekannt, keine Referenzprojekte. Präsentation ausgewertet.
 - **Oliver Timm Check-in (22.04.) ✓** → Mural mit ~25 Dashboard-Links, bis Freitag durcharbeiten. Tool-Übersicht bis 15. Mai. Ich bin das Lead. Persona = Senior Management.
 - **#OneDashboard-Dokument** von Oliver ausgewertet → 7 KPI-Kategorien, 5+ parallele Initiativen (teils on hold), Hindernisse dokumentiert
 - **SAC-Zugang** erhalten (Data Insights Team) → Signavio Dashboards + Datasphere View-Zugang
-- **Mural-Bereiche erfasst:** Product, Security, Portfolio, HR (leer), VoC
-- Tool-Landschaft BDC/SAP umfassend dokumentiert → [notes/praxis/TOOLS.md](praxis/TOOLS.md)
+- **Mural Dashboard-Analyse (23.04.) ✓** — alle ~25 Links systematisch durchgearbeitet, Befunde in [notes/praxis/TOOLS.md](praxis/TOOLS.md) dokumentiert
+
+### Kernergebnisse Mural-Analyse
+- **Fragmentierung bestätigt:** 7 Systeme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint), kein einheitlicher Einstieg
+- **RBAC-Problem real:** ~⅓ der Dashboards nicht zugänglich (CAM, EA Store, Sirius-Mitgliedschaft)
+- **DORA-Metriken fehlen komplett** — größte KPI-Lücke im Ist-Zustand
+- **Stärkste Quellen:** Operational Status Dashboard (ServiceNow), Jira Micro Deliveries
+- **Präzedenzfall:** SAP Signavio Product Excellence Portal — existierender Portal-Ansatz, aber nur Product-KPIs, deprecated Komponenten, veraltete Daten
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -110,20 +116,44 @@
 - [ ] Kennenlernen Nina Vayssiere — 27. April
 - [ ] Bei Oliver melden (Anfang nächste Woche, ~27./28.04.): Brauchen wir vor Mai nochmal ein Meeting?
 
-### Mural / Dashboard-Analyse (Priorität bis Freitag 24.04.)
+### Mural / Dashboard-Analyse (✓ Abgeschlossen 23.04.)
 
-- [ ] Alle zugänglichen Dashboards durchgehen: Screenshots + kurze Beschreibung pro Dashboard
-- [ ] Gemeinsam auswerten: relevante KPIs für KPI-Hub identifizieren, Lücken und Überlappungen erkennen, offene Fragen für Oliver formulieren
-- [ ] Tool-Liste für Janine-Sync (Freitag) zusammenstellen
+- [x] Alle zugänglichen Dashboards durchgegangen: Befunde dokumentiert in [notes/praxis/TOOLS.md](praxis/TOOLS.md)
+- [x] Relevante KPIs für KPI-Hub identifiziert, Lücken und Überlappungen erkannt
+- [x] Offene Fragen für Oliver + Janine formuliert (Zugänge, defekte Links, DORA-Lücke)
+- [ ] Tool-Liste für Janine-Sync (Freitag) fertigstellen — Basis liegt vor
 
-### Vorbereitung Sachse (28. April — Mail statt Meeting)
+### Zugänge beantragen (heute noch)
+
+- [ ] EA Store: **Product 360 Access** beantragen (48h Wartezeit)
+- [ ] EA Store: **EVM neue Rolle** beantragen (48h Wartezeit)
+
+### Vorbereitung Janine-Sync (Freitag 25.04.)
+
+- [ ] **Gainsight** Zugangsdaten erfragen
+- [ ] **Grafana** Zugangsdaten erfragen
+- [ ] **Adoption Monitor 2.0** Zugang klären
+- [ ] **Operations-Links** (E2E Portfolio Planning + QBR): Owner + Status erfragen
+- [ ] **Mural aktualisieren:** Usage Analyzer Link → Detailed Product Analysis ersetzen (mit Oliver)
+- [ ] Klären: SAP Usage Analyzer + CHR Dashboard — gibt es Signavio-Filter?
+- [ ] **#14 Product Standard Compliance Dashboard** nochmal öffnen (hatte nicht geladen)
+- [ ] Tool-Liste für Janine final zusammenstellen
+
+### Vorbereitung Sachse (28. April — Mail)
 
 - [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
 - [x] sachse_gliederung.docx an Janine geschickt (22.04.) — wartet auf Feedback
 - [x] Mail an Sachse geschrieben (22.04.) — wartet auf Janines Feedback zum .docx bevor Versand
 - [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weiterleitet
 
-### Schreiben (parallel starten)
+### Nächste Woche — Oliver
+
+- [ ] **DORA-Metriken:** Gibt es ein Dashboard dafür? (Deployment Frequency, Lead Time, CFR, MTTR) — größte KPI-Lücke
+- [ ] **Security Dashboard Hauptlink** fehlt im Mural — wo ist er?
+- [ ] **SAP_Signavio_Dashboards Unterordner** (Jira Dashboards, Product Usage Dashboards) mit Oliver durchgehen
+- [ ] Bei Oliver melden (~27./28.04.): Brauchen wir vor Mai noch ein Meeting?
+
+### Schreiben (parallel)
 
 - [ ] Literaturrecherche Methodik starten (Einstieg: Hevner et al. 2004, Peffers 2007) — Seitenzahlen für XX-Platzhalter in Kap. 3.1 + 3.4 nachtragen
 - [x] Kapitel 3.1 Forschungsansatz — Erster Entwurf

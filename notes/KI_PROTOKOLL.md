@@ -140,6 +140,18 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 
 ---
 
+### KI-010 | 23. Apr 2026 | REC | Mural Dashboard-Analyse (Ist-Zustand Systemlandschaft)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Kap. 4 Ausgangssituation + Kap. 5 Anforderungsanalyse (Vorarbeit) |
+| **Prompt (Zusammenfassung)** | Systematische Durchsicht aller ~25 Dashboard-Links aus dem Oliver-Mural. Pro Dashboard: Screenshot-Analyse, KPI-Erfassung, Qualitätsbewertung, Zugangsstatus, Relevanz für KPI-Hub. Iterativer Prozess: Nutzer zeigt Screenshots, KI analysiert und dokumentiert. Abschließendes Fazit mit KPI-Abdeckungsmatrix und To-Do-Liste. |
+| **Ergebnis (Zusammenfassung)** | Vollständige Mural-Analyse in `notes/praxis/TOOLS.md` dokumentiert: ~25 Dashboards bewertet, KPI-Abdeckungsmatrix (Ist-Zustand), Gesamtfazit mit 6 Kernbefunden (Fragmentierung, RBAC, DORA-Lücke, Datenfreshness, stärkste Quellen, Präzedenzfall Portal), strukturierte To-Do-Liste für Janine/Oliver. |
+| **Verwendung** | **Redigiert** — Analyse-Struktur und Dokumentation durch KI; alle inhaltlichen Bewertungen (Relevanz, Kritikalität) durch eigenständige Einschätzung des Nutzers bestätigt oder korrigiert |
+
+---
+
 ## Kapitelübergreifend
 
 ### KI-006 | 21. Apr 2026 | REC | BDC/SAP Tool-Landscape-Recherche

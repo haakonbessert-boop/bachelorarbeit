@@ -13,9 +13,14 @@ latexmk -pdf simple.tex          # primary build (thesis)
 latexmk -pdf -interaction=nonstopmode simple.tex  # non-stop mode
 latexmk -pdf minimal.tex         # minimal template test
 latexmk -pdf test.tex            # unit tests (limited)
+latexmk -pdf ki-genehmigung.tex  # KI approval form
+latexmk -pdf sachse_gliederung.tex  # outline/schedule for advisor
+python generate_sachse_docx.py   # regenerate sachse_gliederung.docx (Word export)
 ```
 
 Glossary uses `\makenoidxglossaries` — no separate indexing step needed. No `.latexmkrc` file; latexmk defaults apply.
+
+Build artifacts (`.aux`, `.log`, `.pdf`, `.synctex.gz`, `.fdb_latexmk`, `.fls`, etc.) do **not** belong in the repo.
 
 ## Architecture
 
@@ -23,7 +28,10 @@ Glossary uses `\makenoidxglossaries` — no separate indexing step needed. No `.
 - `baarticle.cls` — BA Dresden document class (margins, spacing, title page, environments). Based on `article` class with `simple` option that auto-loads babel, csquotes, biblatex, hyperref, glossaries
 - `baarticle.{bbx,cbx,dbx}` + `ngerman-ba.lbx` — custom biblatex style (author-year-ibid, German). Defines `\vglcite`, `\bacite`, `\captioncite`
 - `chapter/01..10*.tex` — thesis chapters (included via `\include{}`)
-- `notes/` — project documentation (status, conventions, glossary, literature, meetings, requirements, AI log)
+- `ki-genehmigung.tex` — standalone KI-approval form (separate build)
+- `sachse_gliederung.tex` — outline/schedule document for advisor (separate build); `generate_sachse_docx.py` generates the Word version
+- `notes/` — project documentation: `THESIS_STATUS.md` (task tracker), `CONVENTIONS.md` (authoritative rules), `MEETINGS.md`, `REQUIREMENTS.md`, `GLOSSAR.md`, `LITERATURE.md`, `KI_PROTOKOLL.md`
+- `notes/praxis/` — SAP-context research (tool landscape, system overview)
 - `outline/` — chapter planning documents
 
 ## Key conventions (authoritative source: `notes/CONVENTIONS.md`)
@@ -46,7 +54,7 @@ Use `\textit{}` only for terms that have **no** glossary entry (e.g. taxonomy te
 
 ### Figures
 
-Use `bafigure` environment with `source=` and `label=`. Prefer TikZ for diagrams. Never directly copy figures from publications — redraw and attribute with "in Anlehnung an `\captioncite{key}`".
+Use `bafigure` environment with `source=` and `label=`. Prefer TikZ for diagrams. Only include a figure when it is strictly necessary or makes the text understandable without it. Never directly copy figures from publications — redraw and attribute with "in Anlehnung an `\captioncite{key}`".
 
 ### Language & style (German academic)
 

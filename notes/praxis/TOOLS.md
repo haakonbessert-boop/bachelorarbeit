@@ -192,89 +192,241 @@ Auch möglich: Excel-Upload via CSV in Datasphere (für KPIs die noch nicht syst
 
 ---
 
-## Mural-Overview: Bestehende Dashboards & Links (22.04.2026, Oliver Timm)
+## Mural-Dashboard-Analyse (23.04.2026)
 
-> Quelle: Mural-Board, gemeinsam mit Oliver bis Freitag (24.04.) durcharbeiten. **Oberste Priorität.**
+> Quelle: Mural-Board Oliver Timm — systematische Durchsicht aller ~25 Links am 23.04.2026.
+> Mural-Struktur: **Product**, **Operations**, **HR** (leer)
 
-### Bereich: Product
+### Legende
 
-**SharePoints:**
-- Signavio PPR
-- Signavio Product Excellence Dashboard
-- Business Data Cloud
-
-**SAC-Dashboards:**
-- Signavio Product Excellence Dashboard
-- Signavio Customer Reported Incidents & Bugs
-- Adoption Monitor 2.0
-- SAP Usage Analyser
-- Consumed Annual Contract Value (CACV) Dashboard
-- CACV Single Customer Analysis
-- Product 360
-- Operational Status Dashboard
-- Signavio Dashboards
-- Product Standard Requirements P&E
-- Product Standard Compliance Dashboard
-- Corporate Requirements Dashboard
-- EVM - Infrastructure Vulnerabilities
-- Cloud Health & Reliability Dashboard
-
-**Collibra:**
-- Product Experience Analytics Foundation
-
-**Gainsight:**
-- Signavio Dashboards
-
-**Grafana:**
-- SAP Signavio Release Management Security
-
-**SAP Jira:**
-- Jira Tools (Link)
-- CPA Planning & Adoption Insights
-
-**SAP Wiki:**
-- Security Validations
-- Rolling Calendar View cross initiatives
-
-### Bereich: Security (aus Anastasia Zinkina Mails, März 2026)
-
-> Quelle: E-Mail-Thread Anastasia Zinkina → Oliver Timm (04.–09.03.2026). Ansprechpartner Security-Dashboards: Anastasia Zinkina, Prashant Manerikar, Apoorva Veluvali. Zugang teils eingeschränkt (CAM-Profil, Sirius-Programm, Slack #data-insights-team).
-
-**Security-Dashboard (Haupt-Dashboard):**
-- Zugang über CAM-Profil beantragen
-- Dokumentation vorhanden
-
-**Incidents / Operational Status Dashboard:**
-- Dokumentation: SAP Wiki (Signavio Data Insights)
-- Dashboard in SAC
-- Zugang via Slack #data-insights-team oder datainsights.signavio@groups.sap.com
-
-**Hacker Simulation Findings:**
-- Eingeschränkter Zugang (nur bei Findings im eigenen Team)
-- Dashboard + Dokumentation im SAP Wiki (SIGSEC)
-
-**Security Validation Findings:**
-- Zugang nur für Sirius-Programm-Mitglieder
-- Dashboard + Dokumentation im SAP Wiki (SIGSEC / SecVal)
+| Symbol | Bedeutung |
+|--------|-----------|
+| ✅ | Zugang vorhanden, Daten sichtbar |
+| ⚠️ | Partieller Zugang oder Datenproblem |
+| ❌ | Kein Zugang / defekter Link |
 
 ---
 
-### Bereich: Portfolio
+### Bereich: Product
 
-**SAC-Dashboards:**
-- E2E Portfolio Planning Dashboard
-- E2E Portfolio QBR Dashboard
+#### SAC-Dashboards (Signavio-spezifisch — hohe Relevanz)
+
+**Operational Status Dashboard** ✅
+- Signavio-eigenes Dashboard (2 Seiten)
+- **KPIs:** MTTR (Service Degradation + Disruption in h), Incidents/Monat (High/Medium/Low/No Impact/Internal), MTTR per Product Area (FIT, MxG, PAM, CloudOS), Security Incidents; Seite 2: Drilldown-Tabelle aller High/Medium-Tickets mit TTR
+- **Quellsystem:** ServiceNow (Ticket-IDs: SIGINCIDENT-XXXX bestätigt)
+- **Filter:** Incident Key, Region, Risk Impact Class, Product Area, Classification
+- Daten aktuell (bis Apr 2026)
+- **Relevanz:** Hoch — KPI-Kategorie "Operational Health"
+- Auffällig: SIGINCIDENT-1175 mit 84h 50m TTR (MxG); PAM dominiert Incident-Volumen
+
+**Signavio Customer Reported Incidents & Bugs — Quarterly View** ⚠️
+- Signavio-eigenes Dashboard (3 Seiten)
+- **KPIs:** Total Bugs (142, +3% QoQ), Avg. Bug Resolution (30 Tage), Avg. Incident Resolution (23 Tage), Bugs per Priority, Resolution Categories, Product Bugs Share/Quarter, Top 10 Customers, Top 10 Components
+- Quellsystem: Jira/Kundenmeldungen
+- **Problem:** Updated Aug 22, 2025 — Daten 8 Monate alt; nur bis Q2 2025
+- **Relevanz:** Hoch — KPI-Kategorie "Support/Quality"; aber Freshness-Problem
+- Auffällig: 40 Bugs >4 Wochen offen; Access Management SAP Signavio häufigste Komponente (185)
+- Hinweis: 142 Bugs = identische Zahl wie im HEART Quarterly — gleiche Datenquelle
+
+**Signavio Dashboards (SAC-Ordner)** ✅ (Navigation)
+- SAC File Browser / Container-Ordner mit Unterordnern und Stories
+- Enthält: Content Dashboards, Jira Dashboards, License and Feature, Product Usage Dashboards, VAD - Value Accelerator + 2 Stories
+- Führt zu bereits bekannten Dashboards (u.a. Operational Status)
+- **Kein eigenständiger Eintrag** — Navigation zu Sub-Dashboards
+- Offene Frage an Oliver: Welche Unterordner sind Engineering-relevant?
+
+#### SAC-Dashboards (Corporate — mittlere Relevanz)
+
+**Cloud Health & Reliability Dashboard (2.0 CHR Summary)** ✅
+- Corporate Processes & Information Technology
+- **KPIs:** Cloud Operations (Avg Tenant Outage Min, Initial Cust. Comm. in 15', SLA Violation %, % RCA Compl. in 10 Days) + Infrastructure (MTTR Infra, Avg Infra. Availability, Service Disruptions Count, % RCA Compl. in 8 Days) + Additional Facts YTD (SWAT Count, Total Downtime Min)
+- Sichtbare Werte: SLA Violation **1,17%** (Ziel 0,5% — drüber), RCA Completion **87%** (Ziel 80% ✅), SWAT Count YTD: **10**, Infra. Availability Ziel: **99,90%**
+- Filter: Solution Area, Dev Org (aktuell PE Ariba/Business — kein Signavio-Filter bestätigt)
+- **Relevanz:** Hoch als Referenz; Signavio-Filter noch zu prüfen
+- Relation zu Operational Status Dashboard: CHR = Corporate Cloud-Reliability-Layer; #11 = Signavio-spezifische Incident-Ebene
+
+**Product Standard Requirements P&E** ✅
+- Corporate Processes & Information Technology (9 Seiten)
+- **KPIs:** PSR Compliance-Status (Fulfilled vs. non-compliant) nach Corporate/Mandatory/Integration/UX Consistency PSRs
+- Quellsysteme: Sirius + HyCoM
+- Cut-off: Apr 2026, 6-Monats-Fenster
+- **Relevanz:** Mittel — KPI-Kategorie "Release Management / Product Standards"
+
+**Corporate Requirements Dashboard (NEW)** ✅
+- Corporate Processes & Information Technology (9 Seiten)
+- **KPIs:** CR Violations (Non-Security + Security), Current Status, LoB Overview, Time Trend, Violation Early Warning, BuLi Tabelle
+- **Relevanz:** Mittel — KPI-Kategorie "Corporate Requirements"; bildet Compliance-Cluster mit #13 und #14
+- Hinweis: Cluster-Empfehlung — PSR (#13), Compliance (#14), Corporate Requirements (#15) als eine Integrationskategorie für den KPI-Hub
+
+**Product Standard Compliance Dashboard** ⚠️
+- Beim Durchgang nicht geladen — noch zu prüfen (vermutlich ähnlich wie #13)
+
+**EVM — Infrastructure Vulnerabilities** ⚠️
+- SGSC Dashboard (EVM LOB Report), 2 Seiten (EVM Drill Down + EVM Trends)
+- **KPIs:** L1 Goal Compliance (90d): Vulnerability-SLA nach Severity (Emergency/Critical/High/Medium/Low), Open vs. Fixed, Open vs. Risk Accepted, SLA Compliance per L3/L4 Unit, Avg. Vulnerability Age
+- Partieller Zugang — neue EVM-Rolle nötig (EA Store)
+- **Relevanz:** Hoch — KPI-Kategorie "Release Management / Security Findings"
+- **Aktion:** Neue EVM-Rolle über EA Store beantragen (Link war im Dashboard-Banner)
+
+#### SAC-Dashboards (Corporate — geringe Relevanz)
+
+**SAP Usage Analyzer | Product Factsheet** ❌ (SUNSET)
+- **Abgekündigt** — "Please use the Detailed Product Analysis instead"
+- **Aktion für Oliver:** Mural-Link auf Detailed Product Analysis aktualisieren
+
+**SAP Usage Analyzer | Product Analysis (Detailed)** ✅
+- Corporate Processes & Information Technology (7 Seiten: Overview, cACV, Solution Capabilities, Features, Solution Data Objects, Customers, Value Drivers)
+- **KPIs:** MAU-Trend (~278k), Customer Count (Live/Project/Shelfware), Active Scope (76%), Measured Product Scope (85%), Avg. Functional Footprint, Upcoming Renewals
+- Aktuell auf LPR243 (S/4HANA Finance Cloud) gefiltert — kein Signavio-Filter bestätigt
+- **Relevanz:** Mittel — Usage/Adoption-KPIs; Signavio-LPR-Filter noch zu prüfen
+
+**Consumed Annual Contract Value (CACV) Dashboard** ⚠️
+- Corporate Processes & Information Technology
+- **KPIs:** 2026 YTD cACV (mEUR), YTD cACV YoY Growth, BTP Monthly cACV Trendline
+- Keine Daten sichtbar (auf BTP gefiltert, kein Signavio-Datensatz)
+- **Relevanz:** Gering — GtM/Financials-Tool, kein Engineering-KPI
+
+**CACV Single Customer Analysis** ⚠️
+- Single-Customer Drilldown (aktuell Nestlé-Filter)
+- Keine Signavio-relevanten Daten sichtbar
+- **Relevanz:** Gering — GtM/Sales-Tool
+
+**Product 360** ❌
+- Global Adoption & Experience CoE (2 Seiten)
+- **KPIs:** Customers, Usage (MAU, Active Scope), AI Usage (Base/Premium AI Features), PX (PSAT, Usefulness, Ease of Use), Commercials (Cloud Revenue, Backlog, Bookings, Pipeline), Support (Call Rate, Avg Days to Solve, Customer Effort Score)
+- Kein Zugang — Authorization via EA Store (48h Wartezeit)
+- **Relevanz:** Hoch als Referenz — konzeptionell der KPI-Hub für Product-KPIs; fehlt: Engineering/DORA-KPIs
+- **Aktion:** EA Store Access beantragen — jetzt, damit innerhalb 48h verfügbar
+
+**Adoption Monitor 2.0** ❌
+- Kein Zugang — Berechtigungen fehlen
+- Frage an Janine: Wie beantragen?
+
+#### Collibra
+
+**Product Experience Analytics Foundation** ✅
+- Collibra — Data for All Hub (SAP / 01-Product Development)
+- **Typ:** Data Product (Derived, Gold-Qualität) — keine Dashboard-Ansicht, sondern Datenbasis
+- **Inhalt:** Qualtrics PX Survey-Daten + Mapping zu LPR, Solution Areas, Tenants, Customers
+- SAP Datasphere Ready ✅, SAP Analytics Cloud Ready ✅, Architecture Execution CoE approved ✅
+- Status: Published, fixer Scope
+- **Relevanz:** Mittel — Datenquelle für PX/PSAT-KPIs; zeigt BDC-Stack-Funktionsweise in der Praxis (Collibra → Datasphere → SAC)
+
+#### Gainsight
+
+**Signavio Dashboards (Gainsight)** ❌
+- Kein Zugang — Zugangsdaten bei Janine erfragen
+
+#### Grafana
+
+**SAP Signavio Release Management Security** ❌
+- Kein Zugang — Zugangsdaten bei Janine erfragen
+
+#### SAP Jira
+
+**Signavio Micro Deliveries** ✅
+- SAP Jira — Signavio-spezifisch
+- **KPIs:** Management Status RAG (361 GREEN, 0 RED/YELLOW), Progress of MD (55% Done, 695 Issues), Documentation Status (74% Done), X-Ray Status per Sub-Group, In Pre-Release Delivery Group Split, Product Board Info per Group (FIT/MXG/PA&M/NEXT)
+- Sub-Groups: Platform Services, Process.AI, Transformation Enablement, SPG, M&C, Connectivity, Suite Essentials
+- Filter: Current MD, Version/Delivery, Status, Assignee, Team, Labels, Sub-Groups, JQL
+- ⚠️ Performance Notice aktiv ("bulk operations may be slow")
+- **Relevanz:** Hoch — KPI-Kategorie "Delivery / Release Management"; RAG-Status exakt das Signal das der KPI-Hub surfacen soll
+- Hinweis: Performance-Banner = direkter Beleg für "Poor performance"-Stakeholder-Complaint aus REQUIREMENTS.md
+
+**CPA Planning & Adoption Insights (Semester Plan Cross Topic)** ✅
+- SAP Jira (jira.tools.sap) — SAP-weit
+- **KPIs:** Adoption Status (Open: 3.195 / In Progress: 733 / Done: 2.702 / Blocked: 144), Planning Status (Unplanned: 29%, Done: 28%, Exception Approved: 24%)
+- 9.586 Issues gesamt — BTP, AI, Ariba, Business Networks
+- **Relevanz:** Gering — SAP-weit, nicht Signavio Engineering-spezifisch
+
+#### SAP Wiki
+
+**Rolling Calendar of Cross Initiatives** ✅
+- Wiki@SAP — erstellt von Anna Maria Muhs, zuletzt Apr 08, 2026
+- **Typ:** Statische Transparenzschicht — kein Dashboard, keine KPI-Daten
+- Zeigt alle cross-team Initiativen in P&E (Was/Wann/Für wen/Abhängigkeiten)
+- Migration zu ProductBoard geplant
+- **Relevanz für KPI-Hub:** Mittel als Kontext — zeigt Initiativen die Datenquellen betreffen
+- Thesis-relevante Initiativen: Unified Metering (non-billable usage, Owner: Kuchenbecker/Muhs), Hyperspace/Circle CI Migration (Owner: Beppler Christopher), HAIM (Auth/RBAC), Data & Analytics Initiative (Owner: Barbara Schories)
+- FAQ-Zitat für Kap. 4: *"If BDC integration is prioritized... PA&M and MxG would add the relevant data-product deliveries in NEXT"*
+
+#### Product Excellence Portal (SAP Signavio)
+
+**SAP Signavio Product Excellence Dashboards Portal** ✅
+- Signavio-eigenes Portal mit 4 Kategorien: HEART, Revenue Insights, Product Management, Customer Insights
+- HEART-Substruktur: Quarterly View / Half-Annual View / Annual View (jeweils eigene Dashboards)
+- **KPIs sichtbar (HEART Quarterly Q2/2025):** PSAT 100%, DAU/MAU 10%, Added Content 5,4 Mio., Terminated Value 5.050 Tsd.€, Customer Reported Bugs 142, Added ACV Bookings 24,1 Mio.€, MAU 76,2 Tsd., Activated Users 1.392 Tsd.
+- ⚠️ HEART-Dashboard deprecated: *"Due to deprecating classic SAC Stories this Dashboard is no longer supported. Please Use 'Quarterly Products HEART Dashboard Optimized Design Experience'"*
+- ⚠️ Daten veraltet: Updated Apr 25, 2025 — Daten bis Q2 2025 (8 Monate alt)
+- **Relevanz:** Sehr hoch als Referenz — **einziger existierender Signavio Portal-Ansatz**
+- Kritischer Befund: Deckt nur Product-KPIs ab (HEART, Revenue, Customer) — Engineering-KPIs (DORA, Delivery, Ops) fehlen komplett
+- Architekturelle Frage für Kap. 6: Erweiterung dieses Portals oder eigenständige Lösung?
+- Navigation-Problem: 3-Ebenen-Struktur (Portal → Kategorie → Kadenz → Dashboard) — widerspricht "Where do I find what?"-Anforderung
+
+---
+
+### Bereich: Operations
+
+**E2E Portfolio Planning Dashboard (SAC)** ❌
+- Link defekt — "Diese Datei konnte nicht gefunden werden"
+- Frage an Oliver: Existiert noch? Wer ist Owner?
+
+**E2E Portfolio QBR Dashboard (SAC)** ❌
+- Link defekt — "Diese Datei konnte nicht gefunden werden"
+- Frage an Oliver: Existiert noch? Wer ist Owner?
+
+---
 
 ### Bereich: HR
 
-*(noch keine Inhalte im Mural)*
+*(Keine Inhalte im Mural)*
 
-### Bereich: VoC (Voice of Customer)
+---
 
-- Voice of Customer Mural (Mural)
-- Voice of Customer Pitch (SharePoint/PowerPoint)
-- Voice of Customer Alignment Sheet (SharePoint/Word)
-- KPI Session with Signavio LT — 21. November 2025 (SharePoint/PowerPoint)
+### Gesamtfazit Mural-Analyse
+
+#### Zahlen
+Von ~25 Links: **~8 vollständig zugänglich mit Daten**, ~8 kein Zugang, ~3 deprecated/veraltet, ~2 defekte Links.
+
+#### Kernbefunde
+
+| # | Befund | Thesis-Relevanz |
+|---|--------|----------------|
+| 1 | **Fragmentierung messbar:** 7 verschiedene Systeme, kein einheitlicher Einstieg | Kap. 1 + 4 |
+| 2 | **RBAC-Problem real:** Fast jedes 3. Dashboard nicht zugänglich (CAM, EA Store, Sirius) | Kap. 4 + 5 |
+| 3 | **DORA-Metriken fehlen komplett** — kein einziges Dashboard für Deployment Frequency, Lead Time, etc. | Kap. 4 + 5 (Lücke) |
+| 4 | **Datenfreshness-Problem:** HEART veraltet (8 Monate), Bugs-Dashboard (8 Monate), deprecated Komponenten | Kap. 4 |
+| 5 | **Stärkste Dashboards:** Operational Status (#11, ServiceNow) + Jira Micro Deliveries (#21) | Kap. 4 + 8 (MVP-Quellen) |
+| 6 | **Product Excellence Portal = Präzedenzfall:** Portallösung existiert für Product-KPIs — Engineering fehlt | Kap. 6 |
+
+#### KPI-Abdeckung (Ist-Zustand)
+
+| KPI-Kategorie (aus OneDashboard) | Abdeckung | Dashboard |
+|---|---|---|
+| Operational Health (Incidents, SLA, MTTR) | ✅ Gut | Operational Status Dashboard |
+| Delivery / DORA | ⚠️ Partiell (Jira) | Micro Deliveries (kein DORA) |
+| Release Mgmt / Compliance | ✅ Vorhanden | PSR, Corporate Requirements, EVM |
+| Usage / Adoption | ⚠️ Lücke | Usage Analyzer (kein Signavio-Filter), Gainsight (kein Zugang) |
+| HEART / PX | ⚠️ Veraltet | Product Excellence Portal (deprecated) |
+| Financials / GTM | ❌ Kein Zugang | CACV (kein Datensatz), Product 360 (kein Zugang) |
+| People / HR | ❌ Leer | — |
+| DORA-Metriken | ❌ Fehlt | — |
+
+#### Offene Aktionen
+
+| Priorität | Aktion | An wen |
+|---|---|---|
+| Heute | EA Store: Product 360 Access beantragen | Selbst |
+| Heute | EA Store: EVM neue Rolle beantragen | Selbst |
+| Freitag | Gainsight Zugangsdaten | Janine |
+| Freitag | Grafana Zugangsdaten | Janine |
+| Freitag | Adoption Monitor 2.0 Zugang | Janine |
+| Freitag | Operations Links (E2E Portfolio): Owner + Status | Janine/Oliver |
+| Freitag | Mural-Link Usage Analyzer aktualisieren | Oliver |
+| Freitag | SAP Usage Analyzer + CHR: Signavio-Filter vorhanden? | Janine |
+| Nächste Woche | DORA-Metriken: Gibt es ein Dashboard dafür? | Oliver |
+| Nächste Woche | SAP_Signavio_Dashboards Unterordner (Jira, Product Usage) | Oliver |
 
 ---
 
