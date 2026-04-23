@@ -191,14 +191,54 @@ Oliver Timm hat bereits Requirements zum Thema KPI Dashboard gesammelt und als �
 
 ## 24. April 2026 — Weekly Sync Janine Steidelmüller
 
-**Stand seit letztem Sync:**
+**Stand seit letztem Sync (22.04.):**
 
-**Geplant bis nächstem Sync:**
+*Bachelorarbeit:*
+- Kapitel 3.1 (Forschungsansatz DSR) + 3.4 (Vorgehen im Überblick, DSRM-Phasenmodell) — erste Entwürfe fertig (~350 + ~300 Wörter), je mit TikZ-Abbildung
+- sachse_gliederung.docx neu generiert (python-docx, Word-nativ) — liegt bei Janine zur Freigabe
+- KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weitergeleitet
+
+*Praxisphase / Mural-Analyse:*
+- Alle ~25 Mural-Links systematisch durchgearbeitet und dokumentiert
+- Ergebnis: 7 Quellsysteme (SAC, Jira, Collibra, Gainsight, Grafana, Wiki, SharePoint); ~8/25 Dashboards zugänglich, ~8 ohne Zugang, ~3 veraltet/deprecated, ~2 defekte Links
+- Pendo Analytics Playbook (von Oliver) ausgewertet → Pendo bestätigt als aktives Quellsystem für DAU/MAU, Feature Adoption, PES; wahrscheinlich Basis von Adoption Monitor 2.0
+- One Voice Alignment Sheet (Oliver/Janine/Lea Reib) ausgewertet → PPR = 150 Slides/Quartal, 5–10 Tage Erstellungsaufwand; Metabase als neues Tool (One Voice Demo-Dashboard)
+
+*Tool-Landschaft:*
+- Alle Lösungskandidaten dokumentiert und eingeordnet → will heute vorstellen
+
+**Lösungsoptionen zur Umsetzung (zur Diskussion):**
+
+| Option | Beschreibung | Reifegrad |
+|---|---|---|
+| **A — BDC-Stack** (Datasphere + SAC) | Offizieller SAP-Pfad; Jira + ServiceNow bereits produktiv (Signavio-Adapter); Non-SAP-Quellen (Pendo, Gainsight, Qualtrics) via REST API oder File-Staging | Produktiv für Kernquellen ✅ |
+| **B — Build Work Zone** | Portal-Layer on top von A: Einbettung von SAC-Stories + Signavio-Kacheln; „Single Pane of Glass" | Zu prüfen |
+| **C — EKX** | Deliverable-Layer (Dashboard/PPT-Generierung via Enterprise Knowledge Graph); kein Persistenz-/Visualisierungstool — ergänzt A, ersetzt es nicht | Spring Release 2026 |
+| **D — Metabase** | Leichtgewichtiger Open-Source-BI-Ansatz; bereits von Oliver/dir für One Voice Demo genutzt | SAP-Freigabe unklar ⚠️ |
+
+Wahrscheinlichste Zielarchitektur: **A (BDC) + B (Build Work Zone als Portal)**; EKX als optionaler Deliverable-Layer. Metabase nur wenn SAP-Freigabe bestätigt.
+
+**Geplant bis nächsten Sync (01.05.):**
+- EA Store: Product 360 Access + EVM neue Rolle beantragen (48h Wartezeit)
+- Sachse-Mail abschicken — sobald Janines OK zum docx vorliegt
+- Bei Oliver melden (~27./28.04.): Follow-up-Meeting vor Mai nötig?
+- Kennenlernen Nina Vayssiere (27.04.) vorbereiten
+- Literaturrecherche starten: Hevner et al. (2004), Peffers et al. (2007)
 
 **Blockiert / brauche Input:**
 
-**Vorbereitung / To-Dos:**
-- [ ] Tool-Liste mitbringen: Alle bisher identifizierten Tools und Plattformen (BDC-Stack, EKX, etc.) — Janine will das sehen
+| Frage | Hintergrund |
+|---|---|
+| **sachse_gliederung.docx: OK zum Versand?** | Liegt bei dir — nach OK geht Mail an Sachse raus |
+| **Pendo-Zugang / Adoption Monitor 2.0** | Wer ist Owner? Wie beantragen? |
+| **Metabase (One Voice Demo)** | SAP-intern freigegeben? Zugang möglich? |
+| **Gainsight — Zugangsdaten** | Kein Zugang vorhanden |
+| **Grafana — Zugangsdaten** | Kein Zugang vorhanden |
+| **Qualtrics — API-Integration möglich?** | Aktuell nur manueller Export im PPR-Prozess — Near-Realtime via API realistisch? |
+| **E2E Portfolio Planning + QBR** | Beide Links defekt — existieren noch? Wer ist Owner? |
+| **SAP Usage Analyzer + CHR: Signavio-Filter?** | Aktuell auf andere LoB gefiltert |
+| **Lea Reib — Kontakt sinnvoll?** | Co-Autorin One Voice; potenzielle Interviewpartnerin Anforderungsanalyse |
+| **Mural-Link Usage Analyzer** | Factsheet ist SUNSET → mit Oliver auf Detailed Product Analysis updaten? |
 
 **Notizen:**
 
