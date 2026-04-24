@@ -169,6 +169,12 @@ Aktuell genutzte Systeme (Basis für Kap. 4):
 - KI-basierte Learnings
 - Umfangreiche Trend-Bibliotheken
 
+### Constraints
+
+| # | Constraint | Quelle |
+|---|-----------|--------|
+| C01 | **No-Go: Eigener Datalake / eigene Datenhaltung.** Die Lösung darf keine eigenständige Datenhaltungsschicht aufbauen, sondern muss auf bestehende SAP-Infrastruktur (z.B. BDC-Stack / Datasphere) aufsetzen. | Janine Steidelmüller, Weekly Sync 24.04.2026 |
+
 ---
 
 ## DHSN-Betreuer (Prof. Dr.-Ing. Jürgen Sachse)

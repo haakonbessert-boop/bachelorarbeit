@@ -242,6 +242,17 @@ Wahrscheinlichste Zielarchitektur: **A (BDC) + B (Build Work Zone als Portal)**;
 
 **Notizen:**
 
+1. **Kap. 4.3 Wording:** „Versorgung" ist kein gutes Wording → besser „Verfügbarkeit" oder „Zugang".
+   - **Action Item (ich):** Überschrift Kap. 4.3 anpassen (→ Planer/Autor).
+2. **Roter Faden:** Die Gliederung passt Janine insgesamt — keine strukturellen Änderungen nötig.
+3. **Kap. 4.4 Datenbereitstellung — No-Go:** Eigener Datalake und/oder eigene Datenhaltung ist ein **No-Go**. Soll als formale Constraint in die Anforderungsliste (REQUIREMENTS.md) aufgenommen und in einem Interview offiziell festgehalten werden.
+   - **Action Item (ich):** Constraint in REQUIREMENTS.md eintragen ✓
+   - **Action Item (ich):** No-Go in Anforderungserhebung (Kap. 5) als Interview-Punkt einplanen.
+4. **Zeitplan — Review-Meilenstein:** Spätestens in der Analyse- & Modell-Phase soll ein erstes schriftliches Review der Arbeit durch Janine eingeplant werden.
+   - **Action Item (ich):** Review-Meilenstein in Zeitplan aufnehmen (→ Projektmanager).
+5. **Abgabeformat:** Janine möchte die Arbeit am Ende in **Papierform** haben.
+   - **Action Item (ich):** Druck-Exemplar für Janine einplanen.
+
 ---
 
 ## 27. April 2026 — Kennenlernen Nina Vayssiere
