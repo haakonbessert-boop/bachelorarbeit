@@ -15,44 +15,67 @@ Ein \gls{kri} fasst das Ergebnis mehrerer Maßnahmen zusammen und zeigt, ob die 
 Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jedoch handlungsanleitend zu sein.
 \glspl{kpi} hingegen sind nicht-finanziell, tagesaktuell, vom Topmanagement beobachtet und aktivierend: Ein Mitarbeitender, der einen negativen \gls{kpi}-Ausschlag sieht, weiß, welche konkrete Aktion zu ergreifen ist.\vglcite[9]{parmenter2015}
 
-\begin{bafigure}[label=fig:kpi-hierarchie]{KPI-Hierarchie: KRI, KPI und PI im Vergleich}
+\begin{bafigure}[label=fig:kpi-hierarchie]{Gegenüberstellung von PI, KPI und KRI}
 \centering
 \begin{tikzpicture}[font=\small]
 
-% Pyramide: 3 Trapezschichten, von unten nach oben schmaler werdend
-% y-Grenzen: 0 / 2.0 / 4.0 / 5.8
-% Halbe Breiten: 5.0 / 3.6 / 2.2 / 1.0
+%% Drei Karten: PI | KPI | KRI
+%% Zentren bei x = -4.4 / 0 / +4.4; halbe Kartenbreite = 2.0cm; Lücke = 0.4cm
+%% Zeilen (y): Header [2.2,3.0] | Frequenz [1.4,2.2] | Adressat [0.6,1.4] | Zweck [-0.2,0.6] | Impuls [-1.0,-0.2]
 
-% PI — Basis (hellgrau)
-\fill[gray!15]
-    (-5.0, 0) -- (5.0, 0) -- (3.6, 2.0) -- (-3.6, 2.0) -- cycle;
-\draw[thick]
-    (-5.0, 0) -- (5.0, 0) -- (3.6, 2.0) -- (-3.6, 2.0) -- cycle;
-\node[align=center] at (0, 1.0) {%
-    \bfseries\glspl{pi} — Performance Indicators\\[2pt]
-    \footnotesize Fortschrittsanzeige; informiert, löst aber keine Handlung aus};
+% ---- Karte PI ----
+\fill[gray!15] (-6.4, 2.2) rectangle (-2.4, 3.0);
+\draw[thick]   (-6.4,-1.0) rectangle (-2.4, 3.0);
+\foreach \y in {2.2, 1.4, 0.6, -0.2}
+    \draw (-6.4,\y) -- (-2.4,\y);
+\node[align=center, text width=3.6cm, font=\small\bfseries] at (-4.4, 2.6)
+    {\glspl{pi}};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 1.8)
+    {täglich / laufend};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 1.0)
+    {Teams \& Mitarbeitende};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 0.2)
+    {Fortschritt messen};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4,-0.6)
+    {kein direkter Impuls};
 
-% KPI — Mitte (mittelgrau)
-\fill[gray!35]
-    (-3.6, 2.0) -- (3.6, 2.0) -- (2.2, 4.0) -- (-2.2, 4.0) -- cycle;
-\draw[thick]
-    (-3.6, 2.0) -- (3.6, 2.0) -- (2.2, 4.0) -- (-2.2, 4.0) -- cycle;
-\node[align=center] at (0, 3.0) {%
-    \bfseries\glspl{kpi} — Key Performance Indicators\\[2pt]
-    \footnotesize Aktivierend; nicht-finanziell, tagesaktuell, handlungsanleitend};
+% ---- Karte KPI ----
+\fill[gray!35] (-2.0, 2.2) rectangle (2.0, 3.0);
+\draw[thick]   (-2.0,-1.0) rectangle (2.0, 3.0);
+\foreach \y in {2.2, 1.4, 0.6, -0.2}
+    \draw (-2.0,\y) -- (2.0,\y);
+\node[align=center, text width=3.6cm, font=\small\bfseries] at (0, 2.6)
+    {\glspl{kpi}};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 1.8)
+    {täglich / wöchentlich};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 1.0)
+    {operatives Management};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 0.2)
+    {Steuerung \& Eingriff};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (0,-0.6)
+    {direkter Handlungsimpuls};
 
-% KRI — Spitze (dunkelgrau)
-\fill[gray!55]
-    (-2.2, 4.0) -- (2.2, 4.0) -- (1.0, 5.8) -- (-1.0, 5.8) -- cycle;
-\draw[thick]
-    (-2.2, 4.0) -- (2.2, 4.0) -- (1.0, 5.8) -- (-1.0, 5.8) -- cycle;
-\node[align=center] at (0, 4.9) {%
-    \bfseries\glspl{kri} — Key Result Indicators\\[2pt]
-    \footnotesize Ergebnis-Zusammenfassung; monatlich/quartalsweise};
+% ---- Karte KRI ----
+\fill[gray!55] (2.4, 2.2) rectangle (6.4, 3.0);
+\draw[thick]   (2.4,-1.0) rectangle (6.4, 3.0);
+\foreach \y in {2.2, 1.4, 0.6, -0.2}
+    \draw (2.4,\y) -- (6.4,\y);
+\node[align=center, text width=3.6cm, font=\small\bfseries] at (4.4, 2.6)
+    {\glspl{kri}};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 1.8)
+    {monatlich / quartalsweise};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 1.0)
+    {Führung \& Vorstand};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 0.2)
+    {strategische Übersicht};
+\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4,-0.6)
+    {kein direkter Impuls};
 
-% Seitliches Label links (rotiert, kein Pfeil)
-\node[rotate=90, font=\footnotesize, align=center] at (-5.8, 2.9)
-    {Strategisch \quad$\longleftrightarrow$\quad Operativ};
+% ---- Zeilenbeschriftung links ----
+\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 1.8)  {Frequenz};
+\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 1.0)  {Adressat};
+\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 0.2)  {Zweck};
+\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4,-0.6)  {Impuls};
 
 \end{tikzpicture}
 \end{bafigure}
