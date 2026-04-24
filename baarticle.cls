@@ -396,7 +396,7 @@
             }
         \fi
         \ifdefempty{\@basimplekidoc}{}{
-            \includepdf[pages={1}]{\@basimplekidoc}
+            \includepdf[pages=-]{\@basimplekidoc}
         }
         \ifdefvoid{\basimpleabstract}{}{
             \section*{Abstract}
