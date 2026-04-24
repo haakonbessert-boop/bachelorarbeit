@@ -117,6 +117,21 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 - [x] Kapitel 3.3 Ergebniserwartung — Erster Entwurf (~320 Wörter, 23.04.)
 - [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
 
+### Kapitel 2 & 3 — Schreiben (nächster Schritt)
+
+**Prio 1**
+
+- [ ] Embedding-Paradigma (Kap. 2.2): Quelle für "Embedded Analytics" beschaffen ODER Embedding aus dem Abschnitts-Scope streichen — Entscheidung nötig vor dem Schreiben von 2.2
+- [ ] Kap. 2.1 schreiben: KPI-Management und Business Intelligence — Quellen vollständig vorhanden (ferreirotley2009, parmenter2015, lennerholt2018, passlick2020, michalczyk2020, larson2016)
+- [ ] Kap. 2.3 schreiben: Data Governance und Zugriffskontrolle — Quellen vollständig (ferraiolo2001, alhassan2016, tikkinenpiri2018, alaqrabi2013)
+- [ ] Kap. 2.4 schreiben: Entscheidungsmethoden im Software Engineering — Quellen vollständig (saaty1990, hwangyoon1981, velasquez2013, hanine2016, zaidan2015, pohl2010)
+
+**Prio 2**
+
+- [ ] Kap. 2.2 schreiben: Enterprise-Systemintegration — nach Embedding-Entscheidung (fielding2000, kimball2013, hohpe2003, dehghani2022, baars2008)
+- [ ] Kap. 2.5 schreiben: Defizite bestehender Ansätze — Argumentationslinie mit vorhandenen Quellen führen (baars2008, larson2016, lennerholt2018, passlick2020)
+- [ ] Kap. 3.2 schreiben: Literaturrecherche — erst formale Suche mit Datenbanken/Suchstrings dokumentieren, dann Text schreiben (vombrocke2009, webster2002 vorhanden)
+
 ### Literatur & Quellen — Recherche-Backlog (Stand 24.04.2026)
 
 > Ergebnis der Tiefenanalyse der Literaturlage. Prio 1 = Schreibblocker (ohne diese Quellen kann nicht geschrieben werden); Prio 2 = Vollständigkeit.
