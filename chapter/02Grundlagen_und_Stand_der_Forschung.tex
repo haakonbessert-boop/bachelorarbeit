@@ -16,60 +16,24 @@ Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jed
 \glspl{kpi} hingegen sind nicht-finanziell, tagesaktuell, vom Topmanagement beobachtet und aktivierend: Ein Mitarbeitender, der einen negativen \gls{kpi}-Ausschlag sieht, weiß, welche konkrete Aktion zu ergreifen ist.\vglcite[9]{parmenter2015}
 
 \begin{bafigure}[label=fig:kpi-hierarchie]{Gegenüberstellung von PI, KPI und KRI}
-\centering
-\begin{tikzpicture}[font=\small]
-
-%% 4-spaltige Tabelle: Labels | PI | KPI | KRI
-%% x-Grenzen: -7.0 | -5.0 | -1.6 | 1.8 | 5.2
-%% y-Grenzen (oben→unten): 3.0 | 2.3 | 1.6 | 0.9 | 0.2 | -0.5
-
-% ---- Header-Hintergründe ----
-\fill[gray!20] (-5.0, 2.3) rectangle (-1.6, 3.0);
-\fill[gray!40] (-1.6, 2.3) rectangle ( 1.8, 3.0);
-\fill[gray!60] ( 1.8, 2.3) rectangle ( 5.2, 3.0);
-
-% ---- Tabellenrahmen ----
-\draw[thick] (-7.0, -0.5) rectangle (5.2, 3.0);
-
-% ---- Vertikale Trennlinien ----
-\draw (-5.0, -0.5) -- (-5.0, 3.0);
-\draw (-1.6, -0.5) -- (-1.6, 3.0);
-\draw ( 1.8, -0.5) -- ( 1.8, 3.0);
-
-% ---- Horizontale Trennlinien ----
-\foreach \y in {2.3, 1.6, 0.9, 0.2}
-    \draw (-7.0, \y) -- (5.2, \y);
-
-% ---- Header ----
-\node[font=\small\bfseries] at (-3.3, 2.65) {\glspl{pi}};
-\node[font=\small\bfseries] at ( 0.1, 2.65) {\glspl{kpi}};
-\node[font=\small\bfseries] at ( 3.5, 2.65) {\glspl{kri}};
-
-% ---- Zeilenlabels ----
-\node[font=\footnotesize\itshape] at (-6.0, 1.95) {Frequenz};
-\node[font=\footnotesize\itshape] at (-6.0, 1.25) {Adressat};
-\node[font=\footnotesize\itshape] at (-6.0, 0.55) {Zweck};
-\node[font=\footnotesize\itshape] at (-6.0,-0.15) {Impuls};
-
-% ---- PI-Spalte ----
-\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 1.95) {täglich / laufend};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 1.25) {Teams \& Mitarbeitende};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 0.55) {Fortschritt messen};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3,-0.15) {kein direkter Impuls};
-
-% ---- KPI-Spalte ----
-\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 1.95) {täglich / wöchentlich};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 1.25) {op.\ Management};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 0.55) {Steuerung \& Eingriff};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1,-0.15) {direkter Handlungsimpuls};
-
-% ---- KRI-Spalte ----
-\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 1.95) {monatl.\ / quartalsw.};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 1.25) {Führung \& Vorstand};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 0.55) {strategische Übersicht};
-\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5,-0.15) {kein direkter Impuls};
-
-\end{tikzpicture}
+\centering\small
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l|p{3.2cm}|p{3.2cm}|p{3.2cm}}
+\hline
+ & \multicolumn{1}{c|}{\textbf{\glspl{pi}}}
+ & \multicolumn{1}{c|}{\textbf{\glspl{kpi}}}
+ & \multicolumn{1}{c}{\textbf{\glspl{kri}}} \\
+\hline
+\textit{Frequenz}  & täglich / laufend       & täglich / wöchentlich    & monatlich / quartalsweise \\
+\hline
+\textit{Adressat}  & Teams \& Mitarbeitende  & operatives Management    & Führung \& Vorstand \\
+\hline
+\textit{Zweck}     & Fortschritt messen      & Steuerung \& Eingriff    & strategische Übersicht \\
+\hline
+\textit{Impuls}    & kein direkter Impuls    & direkter Handlungsimpuls & kein direkter Impuls \\
+\hline
+\end{tabular}
 \end{bafigure}
 
 Diese Unterscheidung hat direkte Konsequenzen für die Gestaltung eines \gls{kpihub}: Ein System, das nur \glspl{kri} aggregiert, genügt den Steuerungsansprüchen nicht.
