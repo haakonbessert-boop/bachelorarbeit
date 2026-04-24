@@ -98,6 +98,26 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ---
 
+## KPI / Performance Management
+
+### Ferreira & Otley (2009) — The Design and Use of Performance Management Systems: An Extended Framework for Analysis
+- **BibTeX-Key:** `ferreirotley2009`
+- **Quelle:** Management Accounting Research, Vol. 20, Nr. 4, S. 263–282, DOI: 10.1016/j.mar.2009.07.003
+- **Relevanz:** Hoch
+- **Kapitel:** 2.1 KPI-Management und Business Intelligence
+- **Key Findings:** Liefert ein erweitertes konzeptuelles Rahmenwerk (Extended PMS Framework) für die Analyse von Performance-Management-Systemen. Unterscheidet systematisch zwischen KPIs, kritischen Erfolgsfaktoren (CSFs), Kennzahlen (Performance Measures) und Targets und definiert deren Zusammenhänge. Mit 922 Zitationen die am häufigsten zitierte wissenschaftliche Grundlagenquelle für die Definition und konzeptuelle Abgrenzung von KPIs im Management-Kontext.
+- **Notizen:** Bevorzugt gegenüber Parmenter (2015), da strenger wissenschaftlich (Peer-Review, Elsevier/MAR). Liefert die Grundlagendefinition für Kap. 2.1 — ergänzt durch Parmenter für den praktischen KPI-Einsatz.
+
+### Parmenter (2015) — Key Performance Indicators: Developing, Implementing, and Using Winning KPIs
+- **BibTeX-Key:** `parmenter2015`
+- **Quelle:** Wiley, Hoboken, NJ, 3. Auflage, ISBN 978-1-118-92510-2, DOI: 10.1002/9781119019855
+- **Relevanz:** Hoch
+- **Kapitel:** 2.1 KPI-Management und Business Intelligence
+- **Key Findings:** Standardwerk zur praxisorientierten KPI-Implementierung. Etabliert die Unterscheidung zwischen KRIs (Key Result Indicators), PIs (Performance Indicators) und KPIs (Key Performance Indicators) und zeigt, warum die meisten als "KPIs" bezeichneten Kennzahlen in Unternehmen tatsächlich keine echten KPIs sind. Führt das Konzept des "Winning KPI"-Frameworks ein mit 10 Schritten zur KPI-Einführung.
+- **Notizen:** Praxisorientiertes Referenzwerk (287 Zitationen) — ergänzt Ferreira & Otley (2009) um den implementierungsnahen Perspektivwechsel. Für Kap. 2.1 als anwendungsorientierte Sekundärquelle nutzbar.
+
+---
+
 ## KPI / Enterprise BI
 
 ### Lennerholt, van Laere & Söderström (2018) — Implementation Challenges of Self Service Business Intelligence: A Literature Review
@@ -128,6 +148,30 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ## Integration / Föderierung / Single Pane of Glass
 
+### Fielding (2000) — Architectural Styles and the Design of Network-based Software Architectures
+- **BibTeX-Key:** `fielding2000`
+- **Quelle:** Dissertation, University of California, Irvine, URL: https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
+- **Relevanz:** Hoch
+- **Kapitel:** 2.2 Enterprise-Systemintegration
+- **Key Findings:** Kanonische Primärquelle für REST (Representational State Transfer) als Architekturstil für netzwerkbasierte Softwaresysteme. Definiert die sechs REST-Constraints (Client-Server, Statelessness, Cacheability, Uniform Interface, Layered System, Code-on-Demand) und zeigt, wie diese Constraints die Skalierbarkeit, Modifizierbarkeit und Zuverlässigkeit von Integrations-APIs sicherstellen. Bildet die theoretische Grundlage für alle modernen REST/HTTP-basierten API-Integrationsansätze in Enterprise-Systemen.
+- **Notizen:** Pflicht-Zitat für Kap. 2.2 (API-basierte Integration). Über 20.000 Zitationen — unbestrittene Kanonizität. Da Dissertation ohne DOI: URL in BibTeX-Feld `url` eingetragen.
+
+### Baars & Kemper (2008) — Management Support with Structured and Unstructured Data: An Integrated Business Intelligence Framework
+- **BibTeX-Key:** `baars2008`
+- **Quelle:** Information Systems Management, Vol. 25, Nr. 2, S. 132–148, DOI: 10.1080/10580530801941058
+- **Relevanz:** Hoch
+- **Kapitel:** 2.2 Enterprise-Systemintegration, 2.5 Defizite bestehender Ansätze
+- **Key Findings:** Entwickelt ein integriertes BI-Framework, das strukturierte (DWH, OLAP) und unstrukturierte (Dokumenten-, Text-) Datenquellen zu einem einheitlichen Management-Support-System zusammenführt. Zeigt, dass die fragmentierte Koexistenz separater BI-Systeme (operative, analytische, unstrukturierte) eine fundamentale Schwäche bestehender Unternehmens-BI-Landschaften darstellt. Mit 206 Zitationen gut etabliert als Grundlagenquelle für integrierte BI-Architekturen.
+- **Notizen:** Doppelt relevant: Für Kap. 2.2 als Integrationsframework-Quelle und für Kap. 2.5 als Beleg dafür, dass KPI-Silos und heterogene BI-Systeme ein wissenschaftlich dokumentiertes Strukturproblem sind. Direkter als Larson (2016), weil das Integrationsdefizit explizit als zentrales Problem adressiert wird.
+
+### Dehghani (2022) — Data Mesh: Delivering Data-Driven Value at Scale
+- **BibTeX-Key:** `dehghani2022`
+- **Quelle:** O'Reilly Media, Sebastopol, CA, ISBN 978-1-492-09238-4
+- **Relevanz:** Hoch
+- **Kapitel:** 2.2 Enterprise-Systemintegration (Föderierungskonzepte)
+- **Key Findings:** Führt das Data-Mesh-Paradigma ein: ein dezentrales, domänenorientiertes Datenarchitekturkonzept mit vier Prinzipien — (1) Domain Ownership, (2) Data as a Product, (3) Self-Serve Data Infrastructure, (4) Federated Computational Governance. Adressiert direkt das Problem der zentralisierten monolithischen BI-Architektur und schlägt als Alternative ein föderiertes Modell vor, bei dem jede Domäne ihre eigenen Datenpipelines verantwortet und gleichzeitig über gemeinsame Standards interoperabel bleibt. Liefert das konzeptuelle Fundament für föderierte BI-Architekturen als Alternative zu zentralisierten Ansätzen.
+- **Notizen:** Kein Peer-Review-Artikel, aber de-facto Standardwerk für föderierte Datenarchitektur (2022, O'Reilly). Relevant für Kap. 2.2 als Konzeptgrundlage für Föderierung/Single Pane of Glass. Da das Konzept "Single Pane of Glass" in der akademischen Literatur kaum explizit belegt ist, dient Dehghani als nächstbeste konzeptuelle Referenz für das dahinterliegende Architekturprinzip.
+
 ### Hohpe & Woolf (2003) — Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions
 - **BibTeX-Key:** `hohpe2003`
 - **Quelle:** Addison-Wesley, Boston, ISBN 978-0-321-20068-6
@@ -148,6 +192,14 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 ---
 
 ## RBAC / Data Governance
+
+### Tikkinen-Piri, Rohunen & Markkula (2018) — EU General Data Protection Regulation: Changes and Implications for Personal Data Collecting Companies
+- **BibTeX-Key:** `tikkinenpiri2018`
+- **Quelle:** Computer Law & Security Review, Vol. 34, Nr. 1, S. 134–153, DOI: 10.1016/j.clsr.2017.05.015
+- **Relevanz:** Hoch
+- **Kapitel:** 2.3 Data Governance und Zugriffskontrolle
+- **Key Findings:** Analysiert systematisch, welche Änderungen die DSGVO gegenüber der Datenschutzrichtlinie 95/46/EG für datenverarbeitende Unternehmen bringt. Kategorisiert die neuen Anforderungen in acht Bereiche: Rechtmäßigkeit der Verarbeitung, Betroffenenrechte, Datensicherheit, Privacy by Design/Default, Rechenschaftspflicht, internationale Datenübermittlung, Auftragsverarbeitung und Aufsichtsbehörden. Zeigt, dass die DSGVO tiefgreifende Auswirkungen auf alle Systeme hat, die personenbezogene Daten verarbeiten — einschließlich Enterprise-BI-Systeme.
+- **Notizen:** Peer-reviewed (Elsevier, Computer Law & Security Review), 2018. Zentraler Beleg für Kap. 2.3: DSGVO-Compliance als nichtfunktionale Anforderung an KPI-Hub-Architekturen. Ergänzt Alhassan et al. (2016) um die regulatorische Dimension von Data Governance.
 
 ### Al-Aqrabi, Liu, Hill, Ding & Antonopoulos (2013) — Business Intelligence Security on the Clouds
 
@@ -207,7 +259,7 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Relevanz:** Hoch
 - **Kapitel:** 5 Anforderungsanalyse, 2.4 Entscheidungsmethoden
 - **Key Findings:** Umfassendes deutschsprachiges RE-Standardwerk mit über 800 Seiten. Systematisiert Anforderungsarten (funktional/nicht-funktional/Randbedingung) und stellt etablierte Erhebungsmethoden vor (Interviews, Workshops, Beobachtung, Prototyping). Behandelt auch Anforderungspriorisierung (MoSCoW-Methode, Nutzwertanalyse) und damit die methodische Grundlage für Kap. 5. Mit über 2.200 Zitationen das meistzitierte deutschsprachige RE-Lehrbuch.
-- **Notizen:** Standardreferenz für Kap. 5. Legitimiert den Einsatz strukturierter Anforderungserhebung und -priorisierung als wissenschaftliche Methode. BibTeX-Key `pohl2010` (nach dem in der Arbeit verwendeten Zitationsjahr), verifiziertes Erscheinungsjahr der 2. Auflage 2008.
+- **Notizen:** Standardreferenz für Kap. 5. Legitimiert den Einsatz strukturierter Anforderungserhebung und -priorisierung als wissenschaftliche Methode. BibTeX-Key `pohl2010` (nach dem in der Arbeit verwendeten Zitationsjahr), verifiziertes Erscheinungsjahr der 2. Auflage 2008. **Nutzwertanalyse (Lücke 5):** Pohl deckt die Nutzwertanalyse im Kapitel zur Anforderungspriorisierung explizit ab — keine weitere Quelle für Kap. 2.4 erforderlich.
 
 ---
 
