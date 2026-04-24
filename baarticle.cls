@@ -47,6 +47,7 @@
 }
 \setlength{\headheight}{14.5pt} % fix fancyhdr warning (default 12pt too small)
 \RequirePackage{setspace} % for line spacing
+\RequirePackage{booktabs} % for \toprule, \midrule, \bottomrule in tables
 \RequirePackage{float} % for H placement directive in \begin{figure}
 \RequirePackage{tocloft} % to adjust the ToC, LoF and LoT
 \RequirePackage{fancyhdr} % to adjust headers and footers
