@@ -37,6 +37,24 @@ Rahmenwerk aus Verantwortlichkeiten, Regeln und Kontrollen für den Umgang mit D
 **Fragmentierung (Systemlandschaft)**
 Zustand, in dem Informationen und Kennzahlen auf mehrere nicht integrierte Systeme verteilt sind, was eine konsistente Gesamtsicht erschwert.
 
+**SSBI (Self-Service Business Intelligence)**
+Paradigma, bei dem Fachanwender ohne IT-Unterstützung eigene Berichte und Analysen erstellen können. Zielt auf Demokratisierung des Datenzugriffs, geht aber mit Governance-Risiken einher.
+
+**MCDM (Multi-Criteria Decision Making)**
+Oberbegriff für Methoden zur systematischen Entscheidungsfindung bei mehreren, teils konkurrierenden Kriterien. Umfasst u. a. AHP, TOPSIS, ELECTRE, PROMETHEE und Nutzwertanalyse.
+
+**TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution)**
+MCDM-Methode nach Hwang & Yoon (1981): Alternativen werden nach ihrer Nähe zur positiven Ideallösung und ihrer Distanz zur negativen Anti-Ideallösung bewertet.
+
+**DSGVO (Datenschutz-Grundverordnung)**
+EU-Verordnung 2016/679, in Kraft seit Mai 2018. Regelt den Schutz personenbezogener Daten und legt Anforderungen an datenverarbeitende Systeme fest (u. a. Zweckbindung, Datensparsamkeit, Privacy by Design).
+
+**PMS (Performance Management System)**
+Organisatorisches System aus Kennzahlen, Zielen, Verantwortlichkeiten und Rückkopplungsprozessen zur Steuerung der Unternehmensperformance. Oberbegriff für KPI-basierte Steuerungssysteme.
+
+**KRI (Key Result Indicator)**
+Kennzahl, die das Ergebnis einer Vielzahl von Maßnahmen zusammenfasst. Im Gegensatz zum KPI verweist ein KRI nicht auf spezifische Handlungsmaßnahmen, sondern gibt nur an, ob die Gesamtrichtung stimmt. Abgrenzung nach Parmenter (2015).
+
 **Scoring-Modell**
 Bewertungsrahmen, der Optionen anhand gewichteter Kriterien vergleichbar macht und eine transparente Entscheidungsgrundlage liefert.
 
@@ -144,15 +162,22 @@ SAP-internes Studentenprogramm. Laut Olivers Dokument soll der KPI-Hub-MVP mit e
 | DORA | DevOps Research and Assessment |
 | DSR | Design Science Research |
 | DSRM | Design Science Research Methodology |
+| DSGVO | Datenschutz-Grundverordnung |
 | EKX | Enterprise Knowledge Exploration |
 | ETL | Extract, Transform, Load |
 | FEDS | Framework for Evaluation in Design Science Research |
 | IS | Informationssystem |
 | IT | Informationstechnologie |
+| KRI | Key Result Indicator |
 | KPI | Key Performance Indicator |
+| MCDM | Multi-Criteria Decision Making |
 | MAU | Monthly Active Users |
 | MVP | Minimum Viable Product |
+| PI | Performance Indicator |
+| PMS | Performance Management System |
 | PES | Product Engagement Score |
 | PoC | Proof of Concept |
 | RBAC | Role-Based Access Control |
+| SSBI | Self-Service Business Intelligence |
 | SAC | SAP Analytics Cloud |
+| TOPSIS | Technique for Order of Preference by Similarity to Ideal Solution |

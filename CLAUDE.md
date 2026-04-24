@@ -4,15 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-German-language bachelor thesis (BA Dresden, Wirtschaftsinformatik) on KPI-Hub integration for SAP Signavio. Design Science Research methodology. Main document: `simple.tex`, custom document class: `baarticle.cls`.
+German-language bachelor thesis (BA Dresden, Wirtschaftsinformatik). **Title:** "Ein Mehrkriterien-Entscheidungsmodell zur Auswahl eines KPI-Hub-Integrationsansatzes in einer fragmentierten Enterprise-Systemlandschaft". Topic: KPI-Hub integration for SAP Signavio. Design Science Research methodology. Main document: `simple.tex`, custom document class: `baarticle.cls`.
+
+**Deadline:** 10. Juli 2026 (personal target: 30. Juni 2026). Praxisphase: 20. April – 30. September 2026.
 
 ## Build
 
 ```bash
 latexmk -pdf simple.tex          # primary build (thesis)
 latexmk -pdf -interaction=nonstopmode simple.tex  # non-stop mode
-latexmk -pdf minimal.tex         # minimal template test
-latexmk -pdf test.tex            # unit tests (limited)
 latexmk -pdf ki-genehmigung.tex  # KI approval form
 latexmk -pdf sachse_gliederung.tex  # outline/schedule for advisor
 python generate_sachse_docx.py   # regenerate sachse_gliederung.docx (Word export)
@@ -27,12 +27,17 @@ Build artifacts (`.aux`, `.log`, `.pdf`, `.synctex.gz`, `.fdb_latexmk`, `.fls`, 
 - `simple.tex` — main document, loads `acronyms.tex`, `glossary.tex`, `references.bib`
 - `baarticle.cls` — BA Dresden document class (margins, spacing, title page, environments). Based on `article` class with `simple` option that auto-loads babel, csquotes, biblatex, hyperref, glossaries
 - `baarticle.{bbx,cbx,dbx}` + `ngerman-ba.lbx` — custom biblatex style (author-year-ibid, German). Defines `\vglcite`, `\bacite`, `\captioncite`
-- `chapter/01..10*.tex` — thesis chapters (included via `\include{}`)
+- `chapter/01..10*.tex` — thesis chapters (included via `\include{}`):
+  - 01 Einleitung, 02 Grundlagen und Stand der Forschung, 03 Methodik
+  - 04 Ausgangssituation und Systemlandschaft, 05 Anforderungsanalyse
+  - 06 Lösungsraum und Architektur-/Tooloptionen, 07 Entscheidungs- und Bewertungsmodell
+  - 08 MVP: Design, Umsetzung und Validierung, 09 Ergebnisse und Diskussion, 10 Fazit und Ausblick
 - `ki-genehmigung.tex` — standalone KI-approval form (separate build)
 - `sachse_gliederung.tex` — outline/schedule document for advisor (separate build); `generate_sachse_docx.py` generates the Word version
 - `notes/` — project documentation: `THESIS_STATUS.md` (task tracker), `CONVENTIONS.md` (authoritative rules), `MEETINGS.md`, `REQUIREMENTS.md`, `GLOSSAR.md`, `LITERATURE.md`, `KI_PROTOKOLL.md`
-- `notes/praxis/` — SAP-context research (tool landscape, system overview)
+- `notes/praxis/` — SAP-context research: `TOOLS.md` (tool landscape), `KPI_HUB_KONZEPT.md` (KPI Hub concept definition and constraints)
 - `outline/` — chapter planning documents
+- `Literatur/` — local PDF storage for source papers, organized by chapter (e.g. `03methodik/`, `02Theorie/`); **not tracked in git**
 
 ## Key conventions (authoritative source: `notes/CONVENTIONS.md`)
 

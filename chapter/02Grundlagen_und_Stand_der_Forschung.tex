@@ -15,15 +15,13 @@ Ein \gls{kri} fasst das Ergebnis mehrerer Maßnahmen zusammen und zeigt, ob die 
 Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jedoch handlungsanleitend zu sein.
 \glspl{kpi} hingegen sind nicht-finanziell, tagesaktuell, vom Topmanagement beobachtet und aktivierend: Ein Mitarbeitender, der einen negativen \gls{kpi}-Ausschlag sieht, weiß, welche konkrete Aktion zu ergreifen ist.\vglcite[9]{parmenter2015}
 
-\begin{bafigure}[label=fig:kpi-hierarchie]{Gegenüberstellung von PI, KPI und KRI}
-\centering\small
-\setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{l|p{3.2cm}|p{3.2cm}|p{3.2cm}}
+Tabelle~\ref{tab:kpi-hierarchie} stellt die drei Kennzahlentypen nach Frequenz, Adressat, Zweck und Handlungsimpuls gegenüber.
+
+\begin{batable}[label=tab:kpi-hierarchie]{Gegenüberstellung von PI, KPI und KRI}
+\small\setlength{\tabcolsep}{10pt}\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|p{3.3cm}|p{3.3cm}|p{3.3cm}|}
 \hline
- & \multicolumn{1}{c|}{\textbf{\glspl{pi}}}
- & \multicolumn{1}{c|}{\textbf{\glspl{kpi}}}
- & \multicolumn{1}{c}{\textbf{\glspl{kri}}} \\
+ & \textbf{\glspl{pi}} & \textbf{\glspl{kpi}} & \textbf{\glspl{kri}} \\
 \hline
 \textit{Frequenz}  & täglich / laufend       & täglich / wöchentlich    & monatlich / quartalsweise \\
 \hline
@@ -34,19 +32,19 @@ Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jed
 \textit{Impuls}    & kein direkter Impuls    & direkter Handlungsimpuls & kein direkter Impuls \\
 \hline
 \end{tabular}
-\end{bafigure}
+\end{batable}
 
 Diese Unterscheidung hat direkte Konsequenzen für die Gestaltung eines \gls{kpihub}: Ein System, das nur \glspl{kri} aggregiert, genügt den Steuerungsansprüchen nicht.
 
-Ein System, das diesem Anspruch genügt, muss die richtigen Kennzahlen zur richtigen Zeit in der richtigen Granularität bereitstellen -- was auf die Frage führt, was ein Dashboard konzeptuell leisten kann und soll.
+Ein System, das diesem Anspruch genügt, muss die richtigen Kennzahlen zur richtigen Zeit in der richtigen Granularität bereitstellen. Damit stellt sich die Frage, was ein Dashboard konzeptuell leisten kann und soll.
 
 Dashboards sind „a visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance."\bacite[26]{few2006}
 Diese Definition betont zwei Merkmale: die visuelle Verdichtung auf das Wesentliche und die Einzelbildschirm-Konsolidierung.
 Beides unterscheidet Dashboards von klassischen Berichten oder Analysetools, die entweder mehr Interaktionstiefe oder mehr Seitenumfang erfordern.
 
 Für die Einordnung des \gls{kpihub} ist die Dreifachtypologie nach strategischen, taktischen und operativen Dashboards maßgeblich.\vglcite[4\,ff.]{eckerson2010}
-Strategische Dashboards unterstützen das Topmanagement bei der Überwachung langfristiger Ziele; taktische Dashboards dienen mittleren Führungsebenen zur Steuerung von Projekten und Prozessen; operative Dashboards ermöglichen Echtzeit-Überwachung und unmittelbare Eingriffsmöglichkeiten.
-Ein \gls{kpihub} im Kontext von SAP Signavio P\&E deckt primär den operativen und taktischen Bereich ab: Engineering-Teams benötigen aktuelle Kennzahlen zu Deployment-Frequenz, Incident-Response und Produktnutzung -- nicht quartalsweise Balanced-Scorecard-Berichte.
+Strategische Dashboards unterstützen das Topmanagement bei der Überwachung langfristiger Ziele; taktische Dashboards dienen mittleren Führungsebenen zur Steuerung von Projekten und Prozessen; operative Dashboards ermöglichen Echtzeit-Überwachung und unmittelbare Eingriffs\-möglichkeiten.
+Ein \gls{kpihub} im Kontext von SAP Signavio P\&E deckt primär den operativen und taktischen Bereich ab: Engineering-Teams benötigen aktuelle Kennzahlen zu Deployment-Frequenz, Incident-Response und Produktnutzung -- nicht quartalsweise Balanced-Score\-card-Berichte.
 
 \gls{bi} bezeichnet die technologischen und organisatorischen Fähigkeiten, die eine Organisation benötigt, um Daten in entscheidungsrelevante Informationen umzuwandeln.\vglcite[700]{larson2016}
 Im Enterprise-Kontext ist \gls{bi} keine homogene Infrastruktur, sondern typischerweise eine gewachsene Koexistenz heterogener Systeme: \gls{bi}-Plattformen, Analysetools und Reporting-Lösungen wurden in verschiedenen Unternehmensbereichen zu unterschiedlichen Zeitpunkten eingeführt und sind selten vollständig integriert.\vglcite[700\,f.]{larson2016}
@@ -56,12 +54,12 @@ Als organisatorische Antwort auf diese Fragmentierung hat sich \gls{ssbi} als Pa
 In der Praxis stößt dieser Ansatz jedoch auf strukturelle Hindernisse.
 In der Literatur werden drei Kategorien von Implementierungsproblemen unterschieden: datenbezogene Hindernisse (mangelnde Datenqualität und -zugänglichkeit), benutzerbezogene Hindernisse (fehlende Datenkompetenz, Akzeptanzprobleme) sowie organisationale Hindernisse (fehlendes Change Management, unklare Governance).\vglcite[3\,ff.]{lennerholt2018}
 Hinzu kommt ein empirisch belegtes Akzeptanzparadox: Eine starke organisationale Betonung von Datenqualitätskontrollen korreliert signifikant negativ mit der Nutzungsabsicht der Anwender.\vglcite[18\,f.]{passlick2020}
-Dieses Paradox zeigt, dass technische Lösungen allein für eine erfolgreiche \gls{ssbi}-Implementierung nicht ausreichen.
+Dieses Paradox zeigt, dass technische Lösungen allein für eine erfolgreiche \gls{ssbi}-Imple\-men\-tie\-rung nicht ausreichen.
 
 An dieser Stelle setzt das Konzept eines \gls{kpihub} an, das nicht als weiteres Self-Service-Werkzeug, sondern als föderierter Aggregationspunkt konzipiert ist:
 
 Ein \gls{kpihub} ist konzeptuell mehr als ein weiteres Dashboard.
-Er verbindet die operativ-taktische Dashboard-Logik\vglcite[4\,ff.]{eckerson2010} mit dem Föderierungsanspruch einer heterogenen \gls{bi}-Landschaft:\vglcite[700\,f.]{larson2016} Anstatt alle Daten in ein zentrales System zu migrieren, aggregiert ein \gls{kpihub} Kennzahlen aus bestehenden Quellsystemen und stellt sie als kohärente Sicht bereit.
+Er verbindet die operativ-taktische Dashboard-Logik mit dem föderativen Integrationsanspruch heterogener \gls{bi}-Landschaften. Anstatt alle Daten in ein zentrales System zu migrieren, aggregiert ein \gls{kpihub} Kennzahlen aus bestehenden Quellsystemen und stellt sie als kohärente Sicht bereit.\vglcite[4\,ff.]{eckerson2010}\vglcite[700\,f.]{larson2016}
 Welche Integrationsparadigmen diesen Föderierungsansatz technisch unterstützen, zeigt der folgende Abschnitt -- zunächst aber werden die Grundlagen des Datenzugriffs und der Zugriffskontrolle geklärt.
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -90,44 +88,39 @@ Das etablierteste Instrument zur operativen Umsetzung solcher Governance-Vorgabe
 
 Das \gls{rbac}-Referenzmodell nach dem NIST-Standard definiert vier konzeptuelle Komponenten: Benutzer (\textit{users}), Rollen (\textit{roles}), Berechtigungen (\textit{permissions}) und Sessions.\vglcite[226\,f.]{ferraiolo2001}
 Berechtigungen werden nicht direkt Benutzern zugewiesen, sondern Rollen; Benutzer erhalten Berechtigungen ausschließlich über die Zuweisung zu Rollen.\vglcite[226]{ferraiolo2001}
-Das Modell unterscheidet drei Ausbaustufen: Core \gls{rbac} (die beschriebene Grundstruktur), Hierarchical \gls{rbac} (Rollenvererbung über Rollenhierarchien) und Separation-of-Duty-Erweiterungen (statische und dynamische Inkompatibilitätsregeln zwischen Rollen).\vglcite[228\,ff.]{ferraiolo2001}
+Das Modell unterscheidet drei Ausbaustufen: Core \gls{rbac} (die beschriebene Grundstruktur), Hierarchical \gls{rbac} (Rollenvererbung über Rollenhierarchien) und Separation-of-Duty-Erweiterungen (statische und dynamische Inkompatibilitätsregeln zwischen Rollen); Abbildung~\ref{fig:rbac-grundmodell} fasst diese Struktur zusammen.\vglcite[228\,ff.]{ferraiolo2001}
 
 \begin{bafigure}[source=in Anlehnung an \captioncite{ferraiolo2001}, label=fig:rbac-grundmodell]{RBAC-Grundmodell: Benutzer, Rollen und Berechtigungen}
+\centering
 \begin{tikzpicture}[
-    box/.style={draw, rectangle, rounded corners=4pt, minimum width=2.5cm,
-                minimum height=0.9cm, text centered, font=\small\bfseries,
+    box/.style={draw, rectangle, rounded corners=4pt, minimum width=2.6cm,
+                minimum height=0.95cm, text centered, font=\small\bfseries,
                 fill=gray!15},
     arrow/.style={-{Stealth[scale=1.1]}, thick},
     darrow/.style={-{Stealth[scale=1.1]}, thick, dashed},
     lbl/.style={font=\footnotesize, align=center},
 ]
 
-% Hauptknoten: horizontale Kette
-\node[box] (users)   at (0, 0)    {Benutzer};
-\node[box] (roles)   at (4.2, 0)  {Rollen};
-\node[box] (perms)   at (8.4, 0)  {Berechtigungen};
-\node[box] (objects) at (8.4, -2) {Objekte};
-\node[box] (sess)    at (0, -2)   {Sessions};
-
-% Rollenhierarchie-Knoten oben
-\node[box, fill=gray!30, minimum width=2.5cm] (hierarch) at (4.2, 1.8)
+\node[box] (users)    at (0,   0)    {Benutzer};
+\node[box] (roles)    at (4.8, 0)    {Rollen};
+\node[box] (perms)    at (9.6, 0)    {Berechtigungen};
+\node[box] (objects)  at (9.6, -2.4) {Objekte};
+\node[box] (sess)     at (0,   -2.4) {Sessions};
+\node[box, fill=gray!30, minimum width=2.8cm] (hierarch) at (4.8, 2.2)
     {Rollenhierarchie};
 
-% Pfeile
 \draw[arrow] (users) -- (roles)
-    node[midway, above, lbl] {Zuweisung};
+    node[midway, above=4pt, lbl] {Zuweisung};
 \draw[arrow] (roles) -- (perms)
-    node[midway, above, lbl] {beinhalten};
+    node[midway, above=4pt, lbl] {beinhalten};
 \draw[arrow] (perms) -- (objects)
-    node[midway, right, lbl] {beziehen\\sich auf};
+    node[midway, right=4pt, lbl] {beziehen\\sich auf};
 \draw[arrow] (users) -- (sess)
-    node[midway, left, lbl] {aktivieren};
-\draw[arrow] (sess.east) -- (roles.south)
-    node[midway, below, lbl] {aktivieren\\Teilmenge};
-
-% Hierarchiepfeil (Rollenvererbung)
+    node[midway, left=4pt, lbl] {aktivieren};
+\draw[arrow] (sess.east) -| (roles.south)
+    node[pos=0.3, below=4pt, lbl] {aktivieren (Teilmenge)};
 \draw[darrow] (hierarch) -- (roles)
-    node[midway, right=2pt, lbl] {erbt\\Rechte};
+    node[midway, left=4pt, lbl] {erbt\\Rechte};
 
 \end{tikzpicture}
 \end{bafigure}
@@ -145,7 +138,7 @@ Das Problem dieser Rollen-Heterogenität in Multi-Domain-Umgebungen ist in der L
 
 Das I-RBAC-Framework harmonisiert semantische Geschäftsrollen über Systemgrenzen hinweg: Rollen aus verschiedenen Domänen werden über semantische Korrespondenzregeln verknüpft, sodass übergreifende Zugriffsrichtlinien konsistent durchgesetzt werden können.\vglcite[12255\,f.]{ghazal2020}
 Dieser Ansatz ist direkt auf den \gls{kpihub}-Kontext übertragbar: Wenn ein Nutzer in \gls{sac} die Rolle \textit{Analyst} und in Jira die Rolle \textit{Viewer} hat, muss der \gls{kpihub} entscheiden, welche Datensichtbarkeit im integrierten System gilt.
-Ohne eine explizite Harmonisierungsschicht entstehen entweder zu restriktive oder zu permissive Zugriffsregeln.
+Ohne eine explizite Harmonisierungs\-schicht entstehen entweder zu restriktive oder zu permissive Zugriffsregeln.
 
 Neben dieser technischen Harmonisierungsanforderung unterliegt ein \gls{kpihub} auch regulatorischen Rahmenbedingungen, die von Beginn an in die Architektur einzubeziehen sind.
 
@@ -160,7 +153,7 @@ Welche formalen Methoden geeignet sind, um die beschriebenen Governance- und Zug
 \subsection{Entscheidungsmethoden im Software Engineering}
 \label{sec:grundlagen-mcdm}
 
-Die Wahl eines Integrationsansatzes für den \gls{kpihub} ist kein binäres Ja-Nein-Problem, sondern eine Mehrkriterien-Entscheidung: Technische Machbarkeit, Governance-Kompatibilität, Entwicklungsaufwand und strategische Passung müssen gleichzeitig bewertet werden.
+Die Wahl eines Integrationsansatzes für den \gls{kpihub} ist kein binäres Ja-Nein-Problem, sondern eine Mehr\-kri\-te\-rien-Entscheidung: Technische Machbarkeit, Gover\-nance-Kompa\-ti\-bi\-li\-tät, Entwicklungsaufwand und strategische Passung müssen gleichzeitig bewertet werden.
 Dieser Abschnitt stellt die methodischen Grundlagen für solche Entscheidungsprobleme vor und legt die theoretische Basis für die Methodenwahl in Kapitel~7.
 
 Im Bereich des Requirements Engineering ist die Nutzwertanalyse eine etablierte Methode zur Priorisierung konkurrierender Anforderungen.\vglcite[XX]{pohl2010}
@@ -168,8 +161,6 @@ Das Grundprinzip besteht darin, Optionen anhand gewichteter Kriterien mit Punktw
 Die Nutzwertanalyse ist das einfachste Verfahren der Mehrkriterienentscheidung: transparent, intuitiv und ohne besondere mathematische Vorkenntnisse anwendbar.
 Ihr zentraler Nachteil liegt in der Subjektivität der Gewichtungsvergabe -- es gibt kein formales Verfahren, das die Konsistenz der Gewichtungen überprüft.
 Komplexere Methoden wie \gls{ahp} und \gls{topsis} adressieren diesen Mangel.
-
-Diese Methoden gehören zur Klasse der \gls{mcdm}-Verfahren, die in der IS-Forschung systematisch für Software-Auswahlprobleme eingesetzt werden.
 
 In der IS-Forschung werden \gls{mcdm}-Methoden insbesondere für Software-Auswahlprobleme eingesetzt, bei denen eine Vielzahl funktionaler und nicht-funktionaler Kriterien gegeneinander abgewogen werden müssen.\vglcite[56\,f.]{velasquez2013}
 Als wichtigste Auswahlkriterien für eine \gls{mcdm}-Methode werden identifiziert: Datenbedarf, Transparenz der Bewertungslogik, Handhabbarkeit bei begrenzter Datenlage sowie der Rechenaufwand.\vglcite[61\,ff.]{velasquez2013}
@@ -186,23 +177,29 @@ Für das finale Ranking der Alternativen ergänzt \gls{topsis} den \gls{ahp} dur
 
 \gls{topsis} (Technique for Order of Preference by Similarity to Ideal Solution) bewertet Alternativen nach ihrer geometrischen Nähe zur positiven Ideallösung und ihrer Distanz zur negativen Anti-Ideallösung.\vglcite[58\,f.]{hwangyoon1981}
 Während der \gls{ahp} auf der Ebene der Kriteriengewichtung ansetzt, operiert \gls{topsis} auf der Ebene der Alternativenbewertung: Gegeben eine normierte Entscheidungsmatrix berechnet \gls{topsis} für jede Alternative einen Nähe-Koeffizienten, der das finale Ranking erzeugt.\vglcite[59\,ff.]{hwangyoon1981}
-Die Kombination beider Methoden -- \gls{ahp} für die Kriteriengewichtung, \gls{topsis} für das Alternativenranking -- ist in der Literatur als robuster Ansatz für IT-Software-Auswahlprobleme etabliert: dies wurde sowohl an der Auswahl von \gls{et}-Software\vglcite[2]{hanine2016} als auch an der Auswahl elektronischer Krankenhausinformationssysteme bestätigt.\vglcite[392\,f.]{zaidan2015}
+Die Kombination beider Methoden -- \gls{ahp} für die Kriteriengewichtung, \gls{topsis} für das Alternativenranking -- ist als in der Literatur dokumentierter Ansatz für IT-Software-Auswahlprobleme etabliert: dies wurde sowohl an der Auswahl von \gls{et}-Software\vglcite[2]{hanine2016} als auch an der Auswahl elektronischer Krankenhausinformationssysteme bestätigt.\vglcite[392\,f.]{zaidan2015}
 Beide Anwendungsfälle sind dem vorliegenden Problem -- Auswahl eines \gls{kpihub}-Integrationsansatzes aus mehreren technischen Kandidaten nach gewichteten Kriterien -- strukturell analog.
 
 Tabelle~\ref{tab:mcdm-vergleich} fasst die drei behandelten Verfahren nach ihren entscheidungsrelevanten Eigenschaften zusammen.
 
 \begin{batable}[label=tab:mcdm-vergleich]{Vergleich der MCDM-Verfahren}
-\begin{tabular}{@{}lp{3.2cm}p{3.2cm}p{3.2cm}@{}}
-\toprule
-\textbf{Eigenschaft} & \textbf{Nutzwertanalyse} & \textbf{\gls{ahp}} & \textbf{\gls{topsis}} \\
-\midrule
+\small\setlength{\tabcolsep}{10pt}\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{3.6cm}|p{2.9cm}|p{2.9cm}|p{2.9cm}|}
+\hline
+\textbf{Eigenschaft} & \textbf{Nutz\-wert\-ana\-lyse} & \textbf{\gls{ahp}} & \textbf{\gls{topsis}} \\
+\hline
 Konsistenzprüfung & Nein & Ja (CR) & Nein \\
+\hline
 Datenbedarf & Gering & Mittel & Mittel \\
+\hline
 Transparenz & Hoch & Hoch & Mittel \\
+\hline
 Rechenaufwand & Niedrig & Mittel & Mittel \\
+\hline
 Kriteriengewichtung & Direkt & Paarweise & Extern (z.\,B. AHP) \\
+\hline
 Alternativenranking & Punktwert & Prioritätsvektor & Nähe-Koeffizient \\
-\bottomrule
+\hline
 \end{tabular}
 \end{batable}
 
@@ -218,11 +215,11 @@ Bevor diese Methoden angewendet werden können, sind zunächst die Defizite der 
 \label{sec:grundlagen-defizite}
 
 Die vorangegangenen Abschnitte haben theoretische Grundlagen etabliert.
-Nun ist zu fragen, ob und warum die bestehenden Ansätze -- fragmentierte \gls{bi}-Landschaften, \gls{ssbi}-Implementierungen, RBAC-Modelle -- das Problem der heterogenen \gls{kpi}-Landschaft bei SAP Signavio P\&E lösen.
+Nun ist zu fragen, inwiefern die bestehenden Ansätze -- fragmentierte \gls{bi}-Land\-schaften, \gls{ssbi}-Imple\-men\-tierungen, \gls{rbac}-Modelle -- das Problem der heterogenen \gls{kpi}-Landschaft bei SAP Signavio P\&E lösen.
 Die Antwort dieser Untersuchung lautet: Sie tun es nicht vollständig -- und zwar aus drei strukturellen Gründen, die nachfolgend entlang der technischen, der nutzungsbezogenen und der semantischen Dimension entwickelt werden.
 
 Das erste Defizit ist technisch: \gls{bi}-Landschaften in Unternehmen sind strukturell fragmentiert.
-In einem aktuellen Review wird gezeigt, dass Unternehmen zunehmend mit einer heterogenen Toollandschaft konfrontiert sind, in der unterschiedliche \gls{bi}-Plattformen nebeneinander existieren, ohne vollständig integriert zu sein.\vglcite[700\,f.]{larson2016}
+In einer systematischen Übersichtsarbeit wird gezeigt, dass Unternehmen zunehmend mit einer heterogenen Toollandschaft konfrontiert sind, in der unterschiedliche \gls{bi}-Plattformen nebeneinander existieren, ohne vollständig integriert zu sein.\vglcite[700\,f.]{larson2016}
 Die Konsolidierung heterogener \gls{bi}-Infrastrukturen wird als zentrale ungelöste Herausforderung identifiziert.\vglcite[707]{larson2016}
 Diese Beobachtung wird durch ein integriertes \gls{bi}-Framework konkretisiert: Die parallele Koexistenz separater \gls{bi}-Subsysteme -- operative, analytische und unstrukturierte Datenquellen -- ist ein fundamentales Strukturproblem bestehender Enterprise-\gls{bi}-Architekturen.\vglcite[133]{baars2008}
 Ein integriertes Framework, das diese Subsysteme unter einer einheitlichen Sicht zusammenführt, wird zwar konzeptuell beschrieben, aber die praktische Implementierung bleibt eine offene Herausforderung.\vglcite[134]{baars2008}
@@ -240,49 +237,48 @@ In der Literatur wird gezeigt, dass Integrationsprobleme bei Performance-Measure
 Drei Quellen der Definitionsheterogenität werden identifiziert: unterschiedliche Methodik-Schulen (\textit{Balanced Scorecard}, \textit{Tableau de Bord}, \gls{kpi}-Trees), historisch gewachsene inkompatible Messsysteme sowie fehlende organisationale Governance.\vglcite[985\,ff.]{giovannoni2013}
 Diese Heterogenität ist nicht durch technische Konsolidierung zu beseitigen -- sie erfordert eine explizite semantische Harmonisierungsentscheidung, bevor Integrationstechnologien eingesetzt werden können.
 
-Diese drei Defizitebenen sind nicht additiv, sondern konstituieren gemeinsam eine Lücke, die in der Literatur bislang nicht geschlossen wurde:
-
 Zusammengenommen ergeben die drei Defizitebenen ein kohärentes Bild:
 Die Literatur behandelt \gls{bi}-Integration, rollenbasierte Zugriffskontrolle und \gls{mcdm}-Methoden als getrennte Themenfelder.
-Ein integriertes Entscheidungsmodell, das diese drei Dimensionen -- technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt und eine methodisch fundierte Auswahlentscheidung ermöglicht, existiert in der Literatur bisher nicht.
+Ein integriertes Entscheidungsmodell, das diese drei Dimensionen -- technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt, existiert in der Literatur bisher nicht.
+Eine methodisch fundierte Auswahlentscheidung, die alle drei Dimensionen gleichzeitig berücksichtigt, stellt damit die zentrale Forschungslücke dar.
+
+Abbildung~\ref{fig:defizit-ebenen} verdichtet die drei Defizitebenen und die daraus resultierende Forschungslücke in einer Übersicht.
 
 \begin{bafigure}[label=fig:defizit-ebenen]{Drei Defizitebenen und die resultierende Forschungslücke}
+\centering
 \begin{tikzpicture}[
     layer/.style={draw, rectangle, rounded corners=3pt,
-                  minimum width=10cm, minimum height=1.0cm,
-                  text centered, font=\small\bfseries},
+                  minimum width=3.8cm, minimum height=2.2cm,
+                  align=center, font=\small,
+                  text width=3.4cm},
     gap/.style={draw, rectangle, rounded corners=4pt,
-                minimum width=10cm, minimum height=1.0cm,
-                text centered, font=\small\bfseries,
+                minimum width=12cm, minimum height=1.4cm,
+                align=center, font=\small,
+                text width=11cm,
                 fill=gray!40},
-    lbl/.style={font=\footnotesize, text width=3.6cm, align=left},
     arrow/.style={-{Stealth[scale=1.2]}, thick},
 ]
 
-% Drei Ebenen (von unten nach oben)
-\node[layer, fill=gray!10] (tech)  at (0, 0)
-    {Technisch: \gls{bi}-Fragmentierung (Larson 2016; Baars \& Kemper 2008)};
-\node[layer, fill=gray!20] (nutz)  at (0, 1.3)
-    {Nutzungsbezogen: \gls{ssbi}-Adoptionsbarrieren (Lennerholt 2018; Passlick 2020)};
-\node[layer, fill=gray!30] (sem)   at (0, 2.6)
-    {Semantisch: \gls{kpi}-Definitionsheterogenität (Giovannoni \& Maraghini 2013)};
+\coordinate (merge) at (0, 1.8);
 
-% Pfeil nach oben zur Lücke
-\draw[arrow] (0, 3.15) -- (0, 3.75);
+\node[layer, fill=gray!10] (tech) at (-4.0, 0)
+    {\textbf{Technisch}\\{\footnotesize \gls{bi}-Fragmentierung}};
+\node[layer, fill=gray!20] (nutz) at (0, 0)
+    {\textbf{Nutzungsbezogen}\\{\footnotesize \gls{ssbi}-Adoptionsbarrieren}};
+\node[layer, fill=gray!30] (sem)  at (4.0, 0)
+    {\textbf{Semantisch}\\{\footnotesize \gls{kpi}-Definitions\-heterogenität}};
 
-% Forschungslücke oben
-\node[gap] (gap) at (0, 4.25)
-    {Forschungslücke: kein integriertes Entscheidungsmodell};
+\node[gap] (gap) at (0, 3.6)
+    {\textbf{Forschungslücke}\\{\footnotesize kein integriertes Entscheidungsmodell}};
 
-% Vertikale Klammerlinie links
-\draw[thick] (-5.3, -0.55) -- (-5.7, -0.55);
-\draw[thick] (-5.3,  3.15) -- (-5.7,  3.15);
-\draw[thick] (-5.7, -0.55) -- (-5.7,  3.15);
-\draw[thick] (-5.7,  1.30) -- (-5.9,  1.30);
-\node[lbl] at (-7.5, 1.30) {Drei nicht-additive Ebenen konstituieren gemeinsam die Lücke};
+\draw[thick] (tech.north) |- (merge);
+\draw[thick] (nutz.north) -- (merge);
+\draw[thick] (sem.north)  |- (merge);
+\draw[arrow] (merge) -- (gap.south);
 
 \end{tikzpicture}
 \end{bafigure}
 
-Diese Forschungslücke motiviert die Wahl von \gls{dsr} als Forschungsmethodik: Wenn das vorliegende Problem ein fehlendes Artefakt ist, ist die Konstruktion eben dieses Artefakts die wissenschaftlich adäquate Antwort.
+Die in Abbildung~\ref{fig:defizit-ebenen} visualisierte Lücke motiviert die Wahl von \gls{dsr} als Forschungsmethodik: Wenn das vorliegende Problem ein fehlendes Artefakt ist, ist die Konstruktion eben dieses Artefakts die wissenschaftlich adäquate Antwort.
+Die identifizierten Defizite -- technischer, nutzungsbezogener und semantischer Art -- sind nicht durch inkrementelle Anpassungen bestehender Systeme lösbar, sondern erfordern die Konstruktion eines neuen Artefakts.
 Die methodische Begründung erfolgt im folgenden Kapitel.
