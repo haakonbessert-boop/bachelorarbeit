@@ -19,63 +19,55 @@ Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jed
 \centering
 \begin{tikzpicture}[font=\small]
 
-%% Drei Karten: PI | KPI | KRI
-%% Zentren bei x = -4.4 / 0 / +4.4; halbe Kartenbreite = 2.0cm; Lücke = 0.4cm
-%% Zeilen (y): Header [2.2,3.0] | Frequenz [1.4,2.2] | Adressat [0.6,1.4] | Zweck [-0.2,0.6] | Impuls [-1.0,-0.2]
+%% 4-spaltige Tabelle: Labels | PI | KPI | KRI
+%% x-Grenzen: -7.0 | -5.0 | -1.6 | 1.8 | 5.2
+%% y-Grenzen (oben→unten): 3.0 | 2.3 | 1.6 | 0.9 | 0.2 | -0.5
 
-% ---- Karte PI ----
-\fill[gray!15] (-6.4, 2.2) rectangle (-2.4, 3.0);
-\draw[thick]   (-6.4,-1.0) rectangle (-2.4, 3.0);
-\foreach \y in {2.2, 1.4, 0.6, -0.2}
-    \draw (-6.4,\y) -- (-2.4,\y);
-\node[align=center, text width=3.6cm, font=\small\bfseries] at (-4.4, 2.6)
-    {\glspl{pi}};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 1.8)
-    {täglich / laufend};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 1.0)
-    {Teams \& Mitarbeitende};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4, 0.2)
-    {Fortschritt messen};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (-4.4,-0.6)
-    {kein direkter Impuls};
+% ---- Header-Hintergründe ----
+\fill[gray!20] (-5.0, 2.3) rectangle (-1.6, 3.0);
+\fill[gray!40] (-1.6, 2.3) rectangle ( 1.8, 3.0);
+\fill[gray!60] ( 1.8, 2.3) rectangle ( 5.2, 3.0);
 
-% ---- Karte KPI ----
-\fill[gray!35] (-2.0, 2.2) rectangle (2.0, 3.0);
-\draw[thick]   (-2.0,-1.0) rectangle (2.0, 3.0);
-\foreach \y in {2.2, 1.4, 0.6, -0.2}
-    \draw (-2.0,\y) -- (2.0,\y);
-\node[align=center, text width=3.6cm, font=\small\bfseries] at (0, 2.6)
-    {\glspl{kpi}};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 1.8)
-    {täglich / wöchentlich};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 1.0)
-    {operatives Management};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (0, 0.2)
-    {Steuerung \& Eingriff};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (0,-0.6)
-    {direkter Handlungsimpuls};
+% ---- Tabellenrahmen ----
+\draw[thick] (-7.0, -0.5) rectangle (5.2, 3.0);
 
-% ---- Karte KRI ----
-\fill[gray!55] (2.4, 2.2) rectangle (6.4, 3.0);
-\draw[thick]   (2.4,-1.0) rectangle (6.4, 3.0);
-\foreach \y in {2.2, 1.4, 0.6, -0.2}
-    \draw (2.4,\y) -- (6.4,\y);
-\node[align=center, text width=3.6cm, font=\small\bfseries] at (4.4, 2.6)
-    {\glspl{kri}};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 1.8)
-    {monatlich / quartalsweise};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 1.0)
-    {Führung \& Vorstand};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4, 0.2)
-    {strategische Übersicht};
-\node[align=center, text width=3.6cm, font=\footnotesize] at (4.4,-0.6)
-    {kein direkter Impuls};
+% ---- Vertikale Trennlinien ----
+\draw (-5.0, -0.5) -- (-5.0, 3.0);
+\draw (-1.6, -0.5) -- (-1.6, 3.0);
+\draw ( 1.8, -0.5) -- ( 1.8, 3.0);
 
-% ---- Zeilenbeschriftung links ----
-\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 1.8)  {Frequenz};
-\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 1.0)  {Adressat};
-\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4, 0.2)  {Zweck};
-\node[font=\footnotesize\itshape, align=right, text width=1.6cm] at (-7.4,-0.6)  {Impuls};
+% ---- Horizontale Trennlinien ----
+\foreach \y in {2.3, 1.6, 0.9, 0.2}
+    \draw (-7.0, \y) -- (5.2, \y);
+
+% ---- Header ----
+\node[font=\small\bfseries] at (-3.3, 2.65) {\glspl{pi}};
+\node[font=\small\bfseries] at ( 0.1, 2.65) {\glspl{kpi}};
+\node[font=\small\bfseries] at ( 3.5, 2.65) {\glspl{kri}};
+
+% ---- Zeilenlabels ----
+\node[font=\footnotesize\itshape] at (-6.0, 1.95) {Frequenz};
+\node[font=\footnotesize\itshape] at (-6.0, 1.25) {Adressat};
+\node[font=\footnotesize\itshape] at (-6.0, 0.55) {Zweck};
+\node[font=\footnotesize\itshape] at (-6.0,-0.15) {Impuls};
+
+% ---- PI-Spalte ----
+\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 1.95) {täglich / laufend};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 1.25) {Teams \& Mitarbeitende};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3, 0.55) {Fortschritt messen};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (-3.3,-0.15) {kein direkter Impuls};
+
+% ---- KPI-Spalte ----
+\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 1.95) {täglich / wöchentlich};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 1.25) {op.\ Management};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1, 0.55) {Steuerung \& Eingriff};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (0.1,-0.15) {direkter Handlungsimpuls};
+
+% ---- KRI-Spalte ----
+\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 1.95) {monatl.\ / quartalsw.};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 1.25) {Führung \& Vorstand};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5, 0.55) {strategische Übersicht};
+\node[align=center, text width=3.0cm, font=\footnotesize] at (3.5,-0.15) {kein direkter Impuls};
 
 \end{tikzpicture}
 \end{bafigure}
