@@ -136,9 +136,29 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Key Findings:** Standardwerk zu Enterprise Integration Patterns (EIP). Katalogisiert 65 Integrationsmuster (Messaging-Kanäle, Router, Transformer, Endpoints usw.) und liefert eine einheitliche Sprache für Integrationsarchitekturen. Grundlage für alle modernen Middleware- und ESB-Konzepte. Obwohl von 2003, bleibt das Musterwerk die kanonische Referenz — neuere API-Gateway- und Event-Streaming-Muster bauen konzeptuell darauf auf.
 - **Notizen:** Klassiker, kein Peer-Review-Artikel, aber de-facto Standard in der Enterprise-Architektur-Literatur. Für Kap. 2.2 als konzeptuelle Grundlage unverzichtbar. Durch neuere Quellen (Kap. 6) zu API-led Integration ergänzen.
 
+### Larson & Chang (2016) — A Review and Future Direction of Agile, Business Intelligence, Analytics and Data Science
+
+- **BibTeX-Key:** `larson2016`
+- **Quelle:** International Journal of Information Management, Vol. 36, No. 5, S. 700–710, DOI: 10.1016/j.ijinfomgt.2016.04.013
+- **Relevanz:** Hoch
+- **Kapitel:** 1.1 Problemstellung, 1.2 Relevanz, 2.1 KPI-Management und Business Intelligence
+- **Key Findings:** Vielzitiertes Review-Paper (836 Zitationen) zu BI, Analytics und Data Science in Unternehmen. Zeigt, dass Unternehmen zunehmend mit einer fragmentierten Toollandschaft konfrontiert sind — unterschiedliche BI-Plattformen, heterogene Datenquellen und mangelnde Integration behindern eine einheitliche Entscheidungsgrundlage. Identifiziert die Konsolidierung heterogener BI-Infrastrukturen als zentrale ungelöste Herausforderung. Liefert den empirischen Beleg, dass KPI-Fragmentierung kein Einzelfall, sondern ein strukturelles Problem moderner Enterprise-BI-Landschaften ist.
+- **Notizen:** Geeignet als Problemrelevanzbeleg für Kap. 1.1+1.2 (Hänel verlangt externe Peer-Review-Quellen für die Problemstellung). Erschienen in IJIM (Elsevier), einem anerkannten IS-Journal. Ergänzt Lennerholt et al. (2018) um die strategische Perspektive auf BI-Landschaftsherausforderungen.
+
 ---
 
 ## RBAC / Data Governance
+
+### Al-Aqrabi, Liu, Hill, Ding & Antonopoulos (2013) — Business Intelligence Security on the Clouds
+
+- **BibTeX-Key:** `alaqrabi2013`
+- **Quelle:** IEEE SOSE 2013 (7th International Symposium on Service-Oriented System Engineering), S. 137–144, DOI: 10.1109/sose.2013.36
+- **Relevanz:** Hoch
+- **Kapitel:** 2.3 Data Governance und Zugriffskontrolle
+- **Key Findings:** Behandelt Zugriffskontrollmechanismen für Business Intelligence-Systeme in Cloud-Umgebungen. Analysiert Sicherheitsanforderungen auf verschiedenen Ebenen: Hardware, Netzwerk, Datenmarkt- und Data-Warehouse-Ebene. Zeigt, wie rollenbasierte Zugriffssteuerung (RBAC) in BI-Architekturen mit mehreren Datenquellen umgesetzt werden kann, um konsistente Zugriffsrichtlinien über heterogene Systeme hinweg zu gewährleisten. Direkt relevant für die Frage der datenquellübergreifenden Zugriffskontrolle im KPI-Hub.
+- **Notizen:** IEEE-Konferenzbeitrag (2013), peer-reviewed. Ergänzt Ferraiolo et al. (2001) durch den BI-spezifischen Anwendungskontext — liefert die Brücke vom abstrakten RBAC-Modell zur Enterprise-BI-Praxis. Besonders relevant für Kap. 2.3 und Kap. 5 (Anforderungen an Zugriffskontrolle im KPI-Hub).
+
+---
 
 ### Ferraiolo, Sandhu, Gavrila, Kuhn & Chandramouli (2001) — Proposed NIST Standard for Role-Based Access Control
 - **BibTeX-Key:** `ferraiolo2001`
@@ -175,6 +195,63 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 - **Kapitel:** 2.4 Entscheidungsmethoden im Software Engineering
 - **Key Findings:** Wendet AHP-TOPSIS auf die Auswahl von Open-Source-Krankenhausinformationssystemen an. Zeigt die Übertragbarkeit von MCDM-Methoden auf IT-Systemauswahl in komplexen Organisationsumgebungen. Bewertet sechs EMR-Systeme anhand von 15 Kriterien (Funktionalität, Sicherheit, Usability, Kosten). Mit 234 Zitationen meistzitierte AHP-TOPSIS-Anwendungsstudie für Software-Auswahl in der IS-Literatur.
 - **Notizen:** Belegt die breite Akzeptanz von AHP-TOPSIS als Methodenkombination für IS-Auswahlprobleme. Ergänzt Hanine et al. (2016) als zweiten empirischen Beleg aus einem anderen Anwendungsdomänen-Kontext (Healthcare IT). Für Kap. 2.4 als Methodennachweis nutzbar.
+
+---
+
+## Requirements Engineering
+
+### Pohl (2008) — Requirements Engineering: Grundlagen, Prinzipien, Techniken
+
+- **BibTeX-Key:** `pohl2010`
+- **Quelle:** dpunkt.verlag, Heidelberg, 2. korrigierte Auflage, ISBN 978-3-89864-550-8 (Original 2007, 2. korr. Aufl. 2008)
+- **Relevanz:** Hoch
+- **Kapitel:** 5 Anforderungsanalyse, 2.4 Entscheidungsmethoden
+- **Key Findings:** Umfassendes deutschsprachiges RE-Standardwerk mit über 800 Seiten. Systematisiert Anforderungsarten (funktional/nicht-funktional/Randbedingung) und stellt etablierte Erhebungsmethoden vor (Interviews, Workshops, Beobachtung, Prototyping). Behandelt auch Anforderungspriorisierung (MoSCoW-Methode, Nutzwertanalyse) und damit die methodische Grundlage für Kap. 5. Mit über 2.200 Zitationen das meistzitierte deutschsprachige RE-Lehrbuch.
+- **Notizen:** Standardreferenz für Kap. 5. Legitimiert den Einsatz strukturierter Anforderungserhebung und -priorisierung als wissenschaftliche Methode. BibTeX-Key `pohl2010` (nach dem in der Arbeit verwendeten Zitationsjahr), verifiziertes Erscheinungsjahr der 2. Auflage 2008.
+
+---
+
+## Data Warehouse / Dimensionales Modellieren
+
+### Kimball & Ross (2013) — The Data Warehouse Toolkit
+
+- **BibTeX-Key:** `kimball2013`
+- **Quelle:** Wiley, Indianapolis, IN, 3rd ed., ISBN 978-1-118-53080-1
+- **Relevanz:** Hoch
+- **Kapitel:** 2.2 Enterprise-Systemintegration (Integrationsparadigmen)
+- **Key Findings:** Kanonisches Standardwerk zu Dimensional Modeling und Data Warehouse-Architektur. Definiert die grundlegenden Konzepte: Faktentabellen, Dimensionstabellen, Star Schema, Snowflake Schema sowie den ETL-Prozess (Extract-Transform-Load). Führt das Bus Architecture-Konzept ein, das die dimensionale Integration über mehrere Subject Areas hinweg ermöglicht — direkt relevant für das KPI-Hub-Integrationskonzept. Mit 3. Auflage (2013) vollständig überarbeitet und um Cloud-BI-Aspekte erweitert.
+- **Notizen:** Pflicht-Zitat für Kap. 2.2 als Gegengewicht zu Hohpe & Woolf (2003). Ergänzt Messaging-Patterns-Perspektive um Datenmodellierungs-Perspektive. Besonders relevant für die Konzeption des KPI-Hubs als dimensionaler Datenschicht.
+
+---
+
+## Entscheidungsmethoden
+
+### Saaty (1990) — How to Make a Decision: The Analytic Hierarchy Process
+
+- **BibTeX-Key:** `saaty1990`
+- **Quelle:** European Journal of Operational Research, Vol. 48, No. 1, S. 9–26, DOI: 10.1016/0377-2217(90)90057-I
+- **Relevanz:** Hoch
+- **Kapitel:** 2.4 Entscheidungsmethoden im Software Engineering, 7.1 Wahl der Bewertungsmethodik
+- **Key Findings:** Grundlagenarbeit zur Analytic Hierarchy Process (AHP) Methode. Beschreibt das Prinzip der paarweisen Vergleiche zur Gewichtung von Entscheidungskriterien und die Konstruktion von Prioritätsvektoren aus Vergleichsmatrizen. Führt den Konsistenzindex ein, mit dem die Widerspruchsfreiheit des Entscheidungsträgers gemessen wird. Mit über 26.000 Zitationen die meistzitierte AHP-Referenz überhaupt.
+- **Notizen:** Pflicht-Zitat für Kap. 2.4 und 7.1 als AHP-Grundquelle. Zusammen mit Hwang & Yoon (1981) bildet diese Quelle das methodische Fundament für das Bewertungsmodell in Kap. 7.
+
+### Hwang & Yoon (1981) — Multiple Attribute Decision Making: Methods and Applications
+
+- **BibTeX-Key:** `hwangyoon1981`
+- **Quelle:** Springer, Berlin/Heidelberg, Lecture Notes in Economics and Mathematical Systems, Vol. 186, ISBN 978-3-540-10558-9, DOI: 10.1007/978-3-642-48318-9
+- **Relevanz:** Hoch
+- **Kapitel:** 2.4 Entscheidungsmethoden im Software Engineering, 7.1 Wahl der Bewertungsmethodik
+- **Key Findings:** Grundlagenwerk zu Multi-Criteria Decision Making (MCDM) mit Fokus auf Multiple Attribute Decision Making (MADM). Führt die TOPSIS-Methode (Technique for Order of Preference by Similarity to Ideal Solution) ein: Alternativen werden nach ihrer Distanz zur positiven Ideallösung und zur negativen Anti-Ideallösung bewertet. Gibt einen umfassenden Überblick über MADM-Methoden und systematisiert sie nach Informationstyp. Kanonische Grundlagekreferenz für alle TOPSIS-Anwendungen.
+- **Notizen:** Pflicht-Zitat für Kap. 2.4 und 7.1 als TOPSIS-Grundquelle. Zusammen mit Saaty (1990) bildet dieser Band das methodische Fundament des Bewertungsmodells. Vol. 186 der Lecture Notes in Economics and Mathematical Systems.
+
+### Velasquez & Hester (2013) — An Analysis of Multi-Criteria Decision Making Methods
+
+- **BibTeX-Key:** `velasquez2013`
+- **Quelle:** International Journal of Operations Research (IJOPR), Vol. 10, No. 2, S. 56–66
+- **Relevanz:** Hoch
+- **Kapitel:** 2.4 Entscheidungsmethoden im Software Engineering, 7.1 Wahl der Bewertungsmethodik
+- **Key Findings:** Systematischer Methodenvergleich für gängige MCDM-Verfahren: AHP, TOPSIS, ELECTRE, PROMETHEE, ANP, DEA, SMART, Nutzwertanalyse u. a. Analysiert Vor- und Nachteile jedes Verfahrens nach einheitlichem Schema (Anwendungsgebiet, Datenbedarf, Subjektivität, Rechenaufwand). Zeigt, dass AHP und TOPSIS in der IT-Auswahlpraxis besonders verbreitet sind. Wird häufig als Methodenbegründungsquelle in Software-Auswahlstudien zitiert.
+- **Notizen:** Liefert die Methodenbegründung für Kap. 7.1: Warum AHP + TOPSIS statt ELECTRE oder PROMETHEE? Die Argumentationslinie folgt Velasquez/Hester: geringer Datenbedarf, Handhabbarkeit, Transparenz. IJOPR = International Journal of Operations Research (Taipei), kein DOI in CrossRef, da kleines Taiwanesisches Journal.
 
 ---
 
