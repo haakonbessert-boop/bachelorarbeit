@@ -9,9 +9,9 @@
 
 ---
 
-## Aktueller Stand (23. April 2026)
+## Aktueller Stand (24. April 2026)
 
-Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 liegen als erste Entwürfe vor. Mural-Analyse abgeschlossen, Systemlandschaft in TOOLS.md und KPI_HUB_KONZEPT.md dokumentiert. Janine-Sync für 24.04. vorbereitet. Sachse-Gliederung an Janine weitergeleitet (wartet auf Freigabe).
+Orientierungsphase läuft. Janine-Sync am 24.04. durchgeführt — Gliederung und roter Faden von Janine bestätigt. Feedback: Kap. 4.3 umbenennen ("Versorgung" → "Verfügbarkeit"), No-Go eigener Datalake/Datenhaltung als Constraint festhalten, erstes schriftliches Review in Analyse & Modell-Phase einplanen, Abgabe an Janine in Papierform. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 liegen als erste Entwürfe vor. Mural-Analyse abgeschlossen, Systemlandschaft in TOOLS.md und KPI_HUB_KONZEPT.md dokumentiert.
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -42,7 +42,7 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 |-------|----------|--------------------------|--------------------|
 | **Orientierung** | 20. Apr – 7. Mai | Onboarding, Systemlandschaft, Stakeholder kennenlernen | Kap. 3 Methodik (DSR steht fest) + Kap. 1 Einleitung (Problemstellung) + **Literaturrecherche starten** |
 | **Anforderungen** | 8. Mai – 24. Mai | Interviews führen, Requirements erheben und priorisieren | Kap. 2 Grundlagen & Stand der Forschung + Kap. 4 Ausgangssituation |
-| **Analyse & Modell** | 25. Mai – 14. Jun | Lösungsraum analysieren, Scoring-Modell bauen + anwenden | Kap. 5 Anforderungsanalyse + Kap. 6 Lösungsraum + Kap. 7 Entscheidungsmodell |
+| **Analyse & Modell** | 25. Mai – 14. Jun | Lösungsraum analysieren, Scoring-Modell bauen + anwenden; **erstes schriftliches Review mit Janine** einplanen | Kap. 5 Anforderungsanalyse + Kap. 6 Lösungsraum + Kap. 7 Entscheidungsmodell |
 | **MVP** | 15. Jun – 30. Jun | MVP umsetzen & validieren | Kap. 8 MVP + Kap. 9 Ergebnisse + Kap. 10 Fazit |
 | **Puffer** | 1. Jul – 9. Jul | — | Korrekturen, Feinschliff, Roter-Faden-Check |
 | **Abgabe** | **10. Jul** | — | — |
@@ -79,6 +79,7 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 ### Formales
 
 - [ ] KI-Genehmigungsdokument: Janines Gegenzeichnung ausstehend (siehe Formales oben)
+- [ ] Druckexemplar für Janine einplanen (Papierform gewünscht — Zeitpuffer für Druck vor Abgabe)
 - [x] Svitlana Vlasova anschreiben — Mail gesendet, warte auf Antwort
 
 ### Meetings diese Woche
@@ -101,6 +102,12 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 - [x] Zielarchitektur konkretisiert → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md)
 - [x] Sync-Agenda fertig → MEETINGS.md 24.04. (Stand, Lösungsoptionen, 10 Blockiert-Fragen)
 - [ ] Offene Fragen → wurden im Janine-Sync 24.04. besprochen; sachse_gliederung.docx: Janine prüft heute noch
+
+### Janine-Feedback (24.04.) — Umsetzung
+
+- [ ] Kap. 4.3 umbenennen: "KPI-Versorgung" → "KPI-Verfügbarkeit" (Janine 24.04.)
+- [ ] No-Go Datalake als Constraint in Anforderungsanalyse (Kap. 5) aufnehmen — ggf. in Interview mit Janine offiziell festhalten
+- [ ] Review-Termin mit Janine einplanen (Ziel: spätestens Anfang Juni, in Analyse & Modell-Phase)
 
 ### Nächste Woche — Oliver
 
@@ -190,6 +197,11 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 | 22.04.2026 | Sperrvermerk-Befristung wird erst am Ende der Arbeit geklärt | Keine Dringlichkeit, Entscheidung hat keine Auswirkung auf Schreibprozess |
 | 22.04.2026 | Collibra ist fester Bestandteil des BDC-Stacks (nicht externer Kandidat) | Svitlana-Präsentation: Collibra = offizielle Governance-Plattform im BDC |
 | 22.04.2026 | Goals Tracking als Referenzprojekt | Einziges identifiziertes BDC-Projekt mit Engineering-Bezug (Svitlana, Data Products in Collibra → DSP → SAC) |
+| 24.04.2026 | Roter Faden der Gliederung bestätigt | Janine-Feedback: Struktur und Argumentationslinie passen |
+| 24.04.2026 | Kap. 4.3 Umbenennung "Versorgung" → "Verfügbarkeit" | Janine-Feedback: besseres Wording für den Abschnitt |
+| 24.04.2026 | No-Go eigener Datalake / eigene Datenhaltung | Janine: muss als Constraint in Anforderungsanalyse aufgenommen werden |
+| 24.04.2026 | Erstes schriftliches Review in Analyse & Modell-Phase | Janine will frühzeitig über die Arbeit drüberlesen (Ziel: spätestens Anfang Juni) |
+| 24.04.2026 | Papierform-Abgabe an Janine | Janine wünscht gedrucktes Exemplar (zusätzlich zur offiziellen Abgabe) |
 
 ---
 
