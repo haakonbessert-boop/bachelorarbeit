@@ -11,7 +11,7 @@
 
 ## Aktueller Stand (24. April 2026)
 
-Orientierungsphase läuft. Janine-Sync am 24.04. durchgeführt — Gliederung und roter Faden von Janine bestätigt. Feedback: Kap. 4.3 umbenennen ("Versorgung" → "Verfügbarkeit"), No-Go eigener Datalake/Datenhaltung als Constraint festhalten, erstes schriftliches Review in Analyse & Modell-Phase einplanen, Abgabe an Janine in Papierform. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 liegen als erste Entwürfe vor. Mural-Analyse abgeschlossen, Systemlandschaft in TOOLS.md und KPI_HUB_KONZEPT.md dokumentiert.
+Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben.
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
