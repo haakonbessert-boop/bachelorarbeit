@@ -40,7 +40,35 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 
 ## Kapitel 2 — Grundlagen und Stand der Forschung
 
-*(noch keine Einträge)*
+### KI-013 | 24. Apr 2026 | VIS | TikZ-Abbildung: KPI-Hierarchie (KRI/KPI/PI)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.1 KPI-Management und Business Intelligence (Abbildung fig:kpi-hierarchie) |
+| **Prompt (Zusammenfassung)** | Erstelle eine TikZ-Abbildung für die KPI-Hierarchie nach Parmenter (2015): KRI/KPI/PI als drei horizontale Schichten mit abnehmender Breite (Stufendiagramm), Beschriftungen rechts je Ebene, vertikaler Achsenpfeil links. bafigure-Umgebung, eigene Darstellung. |
+| **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit drei `fill=gray!XX`-Rechtecken (PI/KPI/KRI von unten nach oben, abnehmend breit), rechtsseitigen Kurzbeschreibungen, Stealth-Achsenpfeil links. Direkt im Kapiteltext nach der KRI/KPI/PI-Abgrenzung eingefügt. |
+| **Verwendung** | **Redigiert** — Grundstruktur und TikZ-Code aus KI, Proportionen und Label-Formulierungen angepasst |
+
+### KI-014 | 24. Apr 2026 | VIS | TikZ-Abbildung: RBAC-Grundmodell
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.3 Data Governance und Zugriffskontrolle (Abbildung fig:rbac-grundmodell) |
+| **Prompt (Zusammenfassung)** | Erstelle eine TikZ-Abbildung des RBAC-Grundmodells nach Ferraiolo et al. (2001): Benutzer → Rollen → Berechtigungen → Objekte, Sessions als Aktivierungsebene, Rollenhierarchie als gestrichelter Knoten oben. bafigure-Umgebung, Quellangabe „in Anlehnung an ferraiolo2001". |
+| **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit fünf Knoten (box-style), beschrifteten Pfeilen (Zuweisung, beinhalten, beziehen sich auf, aktivieren), Rollenhierarchie als separater gestrichelter Knoten. Direkt im Kapiteltext nach der NIST-RBAC-Modellbeschreibung eingefügt. |
+| **Verwendung** | **Redigiert** — Grundstruktur und TikZ-Code aus KI, Node-Positionen und Pfeilbeschriftungen angepasst; Rollenhierarchie-Loop durch separaten Knoten ersetzt |
+
+### KI-015 | 24. Apr 2026 | VIS | TikZ-Abbildung: Drei-Ebenen-Defizit
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.5 Defizite bestehender Ansätze (Abbildung fig:defizit-ebenen) |
+| **Prompt (Zusammenfassung)** | Erstelle eine TikZ-Abbildung der drei Defizitebenen (technisch/nutzungsbezogen/semantisch) als übereinander gestapelte Schichten mit Pfeil nach oben zur Forschungslücke, manuelle Klammernotation links. bafigure-Umgebung, eigene Darstellung. |
+| **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit drei horizontalen Schichten (fill=gray!10/20/30), Stealth-Pfeil zur Forschungslücken-Box (fill=gray!40), manuelle Klammer aus Linien mit Label. Direkt im Kapiteltext nach der Synthese der drei Defizitebenen eingefügt. |
+| **Verwendung** | **Redigiert** — Grundstruktur und TikZ-Code aus KI; decorations-Bibliothek durch manuelle Linienkonstruktion ersetzt (library nicht in baarticle.cls geladen) |
 
 ---
 

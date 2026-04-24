@@ -14,6 +14,37 @@ Von \glspl{kpi} sind \glspl{kri} und einfache \textit{Performance Indicators} (\
 Ein \gls{kri} fasst das Ergebnis mehrerer Maßnahmen zusammen und zeigt, ob die generelle Richtung stimmt -- typischerweise in einem monatlichen oder quartalsweisen Rhythmus.
 Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jedoch handlungsanleitend zu sein.
 \glspl{kpi} hingegen sind nicht-finanziell, tagesaktuell, vom Topmanagement beobachtet und aktivierend: Ein Mitarbeitender, der einen negativen \gls{kpi}-Ausschlag sieht, weiß, welche konkrete Aktion zu ergreifen ist.\vglcite[9]{parmenter2015}
+
+\begin{bafigure}[label=fig:kpi-hierarchie]{KPI-Hierarchie: KRI, KPI und PI im Vergleich}
+\begin{tikzpicture}[
+    level/.style={
+        draw, rectangle, rounded corners=3pt,
+        text centered, minimum height=1.1cm,
+        font=\small\bfseries
+    },
+    desc/.style={font=\footnotesize, text width=7.2cm, align=left},
+]
+
+% Hintergrund-Schichten (von unten nach oben, abnehmende Breite)
+\node[level, fill=gray!15, minimum width=11.5cm] (pi) at (0,0)
+    {\glspl{pi} — Performance Indicators};
+\node[level, fill=gray!30, minimum width=9.0cm] (kpi) at (0,1.35)
+    {\glspl{kpi} — Key Performance Indicators};
+\node[level, fill=gray!50, minimum width=6.5cm] (kri) at (0,2.70)
+    {\glspl{kri} — Key Result Indicators};
+
+% Beschriftungen rechts
+\node[desc] at (6.8, 0) {Fortschrittsanzeige; informiert, aber löst keine Handlung aus};
+\node[desc] at (6.8, 1.35) {Aktivierend; nicht-finanziell, tagesaktuell, handlungsanleitend};
+\node[desc] at (6.8, 2.70) {Ergebnis-Zusammenfassung; typisch monatlich/quartalsweise};
+
+% Achsenpfeil
+\draw[-{Stealth[scale=1.2]}, thick] (-6.3, -0.7) -- (-6.3, 3.4)
+    node[midway, left=4pt, font=\footnotesize, align=center] {Strat.\\\&\\Op.};
+
+\end{tikzpicture}
+\end{bafigure}
+
 Diese Unterscheidung hat direkte Konsequenzen für die Gestaltung eines \gls{kpihub}: Ein System, das nur \glspl{kri} aggregiert, genügt den Steuerungsansprüchen nicht.
 
 Ein System, das diesem Anspruch genügt, muss die richtigen Kennzahlen zur richtigen Zeit in der richtigen Granularität bereitstellen -- was auf die Frage führt, was ein Dashboard konzeptuell leisten kann und soll.
@@ -69,6 +100,46 @@ Das etablierteste Instrument zur operativen Umsetzung solcher Governance-Vorgabe
 Das \gls{rbac}-Referenzmodell nach dem NIST-Standard definiert vier konzeptuelle Komponenten: Benutzer (\textit{users}), Rollen (\textit{roles}), Berechtigungen (\textit{permissions}) und Sessions.\vglcite[226\,f.]{ferraiolo2001}
 Berechtigungen werden nicht direkt Benutzern zugewiesen, sondern Rollen; Benutzer erhalten Berechtigungen ausschließlich über die Zuweisung zu Rollen.\vglcite[226]{ferraiolo2001}
 Das Modell unterscheidet drei Ausbaustufen: Core \gls{rbac} (die beschriebene Grundstruktur), Hierarchical \gls{rbac} (Rollenvererbung über Rollenhierarchien) und Separation-of-Duty-Erweiterungen (statische und dynamische Inkompatibilitätsregeln zwischen Rollen).\vglcite[228\,ff.]{ferraiolo2001}
+
+\begin{bafigure}[source=in Anlehnung an \captioncite{ferraiolo2001}, label=fig:rbac-grundmodell]{RBAC-Grundmodell: Benutzer, Rollen und Berechtigungen}
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, rounded corners=4pt, minimum width=2.5cm,
+                minimum height=0.9cm, text centered, font=\small\bfseries,
+                fill=gray!15},
+    arrow/.style={-{Stealth[scale=1.1]}, thick},
+    darrow/.style={-{Stealth[scale=1.1]}, thick, dashed},
+    lbl/.style={font=\footnotesize, align=center},
+]
+
+% Hauptknoten: horizontale Kette
+\node[box] (users)   at (0, 0)    {Benutzer};
+\node[box] (roles)   at (4.2, 0)  {Rollen};
+\node[box] (perms)   at (8.4, 0)  {Berechtigungen};
+\node[box] (objects) at (8.4, -2) {Objekte};
+\node[box] (sess)    at (0, -2)   {Sessions};
+
+% Rollenhierarchie-Knoten oben
+\node[box, fill=gray!30, minimum width=2.5cm] (hierarch) at (4.2, 1.8)
+    {Rollenhierarchie};
+
+% Pfeile
+\draw[arrow] (users) -- (roles)
+    node[midway, above, lbl] {Zuweisung};
+\draw[arrow] (roles) -- (perms)
+    node[midway, above, lbl] {beinhalten};
+\draw[arrow] (perms) -- (objects)
+    node[midway, right, lbl] {beziehen\\sich auf};
+\draw[arrow] (users) -- (sess)
+    node[midway, left, lbl] {aktivieren};
+\draw[arrow] (sess.east) -- (roles.south)
+    node[midway, below, lbl] {aktivieren\\Teilmenge};
+
+% Hierarchiepfeil (Rollenvererbung)
+\draw[darrow] (hierarch) -- (roles)
+    node[midway, right=2pt, lbl] {erbt\\Rechte};
+
+\end{tikzpicture}
+\end{bafigure}
 
 Im Kontext eines \gls{kpihub} hat diese Struktur eine unmittelbare Bedeutung: Verschiedene Stakeholder-Gruppen (Engineering-Teams, Management, externe Prüfer) sollen unterschiedliche Teilmengen von Kennzahlen sehen können.
 \gls{rbac} bietet die konzeptuelle Grundlage, um diese Sichtbarkeitsgrenzen systematisch zu modellieren.
@@ -183,6 +254,44 @@ Diese drei Defizitebenen sind nicht additiv, sondern konstituieren gemeinsam ein
 Zusammengenommen ergeben die drei Defizitebenen ein kohärentes Bild:
 Die Literatur behandelt \gls{bi}-Integration, rollenbasierte Zugriffskontrolle und \gls{mcdm}-Methoden als getrennte Themenfelder.
 Ein integriertes Entscheidungsmodell, das diese drei Dimensionen -- technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt und eine methodisch fundierte Auswahlentscheidung ermöglicht, existiert in der Literatur bisher nicht.
+
+\begin{bafigure}[label=fig:defizit-ebenen]{Drei Defizitebenen und die resultierende Forschungslücke}
+\begin{tikzpicture}[
+    layer/.style={draw, rectangle, rounded corners=3pt,
+                  minimum width=10cm, minimum height=1.0cm,
+                  text centered, font=\small\bfseries},
+    gap/.style={draw, rectangle, rounded corners=4pt,
+                minimum width=10cm, minimum height=1.0cm,
+                text centered, font=\small\bfseries,
+                fill=gray!40},
+    lbl/.style={font=\footnotesize, text width=3.6cm, align=left},
+    arrow/.style={-{Stealth[scale=1.2]}, thick},
+]
+
+% Drei Ebenen (von unten nach oben)
+\node[layer, fill=gray!10] (tech)  at (0, 0)
+    {Technisch: \gls{bi}-Fragmentierung (Larson 2016; Baars \& Kemper 2008)};
+\node[layer, fill=gray!20] (nutz)  at (0, 1.3)
+    {Nutzungsbezogen: \gls{ssbi}-Adoptionsbarrieren (Lennerholt 2018; Passlick 2020)};
+\node[layer, fill=gray!30] (sem)   at (0, 2.6)
+    {Semantisch: \gls{kpi}-Definitionsheterogenität (Giovannoni \& Maraghini 2013)};
+
+% Pfeil nach oben zur Lücke
+\draw[arrow] (0, 3.15) -- (0, 3.75);
+
+% Forschungslücke oben
+\node[gap] (gap) at (0, 4.25)
+    {Forschungslücke: kein integriertes Entscheidungsmodell};
+
+% Vertikale Klammerlinie links
+\draw[thick] (-5.3, -0.55) -- (-5.7, -0.55);
+\draw[thick] (-5.3,  3.15) -- (-5.7,  3.15);
+\draw[thick] (-5.7, -0.55) -- (-5.7,  3.15);
+\draw[thick] (-5.7,  1.30) -- (-5.9,  1.30);
+\node[lbl] at (-7.5, 1.30) {Drei nicht-additive Ebenen konstituieren gemeinsam die Lücke};
+
+\end{tikzpicture}
+\end{bafigure}
 
 Diese Forschungslücke motiviert die Wahl von \gls{dsr} als Forschungsmethodik: Wenn das vorliegende Problem ein fehlendes Artefakt ist, ist die Konstruktion eben dieses Artefakts die wissenschaftlich adäquate Antwort.
 Die methodische Begründung erfolgt im folgenden Kapitel.
