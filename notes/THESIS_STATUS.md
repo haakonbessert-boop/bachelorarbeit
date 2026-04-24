@@ -15,7 +15,7 @@ Orientierungsphase läuft. Janine-Sync am 24.04. durchgeführt — Gliederung un
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
-- [ ] KI-Genehmigungsdokument: Unterschriften ausstehend (Sachse-Unterschrift erhalten — Janine noch offen)
+- [x] KI-Genehmigungsdokument: vollständig unterschrieben (Sachse 21.04., Janine + Haakon 24.04.) — eingebunden in simple.tex
 - [x] KI-Nutzungsprotokoll: läuft
 
 ### Kapitelplanung
