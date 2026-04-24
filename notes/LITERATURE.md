@@ -14,11 +14,11 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ### Heinzl & Riedl (2024) — Wirtschaftsinformatik: Einführung und Grundlegung
 - **BibTeX-Key:** `heinzl2024`
-- **Quelle:** TODO — Verlag, Auflage, ISBN bitte ergänzen
+- **Quelle:** Springer Gabler, Berlin/Heidelberg, ISBN 978-3-662-67391-1
 - **Relevanz:** Hoch
 - **Kapitel:** 2 Grundlagen / 3 Methodik
 - **Key Findings:** Deutschsprachiges Lehrbuch, das die Wirtschaftsinformatik als gleichzeitig empirische Wissenschaft und Ingenieurwissenschaft einordnet und daraus eine charakteristische "Doppelgesichtigkeit" ableitet: verhaltensorientierte Forschung (Erkenntnisgewinnung, deskriptives Omega-Wissen) und gestaltungsorientierte Forschung (Erkenntnisverwertung, praskriptives Lambda-Wissen) stehen komplementar nebeneinander (Kap. 2 + 5). Kapitel 5 behandelt DSR im deutschsprachigen WI-Kontext als Problem-/Losungsparadigma, klassifiziert Artefakte in Konstrukte, Modelle, Methoden und Software-Instanziierungen (nach Hevner et al. 2004) und stellt den DSRM-Prozess (Peffers et al. 2007) als Referenzprozessmodell vor. Gegenuber den englischsprachigen Originalquellen liegt der Mehrwert in der didaktischen Integration von DSR in den Gesamtrahmen der WI-Wissenschaftstheorie (Seins- vs. Sollens-Wissenschaft, Kap. 2.6) sowie in der systematischen Darstellung empirischer und gestaltungsorientierter Methoden in einem gemeinsamen Methodenkanon (Kap. 4 + 5).
-- **Notizen:** Von Hänel explizit als Pflichtlektüre genannt. BibTeX-Eintrag unvollständig — Verlagsdetails nachtragen.
+- **Notizen:** Von Hänel explizit als Pflichtlektüre genannt. BibTeX-Eintrag vollständig (publisher, address, isbn vorhanden).
 
 ---
 
@@ -100,13 +100,36 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ## KPI / Enterprise BI
 
+*Noch keine Quellen eingetragen. Offene Literaturlücken für Kap. 2.1 und Kap. 2.5:*
+
+- **Kap. 2.1 (KPI-Management und Business Intelligence):** Benötigt werden Definitionen/Grundlagen zu KPI, BI, Dashboard-Konzepten. Suchbegriffe: "Key Performance Indicators definition", "Business Intelligence enterprise", "BI dashboard reporting". Mögliche Standardwerke: Eckerson (2010) "Performance Dashboards", Kimball & Ross "The Data Warehouse Toolkit".
+- **Kap. 2.5 (Defizite bestehender Ansätze):** Empirische Studien zu Integrationsproblemen in fragmentierten BI-Landschaften. Suchbegriffe: "enterprise BI fragmentation", "data silos reporting challenges".
+
 ---
 
 ## Integration / Föderierung / Single Pane of Glass
 
+*Noch keine Quellen eingetragen. Offene Literaturlücken für Kap. 2.2 und Kap. 6:*
+
+- **Kap. 2.2 (Enterprise-Systemintegration):** Integrationsparadigmen ETL, API, Embedding, Föderierung. Suchbegriffe: "enterprise application integration patterns", "data federation architecture", "ETL vs ELT", "API-led integration". Standardwerke: Hohpe & Woolf "Enterprise Integration Patterns" (2003).
+- **Kap. 6 (Lösungsraum):** Technische Beschreibungen der Kandidatenansätze (SAC-Embedding, BDC, Low-Code). SAP-Produktdokumentation als unveröffentlichte interne Quellen (unpublished-Typ).
+
 ---
 
 ## RBAC / Data Governance
+
+*Noch keine Quellen eingetragen. Offene Literaturlücken für Kap. 2.3:*
+
+- **Kap. 2.3 (Data Governance und Zugriffskontrolle):** RBAC-Grundlagen, Compliance-Anforderungen. Suchbegriffe: "role-based access control RBAC enterprise", "data governance BI", "GDPR data access control". Standardwerk: Ferraiolo et al. (2001) "Proposed NIST Standard for Role-Based Access Control".
+
+---
+
+## Entscheidungsmethoden
+
+*Noch keine Quellen eingetragen. Offene Literaturlücke für Kap. 2.4 und Kap. 7:*
+
+- **Kap. 2.4 (Entscheidungsmethoden im Software Engineering):** AHP (Analytic Hierarchy Process), Nutzwertanalyse, TOPSIS. Suchbegriffe: "Analytic Hierarchy Process Saaty", "multi-criteria decision making software selection", "Nutzwertanalyse Methodenvergleich". Schlüsselquelle: Saaty (1980) "The Analytic Hierarchy Process". Ergänzend: Hwang & Yoon (1981) für TOPSIS.
+- **Kap. 7 (Bewertungsmodell):** Anwendung von MCDA-Methoden für IT-Systemauswahl. Suchbegriffe: "MCDM software selection criteria", "AHP IT evaluation", "weighted scoring model enterprise software".
 
 ---
 
