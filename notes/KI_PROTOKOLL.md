@@ -70,6 +70,46 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit drei horizontalen Schichten (fill=gray!10/20/30), Stealth-Pfeil zur Forschungslücken-Box (fill=gray!40), manuelle Klammer aus Linien mit Label. Direkt im Kapiteltext nach der Synthese der drei Defizitebenen eingefügt. |
 | **Verwendung** | **Redigiert** — Grundstruktur und TikZ-Code aus KI; decorations-Bibliothek durch manuelle Linienkonstruktion ersetzt (library nicht in baarticle.cls geladen) |
 
+### KI-016 | 24. Apr 2026 | DEV | KPI-Hierarchie-Abbildung: TikZ → batable konvertiert
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.1 KPI-Management und Business Intelligence (Abbildung/Tabelle fig:kpi-hierarchie) |
+| **Prompt (Zusammenfassung)** | Ersetze die TikZ-Abbildung der KPI-Hierarchie (KI-013) durch eine `batable`-Umgebung mit `tabular`: vier Spalten (Eigenschaft + PI / KPI / KRI), Inhalte zeigen Merkmale wie Anzahl, Messgröße, Fokus und Zielgruppe je Typ. |
+| **Ergebnis (Zusammenfassung)** | `batable`-Tabelle mit vier Spalten (Eigenschaft / PI / KPI / KRI) ersetzt das TikZ-Stufendiagramm; Spaltenbreiten optimiert, Tabellenkopf fett, eigene Darstellung als Quelle. |
+| **Verwendung** | **Redigiert** — Tabellenstruktur und LaTeX-Code aus KI, Spalteneinteilung und Inhalte eigenständig vorgegeben und nachkorrigiert |
+
+### KI-017 | 24. Apr 2026 | VIS | RBAC-Abbildung redesignt: Pfeilführung korrigiert
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.3 Data Governance und Zugriffskontrolle (Abbildung fig:rbac-grundmodell) |
+| **Prompt (Zusammenfassung)** | Überarbeite die RBAC-TikZ-Abbildung (KI-014): Pfeil von Session-Knoten zu Rollen-Knoten soll von `east` abgehen und via `-|` Operator nach `south` des Rollen-Knotens führen; Label-Position anpassen. |
+| **Ergebnis (Zusammenfassung)** | Pfeilführung Session → Rollen-Knoten mit `east`-Anker und `-|`-Operator korrigiert; Label neu positioniert. Abbildung zeigt RBAC-Aktivierungsbeziehung nun visuell korrekt. |
+| **Verwendung** | **Redigiert** — TikZ-Änderung aus KI, Richtungsvorgabe und Qualitätskontrolle eigenständig |
+
+### KI-018 | 24. Apr 2026 | VIS | Defizit-Ebenen-Abbildung redesignt: Funnel-Layout
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 2.5 Defizite bestehender Ansätze (Abbildung fig:defizit-ebenen) |
+| **Prompt (Zusammenfassung)** | Redesigne die Drei-Ebenen-Defizit-Abbildung (KI-015): Drei Boxen nebeneinander (statt übereinander) mit Pfeilen, die über eine gemeinsame `\coordinate (merge)` in einen einzelnen Pfeil zur Forschungslücken-Box zusammenlaufen (Funnel-Struktur). Label und Klammernotation entfernen. Mehrere Iterationen zur Layout-Optimierung. |
+| **Ergebnis (Zusammenfassung)** | TikZ-Diagramm mit drei nebeneinander angeordneten Defizitboxen, je einem Stealth-Pfeil zur Merge-Koordinate, einem einzelnen Pfeil zur Forschungslücken-Box; Label und Klammernotation entfernt. Mehrere Iterationsrunden für Abstände und Koordinatenberechnung. |
+| **Verwendung** | **Redigiert** — Layout-Konzept und Merge-Koordinaten-Technik aus KI, Designentscheidung (Funnel statt Stack) eigenständig; Iterationen zur Qualitätssicherung |
+
+### KI-019 | 24. Apr 2026 | TXT | Kapitel 2 Qualitätslektorat: Übergänge und Abbildungseinbindung
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Kapitel 2 gesamt (2.1–2.5) |
+| **Prompt (Zusammenfassung)** | Lektor-Agent und Qualitätsprüfer-Agent prüfen Kapitel 2 vollständig: Absatzübergänge, Abbildungs- und Tabelleneinbindung (Voranstellungssätze, Nachbesprechungen), sprachliche Qualität, Konventionseinhaltung. Befunde umsetzen. |
+| **Ergebnis (Zusammenfassung)** | Absatzübergänge in 2.1–2.5 verbessert; Voranstellungssätze vor jeder Abbildung/Tabelle ergänzt; Nachbesprechungen (Bezug zum Fließtext) hinzugefügt; sprachliche Redundanzen und Wiederholungen reduziert. |
+| **Verwendung** | **Redigiert** — Befundliste und Formulierungsvorschläge aus KI, Endentscheidung über jede Änderung eigenständig |
+
 ---
 
 ## Kapitel 3 — Methodik
