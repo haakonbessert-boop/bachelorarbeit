@@ -308,3 +308,47 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 ---
 
 ## Weitere / Noch einzuordnen
+
+---
+
+## Dashboard / BI-Grundlagen
+
+### Few (2006) — Information Dashboard Design: The Effective Visual Communication of Data
+- **BibTeX-Key:** `few2006`
+- **Quelle:** O'Reilly Media, Sebastopol, CA, ISBN 978-0-596-10016-2
+- **Relevanz:** Hoch
+- **Kapitel:** 2.1 KPI-Management und Business Intelligence (Dashboard-Definition)
+- **Key Findings:** Kanonisches Werk zur Dashboard-Gestaltung: definiert Dashboards als "a visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance." Unterscheidet operative, analytische und strategische Dashboards. Begründet die Designprinzipien aus der Wahrnehmungspsychologie (Preattentive Attributes, Gestalt-Prinzipien). Mit über 2.500 Zitationen die meistgenutzte akademische Grundlagenquelle für Dashboard-Definitionen im BI-Kontext.
+- **Notizen:** Primärquelle für die Dashboard-Definition in Kap. 2.1. Ergänzt durch Eckerson (2010) für die Enterprise-Performance-Management-Perspektive. First Edition (2006, O'Reilly) — 2013 erschien eine erweiterte Auflage bei Analytics Press; diese Arbeit zitiert die Originalausgabe.
+
+### Eckerson (2010) — Performance Dashboards: Measuring, Monitoring, and Managing Your Business
+- **BibTeX-Key:** `eckerson2010`
+- **Quelle:** Wiley, Hoboken, NJ, 2. Auflage, ISBN 978-0-470-58983-0
+- **Relevanz:** Hoch
+- **Kapitel:** 2.1 KPI-Management und Business Intelligence (Dashboard-Definition, Enterprise BI)
+- **Key Findings:** Standardwerk zu Performance Dashboards aus Enterprise-BI-Perspektive. Unterscheidet drei Dashboard-Typen nach Nutzungskontext: Strategic Dashboards (BSC-Ausrichtung, Top-Management), Tactical Dashboards (mittleres Management, Projekt-/Prozess-KPIs), Operational Dashboards (operative Steuerung, Echtzeit-KPIs). Zeigt, wie Dashboards KPIs in Unternehmenshierarchien konsolidieren und damit die Basis für federated KPI-Architekturen bilden. Direkt relevant für den SAP Signavio KPI-Hub als übergreifende Performance-Dashboard-Infrastruktur.
+- **Notizen:** Ergänzt Few (2006) um die Enterprise-BI-Dimension. Während Few die Designperspektive abdeckt, liefert Eckerson den Performance-Management-Rahmen. Für Kap. 2.1 beide kombinieren: Few für die Definition, Eckerson für die Unternehmenskontext-Einordnung. 2. Auflage 2010 gegenüber 1. Auflage 2005 bevorzugt (aktualisierter Enterprise-BI-Kontext).
+
+---
+
+## RBAC / Data Governance (Erweiterung)
+
+### Ghazal, Malik, Qadeer, Raza et al. (2020) — Intelligent Role-Based Access Control Model Using Semantic Business Roles in Multi-Domain Environments
+- **BibTeX-Key:** `ghazal2020`
+- **Quelle:** IEEE Access, Vol. 8, S. 12253–12267, DOI: 10.1109/access.2020.2965333
+- **Relevanz:** Hoch
+- **Kapitel:** 2.3 Data Governance und Zugriffskontrolle
+- **Key Findings:** Entwickelt das I-RBAC-Framework (Intelligent RBAC), das semantische Geschäftsrollen für die Zugriffskontrolle in heterogenen Multi-Domain-Umgebungen nutzt. Löst das Problem der Rollen-Heterogenität zwischen Domänen durch semantische Rollenkorrespondenz: Rollen aus verschiedenen Systemen werden über Ontologien verknüpft, sodass domänenübergreifende Zugriffsrichtlinien konsistent durchgesetzt werden können. Mit 74 Zitationen (2020–2026) stärker als `alaqrabi2013` (IEEE SOSE-Konferenz, ca. 50 Zit.) und in einem höherwertigen Publikationsorgan (IEEE Access = peer-reviewed Journal, nicht Konferenzpaper).
+- **Notizen:** Ergänzt `alaqrabi2013` (BI-spezifischer Cloud-RBAC) und `ferraiolo2001` (RBAC-Standardmodell) für Kap. 2.3. Ghazal 2020 liefert die Brücke vom abstrakten RBAC-Modell zur heterogenen Multi-System-Realität eines KPI-Hubs: exakt der Anwendungsfall, bei dem verschiedene Datenquellensysteme (SAP Analytics Cloud, Signavio, externe BI-Tools) mit unterschiedlichen Rollenmodellen harmonisiert werden müssen. IEEE Access ist ein Open-Access-Journal des IEEE — peer-reviewed, kein DOI-Paywall. Entscheidung: `alaqrabi2013` bleibt im Literaturverzeichnis (BI-spezifisch), `ghazal2020` wird als stärkere Hauptquelle für RBAC-Harmonisierung in Kap. 2.3 eingesetzt.
+
+---
+
+## KPI / Performance Management (Erweiterung)
+
+### Giovannoni & Pia Maraghini (2013) — The Challenges of Integrated Performance Measurement Systems
+- **BibTeX-Key:** `giovannoni2013`
+- **Quelle:** Accounting, Auditing & Accountability Journal, Vol. 26, Nr. 6, S. 978–1008, DOI: 10.1108/aaaj-04-2013-1312
+- **Relevanz:** Hoch
+- **Kapitel:** 2.5 Defizite bestehender Ansätze (KPI-Heterogenität)
+- **Key Findings:** Untersucht die Herausforderungen bei der Integration von Performance-Measurement-Systemen in mittelgroßen Unternehmen. Zeigt, dass Inkonsistenzen zwischen den Zielvorgaben und KPI-Definitionen verschiedener Subsysteme die zentrale Ursache für Integrationsprobleme sind. Benennt explizit drei Quellen von Definitionsheterogenität: (1) unterschiedliche Methodik-Schulen (BSC vs. Tableau de Bord vs. KPI-Trees), (2) historisch gewachsene, inkompatible Messsysteme, (3) fehlende organisationale Governance. Direkt relevant als akademischer Beleg für KPI-Definitionsheterogenität als strukturelles Praxisproblem.
+- **Notizen:** Peer-reviewed, Emerald (Accounting, Auditing & Accountability Journal — anerkanntes Accounting/IS-adjacent Journal). Liefert für Kap. 2.5 den wissenschaftlichen Beleg, dass KPI-Inkonsistenz kein Einzelfall ist, sondern als strukturelles Problem in der Literatur dokumentiert ist. Ergänzt Larson & Chang (2016) und Baars & Kemper (2008) um die Performance-Management-Systems-Perspektive. Kombination: Larson/Baars zeigen BI-Fragmentierung technisch, Giovannoni zeigt sie auf der Ebene der Kennzahlendefinitionen. Kein IS-Top-Journal (kein MISQ/JMIS), aber peer-reviewed Emerald-Fachzeitschrift und inhaltlich direkt einschlägig.
