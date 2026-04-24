@@ -117,6 +117,23 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 - [x] Kapitel 3.3 Ergebniserwartung — Erster Entwurf (~320 Wörter, 23.04.)
 - [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
 
+### Literatur & Quellen — Recherche-Backlog (Stand 24.04.2026)
+
+> Ergebnis der Tiefenanalyse der Literaturlage. Prio 1 = Schreibblocker (ohne diese Quellen kann nicht geschrieben werden); Prio 2 = Vollständigkeit.
+
+**Prio 1 — Schreibblocker**
+
+- [ ] **Saaty (1990):** "How to make a decision: The analytic hierarchy process." — *European Journal of Operational Research* 48(1), S. 9–26. Beschaffen + in `references.bib` + `notes/LITERATURE.md` eintragen. → Kap. 2.4, 7.1
+- [ ] **Hwang & Yoon (1981):** "Multiple Attribute Decision Making." Springer. Beschaffen + eintragen. → Kap. 2.4, 7.1
+- [ ] **Pohl (2010):** "Requirements Engineering — Grundlagen, Prinzipien, Techniken." dpunkt.verlag. Beschaffen + eintragen. → Kap. 5 (deckt auch Nutzwertanalyse + MoSCoW ab)
+- [ ] **KPI/BI-Fragmentierung:** Wissenschaftliche Studie zur Problemrelevanz suchen (Hänel verlangt externe Belege, keine SAP-internen Dokumente). Suchbegriffe: "enterprise BI fragmentation", "KPI management enterprise information systems". → Kap. 1
+
+**Prio 2 — Vollständigkeit**
+
+- [ ] **Velasquez & Hester (2013):** "An Analysis of Multi-Criteria Decision Making Methods." MCDM-Methodenvergleich. Beschaffen + eintragen. → Kap. 2.4 (Methodenbegründung: warum AHP/TOPSIS?)
+- [ ] **Kimball & Ross (2013):** "The Data Warehouse Toolkit." 3rd ed., Wiley. Beschaffen + eintragen. → Kap. 2.2 Integrationsparadigmen (Hohpe & Woolf allein reicht nicht)
+- [ ] **RBAC im BI-Kontext:** Quelle zu datenquellübergreifender RBAC-Harmonisierung suchen. Suchbegriffe: "role-based access control business intelligence", "RBAC enterprise analytics". → Kap. 2 / 5
+
 ---
 
 ## Meeting-Struktur
