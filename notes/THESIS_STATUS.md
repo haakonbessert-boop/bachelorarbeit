@@ -92,7 +92,7 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 
 ### Zugänge
 
-- [ ] EA Store: **Product 360 Access** + **EVM neue Rolle** → Janine fragen (24.04.)
+- [x] EA Store: **Product 360 Access** beantragt (24.04.) — Wartezeit ~48h; **EVM neue Rolle** → noch offen
 
 ### Vorbereitung Janine-Sync (✓ Abgeschlossen 23.04.)
 
@@ -100,7 +100,7 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 - [x] One Voice Alignment Sheet ausgewertet → PPR-Schmerzpunkt, Metabase, Lea Reib dokumentiert
 - [x] Zielarchitektur konkretisiert → [KPI_HUB_KONZEPT.md](praxis/KPI_HUB_KONZEPT.md)
 - [x] Sync-Agenda fertig → MEETINGS.md 24.04. (Stand, Lösungsoptionen, 10 Blockiert-Fragen)
-- [ ] Offene Fragen → werden morgen im Sync geklärt (Pendo-Owner, Metabase-Freigabe, Gainsight/Grafana, Qualtrics-API, EA Store, Lea Reib, sachse_gliederung.docx-Freigabe)
+- [ ] Offene Fragen → wurden im Janine-Sync 24.04. besprochen; sachse_gliederung.docx: Janine prüft heute noch
 
 ### Nächste Woche — Oliver
 
@@ -173,6 +173,6 @@ Orientierungsphase läuft. Methodik-Kapitel im Aufbau: Kap. 3.1, 3.3 und 3.4 lie
 ### Vorbereitung Sachse (abgeschlossen 23.04.)
 
 - [x] sachse_gliederung.docx final durchgehen + Word-Formatierung prüfen → .docx neu generiert (python-docx statt pandoc)
-- [x] sachse_gliederung.docx an Janine geschickt (22.04.) — wartet auf Feedback
+- [x] sachse_gliederung.docx an Janine geschickt (22.04.) — Janine prüft heute (24.04.), Versand an Sachse danach
 - [x] Mail an Sachse geschrieben (22.04.) — wartet auf Janines Feedback zum .docx bevor Versand
 - [x] KI-Genehmigungsdokument (Sachse-Unterschrift) an Janine weitergeleitet
