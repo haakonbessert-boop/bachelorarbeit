@@ -1,23 +1,210 @@
 \section{Grundlagen und Stand der Forschung}
 
 \subsection{KPI-Management und Business Intelligence}
-% Begriffe KPI, BI, Dashboard, Reporting definieren und abgrenzen
-% Hänel: Alle Aussagen belegen — auch allgemein Bekanntes
+\label{sec:grundlagen-kpi-bi}
+
+Eine präzise Begriffsklärung ist die Voraussetzung für eine konsistente Anforderungsanalyse und Methodenwahl in den folgenden Kapiteln.
+Daher werden in diesem Abschnitt die Konzepte \gls{kpi}, \gls{bi} und Dashboard definiert und voneinander abgegrenzt.
+
+\subsubsection*{KPI, KRI und Performance Indicator}
+
+Der Begriff \gls{kpi} wird in der Praxis häufig unscharf verwendet und bezeichnet dort oft jede beliebige Kennzahl, die irgendeinen Aspekt der Unternehmensperformance misst.
+Wissenschaftlich differenzierter ist das Extended-\gls{pms}-Framework, das \glspl{kpi} im Zusammenhang mit Zielen, kritischen Erfolgsfaktoren und Leistungsmaßen einordnet.\vglcite[263\,f.]{ferreirotley2009}
+Demnach sind \glspl{kpi} Messgrößen, die direkt auf die Erreichung strategisch relevanter Ziele verweisen und ein unmittelbares Handlungssignal erzeugen -- sie beantworten die Frage: \textit{Was müssen wir diese Woche tun, um die Zielvorgabe zu erreichen?}\vglcite[8]{parmenter2015}
+
+Von \glspl{kpi} sind \glspl{kri} und einfache \textit{Performance Indicators} (\glspl{pi}) abzugrenzen.\vglcite[2\,ff.]{parmenter2015}
+Ein \gls{kri} fasst das Ergebnis mehrerer Maßnahmen zusammen und zeigt, ob die generelle Richtung stimmt -- typischerweise in einem monatlichen oder quartalsweisen Rhythmus.
+Ein \gls{pi} wiederum informiert über den Fortschritt einer Maßnahme, ohne jedoch handlungsanleitend zu sein.
+\glspl{kpi} hingegen sind nicht-finanziell, tagesaktuell, vom Topmanagement beobachtet und aktivierend: Ein Mitarbeitender, der einen negativen \gls{kpi}-Ausschlag sieht, weiß, welche konkrete Aktion zu ergreifen ist.\vglcite[9]{parmenter2015}
+Diese Unterscheidung hat direkte Konsequenzen für die Gestaltung eines \gls{kpihub}: Ein System, das nur \glspl{kri} aggregiert, genügt den Steuerungsansprüchen nicht.
+
+\subsubsection*{Dashboard-Definition und Typen}
+
+Dashboards sind „a visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance."\bacite[26]{few2006}
+Diese Definition betont zwei Merkmale: die visuelle Verdichtung auf das Wesentliche und die Einzelbildschirm-Konsolidierung.
+Beides unterscheidet Dashboards von klassischen Berichten oder Analysetools, die entweder mehr Interaktionstiefe oder mehr Seitenumfang erfordern.
+
+Für die Einordnung des \gls{kpihub} ist die Dreifachtypologie nach strategischen, taktischen und operativen Dashboards maßgeblich.\vglcite[4\,ff.]{eckerson2010}
+Strategische Dashboards unterstützen das Topmanagement bei der Überwachung langfristiger Ziele; taktische Dashboards dienen mittleren Führungsebenen zur Steuerung von Projekten und Prozessen; operative Dashboards ermöglichen Echtzeit-Überwachung und unmittelbare Eingriffsmöglichkeiten.
+Ein \gls{kpihub} im Kontext von SAP Signavio P\&E deckt primär den operativen und taktischen Bereich ab: Engineering-Teams benötigen aktuelle Kennzahlen zu Deployment-Frequenz, Incident-Response und Produktnutzung -- nicht quartalsweise Balanced-Scorecard-Berichte.
+
+\subsubsection*{Business Intelligence im Enterprise-Kontext}
+
+\gls{bi} bezeichnet die technologischen und organisatorischen Fähigkeiten, die eine Organisation benötigt, um Daten in entscheidungsrelevante Informationen umzuwandeln.\vglcite[700]{larson2016}
+Im Enterprise-Kontext ist \gls{bi} keine homogene Infrastruktur, sondern typischerweise eine gewachsene Koexistenz heterogener Systeme: \gls{bi}-Plattformen, Analysetools und Reporting-Lösungen wurden in verschiedenen Unternehmensbereichen zu unterschiedlichen Zeitpunkten eingeführt und sind selten vollständig integriert.\vglcite[700\,f.]{larson2016}
+Diese \textit{BI-Fragmentierung} erschwert eine einheitliche Datenbasis und erzwingt manuelle Datenzusammenführung durch Endanwender, was Fehlerrisiken erhöht und den analytischen Aufwand vervielfacht.
+
+\subsubsection*{Self-Service BI}
+
+\gls{ssbi} ist ein Paradigma, das Fachanwendern ohne spezialisierte \gls{it}-Kenntnisse ermöglicht, eigenständig Berichte und Analysen zu erstellen.\vglcite[1]{michalczyk2020}
+Ziel ist die Demokratisierung des Datenzugriffs: Statt auf zentrale \gls{bi}-Teams warten zu müssen, können Fachabteilungen adhoc auf Daten zugreifen und eigene Auswertungen produzieren.\vglcite[1]{michalczyk2020}
+In der Praxis stößt \gls{ssbi} jedoch auf strukturelle Hindernisse.
+In der Literatur werden drei Kategorien von Implementierungsproblemen unterschieden: datenbezogene Hindernisse (mangelnde Datenqualität und -zugänglichkeit), benutzerbezogene Hindernisse (fehlende Datenkompetenz, Akzeptanzprobleme) sowie organisationale Hindernisse (fehlendes Change Management, unklare Governance).\vglcite[3\,ff.]{lennerholt2018}
+Hinzu kommt ein empirisch belegtes Akzeptanzparadox: Eine starke organisationale Betonung von Datenqualitätskontrollen korreliert signifikant negativ mit der Nutzungsabsicht der Anwender.\vglcite[18\,f.]{passlick2020}
+Dieses Paradox zeigt, dass technische Lösungen allein für eine erfolgreiche \gls{ssbi}-Implementierung nicht ausreichen.
+
+\subsubsection*{Einordnung des KPI-Hubs}
+
+Ein \gls{kpihub} ist konzeptuell mehr als ein weiteres Dashboard.
+Er verbindet die operativ-taktische Dashboard-Logik\vglcite[4\,ff.]{eckerson2010} mit dem Föderierungsanspruch einer heterogenen \gls{bi}-Landschaft:\vglcite[700\,f.]{larson2016} Anstatt alle Daten in ein zentrales System zu migrieren, aggregiert ein \gls{kpihub} Kennzahlen aus bestehenden Quellsystemen und stellt sie als kohärente Sicht bereit.
+Welche Integrationsparadigmen diesen Föderierungsansatz technisch unterstützen, zeigt der folgende Abschnitt -- zunächst aber werden die Grundlagen des Datenzugriffs und der Zugriffskontrolle geklärt.
+
+% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Enterprise-Systemintegration}
 % Integrationsparadigmen: ETL, API, Embedding, Föderation
 % Bestehende Ansätze und deren Defizite (Literatur!)
+% [OFFENE ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma: Option B oder C bevorzugt
+% Abschnitt 2.2 wird separat geschrieben — Stub bleibt erhalten
+
+% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Data Governance und Zugriffskontrolle}
-% RBAC, rollenbasierte Datensichtbarkeit
-% Compliance-Anforderungen im Enterprise-Kontext
+\label{sec:grundlagen-governance}
+
+Datenintegration im Enterprise-Kontext ist nicht nur eine technische, sondern auch eine organisatorische Aufgabe.
+Jedes System, das Daten aus mehreren Quellen zusammenführt, muss sicherstellen, dass Zugriffsrechte konsistent durchgesetzt werden und regulatorische Anforderungen eingehalten werden.
+Dieser Abschnitt legt die konzeptionellen Grundlagen für \gls{datagovernance} und rollenbasierte Zugriffskontrolle, die in der Anforderungsanalyse (Kapitel~5) operationalisiert werden.
+
+\subsubsection*{Data Governance als organisatorischer Rahmen}
+
+\gls{datagovernance} bezeichnet das organisatorische Rahmenwerk aus Verantwortlichkeiten, Regeln und Prozessen, das den Umgang mit Daten innerhalb einer Organisation steuert.\vglcite[65]{alhassan2016}
+Zu den zentralen Governance-Aktivitäten zählen: Datenpolitik (wer darf was mit welchen Daten tun), Datenqualitätsmanagement, Metadatenverwaltung, Datensicherheit und Zugriffskontrolle sowie Compliance-Überwachung.\vglcite[66\,ff.]{alhassan2016}
+In der Praxis wird \gls{datagovernance} häufig fragmentiert und dezentral umgesetzt: Einzelne Fachabteilungen entwickeln eigene Regeln, ohne dass eine übergreifende Koordination existiert.\vglcite[70]{alhassan2016}
+Für ein integrierendes System wie einen \gls{kpihub} ist diese Dezentralität ein strukturelles Problem: Ohne explizite Governance-Schicht können widersprüchliche Zugriffsregeln aus verschiedenen Quellsystemen zu inkonsistenter Datensichtbarkeit führen.
+
+\subsubsection*{RBAC als Referenzmodell}
+
+Das \gls{rbac}-Referenzmodell nach dem NIST-Standard definiert vier konzeptuelle Komponenten: Benutzer (\textit{users}), Rollen (\textit{roles}), Berechtigungen (\textit{permissions}) und Sessions.\vglcite[226\,f.]{ferraiolo2001}
+Berechtigungen werden nicht direkt Benutzern zugewiesen, sondern Rollen; Benutzer erhalten Berechtigungen ausschließlich über die Zuweisung zu Rollen.\vglcite[226]{ferraiolo2001}
+Das Modell unterscheidet drei Ausbaustufen: Core \gls{rbac} (die beschriebene Grundstruktur), Hierarchical \gls{rbac} (Rollenvererbung über Rollenhierarchien) und Separation-of-Duty-Erweiterungen (statische und dynamische Inkompatibilitätsregeln zwischen Rollen).\vglcite[228\,ff.]{ferraiolo2001}
+
+Im Kontext eines \gls{kpihub} hat diese Struktur eine unmittelbare Bedeutung: Verschiedene Stakeholder-Gruppen (Engineering-Teams, Management, externe Prüfer) sollen unterschiedliche Teilmengen von Kennzahlen sehen können.
+\gls{rbac} bietet die konzeptuelle Grundlage, um diese Sichtbarkeitsgrenzen systematisch zu modellieren.
+
+\subsubsection*{RBAC in BI-Cloud-Umgebungen}
+
+Die Übertragung des \gls{rbac}-Modells auf \gls{bi}-Systeme in Cloud-Infrastrukturen erfordert zusätzliche Überlegungen.\vglcite[138]{alaqrabi2013}
+Die Zugriffskontrolle muss auf mehreren Ebenen greifen: auf der Netzwerkebene, auf der Datenmarktebene und auf der Ebene einzelner Datensätze.\vglcite[139\,f.]{alaqrabi2013}
+Insbesondere bei Systemen, die Daten aus mehreren Quellen aggregieren, entsteht die Herausforderung, dass jede Quelle ihr eigenes Rollenmodell mitbringt.
+Ein \gls{kpihub}, der Daten aus \gls{sac}, Jira und ServiceNow zusammenführt, steht vor genau dieser Situation.
+
+\subsubsection*{RBAC-Harmonisierung in heterogenen Systemen}
+
+Das Problem der Rollen-Heterogenität in Multi-Domain-Umgebungen ist in der Literatur dokumentiert.\vglcite[12254]{ghazal2020}
+Das I-RBAC-Framework harmonisiert semantische Geschäftsrollen über Systemgrenzen hinweg: Rollen aus verschiedenen Domänen werden über semantische Korrespondenzregeln verknüpft, sodass übergreifende Zugriffsrichtlinien konsistent durchgesetzt werden können.\vglcite[12255\,f.]{ghazal2020}
+Dieser Ansatz ist direkt auf den \gls{kpihub}-Kontext übertragbar: Wenn ein Nutzer in \gls{sac} die Rolle \textit{Analyst} und in Jira die Rolle \textit{Viewer} hat, muss der \gls{kpihub} entscheiden, welche Datensichtbarkeit im integrierten System gilt.
+Ohne eine explizite Harmonisierungsschicht entstehen entweder zu restriktive oder zu permissive Zugriffsregeln.
+
+\subsubsection*{DSGVO als regulatorische Rahmenbedingung}
+
+Neben der technischen Zugriffskontrolle unterliegen Enterprise-\gls{bi}-Systeme regulatorischen Anforderungen.
+Die \gls{dsgvo} verpflichtet Unternehmen zu Zweckbindung, Datensparsamkeit und Rechenschaftspflicht bei der Verarbeitung personenbezogener Daten.\vglcite[136\,ff.]{tikkinenpiri2018}
+Besonders relevant ist das Prinzip \textit{Privacy by Design}: technische und organisatorische Maßnahmen zum Datenschutz müssen von Beginn an in die Systemarchitektur integriert werden, nicht nachträglich hinzugefügt.\vglcite[143]{tikkinenpiri2018}
+Für den \gls{kpihub} bedeutet dies: Kennzahlen mit Personenbezug (etwa Nutzeraktivitätsmetriken auf Einzelnutzerebene) erfordern gesonderte Zugriffsregelungen, die bereits in der Architekturentscheidung berücksichtigt werden müssen.
+
+Welche formalen Methoden geeignet sind, um die beschriebenen Governance- und Zugriffskontrollanforderungen zusammen mit technischen Kriterien in eine systematische Integrationsauswahl einzubeziehen, zeigt der folgende Abschnitt.
+
+% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Entscheidungsmethoden im Software Engineering}
-% Sachse (21.04.): Methoden der Entscheidungsfindung aus Software Requirement Engineering
-% Nutzwertanalyse (gewichtetes Scoring), AHP (Analytic Hierarchy Process), TOPSIS
-% Vergleich der Verfahren: Wann eignet sich welches? Stärken/Schwächen
-% Theoretische Grundlage für die Methodenwahl in Kap. 7
+\label{sec:grundlagen-mcdm}
+
+Die Wahl eines Integrationsansatzes für den \gls{kpihub} ist kein binäres Ja-Nein-Problem, sondern eine Mehrkriterien-Entscheidung: Technische Machbarkeit, Governance-Kompatibilität, Entwicklungsaufwand und strategische Passung müssen gleichzeitig bewertet werden.
+Dieser Abschnitt stellt die methodischen Grundlagen für solche Entscheidungsprobleme vor und legt die theoretische Basis für die Methodenwahl in Kapitel~7.
+
+\subsubsection*{Anforderungspriorisierung als RE-Methode}
+
+Im Bereich des Requirements Engineering ist die Nutzwertanalyse eine etablierte Methode zur Priorisierung konkurrierender Anforderungen.\vglcite[XX]{pohl2010}
+Das Grundprinzip besteht darin, Optionen anhand gewichteter Kriterien mit Punktwerten zu bewerten und einen Gesamtnutzwert je Option zu berechnen.\vglcite[XX]{pohl2010}
+Die Nutzwertanalyse ist das einfachste Verfahren der Mehrkriterienentscheidung: transparent, intuitiv und ohne besondere mathematische Vorkenntnisse anwendbar.
+Ihr zentraler Nachteil liegt in der Subjektivität der Gewichtungsvergabe -- es gibt kein formales Verfahren, das die Konsistenz der Gewichtungen überprüft.
+Komplexere Methoden wie \gls{ahp} und \gls{topsis} adressieren diesen Mangel.
+
+\subsubsection*{Multi-Criteria Decision Making -- Überblick}
+
+\gls{mcdm} bezeichnet eine Klasse von Entscheidungsverfahren, die mehrere, teils konfliktäre Kriterien systematisch in die Auswahl unter konkurrierenden Alternativen einbeziehen.\vglcite[56]{velasquez2013}
+In der IS-Forschung werden \gls{mcdm}-Methoden insbesondere für Software-Auswahlprobleme eingesetzt, bei denen eine Vielzahl funktionaler und nicht-funktionaler Kriterien gegeneinander abgewogen werden müssen.\vglcite[56\,f.]{velasquez2013}
+Als wichtigste Auswahlkriterien für eine \gls{mcdm}-Methode werden identifiziert: Datenbedarf, Transparenz der Bewertungslogik, Handhabbarkeit bei begrenzter Datenlage sowie der Rechenaufwand.\vglcite[61\,ff.]{velasquez2013}
+Für den \gls{kpihub}-Kontext sind \gls{ahp} und \gls{topsis} die am besten geeigneten Verfahren, weil sie geringe Datenanforderungen mit hoher Transparenz verbinden -- eine endgültige Methodenbegründung erfolgt in Kapitel~7.1.
+
+\subsubsection*{AHP -- Analytic Hierarchy Process}
+
+Der \gls{ahp} strukturiert ein Entscheidungsproblem als Hierarchie: an der Spitze steht das Ziel, darunter die Kriterien, auf der untersten Ebene die Alternativen.\vglcite[9\,f.]{saaty1990}
+Die Gewichtung der Kriterien erfolgt durch paarweise Vergleiche: Entscheidungsträger beurteilen für jedes Kriterienpaar, welches Kriterium wichtiger ist und in welchem Ausmaß.\vglcite[9\,f.]{saaty1990}
+Aus den Vergleichsmatrizen werden Prioritätsvektoren abgeleitet, die die relativen Gewichtungen der Kriterien repräsentieren.
+Ein entscheidender Vorteil des \gls{ahp} gegenüber der einfachen Nutzwertanalyse ist die Konsistenzprüfung: Der \textit{Consistency Ratio} misst, wie widerspruchsfrei die paarweisen Urteile des Entscheidungsträgers sind.\vglcite[15\,f.]{saaty1990}
+Ein Wert oberhalb von 0,10 weist auf inkonsistente Urteile hin und gibt dem Entscheidungsträger ein explizites Signal zur Revision seiner Einschätzungen -- dieses Rückkopplungsmerkmal fehlt der einfachen Nutzwertanalyse.
+
+\subsubsection*{TOPSIS}
+
+\gls{topsis} (Technique for Order of Preference by Similarity to Ideal Solution) bewertet Alternativen nach ihrer geometrischen Nähe zur positiven Ideallösung und ihrer Distanz zur negativen Anti-Ideallösung.\vglcite[58\,f.]{hwangyoon1981}
+Während der \gls{ahp} auf der Ebene der Kriteriengewichtung ansetzt, operiert \gls{topsis} auf der Ebene der Alternativenbewertung: Gegeben eine normierte Entscheidungsmatrix berechnet \gls{topsis} für jede Alternative einen Nähe-Koeffizienten, der das finale Ranking erzeugt.\vglcite[59\,ff.]{hwangyoon1981}
+Die Kombination beider Methoden -- \gls{ahp} für die Kriteriengewichtung, \gls{topsis} für das Alternativenranking -- ist in der Literatur als robuster Ansatz für IT-Software-Auswahlprobleme etabliert: dies wurde sowohl an der Auswahl von \gls{et}-Software\vglcite[2]{hanine2016} als auch an der Auswahl elektronischer Krankenhausinformationssysteme bestätigt.\vglcite[392\,f.]{zaidan2015}
+Beide Anwendungsfälle sind dem vorliegenden Problem -- Auswahl eines \gls{kpihub}-Integrationsansatzes aus mehreren technischen Kandidaten nach gewichteten Kriterien -- strukturell analog.
+
+\subsubsection*{Methodenvergleich und Eignungseinschätzung}
+
+Tabelle~\ref{tab:mcdm-vergleich} fasst die drei behandelten Verfahren nach ihren entscheidungsrelevanten Eigenschaften zusammen.
+
+\begin{batable}[label=tab:mcdm-vergleich]{Vergleich der MCDM-Verfahren}
+\begin{tabular}{@{}lp{3.2cm}p{3.2cm}p{3.2cm}@{}}
+\toprule
+\textbf{Eigenschaft} & \textbf{Nutzwertanalyse} & \textbf{\gls{ahp}} & \textbf{\gls{topsis}} \\
+\midrule
+Konsistenzprüfung & Nein & Ja (CR) & Nein \\
+Datenbedarf & Gering & Mittel & Mittel \\
+Transparenz & Hoch & Hoch & Mittel \\
+Rechenaufwand & Niedrig & Mittel & Mittel \\
+Kriteriengewichtung & Direkt & Paarweise & Extern (z.\,B. AHP) \\
+Alternativenranking & Punktwert & Prioritätsvektor & Nähe-Koeffizient \\
+\bottomrule
+\end{tabular}
+\end{batable}
+
+Für das vorliegende Entscheidungsproblem -- fünf bis sieben Integrationsoptionen, mehrere gewichtete Kriterien, \gls{it}-Projektkontext -- empfiehlt sich eine hybride Anwendung: \gls{ahp} zur nachprüfbaren Kriteriengewichtung, \gls{topsis} zur Alternativenbewertung.
+Die Nutzwertanalyse bleibt als Plausibilitätskontrolle nutzbar.
+Die endgültige Methodenwahl und -begründung erfolgt in Kapitel~7.1.
+
+Bevor diese Methoden angewendet werden können, sind zunächst die Defizite der bestehenden Ansätze zu systematisieren -- denn sie definieren, welche Kriterien im Bewertungsmodell überhaupt relevant sind.
+
+% ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Defizite bestehender Ansätze}
-% Hänel: Defizite fundiert herausarbeiten → Literatur (keine internen Docs, keine Blogs)
-% Warum lösen bestehende Ansätze das Problem nicht vollständig?
+\label{sec:grundlagen-defizite}
+
+Die vorangegangenen Abschnitte haben theoretische Grundlagen etabliert.
+Nun ist zu fragen, ob und warum die bestehenden Ansätze -- fragmentierte \gls{bi}-Landschaften, \gls{ssbi}-Implementierungen, RBAC-Modelle -- das Problem der heterogenen \gls{kpi}-Landschaft bei SAP Signavio P\&E lösen.
+Die Antwort dieser Untersuchung lautet: Sie tun es nicht vollständig -- und zwar aus drei strukturellen Gründen, die in der Literatur dokumentiert sind.
+
+\subsubsection*{BI-Fragmentierung als strukturelles Problem}
+
+Das erste Defizit ist technisch: \gls{bi}-Landschaften in Unternehmen sind strukturell fragmentiert.
+In einem aktuellen Review wird gezeigt, dass Unternehmen zunehmend mit einer heterogenen Toollandschaft konfrontiert sind, in der unterschiedliche \gls{bi}-Plattformen nebeneinander existieren, ohne vollständig integriert zu sein.\vglcite[700\,f.]{larson2016}
+Die Konsolidierung heterogener \gls{bi}-Infrastrukturen wird als zentrale ungelöste Herausforderung identifiziert.\vglcite[707]{larson2016}
+Diese Beobachtung wird durch ein integriertes \gls{bi}-Framework konkretisiert: Die parallele Koexistenz separater \gls{bi}-Subsysteme -- operative, analytische und unstrukturierte Datenquellen -- ist ein fundamentales Strukturproblem bestehender Enterprise-\gls{bi}-Architekturen.\vglcite[133]{baars2008}
+Ein integriertes Framework, das diese Subsysteme unter einer einheitlichen Sicht zusammenführt, wird zwar konzeptuell beschrieben, aber die praktische Implementierung bleibt eine offene Herausforderung.\vglcite[134]{baars2008}
+
+\subsubsection*{SSBI-Adoptionsbarrieren}
+
+Das zweite Defizit betrifft die Nutzungsebene: \gls{ssbi} als Lösung für die Demokratisierung des Datenzugriffs scheitert in der Praxis an strukturellen Implementierungshürden.
+Datenbezogene, benutzerbezogene und organisationale Hindernisse erschweren die erfolgreiche Einführung von \gls{ssbi} systematisch.\vglcite[4\,ff.]{lennerholt2018}
+Besonders problematisch sind fehlende Datenkompetenz bei Endanwendern, unklare Governance-Strukturen und mangelndes Change Management -- Faktoren, die durch technische Lösungen allein nicht adressiert werden können.\vglcite[6]{lennerholt2018}
+Empirische Befunde belegen einen paradoxen Widerspruch: Systeme, bei denen organisationale Datenqualitätskontrolle stark betont wird, erzeugen eine geringere Nutzungsabsicht bei den Anwendern.\vglcite[18]{passlick2020}
+Dies deutet darauf hin, dass strenge Governance-Mechanismen, die technisch notwendig sind, subjektiv als Nutzungshemmnis wahrgenommen werden -- ein Dilemma, das bestehende \gls{ssbi}-Ansätze nicht auflösen.
+
+\subsubsection*{KPI-Definitionsheterogenität}
+
+Das dritte Defizit ist semantischer Natur: Selbst wenn technische Integration gelingt, sind die zugrundeliegenden \gls{kpi}-Definitionen oft inkonsistent.
+In der Literatur wird gezeigt, dass Integrationsprobleme bei Performance-Measurement-Systemen häufig nicht technischer, sondern definitorischer Natur sind.\vglcite[980]{giovannoni2013}
+Drei Quellen der Definitionsheterogenität werden identifiziert: unterschiedliche Methodik-Schulen (\textit{Balanced Scorecard}, \textit{Tableau de Bord}, \gls{kpi}-Trees), historisch gewachsene inkompatible Messsysteme sowie fehlende organisationale Governance.\vglcite[985\,ff.]{giovannoni2013}
+Diese Heterogenität ist nicht durch technische Konsolidierung zu beseitigen -- sie erfordert eine explizite semantische Harmonisierungsentscheidung, bevor Integrationstechnologien eingesetzt werden können.
+
+\subsubsection*{Zwischenfazit: Die Forschungslücke}
+
+Zusammengenommen ergeben die drei Defizitebenen ein kohärentes Bild:
+Die Literatur behandelt \gls{bi}-Integration, rollenbasierte Zugriffskontrolle und \gls{mcdm}-Methoden als getrennte Themenfelder.
+Ein integriertes Entscheidungsmodell, das diese drei Dimensionen -- technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt und eine methodisch fundierte Auswahlentscheidung ermöglicht, existiert in der Literatur bisher nicht.
+
+Diese Forschungslücke motiviert die Wahl von \gls{dsr} als Forschungsmethodik: Wenn das vorliegende Problem ein fehlendes Artefakt ist, ist die Konstruktion eben dieses Artefakts die wissenschaftlich adäquate Antwort.
+Die methodische Begründung erfolgt im folgenden Kapitel.
