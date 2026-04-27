@@ -18,8 +18,7 @@ simple.synctex.gz
 simple.toc
 simple.blg
 
-# Standalone document build artifacts (ki-genehmigung, sachse_gliederung, etc.)
-ki-genehmigung.pdf
+# Standalone document build artifacts
 sachse_gliederung.pdf
 
 # Chapter build artifacts
