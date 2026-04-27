@@ -287,7 +287,7 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 ---
 
-## 28. April 2026 — Meeting Oliver Timm (Einladung raus)
+## 28. April 2026 — Follow-up Oliver Timm
 
 **Kontext:** Follow-up nach Check-in 22.04. Einladung am 27.04. verschickt.
 
@@ -295,6 +295,18 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 1. Systemlandschaft konkretisieren — Ist-Quellsysteme + Schwachstellen (→ Kap. 4)
 2. Tool-Diskussion — Metabase SAP-Freigabe, Alternativtools (→ Kap. 6)
 3. Thesis-Input — Olivers Perspektive als Stakeholder auf das Gesamtkonzept
+
+**Agenda:**
+
+1. **Kurzer Stand** — seit unserem letzten Gespräch habe ich das Mural komplett durchgearbeitet, die Gliederung wurde von Prof. Sachse genehmigt, und das Schreiben hat begonnen. Ich wollte dich kurz auf den aktuellen Stand bringen, bevor wir in die offenen Punkte gehen.
+
+2. **DORA-Metriken** — beim Durcharbeiten des Murals ist mir aufgefallen, dass Deployment Frequency, Lead Time und ähnliche Engineering-Metriken nirgendwo als Dashboard auftauchen. Gibt es da bei Signavio irgendetwas, oder ist das tatsächlich eine Lücke?
+
+3. **Security Dashboard** — im Mural fehlt der Hauptlink. Hast du da noch einen direkten Zugang, den ich ergänzen kann?
+
+4. **Meilenstein 15. Mai: Tool-Übersicht fertig** — das war unser gemeinsames Ziel aus dem letzten Meeting. Ich bin guter Dinge, das zu schaffen — aber ist das aus deiner Sicht noch realistisch? Gibt es Unterordner (Jira Dashboards, Product Usage Dashboards) im Mural, die ich unbedingt noch anschauen sollte?
+
+5. **Monatliche Reports** — wer ist bei euch eigentlich involviert, wenn die monatlichen Review-Reports erstellt werden? Ich frage, weil ich für die Anforderungsanalyse verstehen möchte, wer die Hauptleser und Ersteller dieser Reports sind.
 
 **Notizen:**
 

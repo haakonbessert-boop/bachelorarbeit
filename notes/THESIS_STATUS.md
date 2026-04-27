@@ -119,10 +119,13 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 
 ### Nächste Woche — Oliver
 
+→ Agenda vorbereitet: siehe [MEETINGS.md — 28. April 2026 Follow-up Oliver Timm](MEETINGS.md)
+
+- [ ] Meeting Oliver — 28.04.2026 (geplant)
 - [ ] **DORA-Metriken:** Gibt es ein Dashboard dafür? (Deployment Frequency, Lead Time, CFR, MTTR) — größte KPI-Lücke
 - [ ] **Security Dashboard Hauptlink** fehlt im Mural — wo ist er?
 - [ ] **SAP_Signavio_Dashboards Unterordner** (Jira Dashboards, Product Usage Dashboards) mit Oliver durchgehen
-- [ ] Meeting Oliver — 28.04.2026 (geplant)
+- [ ] **Monatliche Reports:** Wer ist involviert? (offen seit 22.04.)
 
 ### Schreiben (parallel)
 
