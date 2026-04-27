@@ -148,6 +148,14 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ## Integration / Föderierung / Single Pane of Glass
 
+### Nijkamp & Oberhofer (2009) — Embedded Analytics in Front Office Applications
+- **BibTeX-Key:** `nijkamp2009`
+- **Quelle:** BTW 2009 (13. Fachtagung GI-Fachbereich DBIS), LNI P-144, S. 449–459, GI, Münster. URL: https://dl.gi.de/handle/20.500.12116/20465
+- **Relevanz:** Hoch
+- **Kapitel:** 2.2 Enterprise-Systemintegration (Integrationsparadigmen)
+- **Key Findings:** Peer-reviewed GI-Konferenzbeitrag (Regular Research Paper), der "Embedded Analytics (EA)" als eigenständiges Paradigma einführt und definiert: Analytische Einblicke werden kontextuell in die Benutzeroberfläche einer Front-Office-Applikation eingebettet und stehen dem Nutzer on-demand zur Verfügung, ohne einen Systemwechsel zu einer separaten BI-Plattform. Die Implementierung erfolgt über kontextsensitive Lookup-Services, die per UIMA-Technologie und Web-2.0-Techniken dynamisch an die Applikationsoberfläche gebunden werden. Demonstration am Beispiel SAP NetWeaver CRM.
+- **Notizen:** Akademisch zitierfähige Primärquelle für "Embedded Analytics" als Integrationsparadigma. Die BTW-Konferenz (GI-Fachbereich DBIS) ist die zentrale deutschsprachige Datenbanktagung mit Peer-Review-Verfahren; LNI ist die offizielle GI-Schriftenreihe (PISSN 1617-5468, ISBN 978-3-88579-238-3). 13 Zitationen (Google Scholar, Apr. 2026). Liefert für Kap. 2.2 die wissenschaftliche Grundlage für das vierte Integrationsparadigma "Embedding" neben ETL (kimball2013), API (fielding2000) und Föderation (dehghani2022).
+
 ### Fielding (2000) — Architectural Styles and the Design of Network-based Software Architectures
 - **BibTeX-Key:** `fielding2000`
 - **Quelle:** Dissertation, University of California, Irvine, URL: https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
