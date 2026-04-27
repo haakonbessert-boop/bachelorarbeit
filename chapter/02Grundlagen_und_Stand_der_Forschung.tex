@@ -65,10 +65,75 @@ Welche Integrationsparadigmen diesen Föderierungsansatz technisch unterstützen
 % ─────────────────────────────────────────────────────────────────────────────
 
 \subsection{Enterprise-Systemintegration}
-% Integrationsparadigmen: ETL, API, Embedding, Föderation
-% Bestehende Ansätze und deren Defizite (Literatur!)
-% [OFFENE ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma: Option B oder C bevorzugt
-% Abschnitt 2.2 wird separat geschrieben — Stub bleibt erhalten
+\label{sec:grundlagen-integration}
+
+Die technische Realisierung eines \gls{kpihub} setzt voraus, dass heterogene Quellsysteme -- \gls{bi}-Plattformen, Projektmanagementwerkzeuge, \gls{it}-Service-Management-Systeme -- planvoll angebunden werden.
+Dafür stehen grundlegend verschiedene Integrationsparadigmen zur Verfügung, die sich in ihrer Architekturlogik, ihrem Datenbewegungsmodell und ihren Governance-Implikationen unterscheiden.
+Dieser Abschnitt systematisiert die vier konzeptuell relevanten Paradigmen -- \gls{et} und Data Warehouse, Messaging-basierte Integration, \gls{rest}-\gls{api}-basierte Integration sowie \gls{ea} -- und schließt mit einer integrierten Bewertung anhand des Rahmens von Baars und Kemper.
+
+\subsubsection*{ETL und Data Warehouse als Integrationsparadigma}
+
+Das älteste und in der Unternehmenspraxis am weitesten verbreitete Paradigma zur Konsolidierung heterogener Datenquellen ist das Data-Warehouse-Modell, das auf dem \gls{et}-Prozess basiert.
+Der \gls{et}-Prozess beschreibt die dreistufige Überführung von Daten aus Quellsystemen in eine zentrale, analytisch optimierte Datenhaltung: Daten werden extrahiert, in ein einheitliches Zieldatenmodell transformiert und schließlich in das Zielsystem geladen.\vglcite[XX]{kimball2013}
+Das kanonische Werkzeug für diesen Ansatz ist das dimensionale Datenmodell mit Faktentabellen, Dimensionstabellen und Sternschema-Strukturen -- Konzepte, die in der Praxis nahezu synonym mit dem Begriff Data Warehouse verwendet werden.\vglcite[XX]{kimball2013}
+
+Für die Integration mehrerer Datenbereiche beschreibt das Bus-Architecture-Konzept eine übergreifende Integrationsstrategie: Konformed Dimensions -- also Dimensionstabellen, die über verschiedene Faktentabellen hinweg konsistent definiert sind -- ermöglichen die konzeptuelle Verknüpfung verschiedener Kennzahlenbereiche ohne systemischen Zwang zur physischen Zentralisierung.\vglcite[XX]{kimball2013}
+Dieses Architekturprinzip ist für den \gls{kpihub}-Kontext relevant, da es eine Integrationsstrategie liefert, die verschiedene \gls{bi}-Domänen (Engineering, Product, Customer Success) semantisch zusammenführt.
+
+Das \gls{et}-Paradigma hat jedoch strukturelle Grenzen: Der Ladezyklus ist grundsätzlich batch-orientiert, d.\,h.\ Daten werden in festgelegten Intervallen übertragen, nicht in Echtzeit.
+Für operative Dashboards mit tagesaktuellem oder stündlichem Aktualisierungsbedarf ist dieser Ansatz nur bedingt geeignet.
+Zudem bedeutet eine zentrale Datenhaltung erhöhten Schemamanagement-Aufwand: Jede Änderung in Quellsystemen erfordert Anpassungen im Transformationsschritt.
+
+\subsubsection*{Messaging-basierte Integration}
+
+Als konzeptionelle Antwort auf die Starrheit batch-orientierter Ansätze etablierte sich das Paradigma der Messaging-basierten Integration, dessen konzeptuelles Fundament in den Enterprise Integration Patterns kodifiziert wurde.
+Das Standardwerk zu Enterprise Integration Patterns katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[XX]{hohpe2003}
+
+Das zentrale Konzept dieses Paradigmas ist die asynchrone Nachrichtenübertragung über einen Messaging-Kanal: Quell- und Zielsystem sind entkoppelt; Datenproduzenten senden Nachrichten in einen Kanal, von dem Konsumenten sie unabhängig abrufen können.\vglcite[XX]{hohpe2003}
+Diese Entkopplung ist ein struktureller Vorteil gegenüber dem \gls{et}-Paradigma: Quell- und Zielsystem müssen nicht gleichzeitig verfügbar sein, und Schemaänderungen können über Transformer-Muster abgefangen werden, ohne die gesamte Pipeline anzupassen.
+
+Aus der Messaging-Grundidee haben sich zwei Implementierungsstrategien entwickelt, die sich im Grad der Echtzeitorientierung unterscheiden.
+Batch-orientierte Systeme sammeln Nachrichten über einen Zeitraum und verarbeiten sie gebündelt -- konzeptuell ähnlich dem \gls{et}-Ansatz, jedoch mit flexibleren Koppelungsoptionen.
+Event-getriebene Systeme verarbeiten jede Nachricht sofort nach Eintreffen und ermöglichen damit nahezu echtzeitfähige Datenintegration -- eine Eigenschaft, die für operative \gls{kpi}-Dashboards mit unmittelbarem Aktualisierungsbedarf relevant ist.\vglcite[XX]{hohpe2003}
+
+\subsubsection*{REST-API-basierte Integration}
+
+Mit der Verbreitung von Web-Architekturen hat sich ein drittes Integrationsparadigma als Standard für moderne Enterprise-Systemlandschaften durchgesetzt: die \gls{rest}-basierte \gls{api}-Integration.
+\gls{rest} (Representational State Transfer) ist kein Protokoll, sondern ein Architekturstil, der in der kanonischen Dissertation von Fielding als Menge von sechs Constraints definiert wird: Client-Server-Trennung, Zustandslosigkeit, Cachebarkeit, Einheitliches Interface, Mehrschichtsystem und Code-on-Demand.\vglcite[XX]{fielding2000}
+Das einheitliche Interface -- konkret die Nutzung standardisierter HTTP-Methoden (GET, POST, PUT, DELETE) und ressourcenbasierter Adressierung -- ist dabei die zentrale Eigenschaft, die \gls{rest}-\glspl{api} interoperabel und plattformunabhängig macht.
+
+Die sechs REST-Constraints wirken zusammen darauf hin, dass eine Architektur gut skalierbar, modifizierbar und zuverlässig ist.\vglcite[XX]{fielding2000}
+Für die Integration heterogener Enterprise-Systeme ist insbesondere die Zustandslosigkeit relevant: Da der Server keinen Sitzungszustand speichert, können Anfragen unabhängig voneinander verarbeitet werden, was horizontale Skalierbarkeit ermöglicht.
+
+Im Kontext eines \gls{kpihub} bedeutet \gls{rest}-\gls{api}-Integration, dass Kennzahlen on-demand über standardisierte Endpunkte abgerufen werden, ohne dass Daten physisch kopiert oder vorab transformiert werden müssen.
+Quellsysteme wie Jira, ServiceNow oder \gls{sac} stellen jeweils eigene \gls{rest}-\glspl{api} bereit; der \gls{kpihub} fungiert als Aggregationsschicht, die Anfragen koordiniert und die Antworten zu einer kohärenten Kennzahlensicht zusammenführt.
+Dieses Pull-Modell bietet gegenüber dem \gls{et}-Paradigma den Vorteil geringerer Datenhaltungsredundanz, steht jedoch vor der Herausforderung, dass Verfügbarkeit und Antwortzeiten des \gls{kpihub} von der Verfügbarkeit aller angebundenen Quellsysteme abhängen.
+
+\subsubsection*{Embedded Analytics als Integrationsparadigma}
+
+Als viertes Paradigma ist \gls{ea} zu unterscheiden, das erst mit der Verbreitung webbasierter Enterprise-Applikationen konzeptuell eigenständig relevant wurde.
+\gls{ea} bezeichnet den Ansatz, analytische Einblicke -- also Kennzahlen, Charts und Statusanzeigen -- kontextuell in die Benutzeroberfläche einer Fachanwendung einzubetten, anstatt den Anwender zur Informationsbeschaffung in eine separate \gls{bi}-Plattform zu leiten.\vglcite[449]{nijkamp2009}
+Die Einbettung erfolgt über kontextsensitive Lookup-Services, die bei Aufruf einer Applikationsansicht dynamisch die relevanten analytischen Inhalte aus dem Hintergrundsystem laden und direkt im Applikationskontext darstellen.\vglcite[451\,f.]{nijkamp2009}
+
+Das Besondere dieses Paradigmas ist die Verlagerung des Integrationspunkts: Während \gls{et}, Messaging und \gls{rest}-\gls{api}-Integration die Daten- oder Nachrichtenebene adressieren, operiert \gls{ea} auf der Präsentationsebene.
+Daten verlassen das Quellsystem nicht -- oder nur in minimierter Form -- und werden stattdessen in-context angezeigt, ohne Systemwechsel für den Anwender.\vglcite[450]{nijkamp2009}
+Demonstriert wurde dieses Konzept erstmals im SAP-NetWeaver-CRM-Kontext, wo analytische Einblicke direkt in Vorgangsmasken eingeblendet wurden.\vglcite[453\,ff.]{nijkamp2009}
+
+Im \gls{kpihub}-Kontext kann \gls{ea} als ergänzendes Paradigma interpretiert werden: Anstatt alle Kennzahlen in einer eigenständigen Hub-Oberfläche zu konsolidieren, können Teilmengen von Kennzahlen über Embedding-Techniken in bestehende Arbeitsumgebungen (z.\,B.\ \gls{sac}-Dashboards in eine Portaloberfläche) eingebettet werden.
+Dies entspricht konzeptuell dem, was in der Praxis als \gls{federation} bezeichnet wird: Die Daten und Visualisierungen verbleiben im Quellsystem; lediglich die Ansicht wird integriert.\vglcite[449\,f.]{nijkamp2009}
+
+\subsubsection*{Integrationsrahmen und Defizitdiagnose}
+
+Die skizzierten vier Paradigmen sind in der Unternehmenspraxis selten in reiner Form anzutreffen.
+Baars und Kemper zeigen in ihrem integrierten \gls{bi}-Framework, dass Enterprise-\gls{bi}-Architekturen strukturell aus mehreren koexistierenden Subsystemen bestehen: operative Datenquellen, analytische \gls{bi}-Systeme und unstrukturierte Datenquellen operieren typischerweise nebeneinander, ohne vollständig integriert zu sein.\vglcite[133]{baars2008}
+Diese parallele Koexistenz separater Subsysteme wird explizit als fundamentales Strukturproblem identifiziert -- eines, das weder durch weitere \gls{et}-Pipelines noch durch \gls{rest}-\glspl{api} allein lösbar ist, weil die Integrationslücke weniger auf der Datenübertragungsebene als auf der semantischen Ebene liegt.\vglcite[134]{baars2008}
+
+Ein integriertes Framework, das operative, analytische und unstrukturierte Subsysteme unter einer einheitlichen Sicht zusammenführt, wird von Baars und Kemper konzeptuell beschrieben, aber die praktische Implementierung bleibt eine offene Herausforderung.\vglcite[134]{baars2008}
+Für die vorliegende Untersuchung ist dieser Befund doppelt relevant: Er belegt erstens, dass die im Praxiskontext beobachtete Fragmentierung kein Einzelfall, sondern ein wissenschaftlich dokumentiertes Strukturmerkmal moderner Enterprise-\gls{bi}-Landschaften ist.
+Er zeigt zweitens, dass die Wahl des Integrationsparadigmas keine rein technische, sondern eine architekturstrategische Entscheidung ist -- eine Entscheidung, die in dieser Untersuchung methodisch fundiert werden soll.
+
+Die skizzierten Integrationsparadigmen setzen voraus, dass Datenzugriffsrechte konsistent über Quellsysteme hinweg durchgesetzt werden können.
+Dies erfordert ein explizites \gls{datagovernance}- und Zugriffskontrollmodell, das im folgenden Abschnitt entwickelt wird.
 
 % ─────────────────────────────────────────────────────────────────────────────
 

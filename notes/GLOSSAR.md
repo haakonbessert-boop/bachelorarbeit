@@ -7,7 +7,16 @@ Struktur: Begriff → Definition / Abgrenzung → ggf. Quelle / Kontext.
 
 ## Fachbegriffe (Bachelorarbeit)
 
-**KPI (Key Performance Indicator)**
+**REST (Representational State Transfer)**
+Architekturstil für netzwerkbasierte Softwaresysteme nach Fielding (2000). Definiert sechs Constraints (Client-Server, Zustandslosigkeit, Cachebarkeit, Einheitliches Interface, Mehrschichtsystem, Code-on-Demand). Dominantes Paradigma für moderne Enterprise-APIs.
+
+**EA (Embedded Analytics)**
+Integrationsparadigma nach Nijkamp & Oberhofer (2009): Analytische Einblicke werden kontextuell in die Benutzeroberfläche einer Fachanwendung eingebettet, ohne Systemwechsel für den Anwender. Operiert auf der Präsentationsebene, nicht auf der Datenebene.
+
+**EIP (Enterprise Integration Patterns)**
+Katalog von 65 Integrationsmustern nach Hohpe & Woolf (2003): Messaging-Kanäle, Router, Transformer, Endpoints. Liefert eine einheitliche Entwurfssprache für Integrationsarchitekturen (Messaging, ESB, Event Streaming).
+
+
 Messbare Kennzahl zur Bewertung des Erfolgs einer Organisation, eines Prozesses oder einer Maßnahme gegenüber definierten Zielen.
 
 **KPI-Hub**

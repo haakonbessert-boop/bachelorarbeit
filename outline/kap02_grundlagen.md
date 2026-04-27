@@ -92,20 +92,18 @@ für den Lösungsraum in Kap. 6.
    fragmentierte Koexistenz separater BI-Systeme ein strukturelles Problem bestehender
    Enterprise-BI-Landschaften ist — Brücke zu 2.5.
 
-> **[OFFENE ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma in 2.2**
+> **[ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma in 2.2 — ENTSCHIEDEN**
 >
-> - **Status:** Offen (Stand 24.04.2026)
-> - **Option A:** Embedding (Embedded Analytics) als fünftes Integrationsparadigma mit eigener
->   Subsection behandeln. Problem: Keine akademische Primärquelle verfügbar (der Begriff ist
->   primär aus Vendordokumentation bekannt). Würde Kap. 2.2 auf ca. 3 Seiten ausdehnen.
-> - **Option B:** Embedding als Sonderfall von API-Integration einordnen (ein Satz + Fußnote),
->   ohne eigene Quellenangabe. Spart Seitenumfang, bleibt im akademischen Rahmen.
-> - **Option C:** Embedding vollständig aus dem Scope von 2.2 streichen. Kann in Kap. 6
->   (Lösungsraum) als konkrete Tool-Option auftauchen, ohne theoretische Fundierung zu
->   benötigen.
-> - **Empfehlung:** Option B oder C bevorzugen — Embedding hat keinen eigenständigen
->   theoretischen Gehalt, der akademisch belegt werden kann. Entscheidung muss vor dem
->   Schreiben von 2.2 getroffen werden.
+> - **Status:** Entschieden — Option A umgesetzt (Stand 27.04.2026)
+> - **Entscheidung:** `nijkamp2009` (BTW 2009, GI-Fachbereich DBIS, peer-reviewed) als akademisch
+>   zitierfähige Primärquelle für Embedded Analytics (EA) gefunden. Option A (eigener Abschnitt)
+>   wurde umgesetzt: EA als viertes eigenständiges Integrationsparadigma mit eigener `\subsubsection*`
+>   in 2.2 behandelt. Neue Acronyms hinzugefügt: `ea` (Embedded Analytics), `rest` (REST),
+>   `eip` (Enterprise Integration Patterns). Kap. 2.2 vollständig geschrieben (27.04.2026).
+> - **Option A:** ~~Embedding als fünftes Integrationsparadigma mit eigener Subsection behandeln.~~
+>   **Umgesetzt.** `nijkamp2009` liefert die akademische Primärquelle.
+> - **Option B:** ~~Embedding als Sonderfall von API-Integration einordnen~~. Nicht gewählt.
+> - **Option C:** ~~Embedding vollständig aus 2.2 streichen~~. Nicht gewählt.
 
 ### Quellen
 
@@ -308,7 +306,7 @@ ca. 1,0–1,5 Seiten
 
 | ID | Abschnitt | Entscheidung | Status | Empfehlung |
 |---|---|---|---|---|
-| KAP2-E1 | 2.2 | Embedding-Paradigma: eigener Abschnitt / Sonderfall / streichen | Offen | Option B oder C (kein akademischer Beleg verfügbar) |
+| KAP2-E1 | 2.2 | Embedding-Paradigma: eigener Abschnitt / Sonderfall / streichen | Entschieden | Option A umgesetzt — nijkamp2009 als akademische Primärquelle, EA als eigenständiges Paradigma |
 | KAP2-E2 | 2.4 | Nutzwertanalyse: Pohl (2010) ausreichend / Zangemeister beschaffen? | Entschieden | Option A: Pohl reicht — kein Zangemeister nötig |
 
 ---
