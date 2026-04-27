@@ -278,9 +278,14 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 ---
 
-## 28. April 2026 — Meeting Oliver Timm (geplant)
+## 28. April 2026 — Meeting Oliver Timm (Einladung raus)
 
-**Kontext:** Kurzfristig abgestimmtes Follow-up-Meeting. Thema wird noch abgestimmt.
+**Kontext:** Follow-up nach Check-in 22.04. Einladung am 27.04. verschickt.
+
+**Ziele:**
+1. Systemlandschaft konkretisieren — Ist-Quellsysteme + Schwachstellen (→ Kap. 4)
+2. Tool-Diskussion — Metabase SAP-Freigabe, Alternativtools (→ Kap. 6)
+3. Thesis-Input — Olivers Perspektive als Stakeholder auf das Gesamtkonzept
 
 **Notizen:**
 
