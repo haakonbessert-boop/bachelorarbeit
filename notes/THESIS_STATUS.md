@@ -88,8 +88,16 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [x] Kennenlernen Christopher Pfeiler | 20. April
 - [x] Check-in Oliver Timm — 22. April ✓ → Mural durcharbeiten bis Freitag, Tool-Übersicht bis 15. Mai
 - [x] Svitlana Vlasova — BDC/SAC Tool-Überblick | 22. April ✓ → SAC Data Steer, Collibra, BDC Adoption Program (SharePoint) als neue Leads
-- [ ] Kennenlernen Nina Vayssiere — 27. April
+- [x] Kennenlernen Nina Vayssiere — 27. April ✓ → Neue Stakeholder: Amodiovalerio Verde, Sarina Gallus, Hossam Mokhtar; Dokument von Nina ausstehend
 - [ ] Meeting Oliver — 28.04.2026 (geplant)
+
+### Neue Stakeholder (via Nina Vayssiere, 27.04.)
+
+- [ ] **Dokument von Nina Vayssiere** ausstehend → prüfen und auswerten wenn es ankommt (P&E-Kontext, KPIs)
+- [ ] **Amodiovalerio Verde** (amodiovalerio.verde@sap.com) — Product Excellence Dashboard & HEART; kontaktieren für Anforderungsanalyse (Kap. 5) und Systemlandschaft (Kap. 4)
+- [ ] **Sarina Gallus** — P&E Fundamentals; Rolle klären, ggf. als Interviewpartnerin einplanen
+- [ ] **PPR Portfolio** — Kontext klären (wahrscheinlich P&E); mit Nina oder Valerio nachfragen
+- [ ] **Hossam Mokhtar** — baut Dashboards in Valerios Team; relevanter Ansprechpartner für technische Dashboard-Details
 
 ### Zugänge
 

@@ -276,6 +276,15 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 **Notizen:**
 
+- Kurzes Kennenlernen (Kennenlernen-Format)
+- **Neues Dokument:** Nina schickt ein Dokument nach → **ausstehend**, prüfen wenn es ankommt
+- **Neue Ansprechpartner / Stakeholder (von Nina vermittelt):**
+  - **Amodiovalerio Verde** (amodiovalerio.verde@sap.com) — Product Excellence Dashboard & HEART-Framework; zuständig für produktseitige Excellence-Metriken
+  - **Sarina Gallus** — P&E Fundamentals; genaue Rolle noch zu klären
+  - **PPR Portfolio** — Kontext unklar, wahrscheinlich ebenfalls P&E; nachfragen
+  - **Hossam Mokhtar** — baut Dashboards in Valerios Team (Product Excellence / HEART); relevanter technischer Ansprechpartner für Dashboard-Architektur
+- **Einordnung:** Nina ist zentrale Türöffnerin für das P&E-Stakeholder-Netzwerk. Valerio Verde und Hossam Mokhtar sind insbesondere für Kap. 4 (Systemlandschaft: bestehende Dashboards) und Kap. 5 (Anforderungsanalyse: P&E-seitige KPIs) relevant.
+
 ---
 
 ## 28. April 2026 — Meeting Oliver Timm (Einladung raus)
