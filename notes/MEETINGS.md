@@ -255,6 +255,14 @@ Wahrscheinlichste Zielarchitektur: **A (BDC) + B (Build Work Zone als Portal)**;
 
 ---
 
+## 27. April 2026 — E-Mail Prof. Sachse (Eingang)
+
+**Betreff:** Antwort auf überarbeitete Gliederung
+**Inhalt:** „Ihre E-Mail habe ich erhalten. Vielen Dank für die überarbeitete Gliederung und die weiterhin enthaltenen Ausarbeitungen, welche meinen Vorstellungen entsprechen."
+**Ergebnis:** Gliederung formal genehmigt. Kein Änderungsbedarf.
+
+---
+
 ## 27. April 2026 — Kennenlernen Nina Vayssiere
 
 **Kontext:**
@@ -265,6 +273,14 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 - [ ] Welche Tools nutzt du aktuell zur Datenauswertung?
 - [ ] Was fehlt dir an der aktuellen Datenlage / den bestehenden Dashboards?
 - [ ] Welche Anforderungen hast du an Zugriffsrechte und Datenschutz?
+
+**Notizen:**
+
+---
+
+## 28. April 2026 — Meeting Oliver Timm (geplant)
+
+**Kontext:** Kurzfristig abgestimmtes Follow-up-Meeting. Thema wird noch abgestimmt.
 
 **Notizen:**
 

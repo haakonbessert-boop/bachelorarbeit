@@ -9,9 +9,9 @@
 
 ---
 
-## Aktueller Stand (24. April 2026)
+## Aktueller Stand (27. April 2026)
 
-Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben.
+Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben. **Meilenstein erreicht:** Prof. Sachse hat die überarbeitete Gliederung am 27.04. formal per E-Mail genehmigt — kein Änderungsbedarf.
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -89,7 +89,7 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [x] Check-in Oliver Timm — 22. April ✓ → Mural durcharbeiten bis Freitag, Tool-Übersicht bis 15. Mai
 - [x] Svitlana Vlasova — BDC/SAC Tool-Überblick | 22. April ✓ → SAC Data Steer, Collibra, BDC Adoption Program (SharePoint) als neue Leads
 - [ ] Kennenlernen Nina Vayssiere — 27. April
-- [ ] Bei Oliver melden (Anfang nächste Woche, ~27./28.04.): Brauchen wir vor Mai nochmal ein Meeting?
+- [ ] Meeting Oliver — 28.04.2026 (geplant)
 
 ### Zugänge
 
@@ -114,7 +114,7 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [ ] **DORA-Metriken:** Gibt es ein Dashboard dafür? (Deployment Frequency, Lead Time, CFR, MTTR) — größte KPI-Lücke
 - [ ] **Security Dashboard Hauptlink** fehlt im Mural — wo ist er?
 - [ ] **SAP_Signavio_Dashboards Unterordner** (Jira Dashboards, Product Usage Dashboards) mit Oliver durchgehen
-- [ ] Bei Oliver melden (~27./28.04.): Brauchen wir vor Mai noch ein Meeting?
+- [ ] Meeting Oliver — 28.04.2026 (geplant)
 
 ### Schreiben (parallel)
 
