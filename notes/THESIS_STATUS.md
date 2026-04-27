@@ -130,8 +130,8 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 
 - [ ] Embedding-Paradigma (Kap. 2.2): Quelle für "Embedded Analytics" beschaffen ODER Embedding aus dem Abschnitts-Scope streichen — Entscheidung nötig vor dem Schreiben von 2.2
 - [x] Kap. 2.1 schreiben: KPI-Management und Business Intelligence — vollständig geschrieben (ferreirotley2009, parmenter2015, lennerholt2018, passlick2020, michalczyk2020, larson2016)
-- [ ] Kap. 2.3 schreiben: Data Governance und Zugriffskontrolle — Quellen vollständig (ferraiolo2001, alhassan2016, tikkinenpiri2018, alaqrabi2013)
-- [ ] Kap. 2.4 schreiben: Entscheidungsmethoden im Software Engineering — Quellen vollständig (saaty1990, hwangyoon1981, velasquez2013, hanine2016, zaidan2015, pohl2010)
+- [x] Kap. 2.3 schreiben: Data Governance und Zugriffskontrolle — vollständig geschrieben (ferraiolo2001, alhassan2016, tikkinenpiri2018, alaqrabi2013)
+- [x] Kap. 2.4 schreiben: Entscheidungsmethoden im Software Engineering — vollständig geschrieben (saaty1990, hwangyoon1981, velasquez2013, hanine2016, zaidan2015, pohl2010)
 
 **Prio 2**
 
