@@ -56,11 +56,10 @@ In der Literatur werden drei Kategorien von Implementierungsproblemen unterschie
 Hinzu kommt ein empirisch belegtes Akzeptanzparadox: Eine starke organisationale Betonung von Datenqualitätskontrollen korreliert signifikant negativ mit der Nutzungsabsicht der Anwender.\vglcite[18\,f.]{passlick2020}
 Dieses Paradox zeigt, dass technische Lösungen allein für eine erfolgreiche \gls{ssbi}-Imple\-men\-tie\-rung nicht ausreichen.
 
-An dieser Stelle setzt das Konzept eines \gls{kpihub} an, das nicht als weiteres Self-Service-Werkzeug, sondern als föderierter Aggregationspunkt konzipiert ist:
-
+An dieser Stelle setzt das Konzept eines \gls{kpihub} an, das nicht als weiteres Self-Service-Werkzeug, sondern als föderierter Aggregationspunkt konzipiert ist.
 Ein \gls{kpihub} ist konzeptuell mehr als ein weiteres Dashboard.
 Er verbindet die operativ-taktische Dashboard-Logik mit dem föderativen Integrationsanspruch heterogener \gls{bi}-Landschaften. Anstatt alle Daten in ein zentrales System zu migrieren, aggregiert ein \gls{kpihub} Kennzahlen aus bestehenden Quellsystemen und stellt sie als kohärente Sicht bereit.\vglcite[4\,ff.]{eckerson2010}\vglcite[700\,f.]{larson2016}
-Welche Integrationsparadigmen diesen Föderierungsansatz technisch unterstützen, zeigt der folgende Abschnitt -- zunächst aber werden die Grundlagen des Datenzugriffs und der Zugriffskontrolle geklärt.
+Welche Integrationsparadigmen diesen Föderierungsansatz technisch unterstützen, zeigt Abschnitt~\ref{sec:grundlagen-integration}; die dafür notwendigen Zugriffskontrollgrundlagen folgen in Abschnitt~\ref{sec:grundlagen-governance}.
 
 % ─────────────────────────────────────────────────────────────────────────────
 
@@ -73,24 +72,24 @@ Dieser Abschnitt systematisiert die vier konzeptuell relevanten Paradigmen -- \g
 
 \subsubsection*{ETL und Data Warehouse als Integrationsparadigma}
 
-Das älteste und in der Unternehmenspraxis am weitesten verbreitete Paradigma zur Konsolidierung heterogener Datenquellen ist das Data-Warehouse-Modell, das auf dem \gls{et}-Prozess basiert.
+Das älteste und in der Unternehmenspraxis am weitesten verbreitete Verfahren zur Konsolidierung heterogener Datenquellen ist das Data-Warehouse-Modell, das auf dem \gls{et}-Prozess basiert.
 Der \gls{et}-Prozess beschreibt die dreistufige Überführung von Daten aus Quellsystemen in eine zentrale, analytisch optimierte Datenhaltung: Daten werden extrahiert, in ein einheitliches Zieldatenmodell transformiert und schließlich in das Zielsystem geladen.\vglcite[XX]{kimball2013}
 Das kanonische Werkzeug für diesen Ansatz ist das dimensionale Datenmodell mit Faktentabellen, Dimensionstabellen und Sternschema-Strukturen -- Konzepte, die in der Praxis nahezu synonym mit dem Begriff Data Warehouse verwendet werden.\vglcite[XX]{kimball2013}
 
-Für die Integration mehrerer Datenbereiche beschreibt das Bus-Architecture-Konzept eine übergreifende Integrationsstrategie: Konformed Dimensions -- also Dimensionstabellen, die über verschiedene Faktentabellen hinweg konsistent definiert sind -- ermöglichen die konzeptuelle Verknüpfung verschiedener Kennzahlenbereiche ohne systemischen Zwang zur physischen Zentralisierung.\vglcite[XX]{kimball2013}
+Für die Integration mehrerer Datenbereiche beschreibt das Bus-Architecture-Konzept eine übergreifende Integrationsstrategie: \textit{Conformed} Dimensions -- also Dimensionstabellen, die über verschiedene Faktentabellen hinweg konsistent definiert sind -- ermöglichen die konzeptuelle Verknüpfung verschiedener Kennzahlenbereiche ohne systemischen Zwang zur physischen Zentralisierung.\vglcite[XX]{kimball2013}
 Dieses Architekturprinzip ist für den \gls{kpihub}-Kontext relevant, da es eine Integrationsstrategie liefert, die verschiedene \gls{bi}-Domänen (Engineering, Product, Customer Success) semantisch zusammenführt.
 
-Das \gls{et}-Paradigma hat jedoch strukturelle Grenzen: Der Ladezyklus ist grundsätzlich batch-orientiert, d.\,h.\ Daten werden in festgelegten Intervallen übertragen, nicht in Echtzeit.
+Dieser Ansatz hat jedoch strukturelle Grenzen: Der Ladezyklus ist grundsätzlich batch-orientiert, d.\,h.\ Daten werden in festgelegten Intervallen übertragen, nicht in Echtzeit.
 Für operative Dashboards mit tagesaktuellem oder stündlichem Aktualisierungsbedarf ist dieser Ansatz nur bedingt geeignet.
 Zudem bedeutet eine zentrale Datenhaltung erhöhten Schemamanagement-Aufwand: Jede Änderung in Quellsystemen erfordert Anpassungen im Transformationsschritt.
 
 \subsubsection*{Messaging-basierte Integration}
 
-Als konzeptionelle Antwort auf die Starrheit batch-orientierter Ansätze etablierte sich das Paradigma der Messaging-basierten Integration, dessen konzeptuelles Fundament in den Enterprise Integration Patterns kodifiziert wurde.
-Das Standardwerk zu Enterprise Integration Patterns katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[XX]{hohpe2003}
+Als konzeptuelle Antwort auf die Starrheit batch-orientierter Ansätze etablierte sich das Paradigma der Messaging-basierten Integration, dessen konzeptuelles Fundament in den \gls{eip} kodifiziert wurde.
+Das Standardwerk zu \gls{eip} katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[XX]{hohpe2003}
 
-Das zentrale Konzept dieses Paradigmas ist die asynchrone Nachrichtenübertragung über einen Messaging-Kanal: Quell- und Zielsystem sind entkoppelt; Datenproduzenten senden Nachrichten in einen Kanal, von dem Konsumenten sie unabhängig abrufen können.\vglcite[XX]{hohpe2003}
-Diese Entkopplung ist ein struktureller Vorteil gegenüber dem \gls{et}-Paradigma: Quell- und Zielsystem müssen nicht gleichzeitig verfügbar sein, und Schemaänderungen können über Transformer-Muster abgefangen werden, ohne die gesamte Pipeline anzupassen.
+Das zentrale Konzept dieses Integrationsmodells ist die asynchrone Nachrichtenübertragung über einen Messaging-Kanal: Quell- und Zielsystem sind entkoppelt; Datenproduzenten senden Nachrichten in einen Kanal, von dem Konsumenten sie unabhängig abrufen können.\vglcite[XX]{hohpe2003}
+Diese Entkopplung ist ein struktureller Vorteil gegenüber dem \gls{et}-Verfahren: Quell- und Zielsystem müssen nicht gleichzeitig verfügbar sein, und Schemaänderungen können über Transformer-Muster abgefangen werden, ohne die gesamte Pipeline anzupassen.
 
 Aus der Messaging-Grundidee haben sich zwei Implementierungsstrategien entwickelt, die sich im Grad der Echtzeitorientierung unterscheiden.
 Batch-orientierte Systeme sammeln Nachrichten über einen Zeitraum und verarbeiten sie gebündelt -- konzeptuell ähnlich dem \gls{et}-Ansatz, jedoch mit flexibleren Koppelungsoptionen.
@@ -107,7 +106,7 @@ Für die Integration heterogener Enterprise-Systeme ist insbesondere die Zustand
 
 Im Kontext eines \gls{kpihub} bedeutet \gls{rest}-\gls{api}-Integration, dass Kennzahlen on-demand über standardisierte Endpunkte abgerufen werden, ohne dass Daten physisch kopiert oder vorab transformiert werden müssen.
 Quellsysteme wie Jira, ServiceNow oder \gls{sac} stellen jeweils eigene \gls{rest}-\glspl{api} bereit; der \gls{kpihub} fungiert als Aggregationsschicht, die Anfragen koordiniert und die Antworten zu einer kohärenten Kennzahlensicht zusammenführt.
-Dieses Pull-Modell bietet gegenüber dem \gls{et}-Paradigma den Vorteil geringerer Datenhaltungsredundanz, steht jedoch vor der Herausforderung, dass Verfügbarkeit und Antwortzeiten des \gls{kpihub} von der Verfügbarkeit aller angebundenen Quellsysteme abhängen.
+Dieses Pull-Modell bietet gegenüber dem \gls{et}-Ansatz den Vorteil geringerer Datenhaltungsredundanz, steht jedoch vor der Herausforderung, dass Verfügbarkeit und Antwortzeiten des \gls{kpihub} von der Verfügbarkeit aller angebundenen Quellsysteme abhängen.
 
 \subsubsection*{Embedded Analytics als Integrationsparadigma}
 
@@ -119,7 +118,7 @@ Das Besondere dieses Paradigmas ist die Verlagerung des Integrationspunkts: Wäh
 Daten verlassen das Quellsystem nicht -- oder nur in minimierter Form -- und werden stattdessen in-context angezeigt, ohne Systemwechsel für den Anwender.\vglcite[450]{nijkamp2009}
 Demonstriert wurde dieses Konzept erstmals im SAP-NetWeaver-CRM-Kontext, wo analytische Einblicke direkt in Vorgangsmasken eingeblendet wurden.\vglcite[453\,ff.]{nijkamp2009}
 
-Im \gls{kpihub}-Kontext kann \gls{ea} als ergänzendes Paradigma interpretiert werden: Anstatt alle Kennzahlen in einer eigenständigen Hub-Oberfläche zu konsolidieren, können Teilmengen von Kennzahlen über Embedding-Techniken in bestehende Arbeitsumgebungen (z.\,B.\ \gls{sac}-Dashboards in eine Portaloberfläche) eingebettet werden.
+Im \gls{kpihub}-Kontext kann \gls{ea} als ergänzender Integrationsweg interpretiert werden: Anstatt alle Kennzahlen in einer eigenständigen Hub-Oberfläche zu konsolidieren, können Teilmengen von Kennzahlen über Embedding-Techniken in bestehende Arbeitsumgebungen (z.\,B.\ \gls{sac}-Dashboards in eine Portaloberfläche) eingebettet werden.
 Dies entspricht konzeptuell dem, was in der Praxis als \gls{federation} bezeichnet wird: Die Daten und Visualisierungen verbleiben im Quellsystem; lediglich die Ansicht wird integriert.\vglcite[449\,f.]{nijkamp2009}
 
 \subsubsection*{Integrationsrahmen und Defizitdiagnose}
@@ -142,7 +141,7 @@ Dies erfordert ein explizites \gls{datagovernance}- und Zugriffskontrollmodell, 
 
 Datenintegration im Enterprise-Kontext ist nicht nur eine technische, sondern auch eine organisatorische Aufgabe.
 Jedes System, das Daten aus mehreren Quellen zusammenführt, muss sicherstellen, dass Zugriffsrechte konsistent durchgesetzt werden und regulatorische Anforderungen eingehalten werden.
-Dieser Abschnitt legt die konzeptionellen Grundlagen für \gls{datagovernance} und rollenbasierte Zugriffskontrolle, die in der Anforderungsanalyse (Kapitel~5) operationalisiert werden.
+Dieser Abschnitt legt die konzeptuellen Grundlagen für \gls{datagovernance} und rollenbasierte Zugriffskontrolle, die in der Anforderungsanalyse (Kapitel~5) operationalisiert werden.
 
 \gls{datagovernance} bezeichnet das organisatorische Rahmenwerk aus Verantwortlichkeiten, Regeln und Prozessen, das den Umgang mit Daten innerhalb einer Organisation steuert.\vglcite[65]{alhassan2016}
 Zu den zentralen Governance-Aktivitäten zählen: Datenpolitik (wer darf was mit welchen Daten tun), Datenqualitätsmanagement, Metadatenverwaltung, Datensicherheit und Zugriffskontrolle sowie Compliance-Überwachung.\vglcite[66\,ff.]{alhassan2016}
@@ -235,14 +234,15 @@ Für den \gls{kpihub}-Kontext sind \gls{ahp} und \gls{topsis} die am besten geei
 
 Die Gewichtung der Kriterien erfolgt durch paarweise Vergleiche: Entscheidungsträger beurteilen für jedes Kriterienpaar, welches Kriterium wichtiger ist und in welchem Ausmaß.\vglcite[9\,f.]{saaty1990}
 Aus den Vergleichsmatrizen werden Prioritätsvektoren abgeleitet, die die relativen Gewichtungen der Kriterien repräsentieren.
-Ein entscheidender Vorteil des \gls{ahp} gegenüber der einfachen Nutzwertanalyse ist die Konsistenzprüfung: Der \textit{Consistency Ratio} misst, wie widerspruchsfrei die paarweisen Urteile des Entscheidungsträgers sind.\vglcite[15\,f.]{saaty1990}
+Ein entscheidender Vorteil des \gls{ahp} gegenüber der einfachen Nutzwertanalyse ist die Konsistenzprüfung: Die \textit{Consistency Ratio} misst, wie widerspruchsfrei die paarweisen Urteile des Entscheidungsträgers sind.\vglcite[15\,f.]{saaty1990}
 Ein Wert oberhalb von 0,10 weist auf inkonsistente Urteile hin und gibt dem Entscheidungsträger ein explizites Signal zur Revision seiner Einschätzungen -- dieses Rückkopplungsmerkmal fehlt der einfachen Nutzwertanalyse.
 
 Für das finale Ranking der Alternativen ergänzt \gls{topsis} den \gls{ahp} durch einen distanzbasierten Bewertungsansatz.
 
 \gls{topsis} (Technique for Order of Preference by Similarity to Ideal Solution) bewertet Alternativen nach ihrer geometrischen Nähe zur positiven Ideallösung und ihrer Distanz zur negativen Anti-Ideallösung.\vglcite[58\,f.]{hwangyoon1981}
 Während der \gls{ahp} auf der Ebene der Kriteriengewichtung ansetzt, operiert \gls{topsis} auf der Ebene der Alternativenbewertung: Gegeben eine normierte Entscheidungsmatrix berechnet \gls{topsis} für jede Alternative einen Nähe-Koeffizienten, der das finale Ranking erzeugt.\vglcite[59\,ff.]{hwangyoon1981}
-Die Kombination beider Methoden -- \gls{ahp} für die Kriteriengewichtung, \gls{topsis} für das Alternativenranking -- ist als in der Literatur dokumentierter Ansatz für IT-Software-Auswahlprobleme etabliert: dies wurde sowohl an der Auswahl von \gls{et}-Software\vglcite[2]{hanine2016} als auch an der Auswahl elektronischer Krankenhausinformationssysteme bestätigt.\vglcite[392\,f.]{zaidan2015}
+Die Kombination von \gls{ahp} zur Kriteriengewichtung und \gls{topsis} zur Alternativenbewertung ist als hybrides Vorgehen für \gls{it}-Auswahlprobleme in der Literatur dokumentiert.
+Anwendungsbelege liefern die Auswahl von \gls{et}-Software\vglcite[2]{hanine2016} sowie die Auswahl elektronischer Krankenhausinformationssysteme.\vglcite[392\,f.]{zaidan2015}
 Beide Anwendungsfälle sind dem vorliegenden Problem -- Auswahl eines \gls{kpihub}-Integrationsansatzes aus mehreren technischen Kandidaten nach gewichteten Kriterien -- strukturell analog.
 
 Tabelle~\ref{tab:mcdm-vergleich} fasst die drei behandelten Verfahren nach ihren entscheidungsrelevanten Eigenschaften zusammen.
@@ -272,7 +272,7 @@ Für das vorliegende Entscheidungsproblem -- fünf bis sieben Integrationsoption
 Die Nutzwertanalyse bleibt als Plausibilitätskontrolle nutzbar.
 Die endgültige Methodenwahl und -begründung erfolgt in Kapitel~7.1.
 
-Bevor diese Methoden angewendet werden können, sind zunächst die Defizite der bestehenden Ansätze zu systematisieren -- denn sie definieren, welche Kriterien im Bewertungsmodell überhaupt relevant sind.
+Diese methodischen Grundlagen sind jedoch nur dann operationalisierbar, wenn die zu bewertenden Kriterien aus den Defiziten der bestehenden Ansätze abgeleitet wurden — eine Systematisierung, die Abschnitt~\ref{sec:grundlagen-defizite} leistet.
 
 % ─────────────────────────────────────────────────────────────────────────────
 
@@ -286,14 +286,11 @@ Die Antwort dieser Untersuchung lautet: Sie tun es nicht vollständig -- und zwa
 Das erste Defizit ist technisch: \gls{bi}-Landschaften in Unternehmen sind strukturell fragmentiert.
 In einer systematischen Übersichtsarbeit wird gezeigt, dass Unternehmen zunehmend mit einer heterogenen Toollandschaft konfrontiert sind, in der unterschiedliche \gls{bi}-Plattformen nebeneinander existieren, ohne vollständig integriert zu sein.\vglcite[700\,f.]{larson2016}
 Die Konsolidierung heterogener \gls{bi}-Infrastrukturen wird als zentrale ungelöste Herausforderung identifiziert.\vglcite[707]{larson2016}
-Diese Beobachtung wird durch ein integriertes \gls{bi}-Framework konkretisiert: Die parallele Koexistenz separater \gls{bi}-Subsysteme -- operative, analytische und unstrukturierte Datenquellen -- ist ein fundamentales Strukturproblem bestehender Enterprise-\gls{bi}-Architekturen.\vglcite[133]{baars2008}
-Ein integriertes Framework, das diese Subsysteme unter einer einheitlichen Sicht zusammenführt, wird zwar konzeptuell beschrieben, aber die praktische Implementierung bleibt eine offene Herausforderung.\vglcite[134]{baars2008}
+Wie in Abschnitt~\ref{sec:grundlagen-integration} gezeigt, identifizieren Baars und Kemper diese Koexistenz als fundamentales Strukturmerkmal -- ein konzeptuell beschriebenes Framework für die praktische Überwindung dieses Problems fehlt jedoch bis heute.\vglcite[134]{baars2008}
 
 Als organisatorischer Lösungsversuch für diese technische Herausforderung gilt \gls{ssbi} -- doch auch hier dokumentiert die Literatur strukturelle Adoptionsbarrieren.
 
-Datenbezogene, benutzerbezogene und organisationale Hindernisse erschweren die erfolgreiche Einführung von \gls{ssbi} systematisch.\vglcite[4\,ff.]{lennerholt2018}
-Besonders problematisch sind fehlende Datenkompetenz bei Endanwendern, unklare Governance-Strukturen und mangelndes Change Management -- Faktoren, die durch technische Lösungen allein nicht adressiert werden können.\vglcite[6]{lennerholt2018}
-Empirische Befunde belegen einen paradoxen Widerspruch: Systeme, bei denen organisationale Datenqualitätskontrolle stark betont wird, erzeugen eine geringere Nutzungsabsicht bei den Anwendern.\vglcite[18]{passlick2020}
+Diese Adoptionsbarrieren (vgl. Abschnitt~\ref{sec:grundlagen-kpi-bi}) werden durch ein empirisch belegtes Paradox verschärft: Systeme, bei denen organisationale Datenqualitätskontrolle stark betont wird, erzeugen eine geringere Nutzungsabsicht bei den Anwendern.\vglcite[18]{passlick2020}
 Dies deutet darauf hin, dass strenge Governance-Mechanismen, die technisch notwendig sind, subjektiv als Nutzungshemmnis wahrgenommen werden -- ein Dilemma, das bestehende \gls{ssbi}-Ansätze nicht auflösen.
 
 Ein dritter, tieferliegender Grund betrifft die semantische Ebene: Selbst wenn technische Integration und organisationale Adoption gelingen, bleibt das Problem inkonsistenter \gls{kpi}-Definitionen bestehen.
