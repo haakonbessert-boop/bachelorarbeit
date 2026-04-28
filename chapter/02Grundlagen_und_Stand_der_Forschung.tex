@@ -116,16 +116,16 @@ Dies entspricht konzeptuell dem, was in der Praxis als \gls{federation} bezeichn
 Tabelle~\ref{tab:integrationsparadigmen} stellt die vier Paradigmen nach ihren entscheidungsrelevanten Eigenschaften gegenüber.
 
 \begin{batable}[label=tab:integrationsparadigmen]{Vergleich der Integrationsparadigmen nach entscheidungsrelevanten Eigenschaften}
-\small\setlength{\tabcolsep}{8pt}\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|p{3.0cm}|p{2.6cm}|p{2.6cm}|p{2.3cm}|p{2.6cm}|}
+\small\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{2.8cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|}
 \hline
 \textbf{Dimension} & \textbf{\gls{et}/DWH} & \textbf{Messaging} & \textbf{\gls{rest}-\gls{api}} & \textbf{\gls{ea}} \\
 \hline
-Datenbewegung & Batch-Kopie & Ereignis-/Batch-Nachricht & Pull on-demand & Präsentationsebene \\
+Datenbewegung & Batch-Kopie & Nachricht (Batch/Event) & On-demand-Pull & Präsentationsebene \\
 \hline
 Echtzeitfähigkeit & Gering & Hoch & Mittel & Hoch \\
 \hline
-Datenhaltung & Zentral (DWH) & Dezentral & Im Quellsystem & Im Quellsystem \\
+Datenhaltung & Zentral (DWH) & Dezentral & Im \mbox{Quellsystem} & Im \mbox{Quellsystem} \\
 \hline
 Systemkopplung & Eng & Lose & Lose & Sehr lose \\
 \hline
