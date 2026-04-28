@@ -1,23 +1,131 @@
 \section{Einleitung}
 
 \subsection{Ausgangssituation und Problemstellung}
+\label{sec:einleitung-ausgangssituation}
 % Hänel: Herleitung der Problemstellung — Warum ist das ein Problem?
 % Bezug zum Unternehmensumfeld (SAP Signavio P&E), Branche, Allgemeinheit
 % Nachweis durch Studien, Statistiken, Forschungsergebnisse (keine internen Dokumente/Blogs)
 
+Datengestützte Entscheidungsprozesse gewinnen in Unternehmen zunehmend strategische Bedeutung.
+\gls{bi} bezeichnet dabei die technologischen und organisatorischen Fähigkeiten, die eine Organisation benötigt, um Daten in entscheidungsrelevante Informationen umzuwandeln.\vglcite[700]{larson2016}
+Unternehmen investieren erhebliche Ressourcen in \gls{bi}-Infrastrukturen und Analytics-Plattformen; die Qualität unternehmerischer Entscheidungen hängt in wachsendem Maße von der Verfügbarkeit zuverlässiger, aktueller und konsistenter Kennzahlen ab.
+
+Trotz dieser Investitionen ist die Realität moderner Enterprise-\gls{bi}-Landschaften durch ein strukturelles Problem geprägt: Verschiedene \gls{bi}-Subsysteme entstehen abteilungsweise, systemspezifisch und ohne übergreifenden Architekturplan.
+Das Ergebnis ist eine historisch gewachsene Koexistenz heterogener Systeme, in der unterschiedliche \gls{bi}-Plattformen, Analysetools und Reporting-Lösungen nebeneinander existieren, ohne vollständig integriert zu sein.\vglcite[700\,f.]{larson2016}
+Diese \gls{bi}-Fragmentierung wird in der Forschung nicht als seltene Ausnahme, sondern als strukturelles Merkmal moderner Enterprise-Datenlandschaften dokumentiert: Die Konsolidierung heterogener \gls{bi}-Infrastrukturen wird als eine der zentralen ungelösten Herausforderungen für Unternehmen identifiziert.\vglcite[707]{larson2016}
+Baars und Kemper bestätigen diesen Befund aus architekturtheoretischer Perspektive: Enterprise-\gls{bi}-Architekturen bestehen strukturell aus mehreren koexistierenden Subsystemen -- operative Datenquellen, analytische \gls{bi}-Systeme und unstrukturierte Datenquellen -- die typischerweise unvollständig integriert sind und damit einen fundamentalen Schwachpunkt für einheitliche Managementunterstützung darstellen.\vglcite[133\,f.]{baars2008}
+
+Eine direkte Folge dieser systemseitigen Fragmentierung ist die Heterogenität auf der Ebene der Kennzahlendefinitionen.
+\glspl{kpi} sind Messgrößen, die unmittelbar auf strategisch relevante Ziele verweisen und ein Handlungssignal erzeugen.\vglcite[263\,f.]{ferreirotley2009}
+In fragmentierten Landschaften entstehen jedoch inkonsistente Definitionen ein und derselben Kennzahl: Unterschiedliche Methodik-Schulen, historisch gewachsene inkompatible Messsysteme sowie fehlende organisationale Governance führen dazu, dass dasselbe Konzept in verschiedenen Systemen unterschiedlich operationalisiert und berechnet wird.\vglcite[980\,ff.]{giovannoni2013}
+Die Folge sind Situationen, in denen verschiedene Berichte für dieselbe Frage unterschiedliche Antworten liefern -- ein Phänomen, das das Vertrauen in die Datenbasis nachhaltig beschädigt und die Entscheidungsqualität mindert.
+
+Als organisatorischer Lösungsversuch für die beschriebene Fragmentierung hat sich das Paradigma des \gls{ssbi} etabliert, das Fachanwendern direkten Datenzugriff ohne den Umweg über zentrale \gls{bi}-Teams ermöglichen soll.
+Doch auch dieser Ansatz stößt in der Praxis auf dokumentierte Grenzen: Die Literatur unterscheidet drei Kategorien von Implementierungshindernissen bei \gls{ssbi}-Lösungen -- datenbezogene Probleme (mangelnde Datenqualität und -zugänglichkeit), benutzerbezogene Probleme (fehlende Datenkompetenz, Akzeptanzdefizite) sowie organisationale Hindernisse (fehlendes Change Management, unklare Governance).\vglcite[3\,ff.]{lennerholt2018}
+Diese Befunde zeigen, dass die Überwindung fragmentierter \gls{bi}-Landschaften weder durch rein technische Maßnahmen noch durch organisatorische Selbsthilfe-Konzepte hinreichend adressiert wird.
+
+Dieser allgemeine Forschungsbefund spiegelt sich im konkreten Unternehmenskontext dieser Untersuchung wider.
+Bei SAP Signavio Product \& Engineering operieren mehrere heterogene Metrik- und Dashboard-Systeme nebeneinander, die aus unterschiedlichen Fachbereichen -- Engineering, Product, Customer Success -- mit je eigener Tool-Ownership und je eigenen Kennzahlen-Definitionen entstanden sind.
+Stakeholder berichten Fragmentierung, mangelnde Vergleichbarkeit zwischen Systemen und eingeschränkte Auffindbarkeit relevanter Kennzahlen.
+Dieser Kontext ist nicht als Einzelfall zu werten, sondern als Ausprägung des in der Literatur dokumentierten strukturellen Problems: die fehlende Integration heterogener \gls{bi}-Subsysteme in eine einheitliche Kennzahlensicht.
+
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Lösungsrelevanz und Motivation}
+\label{sec:einleitung-relevanz}
 % Hänel: Diskrepanz aktuell ↔ gewünscht
 % Hindernisse / Schwierigkeiten
 % Negative Konsequenzen (Ineffizienz, Fehleranfälligkeit, mangelnde Transparenz)
 % Aktueller Handlungsbedarf
 
+Die in Abschnitt~\ref{sec:einleitung-ausgangssituation} beschriebene Situation lässt sich als Diskrepanz zwischen einem dokumentierten Ist-Zustand und einem angestrebten Soll-Zustand beschreiben.
+Im Ist-Zustand sind Kennzahlen auf mehrere unverbundene Systeme verteilt: Reports werden manuell zusammengestellt, \gls{kpi}-Definitionen sind systemspezifisch und nicht systemübergreifend harmonisiert, und die Vertrauenswürdigkeit der Datenbasis ist für Entscheidungsträger schwer einzuschätzen.
+Als Soll-Zustand ist ein zentraler Zugangspunkt vorstellbar -- ein \gls{kpihub} -- der Kennzahlen aus bestehenden Quellsystemen als kohärente Sicht bereitstellt, konsistente Definitionen sicherstellt und navigierbar gestaltet ist.
+
+Der Übergang vom Ist- zum Soll-Zustand ist mit mehrschichtigen Hindernissen verbunden.
+Technisch sind heterogene Datenmodelle, unterschiedliche \glspl{api} und variierende Zugriffsrechte zu überwinden.
+Organisational erschweren dezentrale Tool-Ownership-Strukturen und fehlende domänenübergreifende Governance-Mechanismen eine einheitliche Konsolidierung.
+Ein empirisch belegtes Akzeptanzparadox verschärft die Situation: Systeme, bei denen die organisationale Betonung von Datenqualitätskontrolle hoch ist, erzeugen eine signifikant geringere Nutzungsabsicht bei Anwendern.\vglcite[18\,f.]{passlick2020}
+Dieses Paradox zeigt, dass strenge Governance-Anforderungen -- technisch unabdingbar -- gleichzeitig als Nutzungshemmnis wirken können, wenn sie nicht sorgfältig in der Systemgestaltung berücksichtigt werden.
+
+Die negativen Konsequenzen des Ist-Zustands sind nicht nur wahrnehmbar, sondern strukturell: Manueller Reporting-Aufwand bindet Kapazität, die andernorts eingesetzt werden könnte. Inkonsistente \gls{kpi}-Definitionen führen zu divergierenden Interpretationen und erschweren organisationsweite Verständigung über Leistungsstand und Handlungsbedarf. Fragmentierung der Datenbasis mindert die Entscheidungsqualität, weil relevante Signale -- etwa Release-Blocker oder Kapazitätsengpässe -- nicht zeitnah sichtbar werden.\vglcite[133\,f.]{baars2008}\vglcite[980]{giovannoni2013}
+Diese Konsequenzen sind keine Spezifika eines einzelnen Unternehmens, sondern strukturelle Folgen der \gls{bi}-Fragmentierung, die in der Literatur als Managementsupport-Hindernis dokumentiert sind.\vglcite[134]{baars2008}
+
+Gleichzeitig ist der aktuelle Zeitpunkt für eine Konsolidierungslösung günstig.
+Technologisch haben sich \gls{rest}-\gls{api}-basierte Integrationsansätze, Föderations-Architekturen und \gls{ea}-Paradigmen zu reifen Integrationsoptionen entwickelt, die eine systemübergreifende Kennzahlenaggregation heute realisierbar machen.
+Forschungsseitig fehlt jedoch ein systematisches Entscheidungsmodell, das die Auswahl des geeigneten Integrationsansatzes für den \gls{kpihub}-Kontext methodisch fundiert -- ein Defizit, das in der Konsolidierungsforschung explizit als offene Herausforderung benannt wird.\vglcite[707]{larson2016}
+Hier setzt die vorliegende Untersuchung an.
+
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Einordnung in die Wirtschaftsinformatik}
+\label{sec:einleitung-wi-einordnung}
 % Hänel: Einordnung in die Wirtschaftsinformatik
 % Bezug zu IS-Forschungsfeldern (z.B. Enterprise Systems, BI, Data Governance)
 
+Die beschriebene Problemlage ist nicht nur unternehmenspraktisch relevant, sondern lässt sich in anerkannte Forschungsfelder der Wirtschaftsinformatik einordnen.
+
+Das primäre Forschungsfeld ist das der Enterprise-Informationssysteme und \gls{bi}-Architekturen.
+Enterprise-\gls{bi}-Systeme -- Systeme zur Unterstützung unternehmensseitiger Entscheidungsprozesse durch strukturierte Daten -- stellen seit Jahren ein zentrales Untersuchungsfeld der Wirtschaftsinformatik dar.\vglcite[132\,f.]{baars2008}
+Die vorliegende Untersuchung bewegt sich in diesem Teilgebiet, indem sie fragt, wie heterogene \gls{bi}-Teilsysteme durch eine übergreifende Integrationslösung in eine einheitliche Kennzahlensicht überführt werden können.
+
+Ein zweites berührtes Forschungsfeld ist die \gls{datagovernance}.
+Zugriffskontrolle über heterogene Quellsysteme hinweg ist nicht nur ein technisches, sondern ein Governance-Problem: Welche Rollen dürfen welche Kennzahlen sehen, und wie werden widersprüchliche Rollenmodelle verschiedener Quellsysteme harmonisiert?
+Diese Fragen überschreiten die reine \gls{it}-Architektur und berühren das Forschungsfeld organisatorischer Datenverantwortlichkeiten und regulatorischer Compliance, das in Abschnitt~\ref{sec:grundlagen-governance} konzeptuell vertieft wird.
+
+Das dritte und für die methodische Positionierung zentrale Forschungsfeld ist die gestaltungsorientierte Wirtschaftsinformatik.
+Die Wirtschaftsinformatik wird in der Literatur als Wissenschaft mit charakteristischer Doppelgesichtigkeit beschrieben: Sie ist zugleich empirische Wissenschaft (Erkenntnis über bestehende Systeme und Prozesse) und Ingenieurwissenschaft (Gestaltung neuer Systeme und Artefakte).\vglcite[79\,ff.]{heinzl2024}
+Die vorliegende Untersuchung leistet einen Beitrag auf der gestaltungsorientierten Seite: Das zu entwickelnde Entscheidungsmodell ist ein präskriptives Artefakt, das normatives Wissen darüber bereitstellt, wie eine Integrationsentscheidung methodisch fundiert getroffen werden kann.
+
+Damit positioniert sich die Untersuchung ausdrücklich an der Schnittstelle von Technik und Organisation: Es werden keine rein technischen Implementierungsdetails untersucht, sondern die methodisch fundierte Entscheidungsfindung zwischen Integrationsoptionen -- eine Fragestellung, die das Alleinstellungsmerkmal der Wirtschaftsinformatik gegenüber der Informatik ausmacht.
+
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Zielsetzung und Forschungsfrage}
+\label{sec:einleitung-zielsetzung}
 % Forschungsfrage der Arbeit präzise formulieren
 % Abgrenzung: Was wird untersucht, was nicht?
 
+Ziel dieser Untersuchung ist die Entwicklung eines \gls{mcdm}-Modells, das die Auswahl eines \gls{kpihub}-Integrationsansatzes in einer fragmentierten Enterprise-Systemlandschaft methodisch fundiert.
+Das Modell soll die relevanten Entscheidungskriterien -- technische, governance-bezogene und strategische -- in eine nachvollziehbare, kriterienbasierte Empfehlung überführen.
+Ergänzend wird ein \gls{mvp} entwickelt, der den durch das Modell empfohlenen Integrationsansatz unter Realbedingungen erprobt und validiert.
+Die Untersuchung leistet damit einen gestaltungsorientierten Beitrag: präskriptives Modellwissen über die Integrationsentscheidung sowie einen situierten Machbarkeitsnachweis.\vglcite[342\,f.]{gregor2013}
+
+Aus dieser Zielsetzung ergibt sich folgende Hauptforschungsfrage:
+
+\begin{quote}
+\textit{Welcher Integrationsansatz eignet sich für die Realisierung eines \gls{kpihub} in einer fragmentierten Enterprise-Systemlandschaft, und wie kann diese Entscheidung durch ein Mehrkriterien-Entscheidungsmodell methodisch fundiert werden?}
+\end{quote}
+
+Die Hauptfrage wird durch zwei Teilfragen strukturiert:
+
+\begin{description}
+    \item[TF1:] Welche funktionalen und nicht-funktionalen Anforderungen stellt eine fragmentierte Enterprise-Systemlandschaft an einen \gls{kpihub}-Integrationsansatz?
+    \item[TF2:] Wie kann ein Mehrkriterien-Entscheidungsmodell diese Anforderungen in eine begründete, nachvollziehbare Integrationsauswahl überführen?
+\end{description}
+
+TF1 adressiert die Anforderungsseite und wird in Kapitel~5 beantwortet; TF2 adressiert die Entscheidungsmodell-Seite und wird in Kapitel~7 beantwortet.
+
+\textbf{Abgrenzung:} Die Untersuchung beschränkt sich auf den Systemkontext von SAP Signavio Product \& Engineering; eine Übertragung auf andere Unternehmensumgebungen außerhalb des SAP-Ökosystems ist nicht Gegenstand dieser Arbeit.
+Die \gls{mvp}-Implementierung deckt exemplarisch einen Datenpfad ab; eine vollständige Produktivimplementierung aller Quellsysteme ist kein Forschungsziel.
+Langfristige Wartungsökonomie der gewählten Integrationslösung sowie Change-Management- und Adoptionsaspekte eines Rollouts bleiben ausgeklammert.
+
+% ─────────────────────────────────────────────────────────────────────────────
+
 \subsection{Aufbau der Arbeit}
+\label{sec:einleitung-aufbau}
 % Kurzer Überblick über die Kapitelstruktur
+
+Die Arbeit folgt dem \gls{dsrm} nach Peffers et al. und gliedert sich in zehn Kapitel, die die sechs DSRM-Phasen in eine kohärente Argumentationsstruktur überführen.\vglcite[52\,ff.]{peffers2007}
+
+Kapitel~2 legt das konzeptionelle Fundament: \gls{kpi}-Management und \gls{bi}-Architekturen, Enterprise-Systemintegration, \gls{datagovernance} und Zugriffskontrolle sowie \gls{mcdm}-Methoden werden erarbeitet und mit einem Defizitabschnitt abgeschlossen, der die Forschungslücke aus der Literatur herleitet.
+Kapitel~3 begründet den Forschungsansatz (\gls{dsr}), dokumentiert den Literaturrechercheprozess, formuliert die Ergebniserwartung und skizziert das methodische Vorgehen; dieser methodische Rahmen legt die Grundlage für alle nachfolgenden Kapitel.
+
+Die folgenden Kapitel folgen der DSRM-Phasenstruktur:
+Kapitel~4 analysiert die Ausgangssituation und Systemlandschaft bei SAP Signavio P\&E (Problemidentifikation).
+Kapitel~5 erhebt und priorisiert die funktionalen und nicht-funktionalen Anforderungen an einen \gls{kpihub}-Integrationsansatz (Zieldefinition).
+Kapitel~6 identifiziert und charakterisiert den Lösungsraum -- die relevanten Architektur- und Tooloptionen (Vorbereitung Design).
+Kapitel~7 baut das Mehrkriterien-Entscheidungsmodell auf und wendet es auf die identifizierten Optionen an (Design \& Entwicklung).
+Kapitel~8 beschreibt Design, Umsetzung und Erprobung des \gls{mvp} (Demonstration).
+Kapitel~9 evaluiert den \gls{mvp} gegen den Anforderungskatalog und diskutiert die Ergebnisse (Evaluation).
+Kapitel~10 fasst die Erkenntnisse zusammen, reflektiert Limitationen und formuliert weiterführende Schritte (Kommunikation).
