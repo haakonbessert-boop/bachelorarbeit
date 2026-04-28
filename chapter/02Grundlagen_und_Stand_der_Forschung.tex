@@ -279,7 +279,6 @@ Diese methodischen Grundlagen sind jedoch nur dann operationalisierbar, wenn die
 \subsection{Defizite bestehender Ansätze}
 \label{sec:grundlagen-defizite}
 
-Die vorangegangenen Abschnitte haben theoretische Grundlagen etabliert.
 Nun ist zu fragen, inwiefern die bestehenden Ansätze -- fragmentierte \gls{bi}-Land\-schaften, \gls{ssbi}-Imple\-men\-tierungen, \gls{rbac}-Modelle -- das Problem der heterogenen \gls{kpi}-Landschaft bei SAP Signavio P\&E lösen.
 Die Antwort dieser Untersuchung lautet: Sie tun es nicht vollständig -- und zwar aus drei strukturellen Gründen, die nachfolgend entlang der technischen, der nutzungsbezogenen und der semantischen Dimension entwickelt werden.
 
@@ -290,7 +289,8 @@ Wie in Abschnitt~\ref{sec:grundlagen-integration} gezeigt, identifizieren Baars 
 
 Als organisatorischer Lösungsversuch für diese technische Herausforderung gilt \gls{ssbi} -- doch auch hier dokumentiert die Literatur strukturelle Adoptionsbarrieren.
 
-Diese Adoptionsbarrieren (vgl. Abschnitt~\ref{sec:grundlagen-kpi-bi}) werden durch ein empirisch belegtes Paradox verschärft: Systeme, bei denen organisationale Datenqualitätskontrolle stark betont wird, erzeugen eine geringere Nutzungsabsicht bei den Anwendern.\vglcite[18]{passlick2020}
+Wie in Abschnitt~\ref{sec:grundlagen-kpi-bi} dargelegt, scheitert \gls{ssbi}-Adoption an drei Ursachenkategorien: datenbezogenen Hindernissen (mangelnde Qualität und Zugänglichkeit), benutzerbezogenen Hindernissen (fehlende Datenkompetenz, Akzeptanzprobleme) und organisationalen Hindernissen (fehlende Strategie, unklare Governance).\vglcite[3\,ff.]{lennerholt2018}
+Diese Adoptionsbarrieren werden durch ein empirisch belegtes Paradox verschärft: Systeme, bei denen organisationale Datenqualitätskontrolle stark betont wird, erzeugen eine geringere Nutzungsabsicht bei den Anwendern.\vglcite[18]{passlick2020}
 Dies deutet darauf hin, dass strenge Governance-Mechanismen, die technisch notwendig sind, subjektiv als Nutzungshemmnis wahrgenommen werden -- ein Dilemma, das bestehende \gls{ssbi}-Ansätze nicht auflösen.
 
 Ein dritter, tieferliegender Grund betrifft die semantische Ebene: Selbst wenn technische Integration und organisationale Adoption gelingen, bleibt das Problem inkonsistenter \gls{kpi}-Definitionen bestehen.
@@ -299,10 +299,16 @@ In der Literatur wird gezeigt, dass Integrationsprobleme bei Performance-Measure
 Drei Quellen der Definitionsheterogenität werden identifiziert: unterschiedliche Methodik-Schulen (\textit{Balanced Scorecard}, \textit{Tableau de Bord}, \gls{kpi}-Trees), historisch gewachsene inkompatible Messsysteme sowie fehlende organisationale Governance.\vglcite[985\,ff.]{giovannoni2013}
 Diese Heterogenität ist nicht durch technische Konsolidierung zu beseitigen -- sie erfordert eine explizite semantische Harmonisierungsentscheidung, bevor Integrationstechnologien eingesetzt werden können.
 
-Zusammengenommen ergeben die drei Defizitebenen ein kohärentes Bild:
+Ein viertes, strukturell eigenständiges Defizit liegt quer zu den drei genannten Dimensionen und wird durch ihr Zusammentreffen erst vollständig sichtbar: die Zugriffssteuerungsebene.
+Das \gls{rbac}-Grundmodell setzt voraus, dass Rollen und Berechtigungen innerhalb eines Systems konsistent definiert sind.\vglcite[226\,f.]{ferraiolo2001}
+In heterogenen Multi-System-Umgebungen -- wie einem \gls{kpihub}, der Daten aus \gls{sac}, Jira und ServiceNow aggregiert -- bringt jedes Quellsystem sein eigenes Rollenmodell mit.
+Ohne explizite Harmonisierungsschicht entstehen entweder zu restriktive oder zu permissive Zugriffsregeln.\vglcite[12255\,f.]{ghazal2020}
+Bestehende Ansätze adressieren diese domänenübergreifende Rollen-Heterogenität nicht systematisch -- sie ist kein isoliertes technisches Problem, sondern ein Querschnittsthema, das entsteht, wenn technische Fragmentierung, nutzungsbezogene Governance-Anforderungen und semantische \gls{kpi}-Inkonsistenz gleichzeitig auftreten.
+
+Zusammengenommen ergeben die drei Defizitebenen -- mit dem \gls{rbac}-Harmonisierungsproblem als struktureller Querschnittsherausforderung -- ein kohärentes Bild:
 Die Literatur behandelt \gls{bi}-Integration, rollenbasierte Zugriffskontrolle und \gls{mcdm}-Methoden als getrennte Themenfelder.
-Ein integriertes Entscheidungsmodell, das diese drei Dimensionen -- technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt, existiert in der Literatur bisher nicht.
-Eine methodisch fundierte Auswahlentscheidung, die alle drei Dimensionen gleichzeitig berücksichtigt, stellt damit die zentrale Forschungslücke dar.
+Ein integriertes Entscheidungsmodell, das technische Integrationsoptionen, Governance-Anforderungen und semantische \gls{kpi}-Harmonisierung -- einschließlich ihrer Querschnittswirkung auf die \gls{rbac}-Durchsetzung -- für den Kontext einer fragmentierten Enterprise-\gls{bi}-Landschaft zusammenführt, existiert in der Literatur bisher nicht.
+Eine methodisch fundierte Auswahlentscheidung, die alle drei Dimensionen und ihre Wechselwirkungen gleichzeitig berücksichtigt, stellt damit die zentrale Forschungslücke dar.
 
 Abbildung~\ref{fig:defizit-ebenen} verdichtet die drei Defizitebenen und die daraus resultierende Forschungslücke in einer Übersicht.
 
@@ -342,5 +348,5 @@ Abbildung~\ref{fig:defizit-ebenen} verdichtet die drei Defizitebenen und die dar
 \end{bafigure}
 
 Die in Abbildung~\ref{fig:defizit-ebenen} visualisierte Lücke motiviert die Wahl von \gls{dsr} als Forschungsmethodik: Wenn das vorliegende Problem ein fehlendes Artefakt ist, ist die Konstruktion eben dieses Artefakts die wissenschaftlich adäquate Antwort.
-Die identifizierten Defizite -- technischer, nutzungsbezogener und semantischer Art -- sind nicht durch inkrementelle Anpassungen bestehender Systeme lösbar, sondern erfordern die Konstruktion eines neuen Artefakts.
+Die identifizierten Defizite -- technischer, nutzungsbezogener und semantischer Art, verstärkt durch die querschnittliche \gls{rbac}-Harmonisierungsanforderung -- sind nicht durch inkrementelle Anpassungen bestehender Systeme lösbar, sondern erfordern die Konstruktion eines neuen Artefakts.
 Die methodische Begründung erfolgt im folgenden Kapitel.
