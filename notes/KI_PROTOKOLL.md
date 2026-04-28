@@ -184,6 +184,16 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Ergebnis (Zusammenfassung)** | Fließtext ~380 Wörter mit vier Absätzen (Begründung/Rahmen, Themenblöcke T1–T5, Datenbanken und Suchstrings, PRISMA-Tabellenauswertung + Snowballing). batable tab:prisma mit 6 Stufen und XX-Platzhaltern. 2 TODO-Kommentare. Build erfolgreich (53 Seiten, 0 Fehler). |
 | **Verwendung** | **Redigiert** — Struktur und LaTeX-Code aus KI, inhaltliche Substanz (Themenblöcke, Kriterien, Suchstrings) aus outline/03-methodik.md eigenständig vorgegeben |
 
+### KI-021 | 28. Apr 2026 | TXT | Einleitungsabsatz Anhang A (Suchstrings)
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | Anhang A — Suchstrings der systematischen Literaturrecherche |
+| **Prompt (Zusammenfassung)** | Ersetze den Einleitungsabsatz in chapter/anhang_a_suchstrings.tex durch einen klareren Text: Tabellen als maschinenlesbare Suchbefehle (keine Lesetexte), Reproduzierbarkeit als Rigor-Cycle-Anforderung nach Hevner et al. (hevner2004, S. 79), Notation kurz erklären. 3–4 Sätze, kein Nominalstil, Passiv/neutral. |
+| **Ergebnis (Zusammenfassung)** | Einleitungsabsatz auf 4 Sätze erweitert: Zweck (maschinenlesbare Suchbefehle), Rigor-Cycle-Begründung mit \vglcite[79]{hevner2004}, Datenbankoptimierung, Notation. Build erfolgreich (57 Seiten, 0 Fehler). |
+| **Verwendung** | **Redigiert** — Entwurf und LaTeX-Formulierung aus KI; Entfernung unzulässigen \citeauthor-Befehls eigenständig korrigiert |
+
 ---
 
 ## Kapitel 4 — Ausgangssituation und Systemlandschaft

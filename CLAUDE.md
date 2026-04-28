@@ -15,7 +15,8 @@ latexmk -pdf simple.tex          # primary build (thesis)
 latexmk -pdf -interaction=nonstopmode simple.tex  # non-stop mode
 latexmk -pdf ki-genehmigung.tex  # KI approval form
 latexmk -pdf sachse_gliederung.tex  # outline/schedule for advisor
-python generate_sachse_docx.py   # regenerate sachse_gliederung.docx (Word export)
+latexmk -C                       # clean all build artifacts
+python generate_sachse_docx.py   # regenerate sachse_gliederung.docx (requires: pip install python-docx)
 ```
 
 Glossary uses `\makenoidxglossaries` — no separate indexing step needed. No `.latexmkrc` file; latexmk defaults apply.
@@ -32,6 +33,7 @@ Build artifacts (`.aux`, `.log`, `.pdf`, `.synctex.gz`, `.fdb_latexmk`, `.fls`, 
   - 04 Ausgangssituation und Systemlandschaft, 05 Anforderungsanalyse
   - 06 Lösungsraum und Architektur-/Tooloptionen, 07 Entscheidungs- und Bewertungsmodell
   - 08 MVP: Design, Umsetzung und Validierung, 09 Ergebnisse und Diskussion, 10 Fazit und Ausblick
+  - **Gotcha:** `simple.tex` mixes `\include{chapter/01einleitung}` (no `.tex`) and `\include{chapter/04Ausgangssituation_und_Systemlandschaft.tex}` (with `.tex`). Both work — LaTeX's `\include` auto-appends `.tex` — but stay consistent when adding new chapters.
 - `ki-genehmigung.tex` — standalone KI-approval form (separate build)
 - `sachse_gliederung.tex` — outline/schedule document for advisor (separate build); `generate_sachse_docx.py` generates the Word version
 - `notes/` — project documentation: `THESIS_STATUS.md` (task tracker), `CONVENTIONS.md` (authoritative rules), `MEETINGS.md`, `REQUIREMENTS.md`, `GLOSSAR.md`, `LITERATURE.md`, `KI_PROTOKOLL.md`
@@ -43,33 +45,39 @@ Build artifacts (`.aux`, `.log`, `.pdf`, `.synctex.gz`, `.fdb_latexmk`, `.fls`, 
 
 ### Citations
 
-Primary citation command: `\vglcite[PAGE]{key}` — generates footnote with "Vgl." for indirect citations. Always **after** the period: `Text.\vglcite[XX]{key}`. Use `XX` as placeholder for unknown page numbers and replace later.
-
-Other available commands (defined in `baarticle.cbx`):
-- `\bacite[PAGE]{key}` — direct/verbatim citation footnote (without "Vgl."), only for literal quotes
-- `\captioncite{key}` — inline citation for figure/table source attributes (no footnote)
+Primary citation command: `\vglcite[PAGE]{key}` — generates footnote with "Vgl." for indirect citations. Always **after** the period: `Text.\vglcite[XX]{key}`. Use `XX` as placeholder for unknown page numbers and replace later. Other commands: `\bacite` (direct quotes), `\captioncite` (figure/table source attributes).
 
 Never use: `\textcite{}`, `\citet{}`, `\citep{}`, `\autocite{}`. No author names in running text — citations are always anonymous footnotes.
 
 ### Glossary / Acronyms
 
-Always use `\gls{key}` for defined terms from `acronyms.tex` and `glossary.tex`. Never write abbreviations manually. When adding a new term: (1) add to `acronyms.tex`/`glossary.tex`, (2) document in `notes/GLOSSAR.md`, (3) use `\gls{key}` in text.
-
-Use `\textit{}` only for terms that have **no** glossary entry (e.g. taxonomy terms like *Modell*, *Instanz*).
+Always use `\gls{key}` for defined terms from `acronyms.tex` and `glossary.tex`. Never write abbreviations manually. When adding a new term: (1) add to `acronyms.tex`/`glossary.tex`, (2) document in `notes/GLOSSAR.md`, (3) use `\gls{key}` in text. Use `\textit{}` only for terms without a glossary entry.
 
 ### Figures
 
-Use `bafigure` environment with `source=` and `label=`. Prefer TikZ for diagrams. Only include a figure when it is strictly necessary or makes the text understandable without it. Never directly copy figures from publications — redraw and attribute with "in Anlehnung an `\captioncite{key}`".
+Use `bafigure` with `source=` and `label=`. Prefer TikZ for diagrams. Never copy figures directly from publications (copyright) — redraw them and attribute with `source={in Anlehnung an \captioncite{key}}`. If `source=` is omitted, the environment auto-adds "(Quelle: eigene Darstellung)".
 
-### Language & style (German academic)
+### Literature
 
-Avoid repetitive self-reference ("diese Arbeit", "die vorliegende Arbeit", "der Autor"). Vary with: "diese Untersuchung", "zu diesem Zweck", passive constructions.
+When adding any new source, always update **both simultaneously**: (1) add BibTeX entry to `references.bib`, (2) add analysis entry (author, relevance, key findings, chapter mapping) to `notes/LITERATURE.md`.
+
+### KI-Protokoll
+
+Every AI-assisted work step on the thesis (text drafting, diagrams, code, research) requires a new entry in `notes/KI_PROTOKOLL.md`:
+- Running ID: KI-001, KI-002, ...
+- Fields: Datum, Werkzeug, Nutzungsart, Kapitel, Prompt-Zusammenfassung, Ergebnis, Verwendungsklasse
+- Nutzungsart: **TXT** (text), **VIS** (diagrams), **DEV** (code), **REC** (research), **STR** (structure)
+- Verwendungsklasse: **Direkt** (used as-is) / **Redigiert** (edited) / **Inspiration** (starting point only)
+
+Pure meta-work (repo hygiene, notes updates, status tracking) does not require a KI-Protokoll entry.
+
+### German academic style
+
+Avoid repeating "diese Arbeit", "die vorliegende Arbeit", "der Autor". Vary with: "diese Untersuchung", "zu diesem Zweck", passive constructions. Academic, concise, no excessive nominalization or nested relative clauses.
 
 ### Git workflow
 
-Commit and push `notes/*.md` and `outline/*.md` files **immediately** after editing. When adding a source: update both `references.bib` and `notes/LITERATURE.md`. Log all AI-assisted work in `notes/KI_PROTOKOLL.md` with running ID (KI-NNN), tool, type (TXT/VIS/DEV/REC/STR), chapter, prompt summary, result, usage class (Direkt/Redigiert/Inspiration).
-
-`notes/THESIS_STATUS.md` is the central task tracker — update "Aktueller Stand" and "Nächste Schritte" after each work session.
+Commit and push **immediately** after every change to: `notes/THESIS_STATUS.md`, `notes/MEETINGS.md`, `notes/REQUIREMENTS.md`, `notes/LITERATURE.md`, `notes/KI_PROTOKOLL.md`, and any file under `outline/`. Never leave these files in a dirty working tree.
 
 ## Agent system
 
@@ -135,4 +143,11 @@ Appendix with auto-generated Anhangverzeichnis. Figures/tables inside use append
 
 ## Biblatex data model
 
-The `unpublished` entry type auto-appends ", internes Dokument" in the bibliography — use for SAP-internal sources. The `baarticle.dbx` extends the data model with a `bapublisher` field used for `incollection` entries (Hrsg. formatting).
+The `unpublished` entry type auto-appends ", internes Dokument" in the bibliography — use for SAP-internal sources only (not for general unpublished works). The `baarticle.dbx` extends the data model with a `bapublisher` field used for `incollection` entries (Hrsg. formatting).
+
+## Non-obvious pitfalls
+
+- **`\hypersetup{hidelinks}`** is set in `simple.tex` preamble — this globally disables link coloring, overriding the `linkcoloring` class option
+- **`\basimpleabstract`** must be defined in the preamble (before `\begin{document}`), not inside the document body — this is easy to get wrong
+- **`\include{}` vs `\input{}`**: Chapters use `\include{}` which forces page breaks and creates `.aux` files per chapter. Do not switch to `\input{}` without understanding the implications for `\includeonly{}`
+- **Build artifacts are present in the working tree** despite `.gitignore` — some `.aux`, `.log`, `.fdb_latexmk` files exist on disk but should not be committed. If `git status` shows them, check `.gitignore` before staging
