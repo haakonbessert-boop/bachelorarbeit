@@ -70,8 +70,6 @@ Die technische Realisierung eines \gls{kpihub} setzt voraus, dass heterogene Que
 Dafür stehen grundlegend verschiedene Integrationsparadigmen zur Verfügung, die sich in ihrer Architekturlogik, ihrem Datenbewegungsmodell und ihren Governance-Implikationen unterscheiden.
 Dieser Abschnitt systematisiert die vier konzeptuell relevanten Paradigmen -- \gls{et} und Data Warehouse, Messaging-basierte Integration, \gls{rest}-\gls{api}-basierte Integration sowie \gls{ea} -- und schließt mit einer integrierten Bewertung anhand des Rahmens von Baars und Kemper.
 
-\subsubsection*{ETL und Data Warehouse als Integrationsparadigma}
-
 Das älteste und in der Unternehmenspraxis am weitesten verbreitete Verfahren zur Konsolidierung heterogener Datenquellen ist das Data-Warehouse-Modell, das auf dem \gls{et}-Prozess basiert.
 Der \gls{et}-Prozess beschreibt die dreistufige Überführung von Daten aus Quellsystemen in eine zentrale, analytisch optimierte Datenhaltung: Daten werden extrahiert, in ein einheitliches Zieldatenmodell transformiert und schließlich in das Zielsystem geladen.\vglcite[19]{kimball2013}
 Das kanonische Werkzeug für diesen Ansatz ist das dimensionale Datenmodell mit Faktentabellen, Dimensionstabellen und Sternschema-Strukturen -- Konzepte, die in der Praxis nahezu synonym mit dem Begriff Data Warehouse verwendet werden.\vglcite[7\,ff.]{kimball2013}
@@ -83,8 +81,6 @@ Dieser Ansatz hat jedoch strukturelle Grenzen: Der Ladezyklus ist grundsätzlich
 Für operative Dashboards mit tagesaktuellem oder stündlichem Aktualisierungsbedarf ist dieser Ansatz nur bedingt geeignet.
 Zudem bedeutet eine zentrale Datenhaltung erhöhten Schemamanagement-Aufwand: Jede Änderung in Quellsystemen erfordert Anpassungen im Transformationsschritt.
 
-\subsubsection*{Messaging-basierte Integration}
-
 Als konzeptuelle Antwort auf die Starrheit batch-orientierter Ansätze etablierte sich das Paradigma der Messaging-basierten Integration, dessen konzeptuelles Fundament in den \gls{eip} kodifiziert wurde.
 Das Standardwerk zu \gls{eip} katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[10]{hohpe2003}
 
@@ -94,8 +90,6 @@ Diese Entkopplung ist ein struktureller Vorteil gegenüber dem \gls{et}-Verfahre
 Aus der Messaging-Grundidee haben sich zwei Implementierungsstrategien entwickelt, die sich im Grad der Echtzeitorientierung unterscheiden.
 Batch-orientierte Systeme sammeln Nachrichten über einen Zeitraum und verarbeiten sie gebündelt -- konzeptuell ähnlich dem \gls{et}-Ansatz, jedoch mit flexibleren Koppelungsoptionen.
 Event-getriebene Systeme verarbeiten jede Nachricht sofort nach Eintreffen und ermöglichen damit nahezu echtzeitfähige Datenintegration -- eine Eigenschaft, die für operative \gls{kpi}-Dashboards mit unmittelbarem Aktualisierungsbedarf relevant ist.\vglcite[442]{hohpe2003}
-
-\subsubsection*{REST-API-basierte Integration}
 
 Mit der Verbreitung von Web-Architekturen hat sich ein drittes Integrationsparadigma als Standard für moderne Enterprise-Systemlandschaften durchgesetzt: die \gls{rest}-basierte \gls{api}-Integration.
 \gls{rest} (Representational State Transfer) ist kein Protokoll, sondern ein Architekturstil, der in der kanonischen Dissertation von Fielding als Menge von sechs Constraints definiert wird: Client-Server-Trennung, Zustandslosigkeit, Cachebarkeit, Einheitliches Interface, Mehrschichtsystem und Code-on-Demand.\vglcite[76\,ff.]{fielding2000}
@@ -108,8 +102,6 @@ Im Kontext eines \gls{kpihub} bedeutet \gls{rest}-\gls{api}-Integration, dass Ke
 Quellsysteme wie Jira, ServiceNow oder \gls{sac} stellen jeweils eigene \gls{rest}-\glspl{api} bereit; der \gls{kpihub} fungiert als Aggregationsschicht, die Anfragen koordiniert und die Antworten zu einer kohärenten Kennzahlensicht zusammenführt.
 Dieses Pull-Modell bietet gegenüber dem \gls{et}-Ansatz den Vorteil geringerer Datenhaltungsredundanz, steht jedoch vor der Herausforderung, dass Verfügbarkeit und Antwortzeiten des \gls{kpihub} von der Verfügbarkeit aller angebundenen Quellsysteme abhängen.
 
-\subsubsection*{Embedded Analytics als Integrationsparadigma}
-
 Als viertes Paradigma ist \gls{ea} zu unterscheiden, das erst mit der Verbreitung webbasierter Enterprise-Applikationen konzeptuell eigenständig relevant wurde.
 \gls{ea} bezeichnet den Ansatz, analytische Einblicke -- also Kennzahlen, Charts und Statusanzeigen -- kontextuell in die Benutzeroberfläche einer Fachanwendung einzubetten, anstatt den Anwender zur Informationsbeschaffung in eine separate \gls{bi}-Plattform zu leiten.\vglcite[449]{nijkamp2009}
 Die Einbettung erfolgt über kontextsensitive Lookup-Services, die bei Aufruf einer Applikationsansicht dynamisch die relevanten analytischen Inhalte aus dem Hintergrundsystem laden und direkt im Applikationskontext darstellen.\vglcite[451\,f.]{nijkamp2009}
@@ -120,8 +112,6 @@ Demonstriert wurde dieses Konzept erstmals im SAP-NetWeaver-CRM-Kontext, wo anal
 
 Im \gls{kpihub}-Kontext kann \gls{ea} als ergänzender Integrationsweg interpretiert werden: Anstatt alle Kennzahlen in einer eigenständigen Hub-Oberfläche zu konsolidieren, können Teilmengen von Kennzahlen über Embedding-Techniken in bestehende Arbeitsumgebungen (z.\,B.\ \gls{sac}-Dashboards in eine Portaloberfläche) eingebettet werden.
 Dies entspricht konzeptuell dem, was in der Praxis als \gls{federation} bezeichnet wird: Die Daten und Visualisierungen verbleiben im Quellsystem; lediglich die Ansicht wird integriert.\vglcite[449\,f.]{nijkamp2009}
-
-\subsubsection*{Integrationsrahmen und Defizitdiagnose}
 
 Die skizzierten vier Paradigmen sind in der Unternehmenspraxis selten in reiner Form anzutreffen.
 Baars und Kemper zeigen in ihrem integrierten \gls{bi}-Framework, dass Enterprise-\gls{bi}-Architekturen strukturell aus mehreren koexistierenden Subsystemen bestehen: operative Datenquellen, analytische \gls{bi}-Systeme und unstrukturierte Datenquellen operieren typischerweise nebeneinander, ohne vollständig integriert zu sein.\vglcite[133]{baars2008}
