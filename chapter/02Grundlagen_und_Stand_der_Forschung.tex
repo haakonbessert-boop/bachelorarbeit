@@ -73,10 +73,10 @@ Dieser Abschnitt systematisiert die vier konzeptuell relevanten Paradigmen -- \g
 \subsubsection*{ETL und Data Warehouse als Integrationsparadigma}
 
 Das älteste und in der Unternehmenspraxis am weitesten verbreitete Verfahren zur Konsolidierung heterogener Datenquellen ist das Data-Warehouse-Modell, das auf dem \gls{et}-Prozess basiert.
-Der \gls{et}-Prozess beschreibt die dreistufige Überführung von Daten aus Quellsystemen in eine zentrale, analytisch optimierte Datenhaltung: Daten werden extrahiert, in ein einheitliches Zieldatenmodell transformiert und schließlich in das Zielsystem geladen.\vglcite[XX]{kimball2013}
-Das kanonische Werkzeug für diesen Ansatz ist das dimensionale Datenmodell mit Faktentabellen, Dimensionstabellen und Sternschema-Strukturen -- Konzepte, die in der Praxis nahezu synonym mit dem Begriff Data Warehouse verwendet werden.\vglcite[XX]{kimball2013}
+Der \gls{et}-Prozess beschreibt die dreistufige Überführung von Daten aus Quellsystemen in eine zentrale, analytisch optimierte Datenhaltung: Daten werden extrahiert, in ein einheitliches Zieldatenmodell transformiert und schließlich in das Zielsystem geladen.\vglcite[19]{kimball2013}
+Das kanonische Werkzeug für diesen Ansatz ist das dimensionale Datenmodell mit Faktentabellen, Dimensionstabellen und Sternschema-Strukturen -- Konzepte, die in der Praxis nahezu synonym mit dem Begriff Data Warehouse verwendet werden.\vglcite[7\,ff.]{kimball2013}
 
-Für die Integration mehrerer Datenbereiche beschreibt das Bus-Architecture-Konzept eine übergreifende Integrationsstrategie: \textit{Conformed} Dimensions -- also Dimensionstabellen, die über verschiedene Faktentabellen hinweg konsistent definiert sind -- ermöglichen die konzeptuelle Verknüpfung verschiedener Kennzahlenbereiche ohne systemischen Zwang zur physischen Zentralisierung.\vglcite[XX]{kimball2013}
+Für die Integration mehrerer Datenbereiche beschreibt das Bus-Architecture-Konzept eine übergreifende Integrationsstrategie: \textit{Conformed} Dimensions -- also Dimensionstabellen, die über verschiedene Faktentabellen hinweg konsistent definiert sind -- ermöglichen die konzeptuelle Verknüpfung verschiedener Kennzahlenbereiche ohne systemischen Zwang zur physischen Zentralisierung.\vglcite[124\,f.]{kimball2013}
 Dieses Architekturprinzip ist für den \gls{kpihub}-Kontext relevant, da es eine Integrationsstrategie liefert, die verschiedene \gls{bi}-Domänen (Engineering, Product, Customer Success) semantisch zusammenführt.
 
 Dieser Ansatz hat jedoch strukturelle Grenzen: Der Ladezyklus ist grundsätzlich batch-orientiert, d.\,h.\ Daten werden in festgelegten Intervallen übertragen, nicht in Echtzeit.
@@ -86,22 +86,22 @@ Zudem bedeutet eine zentrale Datenhaltung erhöhten Schemamanagement-Aufwand: Je
 \subsubsection*{Messaging-basierte Integration}
 
 Als konzeptuelle Antwort auf die Starrheit batch-orientierter Ansätze etablierte sich das Paradigma der Messaging-basierten Integration, dessen konzeptuelles Fundament in den \gls{eip} kodifiziert wurde.
-Das Standardwerk zu \gls{eip} katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[XX]{hohpe2003}
+Das Standardwerk zu \gls{eip} katalogisiert 65 Integrationsmuster -- darunter Messaging-Kanäle, Router, Transformer und Endpoints -- und liefert damit eine einheitliche Entwurfssprache für Integrationsarchitekturen.\vglcite[10]{hohpe2003}
 
-Das zentrale Konzept dieses Integrationsmodells ist die asynchrone Nachrichtenübertragung über einen Messaging-Kanal: Quell- und Zielsystem sind entkoppelt; Datenproduzenten senden Nachrichten in einen Kanal, von dem Konsumenten sie unabhängig abrufen können.\vglcite[XX]{hohpe2003}
+Das zentrale Konzept dieses Integrationsmodells ist die asynchrone Nachrichtenübertragung über einen Messaging-Kanal: Quell- und Zielsystem sind entkoppelt; Datenproduzenten senden Nachrichten in einen Kanal, von dem Konsumenten sie unabhängig abrufen können.\vglcite[76]{hohpe2003}
 Diese Entkopplung ist ein struktureller Vorteil gegenüber dem \gls{et}-Verfahren: Quell- und Zielsystem müssen nicht gleichzeitig verfügbar sein, und Schemaänderungen können über Transformer-Muster abgefangen werden, ohne die gesamte Pipeline anzupassen.
 
 Aus der Messaging-Grundidee haben sich zwei Implementierungsstrategien entwickelt, die sich im Grad der Echtzeitorientierung unterscheiden.
 Batch-orientierte Systeme sammeln Nachrichten über einen Zeitraum und verarbeiten sie gebündelt -- konzeptuell ähnlich dem \gls{et}-Ansatz, jedoch mit flexibleren Koppelungsoptionen.
-Event-getriebene Systeme verarbeiten jede Nachricht sofort nach Eintreffen und ermöglichen damit nahezu echtzeitfähige Datenintegration -- eine Eigenschaft, die für operative \gls{kpi}-Dashboards mit unmittelbarem Aktualisierungsbedarf relevant ist.\vglcite[XX]{hohpe2003}
+Event-getriebene Systeme verarbeiten jede Nachricht sofort nach Eintreffen und ermöglichen damit nahezu echtzeitfähige Datenintegration -- eine Eigenschaft, die für operative \gls{kpi}-Dashboards mit unmittelbarem Aktualisierungsbedarf relevant ist.\vglcite[442]{hohpe2003}
 
 \subsubsection*{REST-API-basierte Integration}
 
 Mit der Verbreitung von Web-Architekturen hat sich ein drittes Integrationsparadigma als Standard für moderne Enterprise-Systemlandschaften durchgesetzt: die \gls{rest}-basierte \gls{api}-Integration.
-\gls{rest} (Representational State Transfer) ist kein Protokoll, sondern ein Architekturstil, der in der kanonischen Dissertation von Fielding als Menge von sechs Constraints definiert wird: Client-Server-Trennung, Zustandslosigkeit, Cachebarkeit, Einheitliches Interface, Mehrschichtsystem und Code-on-Demand.\vglcite[XX]{fielding2000}
+\gls{rest} (Representational State Transfer) ist kein Protokoll, sondern ein Architekturstil, der in der kanonischen Dissertation von Fielding als Menge von sechs Constraints definiert wird: Client-Server-Trennung, Zustandslosigkeit, Cachebarkeit, Einheitliches Interface, Mehrschichtsystem und Code-on-Demand.\vglcite[76\,ff.]{fielding2000}
 Das einheitliche Interface -- konkret die Nutzung standardisierter HTTP-Methoden (GET, POST, PUT, DELETE) und ressourcenbasierter Adressierung -- ist dabei die zentrale Eigenschaft, die \gls{rest}-\glspl{api} interoperabel und plattformunabhängig macht.
 
-Die sechs REST-Constraints wirken zusammen darauf hin, dass eine Architektur gut skalierbar, modifizierbar und zuverlässig ist.\vglcite[XX]{fielding2000}
+Die sechs REST-Constraints wirken zusammen darauf hin, dass eine Architektur gut skalierbar, modifizierbar und zuverlässig ist.\vglcite[76\,ff.]{fielding2000}
 Für die Integration heterogener Enterprise-Systeme ist insbesondere die Zustandslosigkeit relevant: Da der Server keinen Sitzungszustand speichert, können Anfragen unabhängig voneinander verarbeitet werden, was horizontale Skalierbarkeit ermöglicht.
 
 Im Kontext eines \gls{kpihub} bedeutet \gls{rest}-\gls{api}-Integration, dass Kennzahlen on-demand über standardisierte Endpunkte abgerufen werden, ohne dass Daten physisch kopiert oder vorab transformiert werden müssen.
@@ -220,8 +220,8 @@ Welche formalen Methoden geeignet sind, um die beschriebenen Governance- und Zug
 Die Wahl eines Integrationsansatzes für den \gls{kpihub} ist kein binäres Ja-Nein-Problem, sondern eine Mehr\-kri\-te\-rien-Entscheidung: Technische Machbarkeit, Gover\-nance-Kompa\-ti\-bi\-li\-tät, Entwicklungsaufwand und strategische Passung müssen gleichzeitig bewertet werden.
 Dieser Abschnitt stellt die methodischen Grundlagen für solche Entscheidungsprobleme vor und legt die theoretische Basis für die Methodenwahl in Kapitel~7.
 
-Im Bereich des Requirements Engineering ist die Nutzwertanalyse eine etablierte Methode zur Priorisierung konkurrierender Anforderungen.\vglcite[XX]{pohl2010}
-Das Grundprinzip besteht darin, Optionen anhand gewichteter Kriterien mit Punktwerten zu bewerten und einen Gesamtnutzwert je Option zu berechnen.\vglcite[XX]{pohl2010}
+Im Bereich des Requirements Engineering ist die Nutzwertanalyse eine etablierte Methode zur Priorisierung konkurrierender Anforderungen.\vglcite[119\,ff.]{pohl2010}
+Das Grundprinzip besteht darin, Optionen anhand gewichteter Kriterien mit Punktwerten zu bewerten und einen Gesamtnutzwert je Option zu berechnen.\vglcite[119\,ff.]{pohl2010}
 Die Nutzwertanalyse ist das einfachste Verfahren der Mehrkriterienentscheidung: transparent, intuitiv und ohne besondere mathematische Vorkenntnisse anwendbar.
 Ihr zentraler Nachteil liegt in der Subjektivität der Gewichtungsvergabe -- es gibt kein formales Verfahren, das die Konsistenz der Gewichtungen überprüft.
 Komplexere Methoden wie \gls{ahp} und \gls{topsis} adressieren diesen Mangel.
