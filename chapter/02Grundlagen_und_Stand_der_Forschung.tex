@@ -113,6 +113,32 @@ Demonstriert wurde dieses Konzept erstmals im SAP-NetWeaver-CRM-Kontext, wo anal
 Im \gls{kpihub}-Kontext kann \gls{ea} als ergänzender Integrationsweg interpretiert werden: Anstatt alle Kennzahlen in einer eigenständigen Hub-Oberfläche zu konsolidieren, können Teilmengen von Kennzahlen über Embedding-Techniken in bestehende Arbeitsumgebungen (z.\,B.\ \gls{sac}-Dashboards in eine Portaloberfläche) eingebettet werden.
 Dies entspricht konzeptuell dem, was in der Praxis als \gls{federation} bezeichnet wird: Die Daten und Visualisierungen verbleiben im Quellsystem; lediglich die Ansicht wird integriert.\vglcite[449\,f.]{nijkamp2009}
 
+Tabelle~\ref{tab:integrationsparadigmen} stellt die vier Paradigmen nach ihren entscheidungsrelevanten Eigenschaften gegenüber.
+
+\begin{batable}[label=tab:integrationsparadigmen]{Vergleich der Integrationsparadigmen nach entscheidungsrelevanten Eigenschaften}
+\small\setlength{\tabcolsep}{8pt}\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{3.0cm}|p{2.6cm}|p{2.6cm}|p{2.3cm}|p{2.6cm}|}
+\hline
+\textbf{Dimension} & \textbf{\gls{et}/DWH} & \textbf{Messaging} & \textbf{\gls{rest}-\gls{api}} & \textbf{\gls{ea}} \\
+\hline
+Datenbewegung & Batch-Kopie & Ereignis-/Batch-Nachricht & Pull on-demand & Präsentationsebene \\
+\hline
+Echtzeitfähigkeit & Gering & Hoch & Mittel & Hoch \\
+\hline
+Datenhaltung & Zentral (DWH) & Dezentral & Im Quellsystem & Im Quellsystem \\
+\hline
+Systemkopplung & Eng & Lose & Lose & Sehr lose \\
+\hline
+Schema-Aufwand & Hoch & Mittel & Gering & Sehr gering \\
+\hline
+\gls{kpihub}-Relevanz & Historische Analyse & Echtzeit-Events & Standardzugriff & Kontextuelle Einblicke \\
+\hline
+\end{tabular}
+\end{batable}
+
+Die Gegenüberstellung zeigt, dass kein einzelnes Paradigma alle Anforderungen eines \gls{kpihub} -- Echtzeitfähigkeit, geringe Systemkopplung, überschaubarer Schema-Aufwand und kontextueller Datenzugriff -- gleichzeitig erfüllt.
+Diese komplementäre Eigenschaftsverteilung ist der Ausgangspunkt für die nachfolgende Defizitanalyse.
+
 Die skizzierten vier Paradigmen sind in der Unternehmenspraxis selten in reiner Form anzutreffen.
 Baars und Kemper zeigen in ihrem integrierten \gls{bi}-Framework, dass Enterprise-\gls{bi}-Architekturen strukturell aus mehreren koexistierenden Subsystemen bestehen: operative Datenquellen, analytische \gls{bi}-Systeme und unstrukturierte Datenquellen operieren typischerweise nebeneinander, ohne vollständig integriert zu sein.\vglcite[133]{baars2008}
 Diese parallele Koexistenz separater Subsysteme wird explizit als fundamentales Strukturproblem identifiziert -- eines, das weder durch weitere \gls{et}-Pipelines noch durch \gls{rest}-\glspl{api} allein lösbar ist, weil die Integrationslücke weniger auf der Datenübertragungsebene als auf der semantischen Ebene liegt.\vglcite[134]{baars2008}
