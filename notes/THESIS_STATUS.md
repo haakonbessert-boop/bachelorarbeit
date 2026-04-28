@@ -9,9 +9,9 @@
 
 ---
 
-## Aktueller Stand (27. April 2026)
+## Aktueller Stand (28. April 2026)
 
-Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben. **Meilenstein erreicht:** Prof. Sachse hat die überarbeitete Gliederung am 27.04. formal per E-Mail genehmigt — kein Änderungsbedarf.
+Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben. **Meilenstein erreicht:** Prof. Sachse hat die überarbeitete Gliederung am 27.04. formal per E-Mail genehmigt — kein Änderungsbedarf. Oliver-Timm-Follow-up (28.04.) durchgeführt: EA-Store-Link erhalten, System aktuell down — Klärung im Donnerstag-Sync (30.04.).
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -118,15 +118,14 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [ ] No-Go Datalake als Constraint in Anforderungsanalyse (Kap. 5) aufnehmen — ggf. in Interview mit Janine offiziell festhalten
 - [ ] Review-Termin mit Janine einplanen (Ziel: spätestens Anfang Juni, in Analyse & Modell-Phase)
 
-### Nächste Woche — Oliver
+### Oliver Timm — Follow-up
 
-→ Agenda vorbereitet: siehe [MEETINGS.md — 28. April 2026 Follow-up Oliver Timm](MEETINGS.md)
-
-- [ ] Meeting Oliver — 28.04.2026 (geplant)
-- [ ] **DORA-Metriken:** Gibt es ein Dashboard dafür? (Deployment Frequency, Lead Time, CFR, MTTR) — größte KPI-Lücke
-- [ ] **Security Dashboard Hauptlink** fehlt im Mural — wo ist er?
-- [ ] **SAP_Signavio_Dashboards Unterordner** (Jira Dashboards, Product Usage Dashboards) mit Oliver durchgehen
-- [ ] **Monatliche Reports:** Wer ist involviert? (offen seit 22.04.)
+- [x] Meeting Oliver — 28.04.2026 ✓ → kurzes Gespräch; EA-Store-Link erhalten, System down (→ Klärung Donnerstag-Sync)
+- [ ] **EAS-Zugang** (https://eas.sap.com/astore/ui/index.html#/asset/105991/overview-view) — **pending, System down** → Klärung im Janine-Sync 30.04.
+- [ ] **DORA-Metriken:** Gibt es ein Dashboard dafür? (Deployment Frequency, Lead Time, CFR, MTTR) — noch offen, im Meeting nicht besprochen
+- [ ] **Security Dashboard Hauptlink** fehlt im Mural — noch offen, im Meeting nicht besprochen
+- [ ] **SAP_Signavio_Dashboards Unterordner** (Jira Dashboards, Product Usage Dashboards) mit Oliver durchgehen — noch offen
+- [ ] **Monatliche Reports:** Wer ist involviert? (offen seit 22.04.) — noch offen
 
 ### Schreiben (parallel)
 

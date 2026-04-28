@@ -310,6 +310,12 @@ Nina Vayssiere ist in P&E (Product & Engineering). Relevanter Stakeholder für d
 
 **Notizen:**
 
+- Kurzes Gespräch (kein tiefes Inhaltsgespräch — keine DORA-Metriken, kein Security Dashboard o.ä. besprochen)
+- **System-Zugänge:** Oliver hat folgenden Link für EA-Store-Zugänge gegeben:  
+  https://eas.sap.com/astore/ui/index.html#/asset/105991/overview-view
+- **System aktuell down** — kein Zugang möglich; Status unklar
+- **Klärung:** Wird im nächsten Janine-Sync besprochen (Donnerstag 30.04. — ausnahmsweise nicht Freitag, da 1. Mai Feiertag)
+
 ---
 
 ## 28. April 2026 — Hochschul-Sync Prof. Dr.-Ing. Jürgen Sachse
@@ -340,7 +346,7 @@ Problem verstehen (Kap. 1–4) → Anforderungen erheben (Kap. 5) → Optionen i
 
 ---
 
-## 1. Mai 2026 — Weekly Sync Janine Steidelmüller
+## 30. April 2026 — Weekly Sync Janine Steidelmüller (ausnahmsweise Donnerstag, 1. Mai = Feiertag)
 
 **Stand seit letztem Sync:**
 
