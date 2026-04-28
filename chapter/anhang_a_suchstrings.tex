@@ -6,6 +6,11 @@ Ihre Dokumentation dient der Reproduzierbarkeit des Suchprozesses — eine Kerna
 Die Strings sind für die primären Datenbanken \textit{ACM Digital Library} und \textit{IEEE Xplore} optimiert; für \textit{Springer Link} wurden längere Strings vereinfacht.
 Notation: \texttt{AND}, \texttt{OR}, \texttt{*} (Trunkierung), \texttt{"..."} (Phrase).
 
+% " ist in german babel ein aktives Zeichen ("O -> Ö etc.).
+% \catcode`\"=12 macht es innerhalb dieser Gruppe zu einem gewöhnlichen
+% Zeichen, damit die Anführungszeichen in den Suchstrings korrekt rendern.
+\begingroup\catcode`\"=12
+
 % -----------------------------------------------------------------
 % T1
 % -----------------------------------------------------------------
@@ -111,3 +116,5 @@ Notation: \texttt{AND}, \texttt{OR}, \texttt{*} (Trunkierung), \texttt{"..."} (P
 \end{batable}
 
 \noindent\textbf{Datenbanken T5:} ACM Digital Library, IEEE Xplore, Springer Link
+
+\endgroup
