@@ -66,6 +66,7 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [ ] Befristungsdatum Sperrvermerk festlegen — wird erst am Ende der Arbeit geklärt
 - [x] Referenzprojekte aus anderen SAP-Bereichen anfragen → Svitlana kennt keine; Goals Tracking (Svitlana) als einziges Referenzprojekt identifiziert
 - [ ] Methoden aus Software Requirement Engineering für Kap. 2 + 7 recherchieren (AHP, Nutzwertanalyse, TOPSIS)
+- [ ] **Kap. 3.2 PRISMA-Tabelle (tab:prisma): 6 XX-Platzhalter füllen** — nach Durchführung der Datenbanksuche (ACM DL, IEEE Xplore, Springer, EBSCO) die echten Trefferzahlen eintragen (Roh-Treffer, nach Dedup, nach Titel-Screening, nach Volltext-Screening, Snowballing, Endgültig eingeschlossen)
 - [x] Datenbereitstellung als explizites Thema einplanen → Kap. 4.4 angelegt
 - [x] Gliederung für nächstes Meeting (28. April) vorbereiten und Sachse vorlegen → .docx an Janine, Mail an Sachse geschrieben
 
