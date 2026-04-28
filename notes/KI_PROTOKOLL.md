@@ -174,6 +174,16 @@ Gliederung folgt der Kapitelstruktur der Bachelorarbeit; innerhalb jedes Kapitel
 | **Ergebnis (Zusammenfassung)** | Fließtext ~320 Wörter mit Artefakt-Typisierung, FEDS-Evaluationslogik (formativ/summativ × artifizell/naturalistisch), Anforderungsabdeckung als Hauptkriterium, Vorbehalte zu offenen Entscheidungen. Keine XX-Platzhalter. |
 | **Verwendung** | **Redigiert** — Struktur und Argumentationsführung aus KI, inhaltliche Substanz (Artefakttypen, FEDS-Zuordnung, Kriterienkatalog) eigenständig vorgegeben |
 
+### KI-020 | 28. Apr 2026 | TXT | Fließtext 3.2 Literaturrecherche
+
+| Feld | Inhalt |
+|------|--------|
+| **Werkzeug** | Claude Code (CLI) |
+| **Bezug** | 3.2 Literaturrecherche |
+| **Prompt (Zusammenfassung)** | Schreibe Kap. 3.2 „Literaturrecherche" in chapter/03Methodik.tex. Kombiniertes Verfahren: datenbankbasierte Suche (ACM DL, IEEE Xplore, Springer, EBSCO) + Snowballing nach Webster & Watson (2002). Fünf Themenblöcke T1–T5, Ein-/Ausschlusskriterien, PRISMA-analoge Trefferauswertung als batable mit XX-Platzhaltern. Suchstrings exemplarisch inline, vollständige Liste in Anhang A verweisen. Vom Brocke et al. (2009) als methodischer Rahmen. ~380 Wörter, \vglcite-Zitierstil, \gls{}-Makros für BI, ETL, REST, RBAC, AHP, TOPSIS, DSR. |
+| **Ergebnis (Zusammenfassung)** | Fließtext ~380 Wörter mit vier Absätzen (Begründung/Rahmen, Themenblöcke T1–T5, Datenbanken und Suchstrings, PRISMA-Tabellenauswertung + Snowballing). batable tab:prisma mit 6 Stufen und XX-Platzhaltern. 2 TODO-Kommentare. Build erfolgreich (53 Seiten, 0 Fehler). |
+| **Verwendung** | **Redigiert** — Struktur und LaTeX-Code aus KI, inhaltliche Substanz (Themenblöcke, Kriterien, Suchstrings) aus outline/03-methodik.md eigenständig vorgegeben |
+
 ---
 
 ## Kapitel 4 — Ausgangssituation und Systemlandschaft

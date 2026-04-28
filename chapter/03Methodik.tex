@@ -89,6 +89,49 @@ Das operative Prozessmodell strukturiert die Phasenabfolge dieser Untersuchung u
 % Verwendete Datenbanken, Suchbegriffe, Ein-/Ausschlusskriterien
 % Anzahl gefundener / verwendeter Quellen
 
+Die Literaturbasis dieser Untersuchung wurde nach einem kombinierten Verfahren aus datenbankbasierter Suche und strukturiertem \textit{Snowballing} zusammengestellt.
+Als methodischer Rahmen dienen einerseits die fünf Phasen der rigorosen Literaturrecherche nach vom Brocke et al., die eine vollständige Dokumentation von Suchbereich, Suchstrings, Datenbanken und Ein-/Ausschlusskriterien als Qualitätsanforderung festlegen,\vglcite[2207\,f.]{vombrocke2009} und andererseits das konzeptzentrierte Literaturreview-Verfahren nach Webster und Watson, das Rückwärts- und Vorwärtssuche (\textit{Backward und Forward Snowballing}) als komplementären Prozessschritt verankert.\vglcite[xv\,f.]{webster2002}
+Durch die explizite Dokumentation ist der Prozess nachvollziehbar und reproduzierbar; die Transparenz erfüllt zugleich den Rigor-Cycle-Anspruch des zugrundeliegenden \gls{dsr}-Rahmens.\vglcite[79]{hevner2004}
+
+Die Suche gliedert sich in fünf thematische Blöcke, die sich direkt aus dem Forschungsgegenstand ableiten:
+\textbf{T1}~— \gls{bi}-Integration und \gls{kpi}-Management in Enterprise-Systemen (Kapitel~2 und~4);
+\textbf{T2}~— Integrationsparadigmen (\gls{et}, \gls{eip}, \gls{rest}, \gls{ea}) als Lösungsraum (Kapitel~2 und~6);
+\textbf{T3}~— \gls{rbac} in Enterprise-Anwendungen als Kernanforderung (Kapitel~2 und~5);
+\textbf{T4}~— Mehrkriterien-Entscheidungsmethoden (\gls{ahp}, \gls{topsis}, Nutzwertanalyse) als methodische Basis des Bewertungsmodells (Kapitel~2 und~7);
+\textbf{T5}~— \gls{dsr}-Methodik als Forschungsrahmen (Kapitel~3).
+
+Als Primärdatenbanken wurden \textit{ACM Digital Library}, \textit{IEEE Xplore}, \textit{Springer Link} und \textit{EBSCO Business Source Complete} herangezogen.
+Diese vier Quellen decken die relevanten Felder der Wirtschaftsinformatik, der Informatik und der betriebswirtschaftlichen Informationssystemforschung ab und ermöglichen einen Hochschulzugang für Volltexte.
+Die Suche erfolgte mit themenspezifischen Suchstrings; exemplarisch für T1 lautet ein Kernstring: \texttt{("KPI" OR "key performance indicator") AND ("enterprise integration" OR "fragmented" OR "BI landscape")}.
+Für T4 wurde unter anderem gesucht: \texttt{("multi-criteria decision" OR "MCDM") AND ("enterprise system selection" OR "IT architecture")}.
+Die vollständigen Suchstrings für alle fünf Themenblöcke sind in Anhang~A dokumentiert.
+% TODO: Anhang A mit Suchstring-Tabelle anlegen und \label{apx:suchstrings} setzen; Verweis hier präzisieren
+
+Die Selektion der Treffer folgte einem mehrstufigen Prozess in Anlehnung an das \textit{PRISMA}-Berichtsschema.
+Ein- und Ausschlusskriterien wurden vor der Suche festgelegt:
+Eingeschlossen wurden englisch- und deutschsprachige, begutachtete Beiträge aus Journals und Konferenzproceedings (ACM, IEEE, ECIS, ICIS, DESRIST) sowie einschlägige Lehrwerke ab dem Erscheinungsjahr~2000; Seminalwerke älter als 2000 (etwa zu \gls{ahp} oder Grundlagen der Datenhaltung) wurden explizit aufgenommen.
+Ausgeschlossen wurden Blog-Beiträge, Hersteller-Whitepapers und Preprints ohne nachgewiesene Zitationsqualität.
+Tabelle~\ref{tab:prisma} fasst die Trefferanzahlen je Auswahlstufe zusammen; die Zahlen sind nach Durchführung der vollständigen Datenbanksuche einzutragen.
+
+\begin{batable}[label=tab:prisma]{Trefferauswertung der Literaturrecherche (PRISMA-analog)}
+\begin{tabular}{lc}
+\toprule
+\textbf{Auswahlstufe} & \textbf{Treffer} \\
+\midrule
+Datenbanksuche gesamt (roh)           & XX \\
+Nach Deduplizierung                   & XX \\
+Nach Titel-/Abstract-Screening        & XX \\
+Nach Volltext-Screening               & XX \\
+Ergänzt durch Snowballing             & XX \\
+\textbf{Endgültig eingeschlossen}     & \textbf{XX} \\
+\bottomrule
+\end{tabular}
+\end{batable}
+
+Im Anschluss an das Volltext-Screening wurde für zentrale Quellen ein Snowballing-Durchgang durchgeführt: Rückwärts durch Analyse der Literaturlisten, vorwärts über die „Cited by"-Funktion in Google Scholar.\vglcite[xv\,f.]{webster2002}
+Dieser Schritt erwies sich insbesondere für die Themenblöcke T1 und T4 als ergiebig, da neuere Arbeiten häufig auf einflussreiche Grundlagenarbeiten verweisen, die über die Datenbanksuche allein nicht vollständig erfasst werden.
+% TODO: XX-Platzhalter in Tabelle nach Durchführung der Datenbanksuche durch echte Zahlen ersetzen
+
 \subsection{Ergebniserwartung}
 % Hänel: Ergebniserwartung anhand der Methoden aufstellen
 % Was soll aus der Methodik herauskommen?
