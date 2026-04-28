@@ -260,14 +260,14 @@ Analyse aller recherchierten Quellen. Neue Einträge kommen immer auch als BibTe
 
 ## Requirements Engineering
 
-### Pohl (2008) — Requirements Engineering: Grundlagen, Prinzipien, Techniken
+### Pohl & Rupp (2015) — Requirements Engineering Fundamentals (2nd ed., Rocky Nook)
 
-- **BibTeX-Key:** `pohl2010`
-- **Quelle:** dpunkt.verlag, Heidelberg, 2. korrigierte Auflage, ISBN 978-3-89864-550-8 (Original 2007, 2. korr. Aufl. 2008)
+- **BibTeX-Key:** `pohlrupp2015`
+- **Quelle:** Rocky Nook, Santa Barbara, CA, 2nd Edition 2015, ISBN 978-1-937538-77-4 (englische Übersetzung des deutschen Originals: Pohl 2008, dpunkt.verlag)
 - **Relevanz:** Hoch
 - **Kapitel:** 5 Anforderungsanalyse, 2.4 Entscheidungsmethoden
-- **Key Findings:** Umfassendes deutschsprachiges RE-Standardwerk mit über 800 Seiten. Systematisiert Anforderungsarten (funktional/nicht-funktional/Randbedingung) und stellt etablierte Erhebungsmethoden vor (Interviews, Workshops, Beobachtung, Prototyping). Behandelt auch Anforderungspriorisierung (MoSCoW-Methode, Nutzwertanalyse) und damit die methodische Grundlage für Kap. 5. Mit über 2.200 Zitationen das meistzitierte deutschsprachige RE-Lehrbuch.
-- **Notizen:** Standardreferenz für Kap. 5. Legitimiert den Einsatz strukturierter Anforderungserhebung und -priorisierung als wissenschaftliche Methode. BibTeX-Key `pohl2010` (nach dem in der Arbeit verwendeten Zitationsjahr), verifiziertes Erscheinungsjahr der 2. Auflage 2008. **Nutzwertanalyse (Lücke 5):** Pohl deckt die Nutzwertanalyse im Kapitel zur Anforderungspriorisierung explizit ab — keine weitere Quelle für Kap. 2.4 erforderlich.
+- **Key Findings:** Englischsprachiges RE-Standardwerk (IREB-konform). Systematisiert Anforderungsarten (funktional/nicht-funktional/Randbedingung) und stellt etablierte Erhebungsmethoden vor (Interviews, Workshops, Beobachtung, Prototyping). Behandelt Anforderungspriorisierung (MoSCoW-Methode, Nutzwertanalyse, Abschnitt 8.3.2, S. 119 ff.) — methodische Grundlage für Kap. 5 und 2.4.
+- **Notizen:** Standardreferenz für Kap. 5. Legitimiert den Einsatz strukturierter Anforderungserhebung und -priorisierung als wissenschaftliche Methode. **Hinweis:** Das vorliegende PDF ist die englische Ausgabe (Rocky Nook 2015, 2nd ed.); der frühere Key `pohl2010` und der Verweis auf das deutsche Original (dpunkt 2008) wurden entsprechend korrigiert. **Nutzwertanalyse (Lücke 5):** Pohl & Rupp decken die Nutzwertanalyse in Abschnitt 8.3.2 (S. 119 ff.) explizit ab — keine weitere Quelle für Kap. 2.4 erforderlich.
 
 ---
 

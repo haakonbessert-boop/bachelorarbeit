@@ -203,20 +203,19 @@ heranziehen." Er bildet die theoretische Brücke zu Kap. 7 (Bewertungsmodell).
 
 > **[OFFENE ENTSCHEIDUNG KAP2-E2] Nutzwertanalyse in 2.4 — Quellengrundlage**
 >
-> - **Status:** Entschieden (Stand 24.04.2026, LITERATURE.md-Notiz zu `pohl2010`)
-> - **Option A (präferiert):** Nutzwertanalyse über Pohl (2010) einführen — Pohl behandelt
->   die Nutzwertanalyse explizit im Kapitel zur Anforderungspriorisierung. Vorteil: keine
+> - **Status:** Entschieden (Stand 24.04.2026, aktualisiert 28.04.2026: Key von `pohl2010` auf `pohlrupp2015` korrigiert — PDF ist englische Ausgabe Rocky Nook 2015)
+> - **Option A (präferiert):** Nutzwertanalyse über Pohl & Rupp (2015) einführen — Abschnitt 8.3.2, S. 119 ff. Vorteil: keine
 >   zusätzliche Quelle nötig; Zangemeister-Originalpublikation muss nicht beschafft werden.
 > - **Option B:** Zangemeister (1971/1976) als Originalquelle beschaffen. Nachteil: sehr alte
->   Quelle, schwer zugänglich, unnötiger Aufwand wenn Pohl ausreicht.
-> - **Empfehlung:** Option A umsetzen. Pohl (2010) als einzige Quelle für die Nutzwertanalyse
+>   Quelle, schwer zugänglich, unnötiger Aufwand wenn Pohl & Rupp ausreicht.
+> - **Empfehlung:** Option A umgesetzt. `pohlrupp2015` als einzige Quelle für die Nutzwertanalyse
 >   in 2.4 verwenden; Zangemeister nicht beschaffen.
 
 ### Quellen
 
 | BibTeX-Key | Funktion |
 |---|---|
-| `pohl2010` | Nutzwertanalyse und MoSCoW als RE-Priorisierungsmethoden |
+| `pohlrupp2015` | Nutzwertanalyse und MoSCoW als RE-Priorisierungsmethoden |
 | `velasquez2013` | MCDM-Methodenvergleich (Methodenbegründung) |
 | `saaty1990` | AHP-Grundlagenwerk |
 | `hwangyoon1981` | TOPSIS-Grundlagenwerk |

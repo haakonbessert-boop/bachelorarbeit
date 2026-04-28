@@ -220,7 +220,7 @@ Die Hauptfrage ist zweiteilig, weil sie das Artefaktpaar der Arbeit abbildet: da
 `ferreirotley2009`, `parmenter2015`, `few2006`, `eckerson2010` → gehören in Kap. 2.1  
 `fielding2000`, `kimball2013`, `hohpe2003`, `dehghani2022`, `nijkamp2009` → gehören in Kap. 2.2  
 `ferraiolo2001`, `alhassan2016`, `tikkinenpiri2018`, `alaqrabi2013`, `ghazal2020` → gehören in Kap. 2.3  
-`saaty1990`, `hwangyoon1981`, `velasquez2013`, `hanine2016`, `zaidan2015`, `pohl2010` → gehören in Kap. 2.4
+`saaty1990`, `hwangyoon1981`, `velasquez2013`, `hanine2016`, `zaidan2015`, `pohlrupp2015` → gehören in Kap. 2.4
 
 ---
 
