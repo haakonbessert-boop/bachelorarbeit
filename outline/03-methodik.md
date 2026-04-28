@@ -37,14 +37,218 @@ die *Konstruktion* eines Artefakts ist — nicht Beschreibung oder Erklärung.
 
 **Hänel-Anforderung:** Rechercheprozess dokumentieren (Suche, Auswertung, Analyse, Interpretation)
 
-> **Hinweis:** Kann erst geschrieben werden, wenn die Literaturrecherche tatsächlich durchgeführt wurde.
-> Inhalte fließen laufend in notes/LITERATURE.md ein — von dort hierher übertragen.
+**Methodik-Grundlage:** vom Brocke et al. (2009) 5-Phasen-Rahmen + Webster & Watson (2002) concept-centric review.
 
-### Was rein muss (Checkliste für später)
-- [ ] Verwendete Datenbanken (z.B. Google Scholar, ACM DL, Springer, EBSCO)
-- [ ] Suchbegriffe (deutsch + englisch)
-- [ ] Ein- und Ausschlusskriterien
-- [ ] Anzahl gefundener / gescreenter / verwendeter Quellen (PRISMA-ähnlich)
+**Ziel des Abschnitts im Text:** Reproduzierbarer Nachweis, dass die Literaturbasis wissenschaftlich fundiert und nicht willkürlich zusammengestellt ist. Hänel verlangt explizite Dokumentation — kein beschönigender Überblick.
+
+---
+
+### Struktur des Abschnitts (Reihenfolge im LaTeX-Text)
+
+1. **Einleitungssatz:** Warum systematische Suche? Rigor Cycle nach Hevner; Dokumentation nach vom Brocke (2009) und Webster & Watson (2002).
+2. **Themenbereiche / Suchfelder** (tabellarisch)
+3. **Datenbanken**
+4. **Suchstrings** (themenspezifisch)
+5. **Ein- und Ausschlusskriterien** (als Tabelle)
+6. **Trefferauswertung / PRISMA-Flowchart** (Zahlen nach Durchführung nachtragen)
+7. **Kurze Synthese:** Wie wurden Treffer zu Themenblöcken geordnet? Was ist der Stand der Forschung in jedem Block?
+
+---
+
+### Themenbereiche (Suchfelder)
+
+| # | Themenblock | Warum relevant | Kapitel |
+|---|-------------|----------------|---------|
+| T1 | Enterprise BI-Integration & KPI-Management | Kernthema: fragmentierte Systemlandschaft, zentrale KPI-Versorgung | 2.1, 2.2 |
+| T2 | Integrationsparadigmen (ETL, EAI/EIP, REST API, Embedded Analytics) | Lösungsraum für Kap. 6 | 2.2, 6 |
+| T3 | RBAC in Enterprise-Systemen | Kernanforderung aus Stakeholder-Analyse | 2.3, 5 |
+| T4 | Mehrkriterien-Entscheidungsmethoden (AHP, TOPSIS, Nutzwertanalyse) | Methodische Basis für Bewertungsmodell Kap. 7 | 2.4, 7 |
+| T5 | Design Science Research (Methodik) | Forschungsrahmen — bereits gut abgedeckt | 3 |
+
+---
+
+### Datenbanken
+
+Primäre Datenbanken (Peer-reviewed, IS/WI-relevant):
+
+| Datenbank | URL | Abdeckung |
+|-----------|-----|-----------|
+| **ACM Digital Library** | dl.acm.org | Informatik, IS, Software Engineering — besonders stark für T2, T3, T4 |
+| **IEEE Xplore** | ieeexplore.ieee.org | Technische Informatik, Systems Engineering — stark für T2, T3 |
+| **Springer Link** | link.springer.com | WI, BWL, IS — gut für deutschsprachige Quellen (T1, T4) |
+| **EBSCO Business Source Complete** | Hochschulzugang BA Dresden | Management IS, BI, betriebswirtschaftliche Perspektive (T1) |
+| **Google Scholar** | scholar.google.com | Breit, Vorwärts-/Rückwärtssuche, Graufiteratur; ergänzend, nicht primär |
+
+Ergänzende Quellen (nicht blind primär suchen):
+
+| Datenbank / Quelle | Zweck |
+|--------------------|-------|
+| **Scopus** | Cross-check Trefferqualität, Zitationsanalyse |
+| **WISO** | Deutschsprachige WI-Journals (Wirtschaftsinformatik, BISE) |
+| **dblp** | Technische Suche für ACM/IEEE-Konferenzen (ERP-Integration) |
+| **Snowballing** | Rückwärts (Literaturlisten) + Vorwärts (Google Scholar "Cited by") — nach Webster & Watson (2002) |
+
+---
+
+### Suchstrings (themenspezifisch)
+
+Notation: `AND`, `OR`, `*` (Trunkierung), `"..."` (Phrase). Strings sind für ACM DL / IEEE Xplore optimiert; für Springer ggf. vereinfachen.
+
+#### T1 — Enterprise BI-Integration & KPI-Management
+
+```
+("KPI" OR "key performance indicator" OR "business intelligence") AND
+("enterprise integration" OR "fragmented" OR "dashboard consolidation" OR "BI landscape")
+
+("KPI management" OR "KPI hub" OR "KPI dashboard") AND
+("enterprise system" OR "information system" OR "SAP")
+
+"business intelligence fragmentation" OR "BI fragmentation"
+
+("KPI" OR "performance measurement") AND "enterprise information system*"
+```
+
+**Deutsch (Springer / WISO):**
+```
+("KPI" OR "Kennzahl") AND ("Enterprise" OR "Unternehmens-BI") AND ("Integration" OR "Fragmentierung")
+```
+
+#### T2 — Integrationsparadigmen
+
+```
+("ETL" OR "extract transform load") AND ("business intelligence" OR "data warehouse" OR "enterprise")
+
+("enterprise application integration" OR "EAI") AND ("integration pattern*" OR "message broker")
+
+("REST API" OR "RESTful") AND ("enterprise integration" OR "data integration")
+
+"embedded analytics" AND ("enterprise system*" OR "SAP" OR "ERP")
+
+("data mesh" OR "data fabric") AND "enterprise analytics"
+
+("integration paradigm*" OR "integration approach*") AND
+("enterprise system*" OR "ERP" OR "business intelligence")
+```
+
+#### T3 — RBAC in Enterprise-Systemen
+
+```
+("role-based access control" OR "RBAC") AND
+("business intelligence" OR "analytics" OR "dashboard" OR "enterprise")
+
+("RBAC" OR "access control") AND ("data governance" OR "information governance")
+
+("role-based access control" OR "RBAC") AND ("ERP" OR "SAP" OR "enterprise system*")
+
+"attribute-based access control" AND "enterprise analytics"
+```
+
+#### T4 — Mehrkriterien-Entscheidungsmethoden
+
+```
+("analytic hierarchy process" OR "AHP") AND
+("software selection" OR "tool selection" OR "IT selection" OR "enterprise system")
+
+("TOPSIS" OR "technique for order preference") AND
+("information system*" OR "software engineering" OR "IT evaluation")
+
+("multi-criteria decision" OR "MCDM" OR "multiple criteria") AND
+("enterprise system selection" OR "IT architecture" OR "integration approach")
+
+"Nutzwertanalyse" AND ("Softwareauswahl" OR "IT-Entscheidung")
+
+("weighted scoring" OR "scoring model") AND
+("information system*" OR "enterprise software" OR "tool selection")
+```
+
+#### T5 — Design Science Research (ergänzend / Anschlussliteratur)
+
+```
+"design science research" AND "information system*"
+("DSR" OR "design science") AND ("evaluation" OR "artifact" OR "artefact")
+```
+
+---
+
+### Ein- und Ausschlusskriterien
+
+| Kriterium | Einschluss | Ausschluss |
+|-----------|-----------|------------|
+| **Sprache** | Deutsch, Englisch | Alle anderen Sprachen |
+| **Erscheinungsjahr** | 2000–2026 (Ausnahmen: Grundlagenwerke älter als 2000, z.B. Saaty 1990, Kimball/Ross) | Vor 1990 (ohne explizite Begründung) |
+| **Publikationstyp** | Peer-reviewed Journals, Konferenzbeiträge (ACM, IEEE, ECIS, ICIS, DESRIST), Lehrbücher einschlägiger Verlage | Blog-Beiträge, Vendor-Whitepapers, interne Unternehmensdokumente (außer als Primärquellen für Kap. 4) |
+| **Thematische Relevanz** | Direkte inhaltliche Abdeckung eines der Themenblöcke T1–T5 | Rein domänenfremde Studien (z.B. medizinische BI-Systeme ohne IS-Übertragbarkeit) |
+| **Zugänglichkeit** | Volltext zugänglich (Hochschulzugang BA Dresden, Open Access, Bibliothek) | Nur Abstract verfügbar, kein Volltext beschaffbar |
+| **Qualitätsmindestanforderung** | Mindestens Konferenzbeitrag (ACM/IEEE-Track); Journals bevorzugt | Nicht-begutachtete Preprints (ausgenommen arXiv-Preprints mit nachgewiesener Zitationsqualität) |
+
+**Begründung der Zeitraumgrenze:** Das Feld der Enterprise-Integration und BI hat sich seit 2000 grundlegend verändert (Cloud, REST, Data Mesh). Ältere Grundlagenwerke (Saaty 1990: AHP; Kimball/Ross 1996/2013: Data Warehousing; Ferraiolo et al. 2001: RBAC) werden als Seminalwerke explizit einbezogen.
+
+---
+
+### Trefferauswertung (PRISMA-analog)
+
+**Prozess (nach vom Brocke 2009, Phasen 3–4):**
+
+1. **Datenbanksuche:** Suchstrings in alle Primärdatenbanken eingeben → Trefferanzahl je Datenbank und Suchstring notieren
+2. **Deduplizierung:** Doppeltreffer über Datenbanken hinweg entfernen
+3. **Title/Abstract-Screening:** Titel und Abstract gegen Ein-/Ausschlusskriterien prüfen
+4. **Volltext-Screening:** Verbliebene Treffer im Volltext auf Relevanz und Qualität prüfen
+5. **Einschluss:** Finale Quellen in `notes/LITERATURE.md` eintragen (BibTeX-Key + Analyse)
+6. **Snowballing:** Rückwärts (Literaturlisten der eingeschlossenen Quellen) + Vorwärts (Google Scholar "Cited by") für zentrale Quellen
+
+**Tabelle für den Text (Zahlen nach Durchführung nachtragen):**
+
+| Stufe | Treffer |
+|-------|---------|
+| Datenbanksuche gesamt (roh) | XX |
+| Nach Deduplizierung | XX |
+| Nach Title/Abstract-Screening | XX |
+| Nach Volltext-Screening | XX |
+| + Snowballing | XX |
+| **Endgültig eingeschlossen** | **XX** |
+
+**Hinweis für Autor:** Die Gesamtzahl der eingeschlossenen Quellen liegt erfahrungsgemäß bei 40–60 für eine BA-Arbeit dieser Komplexität. Hänel fordert ~45 Quellen; das ist realistisch erreichbar.
+
+---
+
+### Argumentation im Text (Aufbau der Absätze)
+
+**Absatz 1 — Begründung und methodischer Rahmen:**
+Warum systematische Suche notwendig ist (Rigor Cycle nach Hevner); Verweis auf vom Brocke (2009) und Webster & Watson (2002) als methodische Grundlage.
+
+**Absatz 2 — Themenbereiche:**
+Die Recherche deckt fünf Themenblöcke ab (T1–T5). Jeder Block ist einem oder mehreren Kapiteln direkt zugeordnet. → kurze Nennung der fünf Blöcke, tabellarisch oder als Aufzählung.
+
+**Absatz 3 — Datenbanken:**
+Verwendete Primärdatenbanken nennen (ACM DL, IEEE Xplore, Springer, EBSCO); Begründung: IS/WI-Abdeckung. Snowballing ergänzend nach Webster & Watson (2002).
+
+**Absatz 4 — Suchstrings:**
+Exemplarisch 2–3 repräsentative Strings nennen (nicht alle — würde den Text aufblähen). Vollständige Strings in Anhang verweisen oder in einer kompakten Tabelle.
+
+**Absatz 5 — Kriterien:**
+Ein-/Ausschlusskriterien als Tabelle. Zeitraumgrenze begründen.
+
+**Absatz 6 — Ergebnis:**
+PRISMA-Flowchart oder kompakte Tabelle mit Trefferanzahlen. Abschlusssatz: Wie viele Quellen wurden eingeschlossen, wie verteilen sie sich auf die Themenblöcke?
+
+---
+
+### Quellen für diesen Abschnitt
+
+| Quelle | Funktion in 3.2 |
+|--------|----------------|
+| vom Brocke et al. (2009) `vombrocke2009` | Methodischer Rahmen (5 Phasen, Dokumentationspflicht) |
+| Webster & Watson (2002) `webster2002` | Strukturierungslogik (concept-centric, Snowballing) |
+
+---
+
+### Offene Fragen / Abhängigkeiten
+
+- [ ] **Blocker aufgelöst durch:** Suchstrings und Kriterien sind jetzt definiert — Recherche kann beginnen
+- [ ] **Nächster Schritt:** Suche in ACM DL, IEEE Xplore, Springer, EBSCO mit den Strings oben durchführen; Treffer in `notes/LITERATURE.md` dokumentieren
+- [ ] **Zahlen nachtragen:** XX-Platzhalter in PRISMA-Tabelle nach Durchführung mit echten Werten ersetzen
+- [ ] Soll die vollständige Suchstring-Tabelle in den Anhang oder inline im Text? (Empfehlung: kompakter Ausschnitt inline, Vollständige Liste als Anhang A — spart Platz im Methodikteil)
+- [ ] Ist ein grafischer PRISMA-Flowchart (TikZ) gewünscht oder reicht die Tabelle? (Empfehlung: Tabelle reicht für BA — Flowchart wäre Overkill, kann aber leicht nachgerüstet werden)
 
 ---
 
