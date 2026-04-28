@@ -11,7 +11,7 @@
 
 ## Aktueller Stand (28. April 2026)
 
-Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden bestätigt. Kap. 2 (alle drei Abbildungen + MCDM-Tabelle) in mehreren Iterationen überarbeitet und qualitätsgesichert (Lektor + Qualitätsprüfer); Kap. 3 Zitierfehler (\cite → \captioncite in figure-Attributen) behoben. **Meilenstein erreicht:** Prof. Sachse hat die überarbeitete Gliederung am 27.04. formal per E-Mail genehmigt — kein Änderungsbedarf. Oliver-Timm-Follow-up (28.04.) durchgeführt: EA-Store-Link erhalten, System aktuell down — Klärung im Donnerstag-Sync (30.04.).
+Orientierungsphase läuft. Kap. 1–3 vollständig geschrieben; Kap. 2 qualitätsgesichert (Lektor + Qualitätsprüfer). Kap. 3.2 Literaturrecherche heute fertiggestellt (~380 Wörter, PRISMA-Tabelle mit XX-Platzhaltern); Anhang A (Suchstrings T1–T5) erstellt und committet. Babel-Umlaut-Bug in Anhang A behoben. Gliederung von Prof. Sachse am 27.04. formal genehmigt. Oliver-Timm-Follow-up (28.04.) durchgeführt: EA-Store-Link erhalten, System aktuell down — Klärung im Donnerstag-Sync (30.04.).
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -21,9 +21,9 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 ### Kapitelplanung
 | # | Kapitel | Geplante Seiten | Status |
 |---|---------|-----------------|--------|
-| 1 | Einleitung | 4 | Subsections angelegt |
-| 2 | Grundlagen und Stand der Forschung | 9 | Subsections angelegt — NEU: 2.5 Entscheidungsmethoden |
-| 3 | Methodik | 6 | **3.1 + 3.3 + 3.4 Erster Entwurf** — 3.2 offen (nach Literaturrecherche) |
+| 1 | Einleitung | 4 | **vollständig geschrieben** |
+| 2 | Grundlagen und Stand der Forschung | 9 | **vollständig geschrieben (2.1–2.5)** |
+| 3 | Methodik | 6 | **vollständig geschrieben (3.1–3.4) + Anhang A** — PRISMA-Tabelle: XX-Platzhalter nach Datenbanksuche füllen |
 | 4 | Ausgangssituation und Systemlandschaft | 7 | Subsections angelegt — NEU: 4.4 Datenbereitstellung |
 | 5 | Anforderungsanalyse | 7 | Subsections angelegt |
 | 6 | Lösungsraum und Architektur-/Tooloptionen | 6 | Subsections angelegt — NEU: 6.6 Referenzprojekte, 6.7 Machbarkeit |
@@ -90,7 +90,8 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [x] Check-in Oliver Timm — 22. April ✓ → Mural durcharbeiten bis Freitag, Tool-Übersicht bis 15. Mai
 - [x] Svitlana Vlasova — BDC/SAC Tool-Überblick | 22. April ✓ → SAC Data Steer, Collibra, BDC Adoption Program (SharePoint) als neue Leads
 - [x] Kennenlernen Nina Vayssiere — 27. April ✓ → Neue Stakeholder: Amodiovalerio Verde, Sarina Gallus, Hossam Mokhtar; Dokument von Nina ausstehend
-- [ ] Meeting Oliver — 28.04.2026 (geplant)
+- [x] Meeting Oliver — 28.04.2026 ✓
+- [ ] **Donnerstag-Sync Janine — 30.04.2026** → Agenda: EAS-Zugang klären (System down), Stakeholder-Follow-ups (Verde, Gallus, Mokhtar), Review-Termin einplanen
 
 ### Neue Stakeholder (via Nina Vayssiere, 27.04.)
 
@@ -133,7 +134,7 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 - [x] Kapitel 3.1 Forschungsansatz — Erster Entwurf
 - [x] Kapitel 3.4 Vorgehen im Überblick — Erster Entwurf
 - [x] Kapitel 3.3 Ergebniserwartung — Erster Entwurf (~320 Wörter, 23.04.)
-- [ ] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
+- [x] Kapitel 3.2 Literaturrecherche (erst nach Durchführung der Recherche)
 
 ### Kapitel 2 & 3 — Schreiben (nächster Schritt)
 
@@ -148,7 +149,7 @@ Orientierungsphase läuft; Janine-Sync durchgeführt, Gliederung und roter Faden
 
 - [ ] Kap. 2.2 schreiben: Enterprise-Systemintegration — nach Embedding-Entscheidung (fielding2000, kimball2013, hohpe2003, dehghani2022, baars2008)
 - [ ] Kap. 2.5 schreiben: Defizite bestehender Ansätze — Argumentationslinie mit vorhandenen Quellen führen (baars2008, larson2016, lennerholt2018, passlick2020)
-- [ ] Kap. 3.2 schreiben: Literaturrecherche — erst formale Suche mit Datenbanken/Suchstrings dokumentieren, dann Text schreiben (vombrocke2009, webster2002 vorhanden)
+- [x] Kap. 3.2 schreiben: Literaturrecherche — vollständig geschrieben (28.04.), PRISMA-Tabelle mit XX-Platzhaltern (nach Datenbanksuche füllen)
 
 ### Literatur & Quellen — Recherche-Backlog (Stand 24.04.2026)
 
