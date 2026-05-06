@@ -153,7 +153,7 @@ Kap. 1–3 vollständig geschrieben; Kap. 2 qualitätsgesichert (Lektor + Qualit
 **Prio 2**
 
 - [ ] Kap. 2.2 schreiben: Enterprise-Systemintegration — nach Embedding-Entscheidung (fielding2000, kimball2013, hohpe2003, dehghani2022, baars2008)
-- [ ] Kap. 2.5 schreiben: Defizite bestehender Ansätze — Argumentationslinie mit vorhandenen Quellen führen (baars2008, larson2016, lennerholt2018, passlick2020)
+- [x] Kap. 2.5 schreiben: Defizite bestehender Ansätze — vollständig geschrieben (baars2008, larson2016, lennerholt2018, passlick2020)
 - [x] Kap. 3.2 schreiben: Literaturrecherche — vollständig geschrieben (28.04.), PRISMA-Tabelle mit XX-Platzhaltern (nach Datenbanksuche füllen)
 
 ### Literatur & Quellen — Recherche-Backlog (Stand 24.04.2026)
