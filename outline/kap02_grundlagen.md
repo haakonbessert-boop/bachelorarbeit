@@ -70,62 +70,77 @@ ca. 2,0–2,5 Seiten
 
 ## 2.2 Enterprise-Systemintegration
 
-**Argumentationsziel:** Der Leser soll die vier Integrationsparadigmen (ETL/DWH, API,
-Embedding, Föderation) in ihrer konzeptuellen Logik und ihren Kompromissen kennen und
-verstehen, warum für den KPI-Hub-Kontext nicht ein einzelnes Paradigma, sondern eine
-Kombinationslösung die Referenzgröße bildet. Dieser Abschnitt liefert die Begrifflichkeit
-für den Lösungsraum in Kap. 6.
+**Status: VOLLSTÄNDIG GESCHRIEBEN (27.04.2026)**
 
-### Gliederungspunkte
+**Argumentationsziel:** Der Leser soll die vier Integrationsparadigmen — ETL/DWH,
+Messaging, REST-API und Embedded Analytics (EA) — in ihrer konzeptuellen Logik und ihren
+Kompromissen kennen und verstehen, warum für den KPI-Hub-Kontext nicht ein einzelnes
+Paradigma ausreicht. Der Abschnitt liefert die begriffliche Grundlage für den Lösungsraum
+in Kap. 6 und begründet die Kriterienauswahl im Entscheidungsmodell (Kap. 7).
+
+### Gliederungspunkte (implementiert)
 
 1. **ETL und Data Warehouse als Integrationsparadigma:** Kimball & Ross (2013) — Star Schema,
-   Bus-Architektur, ETL-Prozess als klassischer Ansatz für konsolidierte Datenschichten.
+   Bus-Architektur, ETL-Prozess; Batch-Charakter und Schema-Management als strukturelle
+   Einschränkung für operative KPI-Dashboards.
 2. **Messaging-basierte Integration:** Enterprise Integration Patterns (Hohpe & Woolf 2003) —
-   konzeptuelle Grundlage für Middleware, ESB, Event Streaming. Gegenüberstellung:
-   batch-orientiert (ETL) vs. event-getrieben (Messaging).
-3. **REST-API-basierte Integration:** Fielding (2000) als Primärquelle für die sechs REST-Constraints;
-   REST als dominantes Paradigma für moderne Enterprise-APIs.
-4. **Föderierung / Data Mesh:** Dehghani (2022) — Domain Ownership, Data as a Product, Federated
-   Governance als Gegenentwurf zum zentralisierten BI-Monolithen. "Single Pane of Glass" als
-   Zielkonzept.
-5. **Integrationsrahmen und Defizitdiagnose:** Baars & Kemper (2008) zeigen, dass die
-   fragmentierte Koexistenz separater BI-Systeme ein strukturelles Problem bestehender
-   Enterprise-BI-Landschaften ist — Brücke zu 2.5.
+   konzeptuelle Grundlage; Batch vs. Event-getriebene Systeme; Entkopplung als struktureller
+   Vorteil gegenüber ETL.
+3. **REST-API-basierte Integration:** Fielding (2000) als Primärquelle für die sechs
+   REST-Constraints; Pull-Modell und Verfügbarkeitsabhängigkeit im KPI-Hub-Kontext.
+4. **Embedded Analytics (EA) als viertes Paradigma:** Nijkamp et al. (2009) als akademische
+   Primärquelle (BTW 2009, GI-Fachbereich DBIS, peer-reviewed). EA bezeichnet die kontextuelle
+   Einbettung analytischer Inhalte in die Benutzeroberfläche einer Fachanwendung — Verlagerung
+   des Integrationspunkts von der Daten- auf die Präsentationsebene. Im KPI-Hub-Kontext:
+   SAC-Dashboards eingebettet in Build Work Zone als "Single Pane of Glass". Entspricht
+   konzeptuell dem Federation-Begriff: Daten verbleiben im Quellsystem, nur die Ansicht wird
+   integriert. Academisch eigenständig, kein Sonderfall von REST-API-Integration.
+5. **Integrationsrahmen und Defizitdiagnose:** Baars & Kemper (2008) — fragmentierte Koexistenz
+   separater BI-Systeme als fundamentales Strukturproblem; kein einzelnes Paradigma löst es
+   allein. Brücke zu 2.5.
 
-> **[ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma in 2.2 — ENTSCHIEDEN**
+> **[ENTSCHEIDUNG KAP2-E1] Embedding-Paradigma in 2.2 — ABGESCHLOSSEN**
 >
-> - **Status:** Entschieden — Option A umgesetzt (Stand 27.04.2026)
-> - **Entscheidung:** `nijkamp2009` (BTW 2009, GI-Fachbereich DBIS, peer-reviewed) als akademisch
->   zitierfähige Primärquelle für Embedded Analytics (EA) gefunden. Option A (eigener Abschnitt)
->   wurde umgesetzt: EA als viertes eigenständiges Integrationsparadigma mit eigener `\subsubsection*`
->   in 2.2 behandelt. Neue Acronyms hinzugefügt: `ea` (Embedded Analytics), `rest` (REST),
->   `eip` (Enterprise Integration Patterns). Kap. 2.2 vollständig geschrieben (27.04.2026).
-> - **Option A:** ~~Embedding als fünftes Integrationsparadigma mit eigener Subsection behandeln.~~
->   **Umgesetzt.** `nijkamp2009` liefert die akademische Primärquelle.
-> - **Option B:** ~~Embedding als Sonderfall von API-Integration einordnen~~. Nicht gewählt.
-> - **Option C:** ~~Embedding vollständig aus 2.2 streichen~~. Nicht gewählt.
+> - **Status:** Option A vollständig umgesetzt (27.04.2026). Kap. 2.2 geschrieben und
+>   qualitätsgesichert. Keine offene Frage mehr.
+> - **Entscheidung (Option A):** `nijkamp2009` (BTW 2009, GI-Fachbereich DBIS, peer-reviewed)
+>   als akademisch zitierfähige Primärquelle für EA. EA als viertes eigenständiges
+>   Integrationsparadigma behandelt. Acronyms ergänzt: `ea`, `rest`, `eip`.
+> - **DSR-Begründung:** EA ist für das Entscheidungsmodell (Kap. 7) unverzichtbar, weil der
+>   Praxiskontext — SAP Build Work Zone als Portal-Layer, SAC-Stories via Live-Embedding —
+>   genau diesem Paradigma entspricht (vgl. KPI_HUB_KONZEPT.md, Schicht 3). Ohne EA als
+>   eigenständige Option würde Kap. 7 ein reales Architekturmuster nicht abbilden können.
+>   Die Kriterienmatrix in Kap. 7 muss EA als vollwertige Alternative neben ETL/DWH,
+>   Messaging und REST enthalten.
+> - **Nicht gewählt — Option B** (Sonderfall von REST): EA operiert auf Präsentationsebene,
+>   nicht auf Datenübertragungsebene — konzeptuell inkompatibel mit REST-Integration.
+> - **Nicht gewählt — Option C** (streichen): Würde den Praxiskontext (Build Work Zone +
+>   SAC-Embedding) aus dem theoretischen Rahmen herausnehmen und damit die Brücke von
+>   Kap. 2 zu Kap. 6 schwächen.
 
-### Quellen
+### Quellen (implementiert)
 
 | BibTeX-Key | Funktion |
 |---|---|
-| `kimball2013` | ETL / DWH-Paradigma |
+| `kimball2013` | ETL / DWH-Paradigma (Star Schema, Bus-Architektur) |
 | `hohpe2003` | Enterprise Integration Patterns / Messaging |
-| `fielding2000` | REST-Architekturstil (Primärquelle) |
-| `dehghani2022` | Föderierung / Data Mesh |
+| `fielding2000` | REST-Architekturstil (Primärquelle, sechs Constraints) |
+| `nijkamp2009` | Embedded Analytics — Primärquelle (BTW 2009, peer-reviewed) |
 | `baars2008` | Integriertes BI-Framework; Fragmentierung als strukturelles Problem |
 
-### Übergang
+**Hinweis:** `dehghani2022` (Data Mesh) wurde in der Implementierung nicht verwendet.
+EA/Nijkamp2009 übernimmt die konzeptuelle Rolle der Föderationsebene präziser und
+quellengestützt. Dehghani bleibt als optionale Ergänzungsquelle für Kap. 6 reserviert.
 
-Der Abschnitt schließt mit der Beobachtung, dass alle Integrationsparadigmen Datenzugriffsrechte
-voraussetzen — und dass in Enterprise-Umgebungen diese Zugriffsrechte nicht statisch, sondern
-rollengebunden sind. Überleitung: "Die skizzierten Integrationsparadigmen setzen voraus, dass
-Datenzugriffsrechte konsistent über Quellsysteme hinweg durchgesetzt werden können.
-Dies erfordert ein explizites Data-Governance- und Zugriffskontrollmodell."
+### Übergang (implementiert)
+
+"Die skizzierten Integrationsparadigmen setzen voraus, dass Datenzugriffsrechte konsistent
+über Quellsysteme hinweg durchgesetzt werden können. Dies erfordert ein explizites
+Data-Governance- und Zugriffskontrollmodell, das im folgenden Abschnitt entwickelt wird."
 
 ### Seitenumfang
 
-ca. 2,0 Seiten (ohne Embedding-Exkurs); ca. 2,5 Seiten (mit Option A)
+ca. 2,5 Seiten (mit EA-Paradigma und Vergleichstabelle; implementiert)
 
 ---
 
@@ -293,7 +308,7 @@ ca. 1,0–1,5 Seiten
 | Abschnitt | Seitenumfang |
 |---|---|
 | 2.1 KPI-Management und Business Intelligence | 2,0–2,5 S. |
-| 2.2 Enterprise-Systemintegration | 2,0–2,5 S. (abhängig von Embedding-Entscheidung) |
+| 2.2 Enterprise-Systemintegration | ~2,5 S. (EA-Paradigma umgesetzt, **vollständig geschrieben**) |
 | 2.3 Data Governance und Zugriffskontrolle | 1,5–2,0 S. |
 | 2.4 Entscheidungsmethoden im Software Engineering | 1,5–2,0 S. |
 | 2.5 Defizite bestehender Ansätze | 1,0–1,5 S. |
@@ -303,10 +318,12 @@ ca. 1,0–1,5 Seiten
 
 ## Offene Entscheidungen (Zusammenfassung)
 
+Alle Entscheidungen für Kap. 2 sind abgeschlossen. Kap. 2.1–2.5 vollständig geschrieben (Stand 28.04.2026).
+
 | ID | Abschnitt | Entscheidung | Status | Empfehlung |
 |---|---|---|---|---|
-| KAP2-E1 | 2.2 | Embedding-Paradigma: eigener Abschnitt / Sonderfall / streichen | Entschieden | Option A umgesetzt — nijkamp2009 als akademische Primärquelle, EA als eigenständiges Paradigma |
-| KAP2-E2 | 2.4 | Nutzwertanalyse: Pohl (2010) ausreichend / Zangemeister beschaffen? | Entschieden | Option A: Pohl reicht — kein Zangemeister nötig |
+| KAP2-E1 | 2.2 | Embedding-Paradigma: eigener Abschnitt / Sonderfall / streichen | **Abgeschlossen** | Option A umgesetzt — `nijkamp2009` als akademische Primärquelle, EA als viertes eigenständiges Paradigma; Kap. 2.2 fertig geschrieben |
+| KAP2-E2 | 2.4 | Nutzwertanalyse: Pohl (2010) ausreichend / Zangemeister beschaffen? | **Abgeschlossen** | Option A: `pohlrupp2015` reicht — kein Zangemeister nötig |
 
 ---
 
