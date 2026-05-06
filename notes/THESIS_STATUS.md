@@ -9,9 +9,14 @@
 
 ---
 
-## Aktueller Stand (28. April 2026)
+## Aktueller Stand (6. Mai 2026) — Meilenstein 1: Orientierungsphase abgeschlossen
 
-Orientierungsphase läuft. Kap. 1–3 vollständig geschrieben; Kap. 2 qualitätsgesichert (Lektor + Qualitätsprüfer). Kap. 3.2 Literaturrecherche heute fertiggestellt (~380 Wörter, PRISMA-Tabelle mit XX-Platzhaltern); Anhang A (Suchstrings T1–T5) erstellt und committet. Babel-Umlaut-Bug in Anhang A behoben. Gliederung von Prof. Sachse am 27.04. formal genehmigt. Oliver-Timm-Follow-up (28.04.) durchgeführt: EA-Store-Link erhalten, System aktuell down — Klärung im Donnerstag-Sync (30.04.).
+**Meilenstein-1-Ergebnis: BESTANDEN** (mit einem offenen Rollover-Punkt)
+
+Orientierungsphase (20. Apr – 7. Mai) endet morgen. Alle Kernziele erreicht: Onboarding abgeschlossen, Systemlandschaft und Tool-Landschaft vollständig dokumentiert, Stakeholder-Netzwerk aufgebaut, Gliederung von Sachse genehmigt, Kap. 1–3 vollständig geschrieben (inkl. Kap. 2.2 mit Embedded Analytics als 4. Integrationsparadigma). Alle Seitenzahlen in Kap. 3 korrekt ausgefüllt (keine XX-Platzhalter in Zitaten). EAS-Zugang: Autorisierung heute beantragt, Ergebnis ausstehend (kein Blocker für Phase 2). Stakeholder-Kontakt Verde/Mokhtar: bewusst in Phase 2 (Anforderungsanalyse) verschoben.
+
+**Aktueller Stand (28. April 2026, zuletzt aktualisiert):**
+Kap. 1–3 vollständig geschrieben; Kap. 2 qualitätsgesichert (Lektor + Qualitätsprüfer). Kap. 3.2 Literaturrecherche fertiggestellt (~380 Wörter, PRISMA-Tabelle mit XX-Platzhaltern); Anhang A (Suchstrings T1–T5) erstellt. Babel-Umlaut-Bug in Anhang A behoben. Gliederung von Prof. Sachse am 27.04. formal genehmigt. Oliver-Timm-Follow-up (28.04.) durchgeführt: EA-Store-Link erhalten, System aktuell down — Klärung im Donnerstag-Sync (30.04.).
 
 ### Formales
 - [x] Sperrvermerk: implementiert — Befristungsdatum wird erst am Ende der Arbeit geklärt
@@ -75,7 +80,7 @@ Orientierungsphase läuft. Kap. 1–3 vollständig geschrieben; Kap. 2 qualität
 ## Nächste Schritte (zentrales To-Do-Board)
 
 > Wird nach jedem Meeting / Arbeitsschritt aktualisiert. Fokus auf die aktuelle Phase — nicht zu weit vorausplanen.
-> Aktuelle Phase: **Orientierung** (20. Apr – 7. Mai)
+> Aktuelle Phase: **Anforderungen** (8. Mai – 24. Mai) — ab morgen, 7. Mai endet Orientierungsphase
 
 ### Formales
 
